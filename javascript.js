@@ -8319,3 +8319,20 @@ function solve(string) {
 // 123: |    (Vertical Line)
 // 124: }    (Right Curly Bracket)
 // 125: ~    (Tilde)
+
+//Day 534
+//review
+function disemVowel(str) {
+  return str.replace(/[aeiou]/gi, "")
+}
+//7 - Char Code Calculation
+function calc(string){
+  let total1 = ""
+  for (let i = 0; i < string.length; i++) {
+    total1 += string.charCodeAt(i)
+  }
+  let total2 = total1.replace(/7/g, '1')
+  
+  return total1.split("").map(Number).reduce((a,b) => a+b,0) - total2.split("").map(Number).reduce((a,b) => a+b,0)
+}
+
