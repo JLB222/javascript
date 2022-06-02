@@ -5278,3 +5278,9 @@ function permuteAPalindrome (input) {
 function numberFormat(number) {
   return number.toLocaleString();
 }
+
+//Day 297
+//8 - Be Concise IV
+function find(arr, el) {
+  return arr.includes(el) ? arr.indexOf(el) : "Not found";
+}
