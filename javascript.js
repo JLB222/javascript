@@ -1,3 +1,4 @@
+//DAY 1
 // 8 - produce an array of numbers in reverse order, starting with n
 function reverseSeq(n) {
   let numbers = [];
@@ -39,6 +40,7 @@ function arrayPlusArray(arr1, arr2) {
   return arr1.concat(arr2).reduce((a,b) => a+b)
 }
 
+//DAY 2
 // 8 - fill an array with every number from 1 to n
 
 function count(n) {
@@ -80,3 +82,32 @@ function points(games) {
   }
   return points
 }  //alternatively, I could have used map() and used the [0] and [2] positions of the strings.  Ah, the joys of thinking too hard.
+
+//DAY 3
+// 8 - You are given the length and width of a 4-sided polygon. The polygon can either be a rectangle or a square.  If it is a square, return its area. If it is a rectangle, return its perimeter.
+const areaOrPerimeter = function(l , w) {
+  if (l === w) {
+    return l * w
+  } else {
+    return l * 2 + w * 2
+  }
+}
+
+// 8 - Create a function that gives a personalized greeting. This function takes two parameters: name and owner.
+
+function greet (name, owner) {
+  return name === owner ? "Hello boss" : "Hello guest"
+}
+
+// 8 - Every day you rent the car costs $40. If you rent the car for 7 or more days, you get $50 off your total. Alternatively, if you rent the car for 3 or more days, you get $20 off your total.  Write a code that gives out the total amount for different days(d).
+
+function rentalCarCost(d) {
+  let cost = 40
+  if (d >= 7) {
+    return d * cost - 50
+  } else if (d >=3) {
+    return d * cost - 20
+  } else {
+    return d * cost
+  }
+}
