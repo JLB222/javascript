@@ -130,3 +130,23 @@ function getGrade (s1, s2, s3) {
   }
   return grade
 }
+//Day 5
+// 8 Return the sum of only positive numbers in an array
+function positiveSum(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 0) {
+      sum += arr[i]
+    }
+  }
+  return sum
+}
+
+// 8 - Square every number inside an array and return their sum
+function squareSum(numbers){
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i] * numbers[i]
+  }
+  return sum
+}
