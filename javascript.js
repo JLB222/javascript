@@ -150,3 +150,20 @@ function squareSum(numbers){
   }
   return sum
 }
+
+//Day 6
+// 8 - Remove all "!" from a string
+function removeExclamationMarks(s) {
+  return s.replace(/!/g, "");
+}
+
+/* 8 - Write a function named setAlarm which receives two parameters. The first parameter, employed, is true whenever you are employed and the second parameter, vacation is true whenever you are on vacation.  The function should return true if you are employed and not on vacation (because these are the circumstances under which you need to set an alarm). It should return false otherwise.*/
+function setAlarm(employed, vacation){
+  return employed === true && vacation === false
+  //since the only time this function should return true is when you are employed and NOT on vacation, that's really the only thing you have to test for.
+}
+// 7 - Create a function that returns the sum of the two lowest positive numbers given an array of minimum 4 positive integers. No floats or non-positive integers will be passed.
+function sumTwoSmallestNumbers(numbers) {
+  let arr = numbers.sort((a,b) => a-b)
+  return arr[0] + arr[1]
+}
