@@ -167,3 +167,33 @@ function sumTwoSmallestNumbers(numbers) {
   let arr = numbers.sort((a,b) => a-b)
   return arr[0] + arr[1]
 }
+
+// Day 7
+// 8 - Given a string, you have to return a string in which each character (case-sensitive) is repeated once.
+function doubleChar(str) {
+  let string = ""
+  for (let i = 0; i < str.length; i++) {
+    string += str[i].repeat(2)
+  }
+  return string
+}
+/* 8 - All of the animals are having a feast! Each animal is bringing one dish. There is just one rule: the dish must start and end with the same letters as the animal's name. For example, the great blue heron is bringing garlic naan and the chickadee is bringing chocolate cake.
+
+Write a function feast that takes the animal's name and dish as arguments and returns true or false to indicate whether the beast is allowed to bring the dish to the feast.
+
+Assume that beast and dish are always lowercase strings, and that each has at least two letters. beast and dish may contain hyphens and spaces, but these will not appear at the beginning or end of the string. They will not contain numerals.
+*/
+function feast(beast, dish) {
+  return beast[0] === dish[0] && beast[beast.length-1] === dish[dish.length-1]
+}
+
+// 8 - Take an array and remove every second element from the array. Always keep the first element and start removing with the next element.
+function removeEveryOther(arr){
+  for (let i = 0; i < arr.length; i++) {
+    if (i % 2 !== 0) {
+      arr.splice(i, 1)
+    }
+  }
+  return arr
+}
+// Apparently, mutating the array like I did above can have unpredictable results and shouldn't be relied on.  In the future I think I'll use a filter method instead for this kind of thing.
