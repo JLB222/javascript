@@ -221,3 +221,27 @@ function updateLight(current) {
 function otherAngle(a, b) {
   return 180-a-b;
 }
+
+//Day 9
+// 8 - Search a string for common recognition software mistakes, and correct them.  5s should be "S"; 0s should be "O"; 1s should be "I"
+function correct(string){
+  let newString = string.split("")
+  for (let i = 0; i < newString.length; i++) {
+    if (newString[i] === "5") {
+      newString[i] = "S"
+    } else if (newString[i] === "0") {
+      newString[i] = "O"
+    } else if (newString[i] === "1") {
+      newString[i] = "I"
+    }
+  }
+  return newString.join("")
+  } //could also have used .replace() with an appropriate regular expression.
+
+// 8 - Your function takes two arguments:  1) current father's age (years) 2) current age of his son (years)
+// Сalculate how many years ago the father was twice as old as his son (or in how many years he will be twice as old).
+
+function twiceAsOld(dadYearsOld, sonYearsOld) {
+  let doubleAge = (dadYearsOld - sonYearsOld) * 2  //find the age at which Dad is exactly twice as old as Son.  (age difference times two)
+  return Math.abs(doubleAge - dadYearsOld)  //find how far from the doubled age they currently are. Can be negative, so use absolute value
+}
