@@ -197,3 +197,27 @@ function removeEveryOther(arr){
   return arr
 }
 // Apparently, mutating the array like I did above can have unpredictable results and shouldn't be relied on.  In the future I think I'll use a filter method instead for this kind of thing.
+
+//Day 8
+// 8 - You're writing code to control your town's traffic lights. You need a function to handle each change from green, to yellow, to red, and then to green again.  Complete the function that takes a string as an argument representing the current state of the light and returns a string representing the state the light should change to.
+
+function updateLight(current) {
+   switch (current) {
+       case "green":
+         return "yellow";
+         break;
+       case "yellow":
+         return "red";
+         break;
+       case "red":
+         return "green";
+         break;
+      default:
+         return "Error. check your input"
+         break;
+   }
+}  // if else probably would have been better since there's only 3 cases, but I'm tired of if statements, wanted to code something else.
+// 8 - You are given two interior angles (in degrees) of a triangle.  Write a function to return the 3rd.
+function otherAngle(a, b) {
+  return 180-a-b;
+}
