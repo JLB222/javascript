@@ -245,3 +245,22 @@ function twiceAsOld(dadYearsOld, sonYearsOld) {
   let doubleAge = (dadYearsOld - sonYearsOld) * 2  //find the age at which Dad is exactly twice as old as Son.  (age difference times two)
   return Math.abs(doubleAge - dadYearsOld)  //find how far from the doubled age they currently are. Can be negative, so use absolute value
 }
+
+//Day 10
+// 8 - Given a number n, return the number of positive odd numbers below n, EASY!
+//NOTE:  I spent entirely too long on this simple problem because I was overthinking it.  At first I pushed all the odd numbers, using %2===1, into an array and counted the array length.  Then I tried a counter that increments for every value that %2===1, then I realized I could just fucking divide by 2 and round down -_-
+function oddCount(n){
+  return Math.floor(n/2)
+}
+
+// 8 - Find the length of the longest word in a sentence (DEBUGGING)
+function findLongest(str){
+  var spl = str.split(" ")
+  var longest = 0
+  for (var i = 0; i < spl.length; i++) {
+    if (spl[i].length > longest) {
+      longest = spl[i].length
+    }
+  }
+    return longest
+}
