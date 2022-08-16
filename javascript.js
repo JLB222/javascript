@@ -314,7 +314,7 @@ function checkForFactor (base, factor) {
   return base % factor === 0
 }
 
-/* 8 - I have a cat and a dog.  I got them at the same time as kitten/puppy. That was humanYears years ago. 
+/* 8 - I have a cat and a dog.  I got them at the same time as kitten/puppy. That was humanYears years ago.
 Return their respective ages now as [humanYears,catYears,dogYears]
 NOTES:
 humanYears >= 1
@@ -332,4 +332,30 @@ var humanYearsCatYearsDogYears = function(humanYears) {
   let catYears = humanYears === 1 ? 15 : humanYears === 2 ? 24 : humanYears >= 3 ? 16 + 4*humanYears : null
   let dogYears = humanYears === 1 ? 15 : humanYears === 2 ? 24 : humanYears >= 3 ? 14 + 5*humanYears : null
   return [humanYears,catYears,dogYears];
+}
+
+//Day 13
+// 8 - Write a method, that will get an integer array as parameter and will process every number from this array.  Return a new array with processing every number of the input-array like this:  If the number has an integer square root, take this, otherwise square the number.
+function squareOrSquareRoot(array) {
+  return array.map((num) => Math.sqrt(num) % 1 === 0 ? Math.sqrt(num) : num*num)
+}
+// 8 - Who remembers back to their time in the schoolyard, when girls would take a flower and tear its petals, saying each of the following phrases each time a petal was torn:
+// I love you
+// a little
+// a lot
+// passionately
+// madly
+// not at all
+// When the last petal was torn there were cries of excitement, dreams, surging thoughts and emotions.
+// determine which phrase the girls would say for a flower of a given number of petals, where nb_petals > 0.
+function howMuchILoveYou(nbPetals) {
+    let phrase = {
+      0 : "not at all",
+      1 : "I love you",
+      2 : "a little",
+      3 : "a lot",
+      4 : "passionately",
+      5 : "madly",
+    }
+    return phrase[nbPetals % 6]
 }
