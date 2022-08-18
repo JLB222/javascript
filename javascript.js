@@ -377,3 +377,32 @@ function findDifference(a, b) {
 function isPalindrome(x) {
   return x.toLowerCase() === x.toLowerCase().split("").reverse().join("")
 }
+
+//Day 15
+// 8 - Create a function that takes 2 integers in form of a string as an input, and outputs the sum (also as a string):
+function sumStr(a,b) {
+  return String(Number(a) + Number(b))
+}
+
+// 8 -
+// This function should return a number (final grade). There are four types of final grades:
+// 100, if a grade for the exam is more than 90 or if a number of completed projects more than 10.
+// 90, if a grade for the exam is more than 75 and if a number of completed projects is minimum 5.
+// 75, if a grade for the exam is more than 50 and if a number of completed projects is minimum 2.
+// 0, in other cases
+function finalGrade (exam, projects) {
+  if (exam > 90 || projects > 10) {
+    return 100
+  } else if (exam > 75 && projects >=5) {
+    return 90
+  } else if (exam > 50 && projects >= 2) {
+    return 75
+  } else {
+    return 0
+  }
+}
+// 8 - Remove all elements from the input array that are contained in another array
+function gooseFilter (birds) {
+  var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+  return birds.filter((bird) => !geese.includes(bird))  //without the !, it would return an array of just the elements that match geese
+}
