@@ -406,3 +406,19 @@ function gooseFilter (birds) {
   var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
   return birds.filter((bird) => !geese.includes(bird))  //without the !, it would return an array of just the elements that match geese
 }
+
+//Day 16
+// 8 - Create a function that accepts 2 string arguments and returns an integer of the count of occurrences the 2nd argument is found in the first one.  If no occurrences can be found, a count of 0 should be returned.
+function strCount(str, letter){
+  let counter = 0;
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === letter) {
+      counter++
+    }
+  }
+  return counter
+}
+// an interesting way to do the same problem using split()
+function strCount(str, letter){
+  return str.split(letter).length-1
+}
