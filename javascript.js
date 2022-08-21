@@ -422,3 +422,26 @@ function strCount(str, letter){
 function strCount(str, letter){
   return str.split(letter).length-1
 }
+
+//Day 17
+// 8 - In this kata you need to check the provided array (x) for good ideas 'good' and bad ideas 'bad'. If there are one or two good ideas, return 'Publish!', if there are more than 2 return 'I smell a series!'. If there are no good ideas, as is often the case, return 'Fail!'.
+function well(x){
+  const counts = {};
+  for (let num of x) {
+    counts[num] = (counts[num] || 0) +1
+  }
+  return counts["good"] > 2 ? "I smell a series!" : counts ["good"] > 0 ? "Publish!" : "Fail!"
+}
+
+// 8 - Turn a string into a series of 1s and 0s depending on the length of said string.
+function stringy(str) {
+  let arr = []
+  for (let i = 0; i < str.length; i++) {
+    if (i % 2 === 0) {
+      arr.push("1")
+    } else {
+      arr.push("0")
+    }
+  }
+  return arr.join("")
+}  // for some reason the codewars Kata "Stringy Strings" says my code is wrong, even though it works; tested in the console.
