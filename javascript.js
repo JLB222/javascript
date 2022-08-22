@@ -445,3 +445,42 @@ function stringy(str) {
   }
   return arr.join("")
 }  // for some reason the codewars Kata "Stringy Strings" says my code is wrong, even though it works; tested in the console.
+
+//Day 18
+// 8 - test whether a given input is even or not.  return true or false
+function testEven(n) {
+    return n % 2 === 0
+}
+
+// 8 - Make a function that takes two integers (a, b, where a < b) and return an array of all integers between the input parameters, including them.
+function between(a, b) {
+  let numbers = []
+  for (let i = a; i <= b; i++) {
+    numbers.push(i)
+  }
+  return numbers
+}
+
+// 7 - Categorize new member:  An array of two-element arrays will be passed into a function that determines membership based on the two elements.
+/*
+To be a senior, a member must be at least 55 years old and have a handicap greater than 7. In this croquet club, handicaps range from -2 to +26; the better the player the lower the handicap.
+Input
+Input will consist of a list of pairs. Each pair contains information for a single potential member. Information consists of an integer for the person's age and an integer for the person's handicap.
+Output
+Output will consist of a list of string values stating whether the respective member is to be placed in the senior or open category.
+*/
+function openOrSenior(data){
+  let membership = []
+  for (let i = 0; i < data.length; i++) {
+    if (data[i][0] >= 55 && data[i][1] > 7) {
+      membership.push("Senior")
+    } else {
+      membership.push("Open")
+    }
+  }
+  return membership
+}
+// an array map with destructuring would have also worked:
+function openOrSenior(data){
+  return data.map(([age, handicap]) => (age > 54 && handicap > 7) ? 'Senior' : 'Open');
+}
