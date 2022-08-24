@@ -485,5 +485,29 @@ function openOrSenior(data){
   return data.map(([age, handicap]) => (age > 54 && handicap > 7) ? 'Senior' : 'Open');
 }
 
-//Day 19 -
-//outage, no code this day
+//Day 19
+//power outage, no code this day
+
+//Day 20
+// 8 - return the total from 3 different sources
+function goals (laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
+  return laLigaGoals + copaDelReyGoals + championsLeagueGoals
+}
+// 8 - In this game, the hero moves from left to right. The player rolls the dice and moves the number of spaces indicated by the dice two times.  Create a function for the terminal game that takes the current position of the hero and the roll (1-6) and return the new position.
+function move (position, roll) {
+  return position + roll*2
+}
+// 8 - return a custom greeting based on Input
+function sayHello(name) {
+  return `Hello, ${name}`
+}
+// 8 - Europeans don't like how Americans number their floors in a building.  What would they do?
+function getRealFloor(n) {
+  if (n > 0 && n <= 13) {
+    return n - 1
+  } else if (n > 13) {
+    return n - 2
+  } else {
+    return n
+  }
+}
