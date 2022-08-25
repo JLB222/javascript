@@ -511,3 +511,16 @@ function getRealFloor(n) {
     return n
   }
 }
+//Day 21
+//8 - Figure out how much the customer has to pay, depending on how many hot dogs they buy.
+function saleHotdogs(n){
+  return n < 5 ? n * 100 : n < 10 ? n * 95 : n * 90
+}
+//8 - square an argument
+function square(n) {
+  return n * n
+}
+//8 - Return an error if the argument is a string, otherwise multiply by 50 and add 6
+function problem(x){
+  return typeof(x) === "string" ? "Error" : x * 50 + 6
+}
