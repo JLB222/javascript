@@ -524,3 +524,31 @@ function square(n) {
 function problem(x){
   return typeof(x) === "string" ? "Error" : x * 50 + 6
 }
+
+//day 22
+//8 - Write a function that returns a string in which firstname is swapped with last name.
+function nameShuffler(str){
+  return str.split(" ").reverse().join(" ")
+}
+
+//8 - Given an array of a sequence of numbers, return an array that fills in any numbers that are missing from the original sequence
+function pipeFix(numbers){
+  let start = numbers[0]
+  let end = numbers[numbers.length-1]
+  let output = []
+  for (let i = start; i <= end; i++) {
+    output.push(i)
+  }
+  return output
+}
+
+//8 - create a function that takes an array as an argument; reverse that array's elements
+function reverseList(list) {
+  return list.reverse()
+}
+
+//8 - determine what you should be drinking, depending on your age, by some idiot on the internet
+
+function peopleWithAgeDrink(age) {
+  return age < 14 ? "drink toddy" : age < 18 ? "drink coke" : age < 21 ? "drink beer" : "drink whisky"
+}
