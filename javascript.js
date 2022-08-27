@@ -552,3 +552,23 @@ function reverseList(list) {
 function peopleWithAgeDrink(age) {
   return age < 14 ? "drink toddy" : age < 18 ? "drink coke" : age < 21 ? "drink beer" : "drink whisky"
 }
+//Day 23
+//8 - return a response for the number of puppies your friend bought
+function howManyDalmatians(number) {
+  let dogs = ["Hardly any", "More than a handful!", "Woah that's a lot of dogs!", "101 DALMATIANS!!!"]
+  let respond = number <= 10 ? dogs[0] : number <= 50 ? dogs[1] : number === 101 ? dogs[3] : dogs[2]
+  return respond
+}
+//8 - combat game: take the player's current health and damage taken, and return the new health value.  health cannot go below 0
+function combat(health, damage) {
+  if (health >= damage) {
+    health = health - damage
+    } else {
+      return 0
+    }
+  return health
+}
+//8 - Remove a "!" from the end of a string.
+function remove (string) {
+  return string[string.length-1] === "!" ? string.slice(0, string.length-1) : string
+}
