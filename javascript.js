@@ -572,3 +572,20 @@ function combat(health, damage) {
 function remove (string) {
   return string[string.length-1] === "!" ? string.slice(0, string.length-1) : string
 }
+
+//Day 23
+//8 - A wolf in sheep's clothing.
+function warnTheSheep(queue) {
+  let wolf = queue.reverse().indexOf("wolf")
+  if (wolf === 0) {
+    return 'Pls go away and stop eating my sheep'
+  } else {
+    return `Oi! Sheep number ${wolf}! You are about to be eaten by a wolf!`
+  }
+}
+
+//8 - Hello, Name or World!
+function hello(name) {
+  name = name ? name[0].toUpperCase() + name.slice(1).toLowerCase() : "World"
+  return `Hello, ${name}!`;
+}
