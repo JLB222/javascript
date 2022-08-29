@@ -589,3 +589,23 @@ function hello(name) {
   name = name ? name[0].toUpperCase() + name.slice(1).toLowerCase() : "World"
   return `Hello, ${name}!`;
 }
+
+//Day 24
+//8 - Create a function that operates as an exclusive or operator (XOR)
+function xor(a, b) {
+  if (a === true && b === false || b === true && a === false) {
+    return true
+  } else {
+    return false
+  }
+}
+
+//8 - Wide-Mouthed Frog
+function mouthSize(animal) {
+  return animal.toLowerCase() === "alligator" ? "small" : "wide"
+}
+
+//8 - Convert binary to decimal
+function binToDec(bin){
+  return parseInt(bin, 2)
+}
