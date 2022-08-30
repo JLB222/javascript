@@ -609,3 +609,11 @@ function mouthSize(animal) {
 function binToDec(bin){
   return parseInt(bin, 2)
 }
+
+//day 24
+//8 - Reverse words in a string
+function reverse(string){
+  return string.split(" ").reverse().join(" ")
+}
+
+//8 - 
