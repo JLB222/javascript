@@ -616,4 +616,26 @@ function reverse(string){
   return string.split(" ").reverse().join(" ")
 }
 
-//8 - 
+//day 25
+//8 - We need a simple function that determines if a plural is needed or not. It should take a number, and return true if a plural should be used with that number or false if not. This would be useful when printing out a string such as 5 minutes, 14 apples, or 1 sun.
+function plural(n) {
+  return n === 1 ? false : true
+}
+
+//8 - Your goal is to return multiplication table for number that is always an integer from 1 to 10.
+//Note: newlines should be added between rows, but there should be no trailing newline at the end. If you're unsure about the format, look at the sample tests.
+function multiTable(number) {
+  let result = `${1} * ${number} = ${1 * number}`;
+  for(let i = 2; i <= 10; i++) {
+    result += `\n${[i]} * ${number} = ${[i] * number}`
+  }
+  return result
+}
+// alternate that's a little more clean and takes advantage of the conditional operator
+function multiTable(number) {
+  let result = ""
+  for (let i = 1; i <=10; i++) {
+    result += `${[i]} * ${number} = ${[i] * number}${i < 10 ? '\n' : ''}`  //tacks on the escaped newline only up to iteration 9
+  }
+  return result
+}
