@@ -672,3 +672,28 @@ function equal5(){
   var b=v3;
   return a%b;
 }
+
+//day 27
+//8 - return an array with numbers from 1 to n
+function preFizz(n) {
+  let result = []
+  for (let i = 1; i <= n; i++) {
+    result.push(i)
+  }
+  return result
+}
+
+//8 - Holiday VIII - work out just how many bottles of duty free whiskey you would have to buy such that the saving over the normal high street price would effectively cover the cost of your holiday.
+function dutyFree(normPrice, discount, hol){
+  return Math.floor(hol/(discount/100 * normPrice))
+}
+
+//8 - Convert a decimal to its binary value
+function toBinary(n){
+  return Number(n.toString(2))
+}
+
+//7 - Binary Addition - given two arguments, return their sum in Binary, as a string
+function addBinary(a,b) {
+  return (a+b).toString(2)
+}
