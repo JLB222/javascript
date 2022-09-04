@@ -732,3 +732,28 @@ var number = function(busStops){
   }
   return peopleLeft
 }
+
+//day 29
+//8 - Make sure your plants get enough water!
+function rainAmount(mm){
+  if (mm < 40) {
+       return `You need to give your plant ${40 - mm}mm of water`
+  } else {
+       return "Your plant has had more than enough water for today!"
+  };
+}
+
+//8 - Answer the inquisitive child's questions about age.
+function  calculateAge(birth, future) {
+  if (birth === future) {
+    return "You were born this very year!"
+  } else if (birth +1 === future) {
+    return `You are 1 year old.`
+  } else if (birth -1 === future) {
+    return `You will be born in 1 year.`
+  } else if (birth < future) {
+    return `You are ${future - birth} years old.`
+  } else if (birth > future) {
+    return `You will be born in ${birth - future} years.`
+  }
+}
