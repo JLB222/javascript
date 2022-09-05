@@ -757,3 +757,31 @@ function  calculateAge(birth, future) {
     return `You will be born in ${birth - future} years.`
   }
 }
+
+//Day 30 - Replace all of *something* in a string with something else.
+function vowelReplacer(str) {
+  vowels = ["a", "e", "i","o","u"]
+  splitStr = str.split("")
+  for (let i = 0; i < splitStr.length; i++) {
+    if (vowels.includes(splitStr[i])) {
+      splitStr[i] = "!"
+    }
+  }
+  return splitStr.join("")
+}
+
+//8 - debugging syntax practice
+function main(verb, noun) {
+  return verb + noun
+}
+
+//8 - given an array of integers, return a new array of only the numbers that are multiples of their own index
+function multipleOfIndex(array) {
+  return array.filter((num, ind) => num % ind === 0)
+}
+
+//8 - define a function that removes duplicates from an array of numbers and returns it as a result
+function distinct(a) {
+  let filter = new Set(a)
+  return [...filter]
+}
