@@ -785,3 +785,40 @@ function distinct(a) {
   let filter = new Set(a)
   return [...filter]
 }
+
+//Day 31
+//How hot is the pastry?
+function apple(x){
+  return x*x > 1000 ? "It's hotter than the sun!!" : "Help yourself to a honeycomb Yorkie for the glovebox."
+}
+
+//Get people a drink according to their profession.
+function getDrinkByProfession(param){
+  switch (param.toLowerCase()) {
+      case "jabroni":
+      return "Patron Tequila"
+      break;
+      case "school counselor":
+      return "Anything with Alcohol"
+      break;
+      case "programmer":
+      return "Hipster Craft Beer"
+      break;
+      case "bike gang member":
+      return "Moonshine"
+      break;
+      case "politician":
+      return "Your tax dollars"
+      break;
+      case "rapper":
+      return "Cristal"
+      break;
+      default:
+      return "Beer"
+  }
+}
+
+//Palindrome checker for letters or numbers
+function isPalindrome(line) {
+  return String(line) === String(line).split("").reverse().join("")
+}
