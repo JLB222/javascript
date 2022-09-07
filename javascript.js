@@ -822,3 +822,19 @@ function getDrinkByProfession(param){
 function isPalindrome(line) {
   return String(line) === String(line).split("").reverse().join("")
 }
+
+//Day 32
+//8 - using Regex, remove all numbers from a string, but leave special characters intact
+function stringClean(s){
+  return s.replace(/[0-9]/g, "")
+}
+
+//8 - given two integers, find the remainder of the larger one divided by the smaller one
+function remainder(n, m){
+  return Math.max(n,m) % Math.min(n,m)
+}
+
+//8 - Are you having a son or daughter?
+function chromosomeCheck(sperm) {
+  return `Congratulations! You're going to have a ${sperm === "XY" ? "son" : "daughter"}.`
+}
