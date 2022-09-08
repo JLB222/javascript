@@ -838,3 +838,23 @@ function remainder(n, m){
 function chromosomeCheck(sperm) {
   return `Congratulations! You're going to have a ${sperm === "XY" ? "son" : "daughter"}.`
 }
+
+//Day 33
+//8 - write a function that gets you the total surface area and volume of a box
+function getSize(width, height, depth) {
+  return [((width * depth * 2) + (height * depth * 2) + (width * height * 2)), width * height * depth]
+}
+
+//8 - create a function that detects whether a given array contains a given element
+function include(arr, item){
+  return arr.includes(item)
+}
+
+//8 -  write a function that takes a String and returns an Array/list with the length of each word added to each element.  "write code" --> ["write 5", "code 4"]
+function addLength(str) {
+  let result = str.split(" ")
+  for (let i = 0; i < result.length; i++) {
+    result[i] = result[i] + " " + result[i].length
+  }
+  return result
+}
