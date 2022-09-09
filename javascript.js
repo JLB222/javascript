@@ -858,3 +858,30 @@ function addLength(str) {
   }
   return result
 }
+
+//Day 34
+//8 - pull properties out of an object to make a dynamic string
+function animal(obj){
+  return `This ${obj.color} ${obj.name} has ${obj.legs} legs.`
+}
+
+//8 - Find the average of an array of numbers
+var findAverage = function (nums) {
+  return nums.reduce((a,b) => a + b) / nums.length
+}
+
+//8 - Create a greeting message for  name, city, state.  The name is inside an array and has no set number of names.
+function sayHello( name, city, state ) {
+  return `Hello, ${name.join(" ")}! Welcome to ${city}, ${state}!`
+}
+
+//8 - Create a class Ball. Ball objects should accept one argument for "ball type" when instantiated.  If no arguments are given, ball objects should instantiate with a "ball type" of "regular."
+var Ball = function(ballType = "regular") {
+  this.ballType = ballType
+}
+// OR
+class Ball {
+  constructor(ballType = "regular") {
+    this.ballType = ballType
+  }
+}
