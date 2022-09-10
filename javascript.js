@@ -885,3 +885,39 @@ class Ball {
     this.ballType = ballType
   }
 }
+
+//Day 35
+//8 - Remove all exclamation marks from the end of sentence.  Not anywhere else in the sentence, though.
+function remove (string) {  
+  let str = string.split("").reverse()
+  for(let i = 0; i < string.length; i++) {
+    if (str[0] === "!") {
+      str.shift()
+    }
+  }
+  return str.reverse().join("")
+}
+
+//8 - lightsabers
+function howManyLightsabersDoYouOwn(name) {
+  return name === "Zach" ? 18 : 0
+}
+
+//8 - How many stairs will Suzuki climb in 20 years?  Given an array of arrays.  Each sub-array has the numbers of steps walked for each given day for a full year (each monday, each tuesday, etc)
+function stairsIn20(bigArr){
+  let total = 0;
+  for (let i = 0; i < bigArr.length; i++) {
+    total += bigArr[i].reduce((a,b) => a + b)
+  }
+  return total * 20
+}
+
+//8 - Find out if a string contains a particular word.  Case does not matter.
+function spEng(sentence){
+  return sentence.toLowerCase().includes("english")
+}
+
+//8 - Check an array for a value
+function check(arr, val){
+  return arr.includes(val)
+}
