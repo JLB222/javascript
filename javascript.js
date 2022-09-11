@@ -921,3 +921,9 @@ function spEng(sentence){
 function check(arr, val){
   return arr.includes(val)
 }
+
+//Day 36
+//8 - Convert USD to Chinese Yuan.  The output must be a string with exactly two decimal places.
+function usdcny(usd) {
+  return `${(usd * 6.75).toFixed(2)} Chinese Yuan`
+}
