@@ -927,3 +927,49 @@ function check(arr, val){
 function usdcny(usd) {
   return `${(usd * 6.75).toFixed(2)} Chinese Yuan`
 }
+
+//Day 37 
+//? - count the number of occurences of each element in an array
+function count(array) {  //[1,1,2,2,3,3,3,4,4,4,4,5]
+  let counter = {}
+  for (let key of array) {
+    counter[key] = (counter[key] || 0) +1
+  }
+  return counter
+}
+
+//8 - Sum of differences in array
+function sumOfDifferences(arr) {
+  let array = arr.sort((a,b) => a-b).reverse()
+  let sum = 0
+  for (let i = 0; i < arr.length-1; i++) {
+    sum += (array[i] - array[i+1])
+  }
+  return sum
+}
+
+//8 - Fundamentals: Return
+function add(a,b){
+  return a+b
+}
+
+function divide(a,b){
+  return a/b
+}
+
+function multiply(a,b){
+  return a*b
+}
+
+function mod(a,b){
+  return a%b
+}
+ 
+function exponent(a,b){
+  return a**b
+}
+  
+function subt(a,b){
+  return a-b
+}
+
