@@ -973,3 +973,44 @@ function subt(a,b){
   return a-b
 }
 
+//Day 38
+//8 - given an input of an array of strings, return a single string with comma delimited elements of the array in the same order
+function printArray(array){
+  return array.join()
+}
+
+//8 - Simple calculator.  If the variables aren't numbers or the sign doesn't belong, return unknown value.
+function calculator(a,b,sign){
+  if (typeof a === "number" && typeof b === "number") {
+    switch (sign) {
+        case "+": return a + b;
+        break;
+        case "-": return a - b;
+        break;
+        case "*": return a * b;
+        break;
+        case "/": return a / b;
+        break;
+        default: return "unknown value";
+    }
+  } else {
+    return "unknown value"
+  }
+}
+
+//8 - Sum of Multiples.  Find the sum of all multiples of n below m.  Keep in mind: n and m are positive integers; m is excluded from the multiples
+function sumMul(n,m){
+  if (n > 0 && m > 0) {
+      let sum = 0;
+      let arr = [];
+      for (let i = 0; i < Math.floor(m/n); i++) {
+       sum += n
+       arr.push(sum)
+      }
+      return arr.reduce((a,b) => a+b, 0) - (m % n === 0 ? m : null)  //subtracts m only if n goes into it evenly, since we're not supposed to include m
+  } else {
+    return "INVALID"
+  }
+}
+
+// I probably overcomplicated the above.  I probably could have just done the loop with i = n, and then i+=n each time.
