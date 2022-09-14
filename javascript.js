@@ -1060,3 +1060,4 @@ class makeCharacter {
     console.log(`Executing ${skillName}`)
   }
 }
+
