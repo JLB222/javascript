@@ -1014,3 +1014,49 @@ function sumMul(n,m){
 }
 
 // I probably overcomplicated the above.  I probably could have just done the loop with i = n, and then i+=n each time.
+
+//Day 39 
+//8 - Replace all vowels in a string with a "!" without using Regex
+function repVowels(str) {
+  let vowels = ["a", "e", "i", "o", "u"]
+  let string = str.split("")
+  for (let i = 0; i < str.length; i++) {
+    if (vowels.includes(string[i].toLowerCase())) {
+      string[i] = "!"
+    }
+  }
+  return string.join("")
+}
+//8 - Take an array of elements and smash them together.
+function smash(arr) {
+  return arr.join("")
+}
+
+//8 - Sort an array of numbers
+function sortNums(arr) {
+  return arr.sort((a,b) => a-b, 0)
+}
+
+//
+function makeChar(name,race,gender,skillName) {
+  this.name = name
+  this.race = race
+  this.gender = gender
+  this.skillName = skillName
+  this.skill = function() {
+    console.log(`Executing ${this.skillName}`)
+  }
+}
+
+//
+class makeCharacter {
+  constructor(name, race, gender, skillName) {
+    this.name = name
+    this.race = race
+    this.gender = gender
+    this.skillName = skillName
+  }
+  skill(skillName = this.skillName) {  //can accept a skill name at runtime, but otherwise defaults to the original name passed to it
+    console.log(`Executing ${skillName}`)
+  }
+}
