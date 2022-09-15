@@ -1061,3 +1061,32 @@ class makeCharacter {
   }
 }
 
+//Day 40
+//8 - Round a given input to two decimal places.
+function twoDecimalPlaces(n) {
+  return Math.round(n*100) / 100
+}
+//or
+function twoDecimalPlaces(n) {
+  return Number(n.toFixed(2))
+}
+
+//7 - Given an array of 0s and 1s, return what said numbers would be if converted from binary to decimal
+const binaryArrayToNumber = arr => {
+  return parseInt(arr.join(""), 2)
+}
+
+//6 - Given a like system, return appropriate text depending on how many people have liked something.
+function likes(names) {
+  if (names.length === 0) {
+    return "no one likes this"
+  } else if (names.length === 1) {
+    return `${names[0]} likes this`
+  } else if (names.length === 2) {
+    return `${names[0]} and ${names[1]} like this`
+  } else if (names.length === 3) {
+    return `${names[0]}, ${names[1]} and ${names[2]} like this`
+  } else {
+    return `${names[0]}, ${names[1]} and ${names.length -2} others like this`
+  }
+}
