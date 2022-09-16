@@ -1090,3 +1090,47 @@ function likes(names) {
     return `${names[0]}, ${names[1]} and ${names.length -2} others like this`
   }
 }
+
+
+//Day 41
+//8 - given a card, return its suit
+function defineSuit(card) {
+  return card.includes("♣") ? "clubs" : card.includes("♦") ? "diamonds" : card.includes("♥") ? "hearts" : "spades"
+}
+
+//7 - make a function that has two input strings;  check to see if the first string ends with the 2nd string
+function solution(str, ending){
+  let counter = 0
+  for (let i = 0; i < ending.length; i++) {
+    if (ending[ending.length-1-i] === str[str.length-1-i]) {
+      counter++
+    } 
+  }
+  return counter === ending.length
+}
+
+//turns out there's a convenient method for this....
+
+function solution(str, ending){
+  return str.endsWith(ending);
+}
+
+//6 - Duplicate Encoder - take a string as an argument.  for each character in said string, return either "(" or ")" if there is 1 or more occurences of that character, respectively
+function duplicateEncode(word){
+  let stringBuilder = []
+  let letters = {}
+  word = word.toLowerCase()
+  // this loop creates the entries for the letters object, and counts the number of occurences of each lowercase letter
+  for (let i = 0; i < word.length; i++) {
+    letters[word[i]] = (letters[word[i]] || 0) +1
+  }
+  //this loop checks the now-complete letters object, and for each letter that has a count of 1, returns "(".  For a count of anything else (which will only be two or more, zero won't happen), it will return ")"
+  for (let i = 0; i < word.length; i++) {
+    if (letters[word[i]] === 1) {
+      stringBuilder.push(`(`)
+    } else {
+      stringBuilder.push(`)`)
+    }
+  }
+  return stringBuilder.join("")
+}
