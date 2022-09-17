@@ -1134,3 +1134,25 @@ function duplicateEncode(word){
   }
   return stringBuilder.join("")
 }
+
+//Day 42
+//7 - Remove the Minimum - Given an array of numbers, remove the lowest number.  If there's a tie, remove only the first instance.  DO NOT MUTATE the array.
+function removeSmallest(numbers) {
+  let arr = [...numbers]  
+  let remove = arr[0]
+  for (number of arr) {  
+    if (number < remove) {
+      remove = number
+    }
+  }
+  arr.splice(arr.indexOf(remove), 1)
+  return arr
+}
+
+//alternate
+function removeSmallest(numbers) {
+  let copy = [...numbers]  //creates a new array rather than copying old one
+  let minIndex = copy.indexOf(Math.min(...copy))  //finds the Index of the smallest number in the copy array
+  copy.splice(minIndex, 1) //removes the number found above
+  return copy  //returns what's left
+}
