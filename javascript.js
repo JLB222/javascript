@@ -1156,3 +1156,15 @@ function removeSmallest(numbers) {
   copy.splice(minIndex, 1) //removes the number found above
   return copy  //returns what's left
 }
+
+//Day 43
+//8 - check if an array of strings has a certain value within it
+function checkTheBucket(bucket){
+  return bucket.includes("gold")
+}
+
+//8 - create a method in santa's sleigh object that authenticates the driver and password
+function Sleigh() {}
+Sleigh.prototype.authenticate = function(name, password) {
+  return name === "Santa Claus" && password === "Ho Ho Ho!"
+}
