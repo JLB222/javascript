@@ -1168,3 +1168,59 @@ function Sleigh() {}
 Sleigh.prototype.authenticate = function(name, password) {
   return name === "Santa Claus" && password === "Ho Ho Ho!"
 }
+
+//Day 44
+//8 - replace all the vowels in a string without using regex
+function rep(str) {
+  let vowels = ["a", "e", "i", "o","u"]
+  let arr = str.split("")
+  for (let i = 0; i < str.length; i++) {
+    if (vowels.includes(arr[i].toLowerCase())) {
+      arr[i] = "!"
+    }
+  }
+  return arr.join("")
+}
+
+//8 - Exclamation series #4.  remove all "!", save for one at the very end.
+function remove (string) {
+  let arr = string.split("")
+  for (let i = 0; i < string.length; i++) {
+    if (arr[i] === "!") {
+      arr[i] = ""
+    }
+  }
+  return arr.join("") + "!"
+}
+
+//OR
+
+function remove(string) {
+  return string.split("!").join("") + "!"
+}
+
+//7 - Given an array, return an array that contains only the lowest and highest numbers within it
+function minMax(arr){
+  return [Math.min(...arr), Math.max(...arr)]
+}
+
+//6 - Take a 10 Minute Walk
+/*
+You live in the city of Cartesia where all roads are laid out in a perfect grid. 
+You arrived ten minutes too early to an appointment, so you decided to take the opportunity to go for a short walk. 
+The city provides its citizens with a Walk Generating App on their phones -- everytime you press the button it sends you an array of one-letter strings representing directions to walk (eg. ['n', 's', 'w', 'e']). 
+You always walk only a single block for each letter (direction) and you know it takes you one minute to traverse one city block, so create a function 
+that will return true if the walk the app gives you will take you exactly ten minutes (you don't want to be early or late!) and will, of course, return you to your starting point. Return false otherwise.
+*/
+
+function isValidWalk(walk) {
+  let x = 0
+  let y = 0
+  for (let i = 0; i < walk.length; i++) {
+    if (walk[i] === "n") {x += 1}
+    if (walk[i] === "s") {x -= 1}
+    if (walk[i] === "e") {y += 1}
+    if (walk[i] === "w") {y -= 1}
+  }
+  return walk.length === 10 && x === 0 && y === 0
+}
