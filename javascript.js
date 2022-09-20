@@ -1224,3 +1224,35 @@ function isValidWalk(walk) {
   }
   return walk.length === 10 && x === 0 && y === 0
 }
+
+
+
+//Day 45
+function headsCounter(number) {
+  let heads = 0; 
+  for (let i = 0; i < number; i++) {
+    if (Math.random() > .4999999999) {
+      heads += 1
+    }
+  }
+  return heads
+}
+/*
+P - array of two numbers
+R - sum of those numbers and all others between em
+E - [2,7] should return 27;  so should [7,2]
+P - 
+determine the smaller number, or sort the array so the smaller number is first (or last)
+create a loop starting at smaller number, not stopping til it reaches higher number
+with each iteration, add i to a counter
+return the counter's value at the end
+*/
+
+function sumArr(array) {
+  array = array.sort()
+  let counter = 0
+  for (let i = array[0]; i <= array[1]; i++) {
+    counter += i
+  }
+  return counter
+}
