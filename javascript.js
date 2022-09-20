@@ -1231,7 +1231,7 @@ function isValidWalk(walk) {
 function headsCounter(number) {
   let heads = 0; 
   for (let i = 0; i < number; i++) {
-    if (Math.random() > .4999999999) {
+    if (Math.random() > .5) {
       heads += 1
     }
   }
@@ -1255,4 +1255,83 @@ function sumArr(array) {
     counter += i
   }
   return counter
+}
+
+//given an array, count the number of occurences of each element in the array
+function instanceCounter(arr) {
+  let counter = {}
+  for (instance of arr) {
+    counter[instance] = (counter[instance] || 0) + 1
+  }
+  return counter
+}
+
+//8 - given a month, input as a number 1-12, return the number of days in that month
+function howManydays(month){
+  var days;
+  switch (month){
+    case 4: 
+    case 6: 
+    case 9: 
+    case 11: days = 30; break;
+    case 2: days = 28; break;
+    default: days = 31; break;
+  }
+  return days;
+}
+
+//7 - Testing 1-2-3: given an array of strings, return an array of strings with their line number prepended to them.
+var number=function(array){
+  let result = []
+  for (let i = 0; i < array.length; i++) {
+      result.push(`${i+1}: ${array[i]}`)
+  } 
+  return result
+}
+
+//or with .map():
+
+function lineNumbering(array) {
+  return array.map((element, index) => `${index+1}: ${element}`)
+}
+
+//6 - Persistent Bugger.
+/*
+P - number
+R - number, represents the number of iterations necessary to turn the original number into a single digit
+E - 999 --> 4 (because 9*9*9 = 729, 7*2*9 = 126, 1*2*6 = 12, and finally 1*2 = 2)
+P - 
+  given a number, return a new number that is the original number's individual digits * each other
+  loop the above until String(number).length === 1
+*/
+
+function persistence(num) {
+  let counter = 0
+  let result = num
+  while (String(result).length > 1) {
+    let holder = 1
+    for (let i = 0; i < String(result).length; i++) {
+      holder = holder * +String(result)[i]
+    }
+    result = holder
+    counter++
+  } 
+  return counter
+}
+
+//A more concise way to do it:
+function persistence2(num) {
+  let counter = 0;
+  num = String(num)
+
+  while (num.length > 1) {
+    counter++
+    num = num.split("").map(Number).reduce((a,b) => a*b).toString()
+  }
+  return counter
+}
+
+//Given a number, multiply each digit of the number by the other numbers.  EX: 927 -> 9*2*7
+function multiplyDigits(num) {
+  return num.toString().split("").map(Number).reduce((a,b) => a*b).toString()
 }
