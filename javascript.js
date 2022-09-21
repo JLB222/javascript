@@ -1335,3 +1335,62 @@ function persistence2(num) {
 function multiplyDigits(num) {
   return num.toString().split("").map(Number).reduce((a,b) => a*b).toString()
 }
+
+//Day 46 
+//8 - given a string that is a sequence of numbers separated by commas, return the same sequence but with the first and last number removed and now separated by spaces.
+//if removing the first and last numbers makes it an empty string, return null instead
+function array(str){
+  let result = str.split(",")
+  if (result.length < 3) {
+    return null
+  } else {
+  result.pop()
+  result.shift()
+  return result.join(" ")
+  }
+}
+
+//OR
+function array(arr){
+  return arr.split(",").slice(1,-1).join(" ") || null
+}
+
+
+//7 - Find the stray number.  Given an array of integers, where all the integers are the same except 1, return the different number
+function stray(numbers) {
+  let counter = {}
+  //this loop fills the counter object with all elements in the array and their count
+  for (let key of numbers) {
+    counter[key] = (counter[key] || 0) +1
+  }
+  //if an element has a count of 1, clearly that's the element we want
+  for (thing in counter) {
+    if(counter[thing] === 1) {
+      return Number(thing)  //initially returns it as a string, so we need to change it back to a number
+    }
+  }
+}
+
+//or
+function stray(numbers) {
+  numbers = numbers.sort()
+  if (numbers[0] === numbers[1]) {
+    return numbers[numbers.length-1]
+  } else {
+    return numbers[0]
+  }
+}
+
+//6 - Replace with alphabet position.  Given a string (sentence), return a new string that, instead of letters, are numbers that represent the location of that letter in the alphabet separated by spaces. non-letters are ignored
+// ex:  "hello" returns "8 5 12 12 15"
+
+let alphabet = [" ", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", 'z']
+function alphabetPosition(text) {
+  let result = []
+  for (let i = 0; i < text.length; i++) {
+    if (text[i].toUpperCase() != text[i].toLowerCase()) {  //this expression is only true in the case of letters
+      result.push(alphabet.indexOf(text[i].toLowerCase()))
+    }
+  }
+  return result.join(" ")
+}
