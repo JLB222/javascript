@@ -1394,3 +1394,9 @@ function alphabetPosition(text) {
   }
   return result.join(" ")
 }
+
+//Day 47
+//8 - Gravity Flip.  Given an array of numbers, sort the numbers with the largest numbers on the left or right given another input, "L" or "R"
+function flip(d, a){
+  return d === "L" ? a.sort((a,b) => a-b).reverse() : a.sort((a,b) => a-b)
+}
