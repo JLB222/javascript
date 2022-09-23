@@ -1400,3 +1400,26 @@ function alphabetPosition(text) {
 function flip(d, a){
   return d === "L" ? a.sort((a,b) => a-b).reverse() : a.sort((a,b) => a-b)
 }
+
+//Day 48
+//8 - Holiday VI - Shark Pontoon
+function shark(pontoonDistance, sharkDistance, youSpeed, sharkSpeed, dolphin){
+  sharkSpeed = dolphin ? sharkSpeed/2 : sharkSpeed
+  let sharkTimeToBoat = sharkDistance / sharkSpeed
+  let youTimeToBoat = pontoonDistance / youSpeed
+  return youTimeToBoat < sharkTimeToBoat ? "Alive!" : "Shark Bait!"
+}
+
+//7 - Given an array of strings, sort the strings by their length
+function sortByLength (array) {
+  return array.sort((a,b) => a.length - b.length)
+}
+
+//6 - Your order, please
+/*
+P - a string of words, each word containing a number
+R - a new string, with the words in ascending order using the number within them
+E - "is2 Thi1s T4est 3a"  -->  "Thi1s is2 3a T4est"
+P - 
+
+*/
