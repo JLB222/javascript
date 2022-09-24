@@ -1415,11 +1415,15 @@ function sortByLength (array) {
   return array.sort((a,b) => a.length - b.length)
 }
 
-//6 - Your order, please
-/*
-P - a string of words, each word containing a number
-R - a new string, with the words in ascending order using the number within them
-E - "is2 Thi1s T4est 3a"  -->  "Thi1s is2 3a T4est"
-P - 
+//Day 49
+//8 - 
+function whoIsPaying(name){
+  return name.length > 2 ? [name, name.substring(0,2)] : [name]
+}
 
-*/
+//7 - Find the middle element.  Given an array of 3 numbers, return the index of the middle VALUE.  Ex:  [1,10,5] should return the index of 5, which is 2.
+function gimme(array1) {
+  let array2 = [...array1]        //make a shallow copy of array1
+  array2.sort((a,b) => a - b)     //sort the copy to easily find the middle value, which will now always be array2[1]
+  return array1.indexOf(array2[1])//return the index position of the value found above
+}
