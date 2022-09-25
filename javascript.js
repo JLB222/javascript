@@ -1427,3 +1427,26 @@ function gimme(array1) {
   array2.sort((a,b) => a - b)     //sort the copy to easily find the middle value, which will now always be array2[1]
   return array1.indexOf(array2[1])//return the index position of the value found above
 }
+
+//Day 50
+//8 - Grasshopper - Combine Strings
+function combineNames(fName, lName) {
+  return fName +" "+ lName
+}
+
+//7 - Round up to the next multiple of 5
+function roundToNext5(n){
+  return Math.ceil(n / 5) * 5
+}
+
+//6- Find the unique number:  given an array of integers where all numbers are equal save for 1 unique number, return the unique number
+function findUniq(arr) {
+  arr.sort((a,b) => a-b, 0)
+  if (arr[0] !== arr[1]) {
+    return arr[0]
+  } else {
+    return arr[arr.length-1]
+  }
+}
+
+// could also use the find() method on the array, comparing the indexOf to the lastIndexOf
