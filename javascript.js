@@ -1450,3 +1450,35 @@ function findUniq(arr) {
 }
 
 // could also use the find() method on the array, comparing the indexOf to the lastIndexOf
+
+//Day 51
+//8 - Given an array of numbers, return an array of only the odd numbers
+function odds(values){
+  return values.filter(num => num % 2 !== 0);
+}
+
+//7 - Given a set of 3 numbers: beginning, end, step.  Return the sum of the numbers starting from beginning, counting by step, to the end.
+//example:  given 1,10,2, you'd count from 1-10 by 2 and sum all the numbers between.  1+3+5+7+9   (Return 0 if the beginning number is greater than end)
+const sequenceSum = (begin, end, step) => {
+  let sum = 0
+  for (let i = begin; i <= end; i+= step) {
+    sum += i
+  }
+  return sum
+}
+
+//6 - Given a sentence string, return the word in the string that has the highest score.  The score is determined by the sum of each letter's place in the alphabet.  a=1, b=2, etc
+function high(sentenceString){
+  let sentenceArray = sentenceString.split(" ")
+  let scoreArray = sentenceArray.map(scoreWord)
+  let indexHighestNumber = scoreArray.indexOf(Math.max(...scoreArray))
+  return sentenceArray[indexHighestNumber]
+}
+
+function scoreWord(word) {
+  let sum = 0;
+  for (let i = 0; i < word.length; i++) {
+    sum += (word[i].charCodeAt() - 96)
+  }
+  return sum
+}
