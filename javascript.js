@@ -1482,3 +1482,42 @@ function scoreWord(word) {
   }
   return sum
 }
+
+//Day 52
+//8 - given a date string with the format of: "Friday May 2, 7pm"   return a new string with the time removed
+function shortenToDate(longDate) {
+  return longDate.split(",")[0]
+}
+
+//7 - given an array of numbers, return a new sorted array of numbers.  if the array is empty or a null value, return an empty array
+function solution(nums){
+  return nums !== null ? nums.sort((a,b) => a-b, 0) : []
+}
+
+//6 - Consecutive strings by g964
+/*
+given an array of words and an integer n, find the longest string possible by combining n number of consecutive words in the array
+if the given array is empty, or is shorter in length than n, or n is 0 or negative, return an empty string
+example:
+  strarr = ["tree", "foling", "trashy", "blue", "abcdef", "uvwxyz"]
+  n = 2
+  combine 2 consecutive strings of strarr and find the longest
+  "treefoling", "folingtrashy", "trashyblue", etc
+*/
+
+function longestConsec(strarr, k) {
+  //make sure the input is valid
+  if (strarr.length === 0 || k > strarr.length || k <= 0) {
+    return ""
+  }
+  //container for the longest word found by the for loop
+  let longest = ""
+
+  for (let i = 0; i < strarr.length - (k-1); i++) {               //the number of times the loop needs to run will dynamically change depending on the number of strings we're joining (k)
+    if (strarr.slice(i, k+i).join("").length > longest.length) {  //we slice the original array into temporary pieces to join the pieces and compare lengths, storing the highest one each time
+      longest = strarr.slice(i, k+i).join("")
+    }
+  }
+  return longest
+}
+
