@@ -1521,3 +1521,49 @@ function longestConsec(strarr, k) {
   return longest
 }
 
+//Day 53
+//8 - Back to basics, truthy and falsy
+function trueOrFalse(val){
+  if (val)    return "true";             
+  else     return "false";
+}
+
+//7 - make a simple calculator.  given two integers, a and b, and an operator, such as "add" return the appropriate value
+function arithmetic(a, b, operator){
+  switch (operator) {
+      case "add": return a+b; break;
+      case "subtract": return a-b; break;
+      case "multiply": return a*b; break;
+      case "divide" : return a/b; break;
+  }
+}
+
+//6 - Are they the "same"?
+/*
+P - two arrays, assure they're not empty.  are they of equal length?  must there be a value in a for each value in b?
+R - true or false;  true if array b's elements are all perfect squares of a's elements; false if they're not or if either array is empty, null, etc
+E - 
+    a = [121, 144, 19, 161, 19, 144, 19, 11]  
+    b = [132, 14641, 20736, 361, 25921, 361, 20736, 361]
+    returns true because all the numbers in b are squares of one of the values in a
+
+P - 
+  conditional - if the arrays are not equal length, empty, or null, etc, return false
+  sort both arrays
+  loop, 
+    conditional, comparing arrayA[i] to arrayB[i].  if any are false, return false
+*/
+
+function comp(array1, array2){
+  if (!array1 || !array2) {
+    return false
+  }
+  array1.sort((a,b) => a-b, 0)
+  array2.sort((a,b) => a-b, 0)
+  for (let i = 0; i < array1.length; i++) {
+    if (array1[i] * array1[i] !== array2[i]) {
+      return false
+    }
+  }
+  return true
+}
