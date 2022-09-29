@@ -1567,3 +1567,57 @@ function comp(array1, array2){
   }
   return true
 }
+
+//Day 54
+//8 - given an array of numbers, push odd numbers to one array, even numbers to another.  return an array containing both arrays [odd,even]
+function pickIt(arr){
+  let odd=[],even=[];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 0) {
+      even.push(arr[i])
+    } else {
+      odd.push(arr[i])
+    }
+  } 
+  return [odd,even];
+}
+
+//7 - given a URL, return the same URL minus anything that comes after the hash, if present.  ex: "www.codewars.com#about" --> "www.codewars.com"
+
+function removeUrlAnchor(url){
+  return url.split("#")[0]
+}
+
+//6
+/*
+P - number, greater than 0, integer
+R - string, equation, sum of result
+E - 567 -> 500 + 60 + 7
+P - 
+  String to find the length of the input number
+  for loop, going reverse direction
+  if number > 0, attach a number of zeroes appropriate to its position
+  if number is 0, skip it
+*/
+
+function expandedForm(num) {
+  let numString = String(num)
+  let result = []
+  for (let i = numString.length-1, j = 0; i >= 0; i--, j++) {
+    if (numString[i] != 0) {
+      result.unshift(numString[i] + "0".repeat(j))
+    }
+  }
+  return result.join(" + ")
+}
+
+//written another way:
+function expandedForm(num) {
+  num.toString()
+  .split("")
+  .reverse()
+  .map((a,i) => a * Math.pow(10, i))
+  .filter(a => a > 0)
+  .reverse()
+  .join(" + ")
+}
