@@ -1621,3 +1621,9 @@ function expandedForm(num) {
   .reverse()
   .join(" + ")
 }
+
+//Day 55
+// Given a total volume and the length of one side, determine if the cuboid has equal sides
+var cubeChecker = function(volume, side){
+  return volume > 0 ? volume === side ** 3 : false  //validate input by making sure volume is greater than 0
+}
