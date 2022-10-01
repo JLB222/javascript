@@ -1627,3 +1627,18 @@ function expandedForm(num) {
 var cubeChecker = function(volume, side){
   return volume > 0 ? volume === side ** 3 : false  //validate input by making sure volume is greater than 0
 }
+
+
+//Day 56
+//8 - Who ate the cookie?
+function cookie(x){
+  let whoDunIt
+  if (typeof(x) === "string") {
+    whoDunIt = "Zach"
+  } else if (typeof(x) === "number") {
+    whoDunIt = "Monica"
+  } else {
+    whoDunIt = "the dog"
+  }
+  return `Who ate the last cookie? It was ${whoDunIt}!`
+}
