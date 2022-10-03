@@ -1657,3 +1657,9 @@ function checkExam(array1, array2) {
  }
   return result < 0 ? 0 : result
 }
+
+//Day 58
+//8 - Regex basics.  Determine if the first letter of a number is 1,2, or 3.  If so, return true; otherwise return false
+function validateCode (code) {
+  return /^[123]/.test(code)
+}
