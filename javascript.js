@@ -1663,3 +1663,9 @@ function checkExam(array1, array2) {
 function validateCode (code) {
   return /^[123]/.test(code)
 }
+
+//Day 59
+//7 - given two numbers, greater than 0, a divisor and a boundary, return the highest number between the divisor and the boundary that is divisible by divisor.  Example: 2,7 should return 6
+function maxMultiple(divisor, bound){
+  return Math.floor(bound / divisor) * divisor
+}
