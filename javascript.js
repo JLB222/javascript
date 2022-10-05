@@ -1669,3 +1669,30 @@ function validateCode (code) {
 function maxMultiple(divisor, bound){
   return Math.floor(bound / divisor) * divisor
 }
+
+//Day 60
+//8 - given an array of numbers, if any of the numbers are the character codes for lowercase aeiou, replace those numbers with the appropriate letter
+function isVow(arr){
+  for (let i = 0; i < arr.length; i++) {
+    switch (arr[i]) {
+        case 97: arr[i] = "a"; break;
+        case 101: arr[i] = "e"; break;
+        case 105: arr[i] = "i"; break;
+        case 111: arr[i] = "o"; break;
+        case 117: arr[i] = "u"; break;
+    }
+  }
+  return arr
+}
+
+//alternate method
+function isVow(a){
+  let vowels = {
+    97: "a",
+    101: "e",
+    105: "i",
+    111: "o",
+    117: "u"
+  }
+  return a.map(num => vowels[num] || num)
+}
