@@ -1696,3 +1696,52 @@ function isVow(a){
   }
   return a.map(num => vowels[num] || num)
 }
+
+//Day 61
+//8 - Regexp - create a string method that returns true if the given object is a digit 0-9, otherwise return false
+String.prototype.digit = function() {
+  return /^\d$/.test(this)
+}
+
+//7 - given a string, return an array that consists of the indexes of any words in that string that are capital letters.  for example:  CodEWaRs  -->  [0,3,4,6]
+var capitals = function (word) {
+  let result = []
+  for (let i = 0; i < word.length; i++) {
+    if (word[i] === word[i].toUpperCase()) {
+      result.push(i)
+    }
+  }
+  return result
+}
+
+//6 - 
+// P - string
+// R - true or false; true if every letter of the alphabet is used at least once in the string, false otherwise;  ignore numbers and punctuation
+// E - The quick brown fox jumps over the lazy dog  ---> true
+// P 
+/*
+function isPangram(string) {
+  lowercase the string so we only have to test once
+  loop, checking to see if the string contains 1 letter of the alphabet at a time
+  iterate starting from charCode 97, ending at charCode 122
+  conditional; if the string includes 97, continue to 98, otherwise return false
+}
+*/
+function isPangram(string){
+  let lowerCaseString = string.toLowerCase()
+  for (let i = 97; i <= 122; i++) {
+    if (lowerCaseString.includes(String.fromCharCode(i))) {
+      continue
+    } else {
+      return false
+    }
+  }
+  return true
+}
+
+//alternate solution
+
+function isPangram(string){
+  string = string.toLowerCase()
+  return "abcdefghijklmnopqrstuvwxyz".split("").every(letter => string.includes(letter))
+}
