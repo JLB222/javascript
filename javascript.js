@@ -1754,3 +1754,10 @@ function uefaEuro2016(teams, scores){
   }
   return `At match ${teams[0]} - ${teams[1]}, ${scores[0] > scores[1] ? teams[0] : teams[1]} won!`
 }
+
+//Day 63
+//8 - Pillars;  given a number of pillars of given width and given distance apart, determine the distance from the first to last pillar
+function pillars(numPill, dist, width) {
+  let result = ((numPill -1) * dist * 100) + ((numPill -2) * width)
+  return result > 0 ? result : 0
+}
