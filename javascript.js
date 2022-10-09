@@ -1761,3 +1761,23 @@ function pillars(numPill, dist, width) {
   let result = ((numPill -1) * dist * 100) + ((numPill -2) * width)
   return result > 0 ? result : 0
 }
+
+//Day 64
+//8 - for a given string and optional price, find the total cost of printing said string on a billboard if it costs 30 per character by default and x per character if passed as an argument.  
+//Caveat: you're not allowed to use the * operator
+function billboard(name, price = 30){
+  let total = 0;
+  for (let i = 0; i < name.length; i++) {
+    total += price 
+  }
+  return total
+} 
+
+//7 - Write a function named sumDigits which takes a number as input and returns the sum of the absolute value of each of the number's decimal digits.
+function sumDigits(number) {
+  return Math.abs(number)
+   .toString()
+   .split("")
+   .map(Number)
+   .reduce((a,b) => a+b, 0)
+}
