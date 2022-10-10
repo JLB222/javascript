@@ -1781,3 +1781,42 @@ function sumDigits(number) {
    .map(Number)
    .reduce((a,b) => a+b, 0)
 }
+
+//Day 65
+function counter(arr) {
+  let counts = {}
+  for (let elem of arr) {
+    counts[elem] = (counts[elem] || 0) + 1
+  }
+}
+
+function vowelReplacer(str) {
+  let vowels = "aeiou".split("")
+  let newStr = str.split("")
+  for (let i = 0; i < newStr.length; i++) {
+    if (vowels.includes(str[i])) {
+      newStr[i] = "!"
+    }
+  }
+  return newStr.join("")
+}
+
+function inPlaceTest(arr) {
+  let thing = arr
+  console.log(thing)
+  let thang = thing.sort()
+  console.log(thing)
+  console.log(thang)
+}
+
+//7 - Simple Fun #176 - given a string, reverse it and omit all non-alphabetic characters.
+function reverseLetter(str) {
+  let arr = str.split("")
+  let result = []
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].toUpperCase() != arr[i].toLowerCase()) {
+      result.push(arr[i])
+    }
+  }
+  return result.reverse().join("")
+}
