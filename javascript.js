@@ -1820,3 +1820,25 @@ function reverseLetter(str) {
   }
   return result.reverse().join("")
 }
+
+//Day 66
+//7 - fix string case
+/* 
+P - string of letters, mixed uppercase and lowercase
+R - string of all upper or lowercase, depending on which would take the least number of changes.  NOTE:  if the number of upper and lower is equal, change it to lowercase
+E - "coDe" ->> "code" because it changes only one letter
+P - 
+  determine the total number of letters
+  determine how many are capital; loop
+  is that the majority? if so capitalize the string, otherwise lowercase it
+*/
+function solve(s){
+  let capitalCounter = 0
+  for (let i = 0; i < s.length; i++) {
+    if (s.charCodeAt(i) >=65 && s.charCodeAt(i) <= 90) {
+      capitalCounter += 1
+    }
+  }
+  let majorityCapital = capitalCounter > s.length / 2
+  return majorityCapital ? s.toUpperCase() : s.toLowerCase()
+}
