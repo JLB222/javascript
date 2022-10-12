@@ -1842,3 +1842,28 @@ function solve(s){
   let majorityCapital = capitalCounter > s.length / 2
   return majorityCapital ? s.toUpperCase() : s.toLowerCase()
 }
+
+//Day 67
+//6 - 
+//array of 3 nums, target num
+//array of length target, starting with the numbers from the given array
+//[1,2,3] 6 => [1,2,3,6,11,20]
+//[4,5,6] 8 => [4,5,6,15,26,47,88,161]
+
+//let result = []
+//if target < 3, loop, result.push(i)
+//if target > 3, loop, signature.push(signature[i] + signature[i+1] + signature[i+2])
+function tribonacci(signature,n){
+  let baseArray = signature
+  let result = []
+  if (n <= 3) {
+    for (let i = 0; i < n; i++) {
+      result.push(baseArray[i])
+    }
+  } else {
+    for (let i = 0; i < n - 3; i++) {
+     baseArray.push(baseArray[i] + baseArray[i+1] + baseArray[i+2])
+    }
+  }
+  return n <=3 ? result : baseArray
+}
