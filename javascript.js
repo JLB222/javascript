@@ -1867,3 +1867,67 @@ function tribonacci(signature,n){
   }
   return n <=3 ? result : baseArray
 }
+
+
+//num, always > 1, no floats, 
+//console.log every integer from 1 to that num; if divisible by 3: "Fizz"; if divisible by 5: "Buzz"; if divisible by 3&5: "Fizz Buzz"
+//6 -> 1,2,Fizz,4,Buzz, Fizz
+//15 -> 1,2,Fizz, 4, Buzz, Fizz, 7, 8, Fizz, Buzz, 11, Fizz, 13,14, Fizz Buzz
+
+function fizzBuzz(num) {
+  for (let i = 1; i <= num; i++) {
+    if (i % 15 === 0) {
+      console.log("Fizz Buzz")
+    } else if( i % 5 === 0) {
+      console.log("Buzz")
+    } else if(i % 3 === 0) {
+      console.log("Fizz")
+    } else {
+      console.log(i)
+    }
+  }
+}
+
+fizzBuzz(6)   //1, 2, Fizz, 4, Buzz, Fizz
+fizzBuzz(15)  //1,2,Fizz, 4, Buzz, Fizz, 7, 8, Fizz, Buzz, 11, Fizz, 13,14, Fizz Buzz
+fizzBuzz(100) 
+
+//Day 68
+
+function characterMaker(name, race, element, ult) {
+  this.name = name
+  this.race = race
+  this.element = element
+  this.ult = function() {
+    console.log(`Using ${ult}`)
+  }
+}
+
+//6 - Unique in Order
+/*
+string or array of numbers or letters
+array, each number or letter from given, no duplicates next to each other
+"abbcccddddeeeeea" -> ["a","b","c","d","e","a"]
+
+loop
+push 1st letter into result array; assign that letter to a variable
+check to see if 2nd letter is === said variable
+  if not, push it and change variable to new letter
+
+*/
+var uniqueInOrder=function(iterable){
+  let result = []
+  let placeholder = ""
+  for (let i = 0; i < iterable.length; i++) {
+    if (iterable[i] !== placeholder) {
+      placeholder = iterable[i]
+      result.push(iterable[i])
+    }
+  }
+  return result
+}
+
+//alternate - spread operator, filter
+var uniqueInOrder=function(iterable){
+  return [...iterable].filter((a, i) => a !== iterable[i-1])
+}
