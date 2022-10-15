@@ -1949,3 +1949,31 @@ function findEvenIndex(arr){
   }
   return -1
 }
+
+//Day 70
+//6 - Build Pyramid
+/*
+Build a pyramid-shaped tower, as an array/list of strings, given a positive integer number of floors. A tower block is represented with "*" character.
+3 floors:
+    [
+      "  *  ",
+      " *** ", 
+      "*****"
+    ]
+6 floors:
+    [
+      "     *     ", 
+      "    ***    ", 
+      "   *****   ", 
+      "  *******  ", 
+      " ********* ", 
+      "***********"
+    ]
+*/
+function towerBuilder(nFloors) {
+  let result = []
+  for (let i = nFloors, j = 0; i > 0; i--, j++) {
+    result.unshift(" ".repeat(j) + "*".repeat(i * 2 - 1) + " ".repeat(j))
+  }
+  return result
+}
