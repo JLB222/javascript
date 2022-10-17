@@ -2005,3 +2005,19 @@ function breakChocolate(n,m) {
 var breakChocolate = function(n, m) {
   return Math.max(0, n*m - 1);
 }
+
+//Day 71
+//Using regex, replace all the vowels in a string with a "!"
+function switchVowel(str) {
+  return str.replace(/[aeiou]/gi, "!")
+}
+
+//given a single camelCase word, return those words separated by a space
+function solution(string) {
+  for (let i = 0; i < string.length; i++) {
+    if (string[i] === string[i].toUpperCase()) {
+      return string.slice(0,i) + " " + string.slice(i)
+    }
+  }
+  return null
+}
