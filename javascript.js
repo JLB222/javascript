@@ -2021,3 +2021,15 @@ function solution(string) {
   }
   return null
 }
+
+//Day 72
+
+//8 - check to see if two input strings are both uppercase or both lowercase.  if they match case, return 1; if they don't, return 0;  if either one aren't letters, return -1
+function sameCase(a, b){
+  if (a.toUpperCase() === a.toLowerCase() || b.toUpperCase() === b.toLowerCase()) {
+    return -1
+  }
+  let checkA = 65 <= a.charCodeAt(0) && a.charCodeAt(0) <= 90
+  let checkB = 65 <= b.charCodeAt(0) && b.charCodeAt(0) <= 90
+  return checkA === checkB ? 1 : 0
+}
