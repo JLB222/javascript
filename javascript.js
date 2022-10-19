@@ -2033,3 +2033,75 @@ function sameCase(a, b){
   let checkB = 65 <= b.charCodeAt(0) && b.charCodeAt(0) <= 90
   return checkA === checkB ? 1 : 0
 }
+
+//Day 73
+//Declaring new set objects
+let a = "abcdefg"
+let b = "hijklmn"
+let thing = new Set(a+b) 
+//creates an object with 14 entries, a-n, as single letters
+let thang = new Set()
+thang.add(a+b) 
+//creaats an object with 1 entry that's a combination of a and b into one concatenated string
+
+//Create a heading in react
+function Heading(props) {
+  <h1>{props.message}</h1>
+}
+
+//6 - The Supermarket Queue
+/*
+an array of numbers, representing time per person; a num representing number of tills open
+a single number, representing total time necessary
+[5,3,4], 1 --> 12
+[6,4,8,2,4,9,1], 4 --> 13
+
+array of people (numbers)
+array of numbers, representing ppl at tills
+slice in n numbers from people array*
+counter variable; counts iterations
+use a loop; each iteration represents 1 second
+  this means counter can only increment when i has gone through all the tills; so when i = n-1, reset i to 0 
+for each iteration, reduce the values inside the tills array by 1
+if any values in the tills array are 0, remove them and add a new number from the people array (removing them from the people array entirely)
+loop is only done when tills array.length is 0 (and therefore people array.length is also 0)
+
+I couldn't get this working.  I think there's something under the hood, with arrays, that are throwing me off.
+I recall reading that mutating arrays can cause hard-to=debug problems... and I think I've found one.  Or I'm just dumb.
+
+function queueTime(customers, n) {
+  let people = customers
+  let tills = people.slice(0,n)
+  let counter = 0
+  for (let i = 0; tills.length > 0; i++) {
+    tills[i] -= 1
+    if (tills[i] <= 0) {
+      tills[i] = people.shift() ? people.shift() : "empty"
+    }
+    if (tills[i] === "empty") {
+      tills.splice(i,1)
+    }
+    if (i === n-1) {   //problem code
+      counter++
+      i = 0
+    }
+  }
+  return counter
+}
+
+Problem:  At least one problem I can see is how I have it set to only increment the counter when i === n-1.  For the very last element pushed from people to tills, it won't increment because i will always be 0 when it's the very last element to get rid of.
+*/
+
+
+
+function queueTime(customers, n) {
+  let tills = new Array(n).fill(0)  //create a new array called tills, fill it with zeroes
+  for (let customerTime of customers) {     //loop through customers array, referring to each instance as "time"
+    let index = tills.indexOf(Math.min(...tills)) //let index = the index of the tills array's currently smallest number (specifically, the first occurrence of that number)
+    tills[index] += customerTime  //set the tills array's currently smallest number to itself + the customer's time
+  }
+  return Math.max(...w)
+}
+
+//ex:  [5,6,7,8], 2
+//[0,0] --> [5,0] --> [5,6] --> [12,6] --> [12,14]
