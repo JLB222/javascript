@@ -2105,3 +2105,25 @@ function queueTime(customers, n) {
 
 //ex:  [5,6,7,8], 2
 //[0,0] --> [5,0] --> [5,6] --> [12,6] --> [12,14]
+
+//Day 74 
+//function declaration vs function expression vs fat arrow
+function doTheThing(params) {
+  console.log("Do the thing")
+}
+
+function doTheThang(params) {
+  console.log("Do the thang");
+}
+
+const doTheTheng = params => console.log("Do the theng")
+
+//6 - Run it back: Supermarket Queue
+function queueTime(customers, n) {
+  let tills = new Array(n).fill(0)  //create a new array of n length, fill it with zeroes
+  for (let customer of customers) {  //loop through the customers array one at a time
+    let index = tills.indexOf(Math.min(...tills))  //find the index of the smallest number in the tills array
+    tills[index] += customer  //add the current customer's time to the smallest number of the tills array
+  }
+  return Math.max(...tills)  //return the highest number in the tills array
+}
