@@ -2127,3 +2127,24 @@ function queueTime(customers, n) {
   }
   return Math.max(...tills)  //return the highest number in the tills array
 }
+
+//Day 75
+function commaToSpace(str) {
+  return str.split(",").slice(0,-1).join(" ") || null
+}
+
+function replaceVowels(str) {
+  let vowels = "aeiou".split("")
+  let newStr = str.split("")
+  for (let i = 0; i < str.length; i++) {
+    if (vowels.includes(newStr[i])) {
+      newStr[i] = "!"
+    }
+  }
+  return newStr.join("")
+}
+
+//8 - Contamination #1 - given a long string and a single-letter string, return a new string of the first's length that consists solely of the letter in the second
+function contamination(text, char){
+  return char.repeat(text.length)
+}
