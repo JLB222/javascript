@@ -2148,3 +2148,13 @@ function replaceVowels(str) {
 function contamination(text, char){
   return char.repeat(text.length)
 }
+
+//Day 76
+//8 - Thinkful - Number Drills: Blue and Red Marbles
+//you have a bag of marbles, some blue some red.  given the number of blue and red that start in the bag and the number of each pulled out so far, calculate the probability of pulling a blue one on the next pull
+function guessBlue(blueStart, redStart, bluePulled, redPulled) {
+  let totalMarbles = blueStart + redStart - bluePulled - redPulled
+  let blueLeft = blueStart - bluePulled
+  
+  return blueLeft / totalMarbles
+}
