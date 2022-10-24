@@ -2173,3 +2173,43 @@ function leo(oscar){
   }
 }
 
+
+//Day 78
+//Create a function that accepts 2 string arguments and returns an integer of the count of occurrences the 2nd argument is found in the first one.
+function countLetterInWord(str1, str2) {
+  return str1.split(str2).length -1
+}
+
+//given a string that is a sequence of numbers separated by commas, return the same sequence but with the first and last number removed and now separated by spaces.  if removing the first and last numbers makes it an empty string, return null instead
+function trimNumberString(str) {
+  return str.split(",").slice(1,-1).join(" ") || null
+}
+
+//Count the number of occurrences of each element in an array.
+let arr2189 = [1,2,3,3,3,4,4,4,4,4,1,5,5,2,3]
+function countElements(arr) {
+  let counter = {}
+  for (let element of arr) {
+    counter[element] = (counter[element] || 0) +1
+  }
+  return counter
+}
+
+//3 ways to create javascript function
+//function declaration
+function functionName1() {
+  //do the thing
+}
+
+//function expression
+const functionName2 = function() {
+  //do the thing
+}
+
+//fat arrow syntax
+const functionName3 = (param1, param2) => {}//do the thing; curly brackets if there's more than one statement
+
+//8 - Duck Duck Goose
+function duckDuckGoose(players, goose) {
+  return players[(goose-1) % players.length].name
+}
