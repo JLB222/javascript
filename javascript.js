@@ -2213,3 +2213,25 @@ const functionName3 = (param1, param2) => {}//do the thing; curly brackets if th
 function duckDuckGoose(players, goose) {
   return players[(goose-1) % players.length].name
 }
+
+//Day 79
+//7 - Given an array of digits, return the smallest possible number you can make by only using each number in the array once
+function minValue(values){
+  values.sort((a,b) => a-b, 0)
+  let lowest = []
+  for (let number of values) {
+    if (lowest.includes(number.toString())) {
+      continue
+    } else {
+      lowest.push(number.toString())
+    }
+  }
+  return Number(lowest.join(""))
+}
+
+//alternate way:
+
+function minValue(values) {
+  let arr = Array.from(new Set(values))
+  return Number(arr.sort().join(""))
+}
