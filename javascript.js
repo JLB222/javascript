@@ -2235,3 +2235,19 @@ function minValue(values) {
   let arr = Array.from(new Set(values))
   return Number(arr.sort().join(""))
 }
+
+//Day 80
+//constructor function
+function CharMaker(name, race, element, ult) {
+    this.name = name,
+    this.race = race,
+    this.element = element
+    this.ult = function() {
+      console.log(`Using ${ult}`)
+    }
+}
+
+//8 - Spit out the right quote depending on which dumbass won the fight:
+function quote(fighter) {
+  return fighter.toLowerCase() === "george saint pierre" ? "I am not impressed by your performance." : "I'd like to take this chance to apologize.. To absolutely NOBODY!"
+}
