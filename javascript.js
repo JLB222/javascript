@@ -2251,3 +2251,11 @@ function CharMaker(name, race, element, ult) {
 function quote(fighter) {
   return fighter.toLowerCase() === "george saint pierre" ? "I am not impressed by your performance." : "I'd like to take this chance to apologize.. To absolutely NOBODY!"
 }
+
+//Day 81
+//6 - Playing with digits
+//horrible math problem horribly explained
+function digPow(num, power){
+  let sum = num.toString().split("").map(Number).map((n, i) => n**(power+i)).reduce((a,b) => a+b, 0)
+  return sum % num === 0 ? sum/num : -1
+}
