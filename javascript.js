@@ -2259,3 +2259,10 @@ function digPow(num, power){
   let sum = num.toString().split("").map(Number).map((n, i) => n**(power+i)).reduce((a,b) => a+b, 0)
   return sum % num === 0 ? sum/num : -1
 }
+
+//Day 82
+//convert a letter to its ASCII value
+function getASCII(c){
+  return c.charCodeAt(0)
+}
+
