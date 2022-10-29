@@ -2266,3 +2266,8 @@ function getASCII(c){
   return c.charCodeAt(0)
 }
 
+//Day 83
+//Create a function that converts its input into a number.  If this is not possible, return null.  Expect all input types, not just numbers.
+function parseF(s) {
+  return isNaN(parseFloat(s)) ? null : parseFloat(s);
+}
