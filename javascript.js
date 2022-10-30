@@ -2271,3 +2271,22 @@ function getASCII(c){
 function parseF(s) {
   return isNaN(parseFloat(s)) ? null : parseFloat(s);
 }
+
+//Day 84
+//7 - Alternate Caps
+//given a lowercase string w/ no spaces, return an array of two strings.  the first string should capitalize even-index numbers, and the second should capitalize odd-index numbers
+function capitalize(s){
+  let evens = ""
+  let odds = ""
+  
+  for (let i = 0; i < s.length; i++) {
+    if ([i] % 2 === 0) {
+      evens += s[i].toUpperCase()
+      odds += s[i]
+    } else {
+      evens += s[i]
+      odds += s[i].toUpperCase()
+    }
+  }
+  return [evens, odds];
+}
