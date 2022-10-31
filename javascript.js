@@ -2290,3 +2290,21 @@ function capitalize(s){
   }
   return [evens, odds];
 }
+
+//Day 85
+class CharMaker {
+  constructor(name, race, element, ult) {
+    this.name = name,
+    this.race = race,
+    this.element = element
+    this.ult = ult
+  }
+  ult() {
+    console.log(`Using ${this.ult}!`)
+  }
+}
+
+//8 - type of sum: Return the type of the sum of the two arguments
+function typeOfSum(a, b) {
+  return typeof (a+b)
+}
