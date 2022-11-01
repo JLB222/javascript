@@ -2308,3 +2308,25 @@ class CharMaker {
 function typeOfSum(a, b) {
   return typeof (a+b)
 }
+
+//Day 86
+//8 - Return the first n elements of a given array
+function first(arr, n = 1) {
+  return arr.slice(0, n)
+}
+
+//8 - template literals
+function templateStrings(obj, feature) {
+  return `${obj} are ${feature}`
+}
+
+//8 - Compare with margin
+function closeCompare(a, b, margin = 0){
+  if (margin >= Math.abs(a-b)) {
+    return 0
+  } else if (a < b) {
+    return -1
+  } else if (a > b) {
+    return 1
+  }
+}
