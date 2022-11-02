@@ -2330,3 +2330,30 @@ function closeCompare(a, b, margin = 0){
     return 1
   }
 }
+
+//Day 87
+//8 - NBA full 48 min average.  Given a player's avg points per game and minutes played per game, extrapolate how many points they WOULD have scored if they had played the entire 48-minute game. If 0, return 0.
+function pointsPer48(ppg, mpg) {
+  let ratio = ppg/mpg
+  return Math.round(ratio*48*10) / 10 || 0
+}
+
+//8 - Object Oriented Piracy - Given a ship's total draft and crew, determine if there's enough loot (more than 20 draft worth) for the ship to be worth looting. 1 crew = 1.5 draft
+function Ship(draft,crew) {
+  this.draft = draft;
+  this.crew = crew;
+   
+  this.isWorthIt = function() {
+    return (this.draft - (this.crew * 1.5)) > 20
+  }
+ }
+
+ //Perhaps it's better practice to add the isWorthIt method to a prototype so it's not duplicated every time a ship is made
+ function Ship(draft,crew) {
+  this.draft = draft;
+  this.crew = crew;
+ }
+ 
+ Ship.prototype.isWorthIt = function() {
+   return (this.draft - (this.crew * 1.5)) > 20
+ }
