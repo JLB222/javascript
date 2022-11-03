@@ -2357,3 +2357,19 @@ function Ship(draft,crew) {
  Ship.prototype.isWorthIt = function() {
    return (this.draft - (this.crew * 1.5)) > 20
  }
+
+ //Day 88
+
+ //Debug the function to make it return 32
+ function orderOperations () {
+  return 2 + 2 * 2 + 2 * 2
+}
+function orderOperations () {
+  return (2 + 2) * (2 + 2) * 2
+}
+
+//given a number, multiply that number by 5 raised to a power equal to the number of digits in that number & return the result
+function multiply(number){
+  let power = Math.abs(number).toString().length
+  return number * (5**power)
+}
