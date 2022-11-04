@@ -2373,3 +2373,29 @@ function multiply(number){
   let power = Math.abs(number).toString().length
   return number * (5**power)
 }
+
+//Day 89
+//8 - Joining strings; combine two strings with a space separating them.  You're not allowed to use:  + , .concat() , or .join()
+function joinStrings(string1, string2){
+  return `${string1} ${string2}`
+}
+
+//8 - True or False? ; Return false without ever actually saying "false"
+function ifChuckSaysSo(){
+  return !true
+}
+
+//8 - Training JS#9: while loops;  given a string and a number, use a while loop to alternate between adding a * to the front of the given string and to the back of it.
+function padIt(str,n){
+  let arr = str.split("")
+  let i = 0
+  while (i < n) {
+    if (i % 2) {
+      arr.push("*")
+    } else {
+      arr.unshift("*")
+    }
+    i++
+  }
+  return arr.join("")
+}
