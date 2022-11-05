@@ -2399,3 +2399,24 @@ function padIt(str,n){
   }
   return arr.join("")
 }
+
+//Day 90 - 
+//8 - ASCII Total:  Given a string, return the sum of all characters as an integer.
+function uniTotal (string) {
+  let total = 0
+  let strArr = string.split("")
+  for (let i = 0; i < string.length; i++) {
+    total += strArr[i].charCodeAt(0)
+  }
+  return total
+}
+
+//alternate:
+function uniTotal (str) {
+  return str.split("").map(letter => letter.charCodeAt()).reduce((a,b) => a+b,0)
+}
+
+//8 - The "if" function:  given a boolean and two functions as arguments, execute the first function if the if function returns true, or the 2nd function if its false
+function _if(bool, func1, func2) {
+  return bool ? func1() : func2()
+}
