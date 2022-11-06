@@ -2420,3 +2420,15 @@ function uniTotal (str) {
 function _if(bool, func1, func2) {
   return bool ? func1() : func2()
 }
+
+//Day 91
+//8 - Classy Classes
+class Person {
+  constructor(name, age) {
+    this.name = name
+    this.age = age
+  }
+  get info() {
+    return `${this.name}s age is ${this.age}`
+  }
+}
