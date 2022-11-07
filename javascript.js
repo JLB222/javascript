@@ -2432,3 +2432,31 @@ class Person {
     return `${this.name}s age is ${this.age}`
   }
 }
+
+//Day 92 - 
+//8 - Loop, Break, Continue
+function grabDoll(dolls){
+  var bag=[];
+  for (let i = 0; i < dolls.length; i++) {
+    if (dolls[i] === "Hello Kitty" || dolls[i] === "Barbie doll") {
+      if (bag.length >= 3) {
+        break;
+      } else {
+        bag.push(dolls[i])
+        }
+    } else {continue}
+  }
+  return bag;
+}
+
+//8 - Evil or Odious;  convert a number to its binary format;  if there is an even number of 1s in this format, it's evil.  Otherwise it's odious.
+function evil(n) {
+  let number = n.toString(2).split("")
+  let counter = 0
+  for (let i = 0; i < number.length; i++) {
+    if (number[i] === "1") {
+      counter++
+    }
+  }
+    return counter % 2 ? "It's Odious!" : "It's Evil!"
+}
