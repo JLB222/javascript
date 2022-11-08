@@ -2460,3 +2460,19 @@ function evil(n) {
   }
     return counter % 2 ? "It's Odious!" : "It's Evil!"
 }
+
+//Day 93
+//count the number of occurences of each value in an object
+let nArr = [1,1,1,2,2,3,3,3,3,4,5,5,6,7,7,7,8,8,9]
+function objCounter(arr) {
+  let result = {}
+  for (let number of arr) {
+    result[number] = (result[number] || 0) + 1
+  }
+  return result
+}
+
+//using regex, replace all the vowels in a string with a !
+function repVow(str) {
+  return str.replace(/[aeiou]/gi, "!")
+}
