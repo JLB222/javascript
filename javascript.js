@@ -2476,3 +2476,18 @@ function objCounter(arr) {
 function repVow(str) {
   return str.replace(/[aeiou]/gi, "!")
 }
+
+
+//Day 94
+//Create a function that takes two strings; find the number of occurrences of the 2nd string in the first string.
+
+function occurrenceCounter(str1, str2) {
+  return str1.split(str2).length -1
+}
+
+//8 - Fuel Calculator
+//For every two litres of fuel you buy, you get a 5 cent discount, up to a max of 25 cents off if you buy 10 or more litres.  Given the number of litres purchased and the current fuel price, calculate the total cost
+function fuelPrice(litres, pricePerLitre) {
+  let discount = Math.min(Math.floor(litres/2), 5) * 0.05
+  return Number((litres * (pricePerLitre - discount)).toFixed(2))
+}
