@@ -2491,3 +2491,35 @@ function fuelPrice(litres, pricePerLitre) {
   let discount = Math.min(Math.floor(litres/2), 5) * 0.05
   return Number((litres * (pricePerLitre - discount)).toFixed(2))
 }
+
+
+//Day 95
+//factory function
+function charMake(name, race, ult) {
+  return {
+    name: name,
+    race: race,
+    ult: function() {
+      return ult
+    }
+  }
+}
+//constructor function
+function CharMake2(name, race, ult) {
+  this.name = name,
+  this.race = race
+  this.ult = function() {
+    return ult
+  }
+}
+//class constructor
+class CharMake3 {
+  constructor(name,race,ult) {
+    this.name = name
+    this.race = race
+    this.ult = ult
+  }
+  ult() {
+    return this.ult
+  }
+}
