@@ -2523,3 +2523,18 @@ class CharMake3 {
     return this.ult
   }
 }
+
+//convert an array of stringed numbers into an array of numbers
+function stringToNum(arr) {
+  return arr.map(Number)
+}
+
+//Day 96
+function inAscOrder(arr) {
+  for(let i = 0; i < arr.length - 1; i++) {
+    if (arr[i] > arr[i+1]) {
+      return false; 
+    }
+  }
+  return true;
+}
