@@ -2538,3 +2538,9 @@ function inAscOrder(arr) {
   }
   return true;
 }
+
+//Day 97
+//Type coercion:  given two inputs, return true if they are the same character, false otherwise.  You're not allowed to use explicit type conversion like Number() or String()
+function add(a, b){
+	return a==b
+}
