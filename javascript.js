@@ -2544,3 +2544,14 @@ function inAscOrder(arr) {
 function add(a, b){
 	return a==b
 }
+
+//Day 98
+//8 - Barking Mad:  using objects, teach Snoopy & Scooby how to bark
+function Dog (breed) {
+  this.breed = breed;
+  this.bark = function() {  //adding this to a Dog prototype might be better, to prevent this line from being created for every Dog object ever made.
+    return "Woof"
+  }
+}
+var snoopy = new Dog("Beagle");
+var scoobydoo = new Dog("Great Dane");
