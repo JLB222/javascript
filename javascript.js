@@ -2555,3 +2555,25 @@ function Dog (breed) {
 }
 var snoopy = new Dog("Beagle");
 var scoobydoo = new Dog("Great Dane");
+
+//Day 99
+// Create a function that takes a number as an argument and returns a grade based on that number.
+function grader(score) {
+  if (score > 1) {
+    return "F"
+  }
+  if (score >= 0.9) {
+    return "A"
+  }
+  if (score >= 0.8) {
+    return "B"
+  }
+  if (score >= 0.7) {
+    return "C"
+  }
+  if (score >= 0.6) {
+    return "D"
+  } else {
+    return "F"
+  }
+}
