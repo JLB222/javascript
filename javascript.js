@@ -2577,3 +2577,33 @@ function grader(score) {
     return "F"
   }
 }
+
+//Day 100
+//3 Ways to create a function in JS
+//function declaration
+function functionName(params) {
+  console.log("code here")
+}
+//function expression
+let functionName = function(params) {
+  console.log("code here")
+}
+//fat arrow syntax
+let functionName = ((param1,param2) => console.log("code here"))  //use curly brackets if there's more than one line of code; parentheses around the params are only necessary if there's more than one parameter
+
+//FIZZBUZZ - 3,5,15
+
+function fizzBuzz(n) {
+  for (let i = 1; i <= n; i++) {
+    if (i % 15 === 0) {
+      console.log("FizzBuzz")
+    } else if (i % 5 === 0) {
+      console.log("Buzz")
+    } else if (i % 3 === 0) {
+      console.log("Fizz")
+    } else {
+      console.log(i)
+    }
+  }
+  return "Job done"
+}
