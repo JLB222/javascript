@@ -2607,3 +2607,22 @@ function fizzBuzz(n) {
   }
   return "Job done"
 }
+
+//Day 101
+//7 - Even numbers in an array
+//Given an array of numbers, return a new array of length number containing the last even numbers from the original array (in the same order). The original array will be not empty and will contain at least "number" even numbers.
+function evenNumbers(array, number) {
+  let evens = []
+  for (let i = 0; i < array.length; i++) {  //potential alternative: (let i = array.length-1; evens.length === number; i--)
+    if (array[i] % 2 === 0) {
+      evens.push(array[i])
+    }
+  }
+  let result = []
+  for (let i = 0; i < number; i ++) {
+    result.unshift(evens.pop())
+  }
+  return result
+}
+
+//optimization: if the array is large, you waste a lot of time finding all the evens.  My original idea was a little better: loop starting from the end of the array until you find number of even numbers
