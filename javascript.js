@@ -2626,3 +2626,24 @@ function evenNumbers(array, number) {
 }
 
 //optimization: if the array is large, you waste a lot of time finding all the evens.  My original idea was a little better: loop starting from the end of the array until you find number of even numbers
+
+
+//Day 102
+//6 - Count characters in a string
+function count (string) {  
+  let result = {}
+  let arr = string.split("")
+  for (let i = 0; i < arr.length; i++) {
+    result[arr[i]] = (result[arr[i]] || 0) + 1
+  }
+  return result
+}
+
+//alternative
+function count (string) {  
+  var count = {};
+  string.split('').forEach(function(s) {
+     count[s] ? count[s]++ : count[s] = 1;
+  });
+  return count;
+}
