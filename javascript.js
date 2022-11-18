@@ -2647,3 +2647,16 @@ function count (string) {
   });
   return count;
 }
+
+//Day 103
+class GBFMaker {
+  constructor(name, race, element, ult) {
+    this.name = name
+    this.race = race
+    this.element = element
+    this.ult = ult
+  }
+  ult() {
+    console.log(this.ult)
+  }
+}
