@@ -2660,3 +2660,9 @@ class GBFMaker {
     console.log(this.ult)
   }
 }
+
+//Day 104
+//given a string, ensure that it ends with a question mark.  if it already does, leave it alone
+function ensureQuestion(s) {
+  return s[s.length-1] === "?" ? s : s + "?"
+}
