@@ -2666,3 +2666,14 @@ class GBFMaker {
 function ensureQuestion(s) {
   return s[s.length-1] === "?" ? s : s + "?"
 }
+
+//Day 105
+//7 - Sum of Minimums
+//Given an array of arrays, each inner array filled with numbers, find the sum of each inner array's smallest number
+function sumOfMinimums(arr) {
+  let sum = 0
+  for (let i = 0; i < arr.length; i++) {
+    sum += Math.min(...arr[i])
+  }
+  return sum
+}
