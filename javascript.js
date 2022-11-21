@@ -2677,3 +2677,12 @@ function sumOfMinimums(arr) {
   }
   return sum
 }
+//alternatively, could also use the reduce method
+
+//Day 106
+//8 - Slope:  Given an array of 4 numbers (a,b) & (c,d), return the slope as a string.  If it's 0, return "undefined"
+function slope(points){
+  let x = points[2]-points[0]
+  let y = points[3]-points[1]
+  return x ? (y/x).toString() : "undefined"
+}
