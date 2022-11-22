@@ -2686,3 +2686,30 @@ function slope(points){
   let y = points[3]-points[1]
   return x ? (y/x).toString() : "undefined"
 }
+
+//Day 107
+//replace vowels with a "!"
+function repVow(str) {
+  let vowels = "aeiou".split("")
+  let word = str.split("")
+  for (let i = 0; i < word.length; i++) {
+    if (vowels.includes(word[i])) {
+      word[i] = "!"
+    }
+  }
+  return word.join("")
+}
+
+//for-in loop;  given an object, return (inside an array) all keys and values that have a length of 5
+function giveMeFive(obj){
+  let result = []
+  for (let key in obj) {
+    if (key.length === 5) {
+      result.push(key)
+    }
+    if (obj[key].length === 5) {
+      result.push(obj[key])
+    }
+  }
+  return result
+}
