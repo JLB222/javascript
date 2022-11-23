@@ -2713,3 +2713,22 @@ function giveMeFive(obj){
   }
   return result
 }
+
+//Day 108
+//refactor the following code using the ternary operator and less than 137 characters:
+function describeAge(age) {
+    if (age <= 12) {
+      return "You're a kid";
+    } else if (age >= 13 && age <= 17) {
+      return "You're a teenager";
+    } else if (age >= 18 && age <= 64) {
+      return "You're an adult";
+    } else {
+      return "You're an elder";
+    }
+}
+
+//solution:
+function describeAge(age) {
+  return "You're a(n) " + (age < 13 ? "kid" : age < 18 ? "teenager" : age < 65 ? "adult" : "elderly")
+}
