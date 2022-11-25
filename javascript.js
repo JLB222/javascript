@@ -2738,3 +2738,23 @@ function describeAge(age) {
 var arrowFunc = function(arr) {
   return arr.map(num => String.fromCharCode(num)).join('');
 }
+
+//Day 110
+//6 - Two Sum
+//given an array of numbers and a target number, return an array containing the two indices of two numbers in the array that add up to the target number
+function twoSum(numbers, target) {
+  let first = 0;
+  let second = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    for (let j = 0; j < numbers.length; j++) {
+      if (target - numbers[i] === numbers[j]) {
+        first = i
+        second = j
+        break;
+      }
+    }
+  }
+  return [first, second]
+}
+
+//NOT an optimal solution.  Nested for loops are icky
