@@ -2758,3 +2758,22 @@ function twoSum(numbers, target) {
 }
 
 //NOT an optimal solution.  Nested for loops are icky
+
+//Day 111
+//Create a function that accepts 2 string arguments and returns an integer of the count of occurrences the 2nd argument is found in the first one.
+function check(str1,str2) {
+  return str1.split(str2).length -1
+}
+
+//extend a class
+class Animal {
+  constructor(name) {
+    this.name = name
+  }
+}
+class Dog extends animal {
+  constructor(name, breed) {
+    super(name)
+    this.breed = breed
+  }
+}
