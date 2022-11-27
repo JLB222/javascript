@@ -2777,3 +2777,18 @@ class Dog extends animal {
     this.breed = breed
   }
 }
+
+//Day 112
+//7 - Minimize Sum of Array
+//Given an even-length array of positive numbers (including 0), calculate the lowest possible sum when you are muliplying pairs of these numbers
+function minSum(arr) {
+  let arr2 = arr 
+  arr2.sort((a,b) => a-b,0)  //sort the input array 
+  let arr1 = arr2.splice(0, arr2.length/2).reverse()  //cut the array in half, and reverse the order of one of the halves
+  
+  let result = 0  //the goal is to multiply the lowest number in the array by the highest, the 2nd lowest with the 2nd highest, etc (that's why we reversed one of the array halves)
+  for (let i = 0; i < arr1.length; i++) {
+    result += arr1[i] * arr2[i]
+  }
+  return result
+}
