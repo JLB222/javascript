@@ -2792,3 +2792,31 @@ function minSum(arr) {
   }
   return result
 }
+
+//Day 113
+//Count the number of occurrences of each element in an array.  You don't know how many elements there are, and you need to count them all.
+function countThings(arr) {
+  let counter = {}
+  for (let i = 0; i < arr.length; i++) {
+    counter[arr[i]] = (counter[arr[i]] || 0) + 1
+  }
+  return counter
+}
+
+//or 
+
+function countThings(arr) {
+  let counter = {}
+  for (let num of arr) {
+    counter[num] = (counter[num] || 0) + 1
+  }
+  return counter
+}
+
+//constructor
+function gbfMake(name, race) {
+  this.name = name
+  this.race = race
+}
+let ilsa01 = new gbfMake("Ilsa", "Erune")
+
