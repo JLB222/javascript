@@ -2820,3 +2820,25 @@ function gbfMake(name, race) {
 }
 let ilsa01 = new gbfMake("Ilsa", "Erune")
 
+//Day 114
+//debug: make sure the main function fires the game's functions in the correct order
+var health = 100
+var position = 0
+var coins = 0
+
+function main () {
+  rollDice()  
+  move()
+  combat()  
+  getCoins()
+  buyHealth()
+  printStatus()
+}
+
+//given an integer, test to see if this integer is too large to be used by javascript
+function SafeInteger(n) {
+  return n < 2**53  //BigInt can use numbers up to (2^53 -1)
+}
+
+//apparently there's also a method for this:  Number.isSaveInteger(n)
+
