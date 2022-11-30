@@ -2840,5 +2840,24 @@ function SafeInteger(n) {
   return n < 2**53  //BigInt can use numbers up to (2^53 -1)
 }
 
-//apparently there's also a method for this:  Number.isSaveInteger(n)
+//apparently there's also a method for this:  Number.isSafeInteger(n)
 
+//Day 115
+//7 - Maximum Length Difference
+function mxdiflg(a1, a2) {
+  if (a1.length === 0 || a2.length === 0) {
+    return -1
+  }
+  
+  let resultX = a1.map(str => str.length)
+  let resultY = a2.map(str => str.length)  
+  
+  let maxX = Math.max(...resultX)
+  let maxY = Math.max(...resultY)
+  
+  let minX = Math.min(...resultX)
+  let minY = Math.min(...resultY)
+  
+  return Math.max(maxX - minY, maxY - minX)
+
+}
