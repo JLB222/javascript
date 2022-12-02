@@ -2864,6 +2864,6 @@ function mxdiflg(a1, a2) {
 
 //Day 116
 //6 - PascalCase:  Create a method that returns a string in PascalCase
-String.prototype.camelCase=function(){
+String.prototype.PascalCase=function(){
   return this.split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join("")
 }
