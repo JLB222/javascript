@@ -2867,3 +2867,43 @@ function mxdiflg(a1, a2) {
 String.prototype.PascalCase=function(){
   return this.split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join("")
 }
+
+//Day 117
+//7 Love VS Friendship - Given a=1, b=2, etc.  Calculate the sum of a word when you convert its letters to numbers
+
+function wordsToMarks(string){
+  let arr = string.toLowerCase().split("")
+  let result = 0
+  for (let i = 0; i < arr.length; i++) {
+    result += (arr[i].charCodeAt(0) -96)
+  }
+  return result
+}
+
+//or
+
+function wordsToMarks2(string){
+  return [...string].reduce((result, current) => result += current.charCodeAt(0) -96, 0)
+}
+
+//Day 118
+// 7 - Sorted?  How?
+// given an array, determine if the array is sorted; and if so, is it in ascending or descending order?
+function isSortedAndHow(array) {
+  let sortedArrAsc = [...array].sort((a,b) => a-b, 0)
+  let sortedArrDesc = [...array].sort((a,b) => b-a, 0)
+  if (array.every((val,index) => val === sortedArrAsc[index])) {
+    return "yes, ascending"
+  } else if (array.every((val,index) => val === sortedArrDesc[index])) {
+    return "yes, descending"
+  } else {
+    return "no"
+  }
+}
+
+//alternate
+
+function isSortedAndHow(arr) {
+  return arr.every((x,i)=>i==0||arr[i]>=arr[i-1])?'yes, ascending':  //tests to see if every item in the array, in index order, is greater than or equal to the thing that came before it
+         arr.every((x,i)=>i==0||arr[i]<=arr[i-1])?'yes, descending':'no'  //same but greater
+}
