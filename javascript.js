@@ -2907,3 +2907,24 @@ function isSortedAndHow(arr) {
   return arr.every((x,i)=>i==0||arr[i]>=arr[i-1])?'yes, ascending':  //tests to see if every item in the array, in index order, is greater than or equal to the thing that came before it
          arr.every((x,i)=>i==0||arr[i]<=arr[i-1])?'yes, descending':'no'  //same but greater
 }
+
+//Day 119
+//Pythagorean Triple - Given an array of unsorted integers, determine if it's possible for them to create a triple:  a^2 + b^2 = c^2
+function isPythagoreanTriple(integers) {
+  let sum1 = integers[0]**2 + integers[1]**2
+  let sum2 = integers[1]**2 + integers[2]**2
+  let sum3 = integers[0]**2 + integers[2]**2
+  
+  let check1 = integers[2]**2
+  let check2 = integers[0]**2
+  let check3 = integers[1]**2
+  
+  return sum1 === check1 || sum2 === check2 || sum3 === check3
+}
+
+//remembering that, logically, this will only be possible if the smaller two numbers are on the left side of the equation (and therefore the array), we can simplify it down to:
+
+function isPythagoreanTriple(integers) {
+  integers.sort((a,b) => a-b,0)
+  return integers[0]**2 + integers[1]**2 === integers[2]**2
+}
