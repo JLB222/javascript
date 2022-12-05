@@ -2928,3 +2928,25 @@ function isPythagoreanTriple(integers) {
   integers.sort((a,b) => a-b,0)
   return integers[0]**2 + integers[1]**2 === integers[2]**2
 }
+
+//Day 120
+//6 - Title Case;  Given two strings: a title and a list of exception words, return the title string in Title Case
+function titleCase(title, minorWords ) {
+  let newTitle = title.toLowerCase().split(" ")
+  
+  for (let i = 0; i < newTitle.length; i++) {
+    newTitle[i] = newTitle[i].charAt(0).toUpperCase() + newTitle[i].slice(1)
+  }
+  
+  if (minorWords) {
+    let exceptions = minorWords.toLowerCase().split(" ")
+    for (let i = 1; i < newTitle.length; i++) {
+      if (exceptions.includes(newTitle[i].toLowerCase())) {
+        newTitle[i] = newTitle[i].charAt(0).toLowerCase() + newTitle[i].slice(1)
+      }
+    }
+  }
+  return newTitle.join(" ")
+}
+
+//optimization:  consider the above but using a Set object for the list of exception words
