@@ -2950,3 +2950,24 @@ function titleCase(title, minorWords ) {
 }
 
 //optimization:  consider the above but using a Set object for the list of exception words
+
+//Day 121
+//7 - Switcheroo - 
+function switcheroo(str){
+  let arr = str.split("")
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === "a") {
+      arr[i] = "b"
+    } else if (arr[i] === "b") {
+      arr[i] = "a"
+    } else {
+      continue
+    }
+  }
+  return arr.join("")
+}
+
+//alternative
+function switcherooo(str) {
+  return [...str].map(letter => letter === "a" ? letter = "b" : letter === "b" ? letter = "a" : letter).join((""))
+}
