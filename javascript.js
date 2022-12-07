@@ -2971,3 +2971,12 @@ function switcheroo(str){
 function switcherooo(str) {
   return [...str].map(letter => letter === "a" ? letter = "b" : letter === "b" ? letter = "a" : letter).join((""))
 }
+
+//Day 122 - 
+//7 - Row Weights - Given an array of numbers, sum all of the even index and all of the odd index numbers, representing the weights of the members of two different teams
+function rowWeights(array){
+  let team1 = array.map((el, i) => i % 2 === 0 ? el : 0).reduce((a,b) => a+b,0)
+  let team2 = array.map((el, i) => i % 2 !== 0 ? el : 0).reduce((a,b) => a+b,0)
+  
+  return [team1,team2]
+}
