@@ -2980,3 +2980,9 @@ function rowWeights(array){
   
   return [team1,team2]
 }
+
+//Day 123
+//Filter method
+function getEvenNumbers(numbersArray){
+  return numbersArray.filter(num => num % 2 === 0)
+}
