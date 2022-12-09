@@ -2986,3 +2986,13 @@ function rowWeights(array){
 function getEvenNumbers(numbersArray){
   return numbersArray.filter(num => num % 2 === 0)
 }
+
+//Day 124
+//Sum of Cubes - given an integer, return the sum of all cubed integers from 1 to that number
+function sumCubes(n){
+  let total = 0
+  for (let i = 1; i <= n; i++) {
+    total += i**3
+  }
+  return total
+}
