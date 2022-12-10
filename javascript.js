@@ -2996,3 +2996,9 @@ function sumCubes(n){
   }
   return total
 }
+
+//Day 125
+// 8 - Potenciation : raise a given number to the given power, without using Math.pow()
+function power(x,y){
+  return x**y
+}
