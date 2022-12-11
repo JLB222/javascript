@@ -3002,3 +3002,23 @@ function sumCubes(n){
 function power(x,y){
   return x**y
 }
+
+//Day 126
+function repVowels(str) {
+  return str.replace(/[aeiou]/gi, "!")
+}
+
+function isInteger(num) {
+  return num % 1 ? false : true
+}
+
+function filterVowels(str) {
+  let vowels = [..."aeiou"]
+  let string = str.split("")
+  for (let i = 0; i < string.length; i++) {
+    if (vowels.includes(string[i])) {
+      string[i] = "!"
+    }
+  }
+  return string.join("")
+}
