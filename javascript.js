@@ -3022,3 +3022,34 @@ function filterVowels(str) {
   }
   return string.join("")
 }
+
+//Day 127
+//6 - Mexican Wave - given a string, return an array that contains that string multiple times, with each one having a different letter capitalized, creating a wave
+function wave(str){
+  let result = []
+  let entry = str.split("")
+  for (let i = 0; i < entry.length; i++) {
+    if (entry[i] === " ") {
+      continue
+    } else {
+      entry[i] = entry[i].toUpperCase()
+      result.push(entry.join(""))
+      entry[i] = entry[i].toLowerCase()
+    }
+  }
+  return result
+}
+
+//alt
+
+function wave(str){
+  let result = []
+  for (let i = 0; i < str.length; i++) {
+    let entry = str.split("")   // I'm not sure if re-declaring this variable with each iteration is the best practice; Doing it this way allows me to not lowerCase() every time I upperCase()
+    if (entry[i] !== " ") {
+      entry[i] = entry[i].toUpperCase()
+      result.push(entry.join(""))
+    }
+  }
+  return result
+}
