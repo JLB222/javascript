@@ -3053,3 +3053,17 @@ function wave(str){
   }
   return result
 }
+
+//Day 128
+function stringChange(str) {
+  return str.split("").slice(1,-1).join(" ") || null
+}
+
+//6 - Meeting:  poorly explained bullshit
+function meeting(s) {
+  let string = s.toUpperCase().split(';')
+                .map(x => x.split(':').reverse().join(', '))
+                .sort()
+                .join(')(')
+  return '(' + string + ')'
+}
