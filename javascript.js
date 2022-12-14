@@ -3067,3 +3067,11 @@ function meeting(s) {
                 .join(')(')
   return '(' + string + ')'
 }
+
+//Day 129
+//8 - Classy Extensions
+class Cat extends Animal {
+  speak() {
+    return `${this.name} meows.`
+  }
+}
