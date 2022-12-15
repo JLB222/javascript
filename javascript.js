@@ -3075,3 +3075,10 @@ class Cat extends Animal {
     return `${this.name} meows.`
   }
 }
+
+//Day 130
+//Replace all the vowels in a string with something else, using regex
+function repAllVows(str) {
+  return str.replace(/[aeiou]/gi, "!")
+}
+
