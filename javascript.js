@@ -3082,3 +3082,39 @@ function repAllVows(str) {
   return str.replace(/[aeiou]/gi, "!")
 }
 
+//Day 131
+//6 - If you can read this - Given an input string, return a string of every letter in the original string replaced by the appropriate word in the NATO Phonetic Alphabet
+//EX:  never = November Echo Victor Echo Romeo
+
+let NATO = {
+  'A': 'Alfa',
+  'B': 'Bravo',
+  'C': 'Charlie',
+  'D': 'Delta',
+  'E': 'Echo',
+  'F': 'Foxtrot',
+  'G': 'Golf',
+  'H': 'Hotel',
+  'I': 'India',
+  'J': 'Juliett',
+  'K': 'Kilo',
+  'L': 'Lima',
+  'M': 'Mike',
+  'N': 'November',
+  'O': 'Oscar',
+  'P': 'Papa',
+  'Q': 'Quebec',
+  'R': 'Romeo',
+  'S': 'Sierra',
+  'T': 'Tango',
+  'U': 'Uniform',
+  'V': 'Victor',
+  'W': 'Whiskey',
+  'X': 'Xray',
+  'Y': 'Yankee',
+  'Z': 'Zulu',
+}
+
+function to_nato(words) {
+  return words.split('').filter(char => char !== ' ').map(char => table[char.toUpperCase()] || char).join(' ');
+}
