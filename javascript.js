@@ -3118,3 +3118,13 @@ let NATO = {
 function to_nato(words) {
   return words.split('').filter(char => char !== ' ').map(char => table[char.toUpperCase()] || char).join(' ');
 }
+
+//Day 132
+
+function gbfMaker2(name, race, element) {
+    this.name = name
+    this.race = race
+    this.element = element
+}
+
+// let ilsa = new gbfMaker2("Ilsa", "Erune", "Earth")
