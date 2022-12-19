@@ -3128,3 +3128,14 @@ function gbfMaker2(name, race, element) {
 }
 
 // let ilsa = new gbfMaker2("Ilsa", "Erune", "Earth")
+
+//Day 133
+//7 - Bumps in the Road
+function bump(str){
+  return str.split("").filter(char => char === "n").length <= 15 ? "Woohoo!" : "Car Dead"
+}
+
+//Day 134
+function remove(str, str2) {
+  return str.split(str2).join("")
+}
