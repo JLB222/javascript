@@ -3139,3 +3139,9 @@ function bump(str){
 function remove(str, str2) {
   return str.split(str2).join("")
 }
+
+//Day 135
+// 8 - Remove all "!" from a string
+function removeExclamationMarks(s) {
+  return s.replace(/!/g, "");
+}
