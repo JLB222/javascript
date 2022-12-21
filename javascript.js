@@ -3145,3 +3145,10 @@ function remove(str, str2) {
 function removeExclamationMarks(s) {
   return s.replace(/!/g, "");
 }
+
+//Day 136
+"string".replace(/[aeiou]/gi, "!")
+
+function rep(str) {
+  return str.replace(/[aeiou]/gi, "!")
+}
