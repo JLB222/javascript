@@ -3152,3 +3152,8 @@ function removeExclamationMarks(s) {
 function rep(str) {
   return str.replace(/[aeiou]/gi, "!")
 }
+
+//Day 137
+//Given an array of [1,2,3,4,5], how would you replace the number 3 with the string "three" ?
+let numbers = [1,2,3,4,5]
+numbers.splice(2, 1, "three")
