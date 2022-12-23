@@ -3157,3 +3157,14 @@ function rep(str) {
 //Given an array of [1,2,3,4,5], how would you replace the number 3 with the string "three" ?
 let numbers = [1,2,3,4,5]
 numbers.splice(2, 1, "three")
+
+//Day 138
+function counter(arr) {
+  let results = {}
+  for (let element of arr) {
+    if (arr.includes(element)) {
+      results[element] = (results[element] || 0) + 1
+    }
+  }
+  return results
+}
