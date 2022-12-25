@@ -3187,3 +3187,6 @@ var rooms = {
     }
   }
 }
+
+//Day 140
+let arr = [..."abcdefghijklmnopqrstuvwxyz"]
