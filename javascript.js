@@ -3190,3 +3190,8 @@ var rooms = {
 
 //Day 140
 let arr = [..."abcdefghijklmnopqrstuvwxyz"]
+
+//Day 141
+function typeValidation(variable, type) {
+  return typeof variable === type
+}
