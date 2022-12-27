@@ -3195,3 +3195,15 @@ let arr = [..."abcdefghijklmnopqrstuvwxyz"]
 function typeValidation(variable, type) {
   return typeof variable === type
 }
+
+//Day 142
+//count the divisors - given an integer, n, determine how many divisors that number has.  EX:  given 4, should return 3 (1,2, and 4)
+function getDivisorsCnt(n){
+  let counter = 0
+  for (let i = 1; i <= n; i++) {
+    if (n % i === 0) {
+      counter++
+    }
+  }
+  return counter
+}
