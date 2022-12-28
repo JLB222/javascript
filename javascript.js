@@ -3207,3 +3207,19 @@ function getDivisorsCnt(n){
   }
   return counter
 }
+
+//Day 143
+function disemvowel(str) {
+  return str.replace(/[aeiou]/gi, "!")
+}
+
+arrayName.forEach(el,i,arr) {
+  //syntax of forEach loop
+}
+//object destructuring: renaming
+let obj = {
+  firstProp: "one",
+  secondProp: "two",
+  thirdProp: "three"
+}
+let {firstProp: alpha, secondProp: beta, thirdProp: gamma} = obj
