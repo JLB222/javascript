@@ -3223,3 +3223,21 @@ let obj = {
   thirdProp: "three"
 }
 let {firstProp: alpha, secondProp: beta, thirdProp: gamma} = obj
+
+
+//Day 144
+//6 - Multiplication Table - create an array of arrays that represent the multiplication table of a given size (integer)
+function multiplicationTable(size) {
+  let result = []
+  let temp = []
+  for (let j = 1; j <= size; j++) {
+    for (let i = 1; i <= size; i++) {
+      temp.push(i * j)
+      if (temp.length === size) {
+        result.push(temp)
+        temp = []
+      }
+    }
+  }
+  return result
+}
