@@ -3241,3 +3241,15 @@ function multiplicationTable(size) {
   }
   return result
 }
+
+//Day 145
+//6 Data Reverse
+//given an array of numbers (num is divisible by 8), reverse the array in 8-digit segments.
+//ex: 11111111  00000000  00001111  10101010  --> 10101010  00001111  00000000  11111111
+function dataReverse(data) {
+  let result = []
+  for (let i = 0; i < data.length/8; i++) {
+    result[i] = data.slice(i*8, i*8+8)
+  }
+  return result.reverse().flat()
+}
