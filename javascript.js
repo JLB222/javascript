@@ -3253,3 +3253,32 @@ function dataReverse(data) {
   }
   return result.reverse().flat()
 }
+
+//Day 146
+//6 - new cashier
+function getOrder (input) {
+  const menu = [
+    'burger',
+    'fries',
+    'chicken',
+    'pizza',
+    'sandwich',
+    'onionrings',
+    'milkshake',
+    'coke'
+  ];
+
+  let order = [];
+
+  while (input !== '') {  //this combined with the line that replaces each word with '' will ensure that the function keeps running until all items are done
+    for (let i = 0; i < menu.length; i++) {  //loops through all menu items
+      while (input.indexOf(menu[i]) !== -1) {  //searches input string for each menu item; -1 means the string is not present; this will keep running in the case of duplicate items, replacing each entry with '' until all entries are gone
+        if (input.indexOf(menu[i]) >= 0) {  //this if statement is not actually necessary as far as I can tell; remove?
+          order.push(menu[i][0].toUpperCase() + menu[i].slice(1));  //capitalize the current menu item and push it to the order array
+          input = input.replace(menu[i], '');  //replace the current menu item with empty quotes; the while loop will continue until this has turned all of a given entry into ''
+        }
+      }
+    }
+  }
+  return order.join(' ');
+};
