@@ -3308,3 +3308,14 @@ function beer(count) {
         beer(count - 1);
   }
 }
+
+
+//Day 148
+//8 - Crash Override
+//Given two string inputs, return a single string output of two words.  The output words are determined by the first letter of each of the two input strings.  The output words are pulled from two objects; each letter of the alphabet has a corresponding word
+function aliasGen(first, last){
+  if (first[0].toUpperCase() == first[0].toLowerCase() || last[0].toUpperCase() == last[0].toLowerCase()) {
+    return "Your name must start with a letter from A - Z."
+  }
+  return firstName[first[0].toUpperCase()] + " " + surname[last[0].toUpperCase()]
+}
