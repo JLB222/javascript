@@ -3317,5 +3317,29 @@ function aliasGen(first, last){
   if (first[0].toUpperCase() == first[0].toLowerCase() || last[0].toUpperCase() == last[0].toLowerCase()) {
     return "Your name must start with a letter from A - Z."
   }
-  return firstName[first[0].toUpperCase()] + " " + surname[last[0].toUpperCase()]
+  return firstName[first[0].toUpperCase()] + " " + surname[last[0].toUpperCase()]  //firstName and surname are objects with code names paired to each letter of the alphabet
+}
+
+//Day 149
+class Dog extends Animal{
+  constructor(name, breed) {
+    super(name)
+    this.breed = breed
+  }
+}
+
+//8 - TRUE FOR NONE.  create a function that accepts an array and a callback.  every element of the array is passed through the callback.  return true if the callback function returns true for NONE of the elements of the array.
+function none(arr, fun){
+  for (let i = 0; i < arr.length; i++) {
+    if (fun(arr[i]) === true) {
+      result = false
+    }
+  }
+  return true
+}
+
+//turns out there's a method that makes this easier:  .some()
+
+function none(arr, fun){
+  return !arr.some(fun);
 }
