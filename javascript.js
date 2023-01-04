@@ -3343,3 +3343,10 @@ function none(arr, fun){
 function none(arr, fun){
   return !arr.some(fun);
 }
+
+//Day 150
+//8 - toString and padStart
+//given 3 input numbers, convert these numbers to hexadecimal and return them as a 6-digit color code (string)
+function colorOf(r,g,b){
+  return "#" + [r.toString(16).padStart(2, '0'), g.toString(16).padStart(2, '0'), b.toString(16).padStart(2, '0')].join("")
+}
