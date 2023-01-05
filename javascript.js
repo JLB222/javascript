@@ -3350,3 +3350,26 @@ function none(arr, fun){
 function colorOf(r,g,b){
   return "#" + [r.toString(16).padStart(2, '0'), g.toString(16).padStart(2, '0'), b.toString(16).padStart(2, '0')].join("")
 }
+
+//Day 151
+//disemvowel
+function disemvowel(str) {
+  let result = [...str]
+  let vowels = [..."aeiou"]
+  for (let i = 0; i < result.length; i++) {
+    if (vowels.includes(result[i].toLowerCase())) {
+      result[i] = "!"
+    }
+  }
+  return result.join("")
+}
+
+//8 - given two parameters, an array of floats and a standalone float, determine how many of the floats inside the array, when rounded down to 2 decimal places, are less than the standalone float
+function howManySmaller(arr,n){
+  return arr.map(num => num.toFixed(2)).filter(num => num < n).length
+}
+
+//honestly you don't even have to map it, you can jump straight to the filter
+function howManySmaller(arr,n){
+  return arr.filter(num => num.toFixed(2) < n).length
+}
