@@ -3373,3 +3373,24 @@ function howManySmaller(arr,n){
 function howManySmaller(arr,n){
   return arr.filter(num => num.toFixed(2) < n).length
 }
+
+//Day 152
+class GBFMake2 {
+  constructor(name, race, element, ultimate) {
+    this.name = name
+    this.race = race
+    this.element = element
+    this.ultimate = ultimate
+  }
+  ult() {
+    return `Using ${this.ult}!`
+  }
+}
+
+//8 - JS 16, slice()
+//given an array of strings, reduce all of the strings in the array to be the same length as the shortest one
+function cutIt(arr){
+  let shortest = arr.reduce((a,b) => a.length <= b.length ? a : b).length
+  let result = arr.map(str => str.slice(0,shortest))
+  return result
+}
