@@ -3399,3 +3399,13 @@ function cutIt(arr){
 function returnWord(num) {
   return ["Zero", "One", "Two", "Three", "Four", "Five"][num]
 }
+
+//Day 154
+function gbfCharMaker(name, race, element, ult) {
+    this.name = name
+    this.race = race
+    this.element = element
+    this.ult = function() {
+      return `Using ${ult}`
+    }
+}
