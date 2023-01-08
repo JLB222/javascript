@@ -3394,3 +3394,8 @@ function cutIt(arr){
   let result = arr.map(str => str.slice(0,shortest))
   return result
 }
+
+//Day 153
+function returnWord(num) {
+  return ["Zero", "One", "Two", "Three", "Four", "Five"][num]
+}
