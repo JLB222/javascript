@@ -3409,3 +3409,25 @@ function gbfCharMaker(name, race, element, ult) {
       return `Using ${ult}`
     }
 }
+
+//Day 155
+function countStr(str1,str2) {
+  return str1.split(str2).length -1
+}
+
+//6 - Your order, please
+function order(words){
+  let arr = words.split(" ")
+  let result = []
+  for (let j = 1; j <= arr.length; j++) {
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i].includes(j)) {
+        result.push(arr[i])
+        break;
+      }
+    }
+  }
+  return words.length < 1 ? "" : result.join(" ")
+}
+
+//the above is not ideal due to nested loops.  the larger the original sentence, the slower it becomes.
