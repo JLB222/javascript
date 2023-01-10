@@ -3401,7 +3401,7 @@ function returnWord(num) {
 }
 
 //Day 154
-function gbfCharMaker(name, race, element, ult) {
+function GbfCharMaker(name, race, element, ult) {
     this.name = name
     this.race = race
     this.element = element
@@ -3431,3 +3431,16 @@ function order(words){
 }
 
 //the above is not ideal due to nested loops.  the larger the original sentence, the slower it becomes.
+
+//8 - Calculate Price Excluding VAT;  Given a number that represents the price of an item, find out the original price by removing VAT (VAT = 15%)
+//if price is null, return -1
+function excludingVatPrice(price){
+  return price === null ? -1 : Math.round((price / 1.15) * 100) / 100
+}
+
+//a slightly more robust version of the above, where you can enter the vat at runtime
+function excludingVatPrice(price, vat){  //enter the vat as the percentage, not the decimal.  ex: 15% = 15, 12.5% = 12.5
+  return price === null ? -1 : Math.round((price / (1 + vat/100)) * 100) / 100
+}  
+//problem with this is that if you want it to return a price in usual format (2.00, 2.15, etc) you have to add toFixed(2) any time that your tax rate returns a flat integer
+//for example, 2.30 with a 15% vat would return 2, instead of 2.00, unless you use toFixed(2).  However, toFixed() makes it a string
