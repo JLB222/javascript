@@ -3432,6 +3432,7 @@ function order(words){
 
 //the above is not ideal due to nested loops.  the larger the original sentence, the slower it becomes.
 
+//Day 156
 //8 - Calculate Price Excluding VAT;  Given a number that represents the price of an item, find out the original price by removing VAT (VAT = 15%)
 //if price is null, return -1
 function excludingVatPrice(price){
@@ -3444,3 +3445,25 @@ function excludingVatPrice(price, vat){  //enter the vat as the percentage, not 
 }  
 //problem with this is that if you want it to return a price in usual format (2.00, 2.15, etc) you have to add toFixed(2) any time that your tax rate returns a flat integer
 //for example, 2.30 with a 15% vat would return 2, instead of 2.00, unless you use toFixed(2).  However, toFixed() makes it a string
+
+//Day 157
+//8 - Finish Guess the Number Game
+class Guesser {
+  constructor(number, lives) {
+    this.number = number;
+    this.lives = lives;
+  }
+  
+  guess(n) {
+    if (this.lives < 1) {
+      throw new Error('No guesses left.')
+    } else {
+      if (n === this.number) {
+        return true
+      } else {
+        this.lives--
+        return false
+      }
+    }
+  }
+}
