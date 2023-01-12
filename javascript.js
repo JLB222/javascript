@@ -3447,7 +3447,7 @@ function excludingVatPrice(price, vat){  //enter the vat as the percentage, not 
 //for example, 2.30 with a 15% vat would return 2, instead of 2.00, unless you use toFixed(2).  However, toFixed() makes it a string
 
 //Day 157
-//8 - Finish Guess the Number Game
+//8 - Finish "Guess the Number" Game
 class Guesser {
   constructor(number, lives) {
     this.number = number;
@@ -3466,4 +3466,17 @@ class Guesser {
       }
     }
   }
+}
+
+//Day 158
+//8 - Debug the code
+function yourFutureCareer(){
+	let random = Math.random()
+	if (random <= 0.32) {
+		return "FrontEnd Developer"
+  } else if (random <= 0.65) {
+    return "BackEnd Developer"
+  } else {
+		return 'Full-Stack Developer'
+	}
 }
