@@ -3480,3 +3480,14 @@ function yourFutureCareer(){
 		return 'Full-Stack Developer'
 	}
 }
+
+//Day 159
+function thingamabob(str) {
+  return str.split(",").slice(1,-1).join(" ") || null
+}
+
+//7 - Reverse a number
+function reverseNumber(n) {
+  let number = +Math.abs(n).toString().split("").reverse().join("")
+  return n < 0 ? -number : number
+}
