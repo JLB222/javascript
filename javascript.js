@@ -3513,3 +3513,10 @@ function sarcasm(sentence) {
 
   return result.join(" ")
 }
+
+//Day 161
+class Solution{
+  static main() {
+    console.log("Hello World!");
+  }  
+}
