@@ -3520,3 +3520,31 @@ class Solution{
     console.log("Hello World!");
   }  
 }
+
+class Animal {
+  static planet = "earth"
+  constructor(genus, species) {
+    this.genus = genus
+    this.species = species
+  }
+}
+
+//Day 162
+//react review
+
+function Card(props) {
+  return <div><img src={props.imgURL}></img></div>
+}
+
+<Card imgURL = "fileLocationHere"/>
+
+function gcdCard(props) {
+  return <div>
+    <h2>{props.Name}</h2>
+    <h3>{props.Element}</h3>
+    <h3>{props.Rarity}</h3>
+    <h4>{props.Specialty1}</h4>
+    <h4>{props.Specialty2}</h4>
+  </div>
+}
+
