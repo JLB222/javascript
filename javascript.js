@@ -3548,3 +3548,19 @@ function gcdCard(props) {
   </div>
 }
 
+//Day 163
+//6 - Take a Number And Sum Its Digits Raised To The Consecutive Powers And ....¡Eureka!!
+
+function sumDigPow(a, b) { 
+  let result = []
+  for (let i = a; i <= b; i++) {
+    let sum = 0
+    for (let j = 1; j <= i.toString().length; j++) {
+        sum += i.toString().split("").map(Number)[j-1] ** j
+    }
+    if (sum === i) {
+      result.push(sum)
+    }
+  } 
+  return result
+}
