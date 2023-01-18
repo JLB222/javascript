@@ -3564,3 +3564,36 @@ function sumDigPow(a, b) {
   } 
   return result
 }
+
+//Day 164
+//Count the number of occurrences of each element in an array.  You don't know how many elements there are, and you need to count them all.
+
+function counter(arr) {
+  let container = {}
+  for (let el of arr) {
+    container[el] = (container[el] || 0) +1
+  }
+  return container
+}
+
+const counter = function(arr) {
+  let container = {}
+  for (let el of arr) {
+    container[el] = (container[el] || 0) +1
+  }
+  return container
+}
+
+const counter = arr => {
+  let container = {}
+  for (let el of arr) {
+    container[el] = (container[el] || 0) +1
+  }
+  return container
+}
+
+//8 Blood-alcohol content
+function bloodAlcoholContent(drinks, weight, sex, time){
+  let bac = (drinks.ounces * drinks.abv * (5.14 / weight) * (sex === "male" ? 0.73 : 0.66)) - 0.015 * time
+  return +bac.toFixed(4)
+}
