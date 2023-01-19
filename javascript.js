@@ -3597,3 +3597,27 @@ function bloodAlcoholContent(drinks, weight, sex, time){
   let bac = (drinks.ounces * drinks.abv * (5.14 / weight) * (sex === "male" ? 0.73 : 0.66)) - 0.015 * time
   return +bac.toFixed(4)
 }
+
+//Day 165
+//7 - Anagram Detection
+function isAnagram(test, original) {
+  let firstWordArr = test.toLowerCase().split("").sort()
+  let secondWordArr = original.toLowerCase().split("").sort()
+  let firstWordContainer = {}
+  let secondWordContainer = {}
+  for (let el of firstWordArr) {
+    firstWordContainer[el] = (firstWordContainer[el] || 0) + 1
+  }
+    for (let el of secondWordArr) {
+    secondWordContainer[el] = (secondWordContainer[el] || 0) + 1
+  }
+  return Object.entries(firstWordContainer).toString() === Object.entries(secondWordContainer).toString()
+}
+
+//OH HEY LOOK ANOTHER GREAT EXAMPLE OF ME THINKING TOO HARD.  Here's a better way to do it:
+
+function isAnagram(test, original) {
+  let firstWordArr = test.toLowerCase().split("").sort().join("")
+  let secondWordArr = original.toLowerCase().split("").sort().join("")
+  return firstWordArr === secondWordArr
+}
