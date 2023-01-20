@@ -1,3 +1,5 @@
+//Ctrl-F "revisit" to find the ones you wanna do again or weren't satisfied with
+
 //DAY 1
 // 8 - produce an array of numbers in reverse order, starting with n
 function reverseSeq(n) {
@@ -3620,4 +3622,34 @@ function isAnagram(test, original) {
   let firstWordArr = test.toLowerCase().split("").sort().join("")
   let secondWordArr = original.toLowerCase().split("").sort().join("")
   return firstWordArr === secondWordArr
+}
+
+//Day 166
+//6 - Sums of Parts - Revisit
+function partsSums(ls) {
+  const reps = ls.length
+  let arr = ls
+  let result = []
+  for (let i = 0; i < reps; i++) {
+    result.push(arr.reduce((a,b) => a+b,0))
+    arr.shift()
+  }
+    if (arr.length === 0) {
+      result.push(0)
+    }
+  return result
+}
+
+//My solution above does not pass the Kata's performance needs.  I need a more optimized solution.
+//start from the end of the original array and use shift()?  basically an accumulator; could probably be written better
+function partsSums(ls) {
+  const reps = ls.length
+  let arr = ls
+  let result = [0]
+  let holder = 0
+  for (let i = arr.length-1; i >= 0; i--) {
+    result.unshift(holder + arr[i])
+    holder += arr[i]
+  }
+  return result
 }
