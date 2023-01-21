@@ -3653,3 +3653,26 @@ function partsSums(ls) {
   }
   return result
 }
+
+//Day 167
+//8 Logical calculator.  Terribly worded and seems pointless.
+function logicalCalc(array, op)
+{ 
+  var result = array[0];
+  for(var i = 1; i < array.length; i++)
+  {
+    if(op == "AND")
+    {
+      result = result && array[i];
+    }
+    if(op == "OR")
+    {
+      result = result || array[i];
+    }
+    if(op == "XOR")
+    {
+      result = result != array[i];
+    }
+  }
+  return result;
+}
