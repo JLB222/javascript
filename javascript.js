@@ -3676,3 +3676,15 @@ function logicalCalc(array, op)
   }
   return result;
 }
+
+//Day 168
+//Have you ever written code that works and then stared at it for 15 minutes trying to figure out WHY it works because you stumbled on to the answer?  I HAVE!
+function yearDays(year){
+  let fourHundred = year/400 % 1
+  let oneHundred = year/100 % 1
+  let four = year/4 % 1
+  
+  let standard = four || (fourHundred && !oneHundred)
+  
+  return `${year} has ${standard?365:366} days`
+}
