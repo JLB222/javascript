@@ -3688,3 +3688,9 @@ function yearDays(year){
   
   return `${year} has ${standard?365:366} days`
 }
+
+//Day 169
+//8 - Any arrows left?
+function anyArrows(arrows){
+  return arrows.some(el => el.damaged != true);
+}
