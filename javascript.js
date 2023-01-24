@@ -3694,3 +3694,10 @@ function yearDays(year){
 function anyArrows(arrows){
   return arrows.some(el => el.damaged != true);
 }
+
+//Day 170
+//8 - Predict your age
+function predictAge(age1,age2,age3,age4,age5,age6,age7,age8){
+  let arr = [age1,age2,age3,age4,age5,age6,age7,age8].reduce((a,b) => a + (b ** 2), 0)
+  return Math.floor(Math.sqrt(arr)/2)
+}
