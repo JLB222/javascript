@@ -3696,8 +3696,29 @@ function anyArrows(arrows){
 }
 
 //Day 170
-//8 - Predict your age
+//7 - Predict your age
 function predictAge(age1,age2,age3,age4,age5,age6,age7,age8){
   let arr = [age1,age2,age3,age4,age5,age6,age7,age8].reduce((a,b) => a + (b ** 2), 0)
   return Math.floor(Math.sqrt(arr)/2)
+}
+
+//Day 171
+//8 - Reagent Formula
+function isValid(formula){
+  if (formula.includes(1) && formula.includes(2)) {
+    return false
+  }
+  if (formula.includes(3) && formula.includes(4)) {
+    return false
+  }
+  if (formula.includes(5) && formula.includes(6) === false) {
+    return false
+  }
+  if (formula.includes(6) && formula.includes(5) === false) {
+    return false
+  }
+  if (!formula.includes(7) && !formula.includes(8)) {
+    return false
+  }
+  return true
 }
