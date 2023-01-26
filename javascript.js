@@ -3722,3 +3722,18 @@ function isValid(formula){
   }
   return true
 }
+
+//Day 172
+//6 - Given a string of letters and hashes, output the string that would result if every hash (#) were treated like a typed backspace, deleting whatever letter comes before it.  
+//ex: "abc#d##c" ==> "ac"
+function cleanString(s) {
+  let arr = []
+  for (let i = 0; i < s.length; i++) {
+    if (s[i] !== "#") {
+      arr.push(s[i])
+    } else {
+      arr.pop()
+    }
+  }
+  return arr.join("")
+}
