@@ -3753,3 +3753,9 @@ var hotpo = function(n){
   }
   return counter
 }
+
+//Day 174
+//8 - Find the Integral
+function integrate(coefficient, exponent) {
+  return [coefficient / (exponent + 1), (exponent + 1)].join("x^")
+}
