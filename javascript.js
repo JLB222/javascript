@@ -3759,3 +3759,13 @@ var hotpo = function(n){
 function integrate(coefficient, exponent) {
   return [coefficient / (exponent + 1), (exponent + 1)].join("x^")
 }
+
+//175 
+//8 - Locate the Barycenter of a Triangle
+function barTriang(p1, p2, p3){
+  let x = (p1[0]+p2[0]+p3[0])/3
+  let y = (p1[1]+p2[1]+p3[1])/3
+  return [Math.round(x * 10000) / 10000, Math.round(y * 10000) / 10000]
+}
+
+//can also use toFixed(4) to get the result to 4 decimal places; keep in mind that toFixed() converts it to a string.
