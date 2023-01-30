@@ -3769,3 +3769,23 @@ function barTriang(p1, p2, p3){
 }
 
 //can also use toFixed(4) to get the result to 4 decimal places; keep in mind that toFixed() converts it to a string.
+
+//Day 176
+//8 - Grasshopper - Create the rooms
+var rooms = {
+  room1: {
+  name: "Entrance",
+  description: "Entrance Hall description",
+  completed: false
+},
+  room2: {
+  name: "Entrance",
+  description: "Entrance Hall description",
+  completed: false
+  },
+  room3: {
+  name: "Entrance",
+  description: "Entrance Hall description",
+  completed: false
+  }
+}
