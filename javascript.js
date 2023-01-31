@@ -3789,3 +3789,16 @@ var rooms = {
   completed: false
   }
 }
+
+//Day 177
+//8 Age range compatibility equation
+function datingRange(age){
+  if (age > 14) {
+    var min = Math.floor(age/2 + 7)
+    var max = Math.ceil((age-7) * 2)
+  } else {
+    var min = Math.floor(age * .9)
+    var max = Math.floor(age * 1.1)
+  }
+  return `${min}-${max}`
+}
