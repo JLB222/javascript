@@ -3802,3 +3802,13 @@ function datingRange(age){
   }
   return `${min}-${max}`
 }
+
+//Day 178
+//8 Training JS 17
+function firstToLast(str,c) {
+  if (str.indexOf(c) === -1) {
+    return -1
+  } else {
+      return str.lastIndexOf(c) - str.indexOf(c)
+  }
+}
