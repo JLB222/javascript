@@ -3812,3 +3812,17 @@ function firstToLast(str,c) {
       return str.lastIndexOf(c) - str.indexOf(c)
   }
 }
+
+//Day 179
+function febtwo(str) {
+  return str.split(",").slice(1,-1).join(" ") || null
+}
+function Febtwogbf(name, race, element, ult) {
+  this.name = name
+  this.race = race
+  this.element = element
+  this.ult = ult
+  this.ultimate = function() {
+    console.log(`Using ${this.ult}!`)
+  }
+}
