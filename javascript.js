@@ -3826,3 +3826,9 @@ function Febtwogbf(name, race, element, ult) {
     console.log(`Using ${this.ult}!`)
   }
 }
+
+//Day 180
+//8 - Training JS 29.  concat() and join()
+function bigToSmall(arr){
+  return [].concat(...arr).sort((a,b) => b-a,0).join(">")
+}
