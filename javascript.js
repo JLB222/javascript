@@ -3832,3 +3832,9 @@ function Febtwogbf(name, race, element, ult) {
 function bigToSmall(arr){
   return [].concat(...arr).sort((a,b) => b-a,0).join(">")
 }
+
+//Day 181
+//8 late period?
+function periodIsLate(last, today, cycleLength){
+  return ( ( today.getTime() - last.getTime() ) / 86400000) > cycleLength
+}
