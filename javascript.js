@@ -3838,3 +3838,9 @@ function bigToSmall(arr){
 function periodIsLate(last, today, cycleLength){
   return ( ( today.getTime() - last.getTime() ) / 86400000) > cycleLength
 }
+
+//Day 182
+//8 Enumerable Magic 2
+function any(arr, fun){
+  return arr.some(fun)
+}
