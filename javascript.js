@@ -3844,3 +3844,9 @@ function periodIsLate(last, today, cycleLength){
 function any(arr, fun){
   return arr.some(fun)
 }
+
+//Day 183
+//Geometry Basics: circle area in 2d
+function circleArea(circle){
+  return (Math.PI * circle.radius **2)
+}
