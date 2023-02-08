@@ -3863,3 +3863,15 @@ function whatNumberIsIt(n){
       case n: return `Input number is ${n}`
   }
 }
+
+//Day 185
+function disemvowel(str) {
+  let result = [...str]
+  let vowels = [..."aieou"]
+  for (let i = 0; i < str.length; i++) {
+    if (vowels.includes(result[i])) {
+      result[i] = "!"
+    }
+  }
+  return result.join("")
+}
