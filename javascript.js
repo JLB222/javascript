@@ -3875,3 +3875,16 @@ function disemvowel(str) {
   }
   return result.join("")
 }
+
+//Day 186
+class GBFMake3 {
+  constructor(name, race, element, ultName) {
+    this.name = name,
+    this.race = race, 
+    this.element = element, 
+    this.ultName = ultName
+  }
+  Ultimate() {
+    console.log(`Using ${this.ultName}!`)
+  }
+}
