@@ -3888,3 +3888,13 @@ class GBFMake3 {
     console.log(`Using ${this.ultName}!`)
   }
 }
+
+//Day 187
+//8 - Training JS 21
+function fiveLine(str){
+  return `${str.trim()}\n` + 
+         `${str.trim()}${str.trim()}\n` +
+         `${str.trim()}${str.trim()}${str.trim()}\n` + 
+         `${str.trim()}${str.trim()}${str.trim()}${str.trim()}\n` + 
+         `${str.trim()}${str.trim()}${str.trim()}${str.trim()}${str.trim()}`
+}
