@@ -3898,3 +3898,8 @@ function fiveLine(str){
          `${str.trim()}${str.trim()}${str.trim()}${str.trim()}\n` + 
          `${str.trim()}${str.trim()}${str.trim()}${str.trim()}${str.trim()}`
 }
+
+//Day 188
+function zeroToNine(n) {
+  return "Zero One Two Three Four Five Six Seven Eight Nine".split(" ")[n]
+}
