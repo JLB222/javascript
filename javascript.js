@@ -3903,3 +3903,9 @@ function fiveLine(str){
 function zeroToNine(n) {
   return "Zero One Two Three Four Five Six Seven Eight Nine".split(" ")[n]
 }
+
+//Day 189
+//8 - Improving Math.round(x)
+Math.roundTo = function (number, precision) {
+  return +number.toFixed(precision)
+}
