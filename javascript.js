@@ -3925,3 +3925,11 @@ class Person {
     return `Welcome to Planet Earth ${raceName}`
   }
 }
+
+//Day 191
+//8 - "this" is a problem
+function NameMe(first, last) {
+  this.firstName = first;
+  this.lastName = last;
+  this.name =  this.firstName + ' ' + this.lastName
+}
