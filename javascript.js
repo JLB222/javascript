@@ -3933,3 +3933,24 @@ function NameMe(first, last) {
   this.lastName = last;
   this.name =  this.firstName + ' ' + this.lastName
 }
+
+//Day 192
+//8 - Training JS 32
+function roundIt(n){
+  let arr = String(n).split(".")
+  if (arr[0].length < arr[1].length) {
+    return Math.ceil(n)
+  }
+  if (arr[0].length > arr[1].length) {
+    return Math.floor(n)
+  }
+  if (arr[0].length == arr[1].length) {
+    return Math.round(n)
+  }
+}
+
+//alternate version
+function roundIt(n){
+  var [a, b] = n.toString().split('.')  //array destructuring puts the two array values into a and b
+  return a.length > b.length ? Math.floor(n) : a.length < b.length ? Math.ceil(n) : Math.floor(n);
+}
