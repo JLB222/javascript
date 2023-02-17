@@ -3955,10 +3955,15 @@ function roundIt(n){
   return a.length > b.length ? Math.floor(n) : a.length < b.length ? Math.ceil(n) : Math.floor(n);
 }
 
-//193
+//Day 193
 //8 - count words*
 function countWords(str) {
   console.log(str)
   return str.split(" ").filter((el,i) => el.toUpperCase() != el.toLowerCase()).length
 }
 //currently doesn't account for words that are side by side like "helloWorld"
+
+//Day 194
+function sumSquares(array) {
+  return array.map(x => x**2).reduce((a,b) => a+b,0)
+}
