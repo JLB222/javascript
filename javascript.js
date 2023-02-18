@@ -3967,3 +3967,13 @@ function countWords(str) {
 function sumSquares(array) {
   return array.map(x => x**2).reduce((a,b) => a+b,0)
 }
+
+//Day 195
+function nextItem(arr, item) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === item) {
+      return arr[i+1]
+    }
+  }
+  return undefined
+ }
