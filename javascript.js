@@ -3977,3 +3977,14 @@ function nextItem(arr, item) {
   }
   return undefined
  }
+
+ //Day 196
+ //8 - Terminal Game Turn Function
+ function doTurn() {
+  rollDice()
+  move()
+  combat()
+  getCoins()
+  buyHealth()
+  printStatus()
+}
