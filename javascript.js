@@ -3988,3 +3988,19 @@ function nextItem(arr, item) {
   buyHealth()
   printStatus()
 }
+
+//Day 197
+//p: two parameters, representing two integers
+//r: return an array with two integer values, rounded up
+//e: 
+//p: declare function with two parameters; determine final ratio; return an array what contains: x value of y * ratio, y value of original y, since that doesn't change
+function aspectRatio(x,y){
+  let ratio = 16/9
+  return [Math.ceil(y * ratio), y]
+}
+
+//Day 198
+//P
+//R
+//E
+//P
