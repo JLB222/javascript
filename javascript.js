@@ -4014,3 +4014,15 @@ function occurences(arr) {
   return results
 }
 
+//Day 199
+class Cube {
+  constructor(side = 0) {
+    this.side = Math.abs(side)
+  }
+  getSide() {
+    return this.side; 
+  }
+  setSide(n) {
+    this.side = Math.abs(n);
+  }
+}
