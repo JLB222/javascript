@@ -4026,3 +4026,9 @@ class Cube {
     this.side = Math.abs(n);
   }
 }
+
+//Day 200
+//8 - terribly written problem
+function addExtra(listOfNumbers){
+  return [...listOfNumbers, 4]
+}
