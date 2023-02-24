@@ -4032,3 +4032,25 @@ class Cube {
 function addExtra(listOfNumbers){
   return [...listOfNumbers, 4]
 }
+
+//Day 201
+//7 - Two fighters, one winner
+function declareWinner(fighter1, fighter2, firstAttacker) {
+  for (let i = 0; fighter1.health > 0 && fighter2.health > 0; i++) {
+    if (fighter1.name === firstAttacker) {
+      fighter2.health = fighter2.health - fighter1.damagerPerAttack
+      if (fighter2.health <=0) {break}
+      fighter1.health = fighter1.health - fighter2.damagerPerAttack
+      if (fighter1.health <=0) {break}
+    }
+    else {
+      fighter1.health = fighter1.health - fighter2.damagerPerAttack
+      if (fighter1.health <=0) {break}
+      fighter2.health = fighter2.health - fighter1.damagerPerAttack
+      if (fighter2.health <=0) {break}
+    }
+  }
+  return fighter1.health > 0 ? fighter1.name : fighter2.name
+}
+
+//this fails.  somehow the health value of the fighters is becoming NaN.
