@@ -4054,3 +4054,40 @@ function declareWinner(fighter1, fighter2, firstAttacker) {
 }
 
 //this fails.  somehow the health value of the fighters is becoming NaN.
+
+//Day 202
+//7 The Coupon Code:  FAIL
+function checkCoupon(enteredCode, correctCode, currentDate, expirationDate){
+  if (enteredCode !== correctCode) {
+    return false
+  }
+  let months = "January February March April May June July August September October November December".split(" ")
+  
+  let currentYear = +currentDate.replace(",", "").split(" ")[2]
+  let expirationYear = +expirationDate.replace(",", "").split(" ")[2]
+  
+  let currentMonth = currentDate.replace(",", "").split(" ")[0]
+  let expirationMonth = expirationDate.replace(",", "").split(" ")[0]
+  
+  let currentDay = +currentDate.replace(",", "").split(" ")[1]
+  let expirationDay = +expirationDate.replace(",", "").split(" ")[1]
+  
+  if (expirationDay < currentDay) {
+    if (months.indexOf(expirationMonth) < months.indexOf(currentMonth)) {
+      if (expirationYear < currentYear) {
+      return false
+      }
+    }
+  }
+  return true
+}
+
+//this code works correctly in my browser's console, but codewars claims it returns true when it should be false.  the very first statement seems to be the core of the problem.  the codes don't match but codewars claims my function returns true.  it doesn't.
+
+function checkCoupon(enteredCode, correctCode, currentDate, expirationDate){
+  return enteredCode === correctCode && Date.parse(currentDate) <= Date.parse(expirationDate)
+}
+
+//I did not try Date.parse() because according to the docs it only explicitly supports one very specific format, which this problem wasn't in.
+//Lesson learned, try it anyway to see if it works... -_-
+//also could have converted it with a new Date() operation to compare them.
