@@ -4091,3 +4091,10 @@ function checkCoupon(enteredCode, correctCode, currentDate, expirationDate){
 //I did not try Date.parse() because according to the docs it only explicitly supports one very specific format, which this problem wasn't in.
 //Lesson learned, try it anyway to see if it works... -_-
 //also could have converted it with a new Date() operation to compare them.
+
+
+//Day 203
+//7 Flatten and sort an array
+function flattenAndSort(array) {
+  return array.flat().sort((a,b) => a-b,0);
+}
