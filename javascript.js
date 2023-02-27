@@ -4098,3 +4098,13 @@ function checkCoupon(enteredCode, correctCode, currentDate, expirationDate){
 function flattenAndSort(array) {
   return array.flat().sort((a,b) => a-b,0);
 }
+
+//Day 204
+//Factorial
+function factorial(n){
+  let result = 1
+  for(let i = 0; i < n; i++) {
+    result *= (n-i)
+  }
+  return result
+}
