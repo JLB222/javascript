@@ -4108,3 +4108,9 @@ function factorial(n){
   }
   return result
 }
+
+//Day 205
+//7 - Coding Meetup #1
+function countDevelopers(list) {
+  return list.filter(x => x.continent === "Europe" && x.language === "JavaScript").length
+}
