@@ -4114,3 +4114,8 @@ function factorial(n){
 function countDevelopers(list) {
   return list.filter(x => x.continent === "Europe" && x.language === "JavaScript").length
 }
+
+//Day 206
+function rep(str) {
+  return str.split(",").splice(1,-1).join(" ") || null
+}
