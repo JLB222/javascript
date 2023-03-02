@@ -4119,3 +4119,9 @@ function countDevelopers(list) {
 function rep(str) {
   return str.split(",").splice(1,-1).join(" ") || null
 }
+
+//Day 207
+//7 - Sum of Angles
+function angle(n) {
+  return 180*(n-2)
+}
