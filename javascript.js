@@ -4125,3 +4125,9 @@ function rep(str) {
 function angle(n) {
   return 180*(n-2)
 }
+
+//Day 208
+//7 - Largest sum in array
+function largestPairSum (numbers) {
+  return numbers.sort((a,b) => a-b,0).splice(-2).reduce((a,b)=>a+b,0)
+}
