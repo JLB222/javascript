@@ -4131,3 +4131,8 @@ function angle(n) {
 function largestPairSum (numbers) {
   return numbers.sort((a,b) => a-b,0).splice(-2).reduce((a,b)=>a+b,0)
 }
+
+//Day 209
+if (internetIsOut) {
+  return "well shit..."
+}
