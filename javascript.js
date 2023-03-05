@@ -4136,3 +4136,7 @@ function largestPairSum (numbers) {
 if (internetIsOut) {
   return "well shit..."
 }
+//Day 210
+function isTheInternetDown(answer) {
+  return answer === "yes" ? "feck..." : "yay!"
+}
