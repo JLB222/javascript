@@ -4140,3 +4140,18 @@ if (internetIsOut) {
 function isTheInternetDown(answer) {
   return answer === "yes" ? "feck..." : "yay!"
 }
+
+//Day 211
+let arrayAlphabet = "abcdefghijklmnopqrstuvwxyz".split("")
+//Deodorant Evaporator  -  another terribly worded mathwars problem by a jackass
+function evaporator(content, evapPerDayInteger, threshold){ 
+  let capacity = content
+  let evapRate = evapPerDayInteger / 100
+  let cutoff = (threshold/100) * capacity
+  let days = 0
+  for (let i = 0; capacity > cutoff; i++) {
+    capacity -= capacity * evapRate
+    days++
+  }
+  return days
+}
