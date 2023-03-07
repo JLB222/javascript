@@ -4155,3 +4155,13 @@ function evaporator(content, evapPerDayInteger, threshold){
   }
   return days
 }
+
+//Day 212
+function reviewConstructors(name, race, element, ultName) {
+  this.name = name
+  this.race = race
+  this.element = element
+  this.test = function() {
+    console.log(ultName)
+  }
+}
