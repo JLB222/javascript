@@ -4165,3 +4165,38 @@ function reviewConstructors(name, race, element, ultName) {
     console.log(ultName)
   }
 }
+
+//Day 213
+//7 - Alphabet War
+function alphabetWar(fight){
+  let combatants = fight.split("")
+  let warTally = 0
+  let leftSide = {
+    w: 4,
+    p: 3,
+    b: 2,
+    s: 1
+  }
+  let rightSide = {
+    m: 4,
+    q: 3,
+    d: 2,
+    z: 1
+  }
+  for (let i = 0; i < combatants.length; i++) {
+    if (leftSide.hasOwnProperty(combatants[i])) {
+      warTally -= leftSide[combatants[i]]
+    }
+    if (rightSide.hasOwnProperty(combatants[i])) {
+      warTally += rightSide[combatants[i]]
+    }
+  }
+   return warTally > 0 ? "Right side wins!" : warTally < 0 ? "Left side wins!" : "Let's fight again!"
+}
+
+//A more concise but harder to read approach:
+function alphabetWar(fight) {
+  let map = { w: -4, p: -3, b: -2, s: -1, m: 4, q: 3, d: 2, z: 1 };
+  let result = fight.split('').reduce((a, b) => a + (map[b] || 0), 0);
+  return result ? (result < 0 ? "Left" : "Right") + " side wins!" : "Let's fight again!";
+}
