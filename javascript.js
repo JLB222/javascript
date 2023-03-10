@@ -4206,3 +4206,15 @@ function alphabetWar(fight) {
 function noOdds( values ){
   return values.filter(x => x % 2 ===0)
 }
+
+//Day 215
+//7 - Maximum Product
+function adjacentElementsProduct(array) {
+  let result = array[0] * array[1]
+  for (let i = 1; i < array.length; i++) { //change the starting i to 1 since array[0] * array[1] has already been done
+    if (array[i] * array[i+1] > result) {
+      result = array[i] * array[i+1]
+    }
+  }
+  return result
+}
