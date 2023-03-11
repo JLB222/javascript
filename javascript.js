@@ -4218,3 +4218,29 @@ function adjacentElementsProduct(array) {
   }
   return result
 }
+
+//Day 216
+//7 - FizzBuzz array
+function fizzbuzz(n){
+  let result = []
+  for (let i = 1; i <= n; i++) {
+    if (i % 15 === 0) {
+      result.push("FizzBuzz")
+    } else if(i % 5 === 0) {
+      result.push("Buzz")
+    } else if(i % 3 === 0) {
+      result.push("Fizz")
+    } else {
+      result.push(i)
+    }
+  }
+  return result
+}
+//slightly condensed version
+function fizzbuzz(n){
+  let result = []
+  for (let i = 1; i <= n; i++) {
+    result.push(i%15===0?"FizzBuzz":i%5===0?"Buzz":i%3===0?"Fizz":i)
+  }
+  return result
+}
