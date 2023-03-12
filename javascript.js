@@ -4244,3 +4244,16 @@ function fizzbuzz(n){
   }
   return result
 }
+
+//Day 217
+//7 Find the vowels.  given a string, return an array with the index positions of the vowels
+function vowelIndices(word){
+  let vowels = "aeiouy".split("")
+  let result = []
+  for (let i = 0; i < word.length; i++) {
+    if (vowels.includes(word.toLowerCase()[i])) {
+      result.push(i+1)
+    }
+  }
+  return result
+}
