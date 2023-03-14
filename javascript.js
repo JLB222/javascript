@@ -4257,3 +4257,18 @@ function vowelIndices(word){
   }
   return result
 }
+
+//Day 218
+//7 Most digits
+function findLongest(array){
+  //determine the longest number in the array
+  let digits = Math.max(...array).toString().length 
+  //convert the number array into an array of strings
+  let strings = array.map(el => el.toString())
+  //loop through the stringed array, and as soon as you find the first number with the length found above, return that as the result
+  for (let i = 0; i < strings.length; i++) {
+    if (strings[i].length === digits) {
+      return +strings[i]
+    }
+  }
+}
