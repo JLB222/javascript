@@ -4272,3 +4272,9 @@ function findLongest(array){
     }
   }
 }
+
+//Day 219
+//7 Greet me
+function greet(str) {
+  return `Hello ${str[0].toUpperCase() + str.toLowerCase().slice(1)}!`
+}
