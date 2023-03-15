@@ -4278,3 +4278,9 @@ function findLongest(array){
 function greet(str) {
   return `Hello ${str[0].toUpperCase() + str.toLowerCase().slice(1)}!`
 }
+
+//Day 220
+//7
+function digits(n) {
+  return n.toString().length
+}
