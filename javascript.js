@@ -4284,3 +4284,17 @@ function greet(str) {
 function digits(n) {
   return n.toString().length
 }
+
+//Day 221
+//7 - Power of two
+function isPowerOfTwo(v){  //Thank stack overflow for this one
+  if (v === 0) {
+    return false
+  }
+  return v && !(v & (v - 1));
+}
+
+//alternate
+function isPowerOfTwo(n){
+  return Number.isInteger(Math.log2(n))
+}
