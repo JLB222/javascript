@@ -4298,3 +4298,16 @@ function isPowerOfTwo(v){  //Thank stack overflow for this one
 function isPowerOfTwo(n){
   return Number.isInteger(Math.log2(n))
 }
+
+//Day 222
+class CharMake {
+  constructor(name, race, element, ult) {
+    this.name = name
+    this.race = race
+    this.element = element
+    this.ult = ult
+  }
+  useUlt = function() {
+    return `Using ${this.ult}!`
+  }
+}
