@@ -4311,3 +4311,9 @@ class CharMake {
     return `Using ${this.ult}!`
   }
 }
+
+//Day 223
+//7 - convert an array of strings to numbers
+function toNumberArray(stringarray){
+  return stringarray.map(Number)
+}
