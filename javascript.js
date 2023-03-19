@@ -4317,3 +4317,13 @@ class CharMake {
 function toNumberArray(stringarray){
   return stringarray.map(Number)
 }
+
+//Day 224
+// P - array of integers
+// R - difference (integer) between the largest and smallest int in array
+// E - [1,3,5] --> 4
+// P - find the largest with Math.max, the smallest with Math.min, return the difference.  if input array has only 1 item, return 0
+
+function maxDiff(list) {
+  return list.length === 0 ? 0 : Math.max(...list) - Math.min(...list)
+}
