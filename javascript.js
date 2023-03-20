@@ -4327,3 +4327,22 @@ function toNumberArray(stringarray){
 function maxDiff(list) {
   return list.length === 0 ? 0 : Math.max(...list) - Math.min(...list)
 }
+
+//Day 225
+function repV(str) {
+  let vowels = "aeiou".split("")
+  let word = str.split("")
+  for (let i = 0; i < str.length; i++) {
+    if (vowels.includes(word[i])) {
+      word[i] = "!"
+    }
+  }
+  return word.join("")
+}
+
+//7 - Sort the Gift Code
+//given a string, return the same string but in alphabetical order
+
+function sortGiftCode(code){
+  return code.split("").sort().join("")
+}
