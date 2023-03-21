@@ -4346,3 +4346,37 @@ function repV(str) {
 function sortGiftCode(code){
   return code.split("").sort().join("")
 }
+
+function range(start,end) {
+  let numberArr = []
+  if (start < end) {
+    for (let i = start; i <= end; i++) {
+      numberArr.push(i)
+    }
+  }
+  if (start > end) {
+    for (let i = start; i >= end; i--) {
+      numberArr.push(i)
+    }
+  }
+  return numberArr
+}
+
+function rangeMod(start,end,step=1) {
+  let numberArr = []
+  if (start < end) {
+    for (let i = start; i <= end; i += step) {
+      numberArr.push(i)
+    }
+  }
+  if (start > end) {
+    for (let i = start; i >= end; i -= step) {
+      numberArr.push(i)
+    }
+  }
+  return numberArr
+}
+
+function sum(arr) {
+  return arr.reduce((a,b) => a+b, 0)
+}
