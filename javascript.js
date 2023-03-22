@@ -4380,3 +4380,13 @@ function rangeMod(start,end,step=1) {
 function sum(arr) {
   return arr.reduce((a,b) => a+b, 0)
 }
+
+//Day 226 - 
+function findOccurrences(str1, str2) {
+  return str1.split(str2).length -1
+}
+
+//7 - simple beads count
+function countRedBeads(n) {
+  return n < 2 ? 0 : 2 * (n-1)
+}
