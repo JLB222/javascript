@@ -4390,3 +4390,16 @@ function findOccurrences(str1, str2) {
 function countRedBeads(n) {
   return n < 2 ? 0 : 2 * (n-1)
 }
+
+//Day 227
+//7 - find the nth number of a digit
+var findDigit = function(num, nth){
+  if(nth <= 0)
+    return -1;
+   
+  var x = Math.abs(num);
+  for (var i=1; i < nth; i++){
+    x = Math.floor(x/10);
+  }
+  return x%10;
+}
