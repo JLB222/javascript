@@ -4403,3 +4403,10 @@ var findDigit = function(num, nth){
   }
   return x%10;
 }
+
+//Day 228
+//7 Alternate case - given a string, make all uppercase letters lowercase and viceversa
+function alternateCase(s) {
+  let sentence = s.split("").map(letter => letter === letter.toUpperCase() ? letter.toLowerCase() : letter.toUpperCase())
+  return sentence.join("")
+}
