@@ -4410,3 +4410,13 @@ function alternateCase(s) {
   let sentence = s.split("").map(letter => letter === letter.toUpperCase() ? letter.toLowerCase() : letter.toUpperCase())
   return sentence.join("")
 }
+
+//Day 229
+//7 - esreveR
+function reverse(array) {
+  let result = []
+  for (let i = 0; i < array.length; i++) {
+    result.unshift(array[i])
+  }
+  return result
+}
