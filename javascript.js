@@ -4420,3 +4420,10 @@ function reverse(array) {
   }
   return result
 }
+
+//Day 230
+function overheat(cpu) {
+  if (cpu.Temp > 90) {
+    cpu.shutdown
+  }
+}
