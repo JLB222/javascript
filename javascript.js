@@ -4439,3 +4439,9 @@ function pc() {
 function f(n){
   return (parseInt(n) === n && n > 0) ? n*(n+1)/2 : false;
 }
+
+//Day 232
+//7 - Coding Meetup #3
+function isRubyComing(list) {
+  return list.some(entry => entry.language === "Ruby")
+}
