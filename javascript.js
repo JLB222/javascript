@@ -4445,3 +4445,10 @@ function f(n){
 function isRubyComing(list) {
   return list.some(entry => entry.language === "Ruby")
 }
+
+//Day 233
+//7 - Coding Meetup #2
+function greetDevelopers(list) {
+  list.forEach(entry => entry.greeting = `Hi ${entry.firstName}, what do you like the most about ${entry.language}?`)
+  return list
+}
