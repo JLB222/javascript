@@ -4452,3 +4452,19 @@ function greetDevelopers(list) {
   list.forEach(entry => entry.greeting = `Hi ${entry.firstName}, what do you like the most about ${entry.language}?`)
   return list
 }
+
+//Day 234
+//Coding Meetup #4
+//given an array of objects, find the first object that meets a criteria and return its information in a given format
+function getFirstPython(list) {
+  let result = "There will be no Python developers"
+  for (let entry of list) {
+    if (entry.language === "Python") {
+      result = `${entry.firstName}, ${entry.country}`
+      break
+    }
+  }
+  return result
+}
+
+// an alternate would be to use the array method "find()", which finds the first element of an array that satisfies a given condition
