@@ -4468,3 +4468,23 @@ function getFirstPython(list) {
 }
 
 // an alternate would be to use the array method "find()", which finds the first element of an array that satisfies a given condition
+
+//Day 235
+function countThings(arr) {
+  let counter = {}
+  for (let i = 0; i < arr.length; i++) {
+    counter[arr[i]] = (counter[arr[i]] || 0) +1
+  }
+  return counter
+}
+
+//7 - Balanced Number 1
+function balancedNum(number) {
+  let str = `${number}`
+  ,   len = (str.length - (str.length % 2 ? -1 : -2)) / 2
+  ,   sum = digits => [ ...digits ].reduce((a, b) => a + +b, 0);
+
+  return sum(str.slice(0, len)) === sum(str.slice(-len)) 
+  ? 'Balanced' 
+  : 'Not Balanced';
+}
