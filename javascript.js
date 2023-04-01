@@ -4488,3 +4488,15 @@ function balancedNum(number) {
   ? 'Balanced' 
   : 'Not Balanced';
 }
+
+//Day 236
+//7 - Incrementer
+function incrementer(nums) { 
+  let step1 = nums.map((el, i) => el + i + 1)
+  return step1.map(el => el >= 10 ? +el.toString().split("").slice(-1) : el)
+}
+
+//alternate
+function incrementer(num) { 
+  return num.map((a,i) => (a+i+1)%10);
+}
