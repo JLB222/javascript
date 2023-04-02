@@ -4500,3 +4500,10 @@ function incrementer(nums) {
 function incrementer(num) { 
   return num.map((a,i) => (a+i+1)%10);
 }
+
+//Day 237
+function pcTemp() {
+  if (pcTemp === "too fecking high") {
+    shutdown
+  }
+}
