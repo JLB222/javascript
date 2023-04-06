@@ -4507,3 +4507,15 @@ function pcTemp() {
     shutdown
   }
 }
+
+//Day 238
+
+//Day 239
+
+//Day 240
+
+//Day 241
+//8 - Is the string uppercase?
+String.prototype.isUpperCase = function() {
+  return this.split("").every(character => character.toUpperCase() === character)
+}
