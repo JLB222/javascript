@@ -4519,3 +4519,15 @@ function pcTemp() {
 String.prototype.isUpperCase = function() {
   return this.split("").every(character => character.toUpperCase() === character)
 }
+
+//Day 242
+//Nth Smallest Element - given an array of integers, find the nth smallest number
+function nthSmallest(arr, pos){
+  return arr.sort((a,b) => a-b,0)[pos - 1]
+ }
+
+ //without modifying the input:
+ function nthSmallest(arr, pos){
+  let arrCopy = [...arr]
+  return arrCopy.sort((a,b) => a-b,0)[pos - 1]
+ }
