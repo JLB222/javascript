@@ -4531,3 +4531,15 @@ function nthSmallest(arr, pos){
   let arrCopy = [...arr]
   return arrCopy.sort((a,b) => a-b,0)[pos - 1]
  }
+
+ //Day 243
+ //Sum of Odd Cubed Numbers
+ function cubeOdd(arr) {
+  if (arr.some(el => el !== +el)) {
+   return undefined
+  }
+  let cubed = arr.map(el => el * el * el)
+  let odds = cubed.filter(el => el % 2 === 1 || el % 2 === -1)
+  let sum = odds.reduce((a,b) => a+b, 0)
+  return sum
+}
