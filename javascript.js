@@ -4508,11 +4508,11 @@ function pcTemp() {
   }
 }
 
-//Day 238
+//Day 238 - SSD failure; no computer
 
-//Day 239
+//Day 239 - SSD failure; no computer
 
-//Day 240
+//Day 240 - SSD failure; no computer
 
 //Day 241
 //8 - Is the string uppercase?
@@ -4542,4 +4542,16 @@ function nthSmallest(arr, pos){
   let odds = cubed.filter(el => el % 2 === 1 || el % 2 === -1)
   let sum = odds.reduce((a,b) => a+b, 0)
   return sum
+}
+
+//Day 244
+//simple remove duplicates
+function solve(arr) {
+  let result = []
+  for (let i = arr.length-1; i >= 0; i--) {
+    if (!result.includes(arr[i])) {
+      result.unshift(arr[i])
+    }
+  }
+  return result
 }
