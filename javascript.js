@@ -4555,3 +4555,14 @@ function solve(arr) {
   }
   return result
 }
+
+//Day 245
+//7 Spacify
+function spacify(str) {
+  return str.split("").join(" ")
+}
+
+//alternate
+function spacify(str) {
+  return [...str].join(" ")
+}
