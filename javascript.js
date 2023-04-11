@@ -4566,3 +4566,17 @@ function spacify(str) {
 function spacify(str) {
   return [...str].join(" ")
 }
+
+//Day 245
+//function declaration
+function thing() {
+  //do the thing
+}
+
+//function expression
+const thing = function() {
+  //do the thing
+}
+
+//fat arrow
+const thing = thing => thing +1
