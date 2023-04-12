@@ -4580,3 +4580,17 @@ const thing = function() {
 
 //fat arrow
 const thing = thing => thing +1
+
+//Day 246
+//7 - Average of numbers
+function averages(numbers) {
+  if (numbers === null || numbers.length < 2) {
+    return []
+  }
+  return numbers.map((el,i,arr) => (arr[i] + arr[i+1]) / 2).slice(0,-1)
+}
+
+//alternate
+function averages(numbers) {
+  return numbers ? numbers.map((el, i, a) => (el + a[i + 1]) / 2).slice(0, -1) : [];
+}
