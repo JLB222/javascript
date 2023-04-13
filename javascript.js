@@ -4594,3 +4594,9 @@ function averages(numbers) {
 function averages(numbers) {
   return numbers ? numbers.map((el, i, a) => (el + a[i + 1]) / 2).slice(0, -1) : [];
 }
+
+//Day 247
+//7 - V A P O R C O D E
+function vaporcode(string) {
+  return string.toUpperCase().split("").filter(el => el !== " ").join("  ")
+}
