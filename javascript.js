@@ -4600,3 +4600,9 @@ function averages(numbers) {
 function vaporcode(string) {
   return string.toUpperCase().split("").filter(el => el !== " ").join("  ")
 }
+
+//Day 248
+//7 - Filter the number
+function filterString(str) {
+  return  +str.split("").filter(el => el.toUpperCase() === el.toLowerCase()).join("")
+}
