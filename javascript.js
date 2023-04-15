@@ -4606,3 +4606,11 @@ function vaporcode(string) {
 function filterString(str) {
   return  +str.split("").filter(el => el.toUpperCase() === el.toLowerCase()).join("")
 }
+
+//Day 249
+
+function gbfCon(name, race, element) {
+  this.name = name
+  this.race = race
+  this.element = element
+}
