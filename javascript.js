@@ -4614,3 +4614,12 @@ function gbfCon(name, race, element) {
   this.race = race
   this.element = element
 }
+
+//Day 250
+//7- Sort out the men from the boys
+function menFromBoys(arr){
+  arr = Array.from(new Set(arr))
+  let odds = arr.filter(el => el % 2).sort((a,b) => b-a,0)  //originally I had el % 2 === 1;  this caused problems with negative numbers having a remainder of -1
+  let evens = arr.filter(el => el % 2 === 0).sort((a,b) => a-b,0)
+  return [...evens, ...odds]
+}
