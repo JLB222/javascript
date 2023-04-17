@@ -4623,3 +4623,16 @@ function menFromBoys(arr){
   let evens = arr.filter(el => el % 2 === 0).sort((a,b) => a-b,0)
   return [...evens, ...odds]
 }
+
+//Day 251
+//7 Simple consecutive pairs
+function pairs(ar){
+  let count = 0
+  for (let i = 0; i < ar.length; i += 2) {
+    console.log(ar[i+1])
+    if (ar[i + 1] === ar[i] +1 || ar[i + 1] === ar[i] -1) {
+      count++
+    }
+  }
+  return count
+}
