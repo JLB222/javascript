@@ -4651,3 +4651,25 @@ function outed(meet, boss){
   }
   return total / teamSize <= 5 ? "Get Out Now!" : "Nice Work Champ!"
 }
+
+//Day 253
+//Fold an array
+// revisit
+
+function foldArray(array, runs){
+  if (!runs) return array //this will stop the recursion from infinite looping;  once runs is 0, it'll return array
+  
+  var result = []
+  for (let i = 0; i < Math.ceil(array.length /2); i++) {
+    //add the 1st element to the last, 2nd to 2nd last, etc.  if at any point you're adding an element to itself, you know you've hit the middle and should stop
+    if (i !== array.length-[i+1]) {
+      result.push(array[i] + array[array.length-[i+1]])
+    } 
+    else {
+      result.push(array[i])
+      break;
+    }
+  }
+  
+  return foldArray(result,runs-1)  //instead of nested for loops, make it recursive
+}
