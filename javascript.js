@@ -4636,3 +4636,18 @@ function pairs(ar){
   }
   return count
 }
+
+//Day 252
+//7 - The Office I
+function outed(meet, boss){
+  let total = 0
+  let teamSize = Object.keys(meet).length
+  for (let person in meet) {
+    if (person === boss) {
+      total += (meet[person] *2)
+    } else {
+      total += meet[person]
+    }
+  }
+  return total / teamSize <= 5 ? "Get Out Now!" : "Nice Work Champ!"
+}
