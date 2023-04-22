@@ -4673,3 +4673,15 @@ function foldArray(array, runs){
   
   return foldArray(result,runs-1)  //instead of nested for loops, make it recursive
 }
+
+//Day 254
+//7 - Basic Calculator
+function calculate(num1, operation, num2) {
+  switch (operation) {
+      case "+": return num1 + num2
+      case "-": return num1 - num2
+      case "*": return num1 * num2
+      case "/": return num2 === 0 ? null : num1 / num2
+      default: return null
+  }
+ }
