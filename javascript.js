@@ -4713,3 +4713,24 @@ class Dictionary {
     return this[key] || `Can't find entry for ${key}`;
   }
 }
+
+//Day 256
+//7 - Sum Factorial
+
+function sumFactorial(arr){
+  let sum = 0
+  for (let i = 0; i < arr.length; i++) {
+    sum += factorialize(arr[i])
+  }
+  return sum
+}
+
+function factorialize(num) {
+  if (num < 0) 
+        return -1;
+  else if (num == 0) 
+      return 1;
+  else {
+      return (num * factorialize(num - 1));
+  }
+}
