@@ -4734,3 +4734,15 @@ function factorialize(num) {
       return (num * factorialize(num - 1));
   }
 }
+
+//Day 257
+//7 - Running out of space
+function spacey(array){
+  let result = []
+  let word = ""
+  for (let i = 0; i < array.length; i++) {
+    word += array[i]
+    result.push(word)
+  }
+  return result
+}
