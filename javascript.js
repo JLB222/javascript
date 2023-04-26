@@ -4752,3 +4752,25 @@ function spacey(array){
 function helloWorld(){
   return String.fromCharCode(72,101,108,108,111, 44,32, 87,111,114,108,100, 33)
 }
+
+//Day 259
+//7 - Keep the Order
+function keepOrder(arr, val) {
+  let higherVal = 0
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] >= val) {
+      higherVal = i
+      break;
+    }
+    if (arr[arr.length-1] < val) {
+      higherVal = arr.length
+    }
+  }
+  return higherVal
+}
+
+//alternate:  use findIndex to find the index of the first element that is larger than, or equal to, the input value.  also, add the value to the array with array.concat
+function keepOrder(arr,val) {
+  return arr.concat(val).findIndex( el => el >= val )
+}
+
