@@ -4774,3 +4774,8 @@ function keepOrder(arr,val) {
   return arr.concat(val).findIndex( el => el >= val )
 }
 
+//Day 260
+//Get Nth Even Number
+function nthEven(n){
+  return n * 2 -2
+}
