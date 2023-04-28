@@ -4779,3 +4779,28 @@ function keepOrder(arr,val) {
 function nthEven(n){
   return n * 2 -2
 }
+
+//Day 261
+//7 - Dot Calculator
+function dotCalculator (equation) {
+  let numbers = equation.split(" ")
+  let answer = ""
+  switch (numbers[1]) {
+      case "+": return answer.padStart(numbers[0].length + numbers[2].length, ".")
+      case "-": return answer.padStart(numbers[0].length - numbers[2].length, ".")
+      case "//": return answer.padStart(numbers[0].length / numbers[2].length, ".")
+      default:  return answer.padStart(numbers[0].length * numbers[2].length, ".")
+  }
+}
+
+//slightly more readable
+function dotCalculator (equation) {
+  let [leftDots,operation,rightDots] = equation.split(" ")
+  let answer = ""
+  switch (operation) {
+      case "+" : return answer.padStart(leftDots.length + rightDots.length, ".")
+      case "-" : return answer.padStart(leftDots.length - rightDots.length, ".")
+      case "//": return answer.padStart(leftDots.length / rightDots.length, ".")
+      case "*":  return answer.padStart(leftDots.length * rightDots.length, ".")
+  }
+}
