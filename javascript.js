@@ -4804,3 +4804,20 @@ function dotCalculator (equation) {
       case "*":  return answer.padStart(leftDots.length * rightDots.length, ".")
   }
 }
+
+//Day 262
+//7 - Find the index of the 2nd occurrence
+function secondSymbol(str, symbol) {
+  let result = []
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === symbol) {
+      result.push(i)
+    }
+  }
+  return result.length > 1 ? result[1] : -1
+}
+
+//alternate
+function secondSymbol(s, symbol) {
+  return s.indexOf(symbol, s.indexOf(symbol) + 1);  //you can optionally indicate where in the string to start your search, so start it after the first occurrence's index
+}
