@@ -4821,3 +4821,16 @@ function secondSymbol(str, symbol) {
 function secondSymbol(s, symbol) {
   return s.indexOf(symbol, s.indexOf(symbol) + 1);  //you can optionally indicate where in the string to start your search, so start it after the first occurrence's index
 }
+
+//Day 263
+//7 - Sum a list but ignore any duplicates
+// revisit - At first I didn't know why this code worked.  I forgot that indexOf(num) would always return the first index of that number, even if its called on later elements in the array.  So if there are duplicates in the array, it'll always return false and therefore not add them to the sum.
+function sumNoDuplicates(arr) {
+  let sum = 0
+  arr.forEach(num => {
+      if (arr.indexOf(num) === arr.lastIndexOf(num)) {
+          sum += num;
+      }
+  })
+  return sum
+}
