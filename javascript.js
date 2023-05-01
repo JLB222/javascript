@@ -4834,3 +4834,25 @@ function sumNoDuplicates(arr) {
   })
   return sum
 }
+//Day 264
+//7 - Last digits of a number.
+function lastDigit(n, d) {
+  let numArr = n.toString().split("").map(Number) // .splice(-d,d)
+  //instead of everything down below this line, I could have just spliced the above line to get the specific section of the array I wanted...
+  let result = []
+  
+  for (let i = numArr.length-1; result.length < d; i--) {
+    result.unshift(numArr[i])
+  }
+  
+  if (d > numArr.length) {
+    return numArr
+  } else {
+    return result
+  }
+}
+
+//cleaner alternative
+function lastDigit(n, d) {
+  return n.toString().split('').splice(-d,d).map(Number)
+}
