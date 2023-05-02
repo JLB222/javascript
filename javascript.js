@@ -4856,3 +4856,16 @@ function lastDigit(n, d) {
 function lastDigit(n, d) {
   return n.toString().split('').splice(-d,d).map(Number)
 }
+
+//Day 265
+class GbfChar {
+  constructor(name, race, element, ult) {
+    this.name = name
+    this.race = race
+    this.element = element
+    this.ult = ult
+  }
+  ougi() {
+    return `${this.ult}`
+  }
+}
