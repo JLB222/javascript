@@ -4869,3 +4869,9 @@ class GbfChar {
     return `${this.ult}`
   }
 }
+
+//Day 266
+//7 Holiday 3 - Fire on the boat
+function fireFight(arr){
+  return arr.split(" ").map(el => el === "Fire" ? el = "~~" : el).join(" ")
+}
