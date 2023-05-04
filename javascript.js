@@ -4872,6 +4872,34 @@ class GbfChar {
 
 //Day 266
 //7 Holiday 3 - Fire on the boat
-function fireFight(arr){
-  return arr.split(" ").map(el => el === "Fire" ? el = "~~" : el).join(" ")
+function fireFight(s){
+  return s.split(" ").map(el => el === "Fire" ? el = "~~" : el).join(" ")
+}
+
+//also could have used String.replaceAll("Fire", "~~")
+
+//Day 267
+//6 - Odd-heavy array
+function isOddHeavy(arr){
+  let odds = arr.filter(el => el % 2).sort((a,b) => a-b,0)  //if we use Math.min and Math.max in the return, we would not need to sort the new arrays.
+  let evens = arr.filter(el => el % 2 === 0).sort((a,b) => a-b,0)
+  
+  if (arr.length === 0 || odds.length === 0) {  //if arr.length is 0, odds.length is 0 by default, so I could actually get rid of that check
+    return false
+  }
+  if (odds.length > 0 && evens.length === 0) {
+    return true
+  }
+  return odds[0] > evens[evens.length -1]  //Also could have done `Math.min(...odds) > Math.max(...evens)`
+}
+
+//cleaned up a little: 
+function isOddHeavy(arr){
+  let odds = arr.filter(el => el % 2 !== 0)
+  let evens = arr.filter(el => el % 2 === 0)
+  
+  if (odds.length === 0) {
+    return false
+  }
+  return Math.min(...odds) > Math.max(...evens)
 }
