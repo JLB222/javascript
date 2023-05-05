@@ -4903,3 +4903,17 @@ function isOddHeavy(arr){
   }
   return Math.min(...odds) > Math.max(...evens)
 }
+
+//Day 268
+//7 - Find your caterer
+function findCaterer(budget, people){
+  let basic = 15 * people
+  let economy = 20 * people
+  let premium = (people > 60 ? 24 : 30) * people
+  
+  if (people < 1 || budget < basic) {
+    return -1
+  } else {
+    return premium > budget ? economy > budget ? 1 : 2 : 3
+  }
+}
