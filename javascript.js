@@ -4917,3 +4917,20 @@ function findCaterer(budget, people){
     return premium > budget ? economy > budget ? 1 : 2 : 3
   }
 }
+
+//Day 269
+//8 - Quadrants - Determine which of the 4 quadrants a set of coordinates is in.
+function quadrant(x, y) {
+  if (x > 0 && y > 0) {
+    return 1
+  }
+  if (x < 0 && y < 0) {
+    return 3
+  }
+  if (x > 0 && y < 0) {
+    return 4
+  }
+  if (x < 0 && y > 0) {
+    return 2
+  }
+}
