@@ -4934,3 +4934,9 @@ function quadrant(x, y) {
     return 2
   }
 }
+
+//Day 270
+//7 - Alphabetically ordered; check to see if all of a string's letters are in alphabetical order
+function alphabetic(s) {
+  return s.split("").sort().join("") === s
+}
