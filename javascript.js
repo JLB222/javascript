@@ -4940,3 +4940,10 @@ function quadrant(x, y) {
 function alphabetic(s) {
   return s.split("").sort().join("") === s
 }
+
+//Day 271
+//7 How many consecutive numbers are needed?
+function consecutive(arr) {
+  let limit = Math.max(...arr) - (Math.min(...arr)-1)
+  return arr.length ? limit - arr.length : 0
+}
