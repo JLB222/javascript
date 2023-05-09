@@ -4947,3 +4947,9 @@ function consecutive(arr) {
   let limit = Math.max(...arr) - (Math.min(...arr)-1)
   return arr.length ? limit - arr.length : 0
 }
+
+//Day 272
+//7 - 99 Problems, #1: last in list
+function last(arr) {
+  return arr.length ? arr[arr.length-1] : null
+}
