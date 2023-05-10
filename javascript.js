@@ -4953,3 +4953,29 @@ function consecutive(arr) {
 function last(arr) {
   return arr.length ? arr[arr.length-1] : null
 }
+
+//Day 273
+function repStr(str) {
+  let vowels = "aeiou".split("")
+  let result = []
+  for (let i = 0; i < str.length; i++) {
+    if (vowels.includes(str[i])) {
+      result.push("!")
+    } else {
+      result.push(str[i])
+    }
+  }
+  return result.join("")
+}
+
+//7 - Adding Arrays
+function arrAdder(arr) {
+  let result = []
+  for (let j = 0; j < arr[0].length; j++) {
+    for (let i = 0; i < arr.length; i++) {
+      result.push(arr[i][j])
+    }
+    result.push(" ")
+  }
+  return result.join("").trim()
+}
