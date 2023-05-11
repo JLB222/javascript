@@ -4979,3 +4979,9 @@ function arrAdder(arr) {
   }
   return result.join("").trim()
 }
+
+//Day 274
+//Given a number, 0-9, return that number as a word.
+function convert(num) {
+  return ["Zero", "One", "Two","Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"][num]
+}
