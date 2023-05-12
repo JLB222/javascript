@@ -4985,3 +4985,10 @@ function arrAdder(arr) {
 function convert(num) {
   return ["Zero", "One", "Two","Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"][num]
 }
+
+//Day 275
+//7 Remove All Marked Elements of a List
+//revisit
+Array.prototype.remove_ = function(integer_list, values_list){
+  return integer_list.filter(el => !values_list.includes(el))
+}
