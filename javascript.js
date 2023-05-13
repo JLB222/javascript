@@ -4992,3 +4992,9 @@ function convert(num) {
 Array.prototype.remove_ = function(integer_list, values_list){
   return integer_list.filter(el => !values_list.includes(el))
 }
+
+//Day 276
+//7 Make Acronym
+function toAcronym(str){
+  return str.split(" ").map(el => el.slice(0,1)).join("").toUpperCase()
+}
