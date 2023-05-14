@@ -4998,3 +4998,21 @@ Array.prototype.remove_ = function(integer_list, values_list){
 function toAcronym(str){
   return str.split(" ").map(el => el.slice(0,1)).join("").toUpperCase()
 }
+
+//Day 277
+// Create a function that accepts 2 strings as arguments and returns an integer of the number of occurrences the 2nd argument is found in the 1st
+function countThings(str1, str2) {
+  let count = 0
+  let strArr = str1.split("")
+  for (let i = 0; i < strArr.length; i++) {
+    if (strArr[i] === str2) {
+      count++
+    }
+  }
+  return count
+}
+
+//alternative
+function countThings2(str1,str2) {
+  return str1.split(str2).length -1
+}
