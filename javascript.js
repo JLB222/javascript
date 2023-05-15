@@ -5016,3 +5016,15 @@ function countThings(str1, str2) {
 function countThings2(str1,str2) {
   return str1.split(str2).length -1
 }
+
+//Day 278
+//7 - Find the smallest power higher than a given value
+function findNextPower(val, pow_) {
+  return Math.floor(Math.pow(val, 1/pow_) +1) ** pow_ > val ? Math.floor(Math.pow(val, 1/pow_) +1) ** pow_  : Math.floor(Math.pow(val, 1/pow_) +2) ** pow_ 
+}  //oh god its so wet
+
+//alternate
+function findNextPower(val, pow_) {
+  return Math.ceil(Math.pow(val+1, 1/pow_)) ** pow_
+} 
+//explanation: take the original value, find its nth root, round it down, increase it by 1, raise it to the nth power.  However, this fails inconsistently when the given value is already a perfect power.  Increase the original value by one and round UP to bypass this
