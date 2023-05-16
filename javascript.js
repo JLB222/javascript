@@ -5028,3 +5028,11 @@ function findNextPower(val, pow_) {
   return Math.ceil(Math.pow(val+1, 1/pow_)) ** pow_
 } 
 //explanation: take the original value, find its nth root, round it down, increase it by 1, raise it to the nth power.  However, this fails inconsistently when the given value is already a perfect power.  Increase the original value by one and round UP to bypass this
+
+//Day 279
+//7 - Most Likely
+function mostLikely(prob1,prob2){
+  let arr1 = prob1.split(":").map(Number)
+  let arr2 = prob2.split(":").map(Number)
+  return (arr1[0]/arr1[1] > arr2[0]/arr2[1])
+}
