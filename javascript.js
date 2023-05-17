@@ -5036,3 +5036,17 @@ function mostLikely(prob1,prob2){
   let arr2 = prob2.split(":").map(Number)
   return (arr1[0]/arr1[1] > arr2[0]/arr2[1])
 }
+
+//Day 280
+//7 - Cats in hats
+function height(n) {
+  let result = 2000000
+  let previousCat = 2000000
+  let currentCat = 0
+  for (let i = 0; i < n; i++) {
+    currentCat = previousCat * 0.4
+    result += currentCat
+    previousCat = currentCat
+  }
+  return result.toFixed(3)
+}
