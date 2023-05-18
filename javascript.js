@@ -5050,3 +5050,25 @@ function height(n) {
   }
   return result.toFixed(3)
 }
+
+//Day 281
+function countElementsFor(arr) {
+  let counter = {}
+  for (let i = 0; i < arr.length; i++) {
+    if (counter[arr[i]]) { 
+      counter[arr[i]]++
+    } else {
+      counter[arr[i]] = 1
+    }
+  }
+  return counter
+}
+
+//alternate
+function countElementsForOf(arr) {
+  let counter = {}
+  for (let num of arr) {
+    counter[num] = (counter[num] || 0) +1
+  }
+  return counter
+}
