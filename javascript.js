@@ -5072,3 +5072,20 @@ function countElementsForOf(arr) {
   }
   return counter
 }
+
+//Day 282
+//7 - Length and two values
+function alternate(n, firstValue, secondValue){
+  let result = []
+  let i = 0
+  while (i < n) {
+    if (i % 2 === 0) {
+      result.push(firstValue) 
+      i++
+    } else {
+      result.push(secondValue)
+      i++
+    }
+  }
+  return result
+}
