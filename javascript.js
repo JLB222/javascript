@@ -5089,3 +5089,19 @@ function alternate(n, firstValue, secondValue){
   }
   return result
 }
+
+//Day 283
+//7 - Find Duplicates
+function duplicates(arr) {
+  let array1 = []
+  let duplicates = []
+  for (let i = 0; i < arr.length; i++) {
+    if (array1.indexOf(arr[i]) === -1) {
+      array1.push(arr[i]) 
+    } 
+    else if (duplicates.indexOf(arr[i]) === -1) {
+      duplicates.push(arr[i])
+    }
+  }
+  return duplicates
+}
