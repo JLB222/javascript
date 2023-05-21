@@ -5105,3 +5105,15 @@ function duplicates(arr) {
   }
   return duplicates
 }
+
+//Day 284
+//implement filter
+Array.prototype.filter = function(fn){
+  var result = [];
+  for (var i = 0; i<this.length; i++){
+    if (fn(this[i])){
+      result.push(this[i])
+    }
+  }
+  return result
+}
