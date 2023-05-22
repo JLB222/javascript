@@ -5117,3 +5117,11 @@ Array.prototype.filter = function(fn){
   }
   return result
 }
+
+//Day 285
+//8 - Do something "n.times"
+Number.prototype.times = function (f) {
+  for (let i = 0; i < this; i++) {
+    f(i)
+  }
+}
