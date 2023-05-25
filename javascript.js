@@ -5145,3 +5145,11 @@ function blackAndWhite(arr){
 solution= (molarMass1, molarMass2, givenMass1, givenMass2, volume, temp) => {
   return (((givenMass1/molarMass1) + (givenMass2/molarMass2)) * 0.082 * (temp+273.15)) / volume
 }
+
+//Day 288
+//8 - Configure package json for a node app
+const configuration = {
+  "name": "your-pack-name",
+  "description": "This is a test.",
+  "version": "1.0.0"
+}
