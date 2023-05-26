@@ -5153,3 +5153,17 @@ const configuration = {
   "description": "This is a test.",
   "version": "1.0.0"
 }
+
+//Day 289
+//8 - Elite Brazilian Forces
+function magNumber(info){
+  switch (info[0]) {
+    case "PT92": return Math.ceil(3 * info[1] / 17)
+    case "M4A1": 
+    case "M16A2": return Math.ceil(3 * info[1] / 30)
+    case "PSG1": return Math.ceil(3 * info[1] / 5)
+  }
+}
+
+//alternate that's more DRY
+magNumber = info => Math.ceil(info[1] * 3 / {PT92: 17, M4A1: 30, M16A2: 30, PSG1: 5}[info[0]])
