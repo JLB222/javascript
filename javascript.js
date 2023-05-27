@@ -5167,3 +5167,10 @@ function magNumber(info){
 
 //alternate that's more DRY
 magNumber = info => Math.ceil(info[1] * 3 / {PT92: 17, M4A1: 30, M16A2: 30, PSG1: 5}[info[0]])
+
+//Day 290
+//7 - Product of largest pair
+function maxProduct(a) {
+  let arr = a.sort((a,b) => a-b,0)
+  return arr[arr.length-1] * arr[arr.length-2]
+}
