@@ -5174,3 +5174,14 @@ function maxProduct(a) {
   let arr = a.sort((a,b) => a-b,0)
   return arr[arr.length-1] * arr[arr.length-2]
 }
+
+//Day 291
+//7 - 
+function newAvg(arr, newavg) {
+    let result = (newavg * (arr.length+1)) - (arr.reduce((a,b) => a+b,0))
+    if (result <= 0) {
+      throw new Error('Expected New Average is too low')
+    } else {
+      return Math.ceil(result)
+    }
+}
