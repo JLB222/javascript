@@ -5185,3 +5185,42 @@ function newAvg(arr, newavg) {
       return Math.ceil(result)
     }
 }
+
+//Day 292
+//6 - Find Cracker
+//revisit - fun fact! this code has a very edge case failure:  if a student hacks their grade to be LOWER than what they deserve, this function will not catch it.
+function findHack(arr) {
+  let cheaters = []
+  for (let i = 0; i < arr.length; i++) {
+    if (checkTotal(arr[i][2]) < arr[i][1]) {
+        cheaters.push(arr[i][0])
+    }
+  }
+  return cheaters
+}
+
+function checkTotal(arr) {
+  let total = 0
+  if (arr.length > 4) {
+      var honorRoll = true
+  }
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === "A") {
+      total += 30
+    }
+    else if (arr[i] === "B") {
+      total += 20
+    }
+    else if (arr[i] === "C") {
+      total += 10
+      honorRoll = false
+    }
+    else if (arr[i] === "D") {
+      total += 5
+      honorRoll = false
+    } else {
+      honorRoll = false
+    }
+  }
+  return total + (honorRoll ? 20 : 0)
+}
