@@ -5224,3 +5224,23 @@ function checkTotal(arr) {
   }
   return total + (honorRoll ? 20 : 0)
 }
+
+//Day 293
+//6 - Reverse vowels in a string
+function reverseVowels(str) {
+  let wordArr = str.split("")
+  let vowelArr = "aeiouAEIOU".split("")
+  let vowels = []
+  for (let i = 0; i < wordArr.length; i++) {
+    if (vowelArr.includes(wordArr[i])) {
+      vowels.push(wordArr[i])
+      wordArr[i] = "replace"
+    }
+  }
+  for (let i = 0; i < wordArr.length; i++) {
+    if ((wordArr[i]) === "replace") {
+      wordArr[i] = vowels.pop()
+    }
+  }
+  return wordArr.join("")
+}
