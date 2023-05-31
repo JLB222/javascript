@@ -5244,3 +5244,14 @@ function reverseVowels(str) {
   }
   return wordArr.join("")
 }
+
+//Day 294
+//constructor function
+function gbfConstructor(name,race,element, ult) {
+  this.name = name,
+  this.race = race,
+  this.element = element
+  this.ult = function() {
+    return `Using ${ult}`
+  }
+}
