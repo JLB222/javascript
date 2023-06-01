@@ -5255,3 +5255,20 @@ function gbfConstructor(name,race,element, ult) {
     return `Using ${ult}`
   }
 }
+
+//Day 295
+//6 - Permute a palindrome
+function permuteAPalindrome (input) { 
+  let inputArray = input.split("")  //turn the input into an array
+  let counter = {}  //empty object to fill with counts of each character
+  for (let i = 0; i < inputArray.length; i++) {  //for loop that counts the number of occurrences for each character in the array
+    counter[inputArray[i]] = (counter[inputArray[i]] || 0) +1
+  }
+  let numOfOdds = 0  //a palindrome by its very nature can only have 1 character with an odd number of occurrences, at most
+  for (const property in counter) {  //loop through the object and increment the counter every time there's a character with an odd number of occurrences
+    if (counter[property] % 2 === 1) {
+      numOfOdds++
+    }
+  }
+  return numOfOdds > 1 ? false : true  
+}
