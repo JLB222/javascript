@@ -5272,3 +5272,15 @@ function permuteAPalindrome (input) {
   }
   return numOfOdds > 1 ? false : true  
 }
+
+//Day 296
+//6 - Number format.  Given a number, return that number as a string with commas in appropriate places
+function numberFormat(number) {
+  return number.toLocaleString();
+}
+
+//Day 297
+//8 - Be Concise IV
+function find(arr, el) {
+  return arr.includes(el) ? arr.indexOf(el) : "Not found";
+}
