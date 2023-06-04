@@ -5284,3 +5284,9 @@ function numberFormat(number) {
 function find(arr, el) {
   return arr.includes(el) ? arr.indexOf(el) : "Not found";
 }
+
+//Day 298
+//8 - Making Six Toast
+function sixToast(num) {
+  return Math.abs(6-num)
+}
