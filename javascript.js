@@ -5300,3 +5300,12 @@ function numberToPower(number, power){
   }
   return total;
 }
+
+//Day 300
+//8 - unexpected parsing
+function getStatus(isBusy) {
+  var msg = (isBusy ? "busy" : "available");
+  return {
+    status: msg
+  }
+}
