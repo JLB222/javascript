@@ -5312,7 +5312,6 @@ function getStatus(isBusy) {
 
 //Day 301
 //8 - debugging - basic var assignment
-var a = "code";
-var b = "wa.rs";
-var name = a + b;
-
+var ab = "code";
+var bc = "wa.rs";
+var name = ab + bc;
