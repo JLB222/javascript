@@ -5316,5 +5316,28 @@ var ab = "code";
 var bc = "wa.rs";
 var name = ab + bc;
 
+//Day 302
 
-//wtf github why are you not working?
+//function declaration
+function doIt() {
+  //do it
+}
+//function expression
+const doIt = function() {
+  //do it
+}
+//fat arrow
+const goOnDoIt = () => {/*do it*/}
+
+//8 - Debugging practice
+function weatherInfo (temp) {
+  let c = convertToCelsius(temp)
+  if (c < 0) {
+    return (c + " is freezing temperature")
+  } else {
+    return (c + " is above freezing temperature")
+  }
+}
+function convertToCelsius(temperature) {
+  return ((temperature - 32) * (5/9))
+}
