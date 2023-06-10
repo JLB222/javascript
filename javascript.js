@@ -5356,3 +5356,9 @@ function evalObject(value){
   }
   return result;
 }
+
+//Day 304
+//8 - Simple Fun - Seats in theater
+function seatsInTheater(nCols, nRows, col, row) {
+  return (nCols - col +1) * (nRows - row)
+}
