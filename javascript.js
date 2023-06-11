@@ -5362,3 +5362,9 @@ function evalObject(value){
 function seatsInTheater(nCols, nRows, col, row) {
   return (nCols - col +1) * (nRows - row)
 }
+
+//Day 305
+//8 - String Templates - Bug Fixing 5
+function buildString(...template){
+  return `I like ${template.join(', ')}!`;
+}
