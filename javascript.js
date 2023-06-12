@@ -5368,3 +5368,9 @@ function seatsInTheater(nCols, nRows, col, row) {
 function buildString(...template){
   return `I like ${template.join(', ')}!`;
 }
+
+//Day 306
+//8 - Short Long Short - given two strings, return a new string of format: short+long+short
+function solution(a, b){
+  return a.length > b.length ? b+a+b : a+b+a
+}
