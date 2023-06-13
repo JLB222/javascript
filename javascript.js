@@ -5374,3 +5374,17 @@ function buildString(...template){
 function solution(a, b){
   return a.length > b.length ? b+a+b : a+b+a
 }
+
+//Day 307
+//8 - debugging - is this my tail?
+function correctTail(bod, tail) {
+    
+  let sub = bod.substr(bod.length-(tail.length))
+  
+  if (sub === tail) {;
+    return true
+  }
+  else {
+    return false
+  }
+}
