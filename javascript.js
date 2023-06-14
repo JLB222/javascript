@@ -5388,3 +5388,13 @@ function correctTail(bod, tail) {
     return false
   }
 }
+
+//Day 308
+//8 - if/else syntax debug
+function checkAlive (health) {
+  if (health <= 0) {
+    return false
+  } else {
+    return true
+  }
+}
