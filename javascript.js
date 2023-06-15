@@ -5398,3 +5398,27 @@ function checkAlive (health) {
     return true
   }
 }
+
+//Day 309
+//8 - refactoring
+//started with:
+function squaresOnly(array) {
+  var result = [], isSquare;
+  for (let i = 0; i < array.length; i++) {
+    isSquare = !1; // !1 evaluates to false and is therefore a shorthand way of typing 'false'
+    for (let k = 0; k <= 10; k++) {
+      if (k ** 2 === array[i]) {
+        isSquare = true;
+      }
+    }
+    if (isSquare) {
+      result[result.length] = array[i];
+    }
+  }
+  return result;
+}
+
+//finished with:
+function squaresOnly(arr) {
+  return arr.filter((num) => Math.sqrt(num) % 1 === 0)
+}
