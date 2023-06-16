@@ -5422,3 +5422,10 @@ function squaresOnly(array) {
 function squaresOnly(arr) {
   return arr.filter((num) => Math.sqrt(num) % 1 === 0)
 }
+
+//Day 310
+//8 - Whose Move?
+function whoseMove(lastPlayer, win) {
+  let nextPlayer = lastPlayer === "white" ? "black" : "white"
+  return win ? lastPlayer : nextPlayer
+}
