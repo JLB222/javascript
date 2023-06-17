@@ -5429,3 +5429,9 @@ function whoseMove(lastPlayer, win) {
   let nextPlayer = lastPlayer === "white" ? "black" : "white"
   return win ? lastPlayer : nextPlayer
 }
+
+//Day 311
+//8 - Dollars and Cents - given a float, return said number as a string with dollar notation:  3 >>> $3.00
+function formatMoney(amount){
+  return `$${amount.toFixed(2)}`
+}
