@@ -5435,3 +5435,11 @@ function whoseMove(lastPlayer, win) {
 function formatMoney(amount){
   return `$${amount.toFixed(2)}`
 }
+
+//Day 312
+//8 - Find the difference in ages
+function differenceInAges(ages){
+  let youngest = Math.min(...ages)
+  let oldest = Math.max(...ages)
+  return [youngest, oldest,(oldest-youngest) ]
+}
