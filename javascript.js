@@ -5443,3 +5443,13 @@ function differenceInAges(ages){
   let oldest = Math.max(...ages)
   return [youngest, oldest,(oldest-youngest) ]
 }
+
+//Day 313
+//8 - Fix the bugs
+function myFirstKata(a, b) {
+  if (typeof(a) !== "number" || typeof(b) !== "number") {
+    return false;
+  } else {
+    return (a % b) + (b % a)
+  }
+}
