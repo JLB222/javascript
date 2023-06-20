@@ -5453,3 +5453,10 @@ function myFirstKata(a, b) {
     return (a % b) + (b % a)
   }
 }
+
+//Day 314
+//8 - user links (spaces)
+function generateLink(user) {
+  let name = user.split(" ").join("%20")
+  return `http://www.codewars.com/users/${name}`
+}
