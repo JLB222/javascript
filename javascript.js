@@ -5460,3 +5460,12 @@ function generateLink(user) {
   let name = user.split(" ").join("%20")
   return `http://www.codewars.com/users/${name}`
 }
+
+//Day 315
+//8 - Speedcode #2, array madness
+function arrayMadness(a, b) {
+  let sumA = a.reduce((a,b) => a + b*b, 0)
+  let sumB = b.reduce((a,b) => a + b*b*b, 0)
+  return (sumA > sumB)
+}
+
