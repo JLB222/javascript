@@ -5469,3 +5469,13 @@ function arrayMadness(a, b) {
   return (sumA > sumB)
 }
 
+//Day 316
+//review
+function cleanString(str) {  //string will be numbers & commas:  "1,2,3,4,5"
+  return str.split(",").slice(1,-1).join(" ") || null
+}
+//review
+//How would you replace all the vowels in a string with something else, or nothing at all?  (Use a regex)
+function repVow(str) {
+  return str.replace(/[aeiou]/gi, "!")
+}
