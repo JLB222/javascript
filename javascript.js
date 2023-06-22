@@ -5478,4 +5478,4 @@ function cleanString(str) {  //string will be numbers & commas:  "1,2,3,4,5"
 //How would you replace all the vowels in a string with something else, or nothing at all?  (Use a regex)
 function repVow(str) {
   return str.replace(/[aeiou]/gi, "!")
-}
+} 
