@@ -5479,3 +5479,8 @@ function cleanString(str) {  //string will be numbers & commas:  "1,2,3,4,5"
 function repVow(str) {
   return str.replace(/[aeiou]/gi, "!")
 } 
+
+//Day 317
+//debugging
+let items = []
+items.push({a: "b", c: "d"})
