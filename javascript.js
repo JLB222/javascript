@@ -5484,3 +5484,13 @@ function repVow(str) {
 //debugging
 let items = []
 items.push({a: "b", c: "d"})
+
+//Day 318
+//8 - invalid login, bug fixing
+function validate(username, password){
+  if (password.includes("||") || password.includes("//")) {
+    return "Wrong username or password!"
+  }
+  var database = new Database();
+  return database.login(username, password);
+}
