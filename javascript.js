@@ -5494,3 +5494,12 @@ function validate(username, password){
   var database = new Database();
   return database.login(username, password);
 }
+
+//Day 319
+//8 - fun with es6 classes
+// revisit
+class Labrador extends Dog {
+  constructor(name, age, gender, master) {
+    super(name, age, gender, "Labrador", "Large", master, true);
+  }
+}
