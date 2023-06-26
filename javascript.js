@@ -5503,3 +5503,15 @@ class Labrador extends Dog {
     super(name, age, gender, "Labrador", "Large", master, true);
   }
 }
+
+//Day 320
+class GBFcharMaker {
+  constructor(name, race, element, ultName) {
+    this.name = name
+    this.race = race
+    this.element = element
+    this.chargeAttack = function() {
+      return `Using ${ultName}!`
+    }
+  }
+}
