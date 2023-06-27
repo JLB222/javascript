@@ -5515,3 +5515,15 @@ class GBFcharMaker {
     }
   }
 }
+
+//Day 321
+//8 - JS Style
+//the below code will not work.  Why?  revisit
+function getMax2()
+{
+  return
+  {
+    name: 'Max Headroom'
+  }
+}
+//apparently there's an implicit ";" after return, which means the code never reaches the object.  fix it by putting the opening curly bracket on the same line as return
