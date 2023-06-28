@@ -5527,3 +5527,17 @@ function getMax2()
   }
 }
 //apparently there's an implicit ";" after return, which means the code never reaches the object.  fix it by putting the opening curly bracket on the same line as return
+
+//Day 322
+//7 - Count the consonants
+function consonantCount(str) {
+  let consonants = "bcdfghjklmnpqrstvwxyz".split("")
+  let word = str.toLowerCase().split("")
+  let counter = 0
+  for (let i = 0; i < str.length; i++) {
+    if (consonants.includes(word[i])) {
+      counter++
+    }
+  }
+  return counter
+}
