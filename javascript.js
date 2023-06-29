@@ -5541,3 +5541,23 @@ function consonantCount(str) {
   }
   return counter
 }
+
+//Day 323
+//7 - What dominates your array?
+//revisit
+function dominator(arr) {
+  let counter = {}
+  for (let i=0; i < arr.length; i++) {
+    if (counter[arr[i]]) {
+      counter[arr[i]]++
+    } else {
+      counter[arr[i]] = 1
+    }
+  }
+  for (let key in counter) {
+    if (counter[key] > arr.length/2) {
+      return +key
+    }
+  }
+  return -1
+}
