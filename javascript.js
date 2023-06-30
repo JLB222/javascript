@@ -5561,3 +5561,14 @@ function dominator(arr) {
   }
   return -1
 }
+
+//Day 324
+//7 - Day of the Year
+function toDayOfYear(arr) {
+  var now = new Date(arr[2],(arr[1]-1),[arr[0]]);
+  var start = new Date(arr[2], 0, 0);
+  var diff = now - start;
+  var oneDay = 1000 * 60 * 60 * 24;
+  var day = Math.round(diff / oneDay)
+  return day
+}
