@@ -5572,3 +5572,13 @@ function toDayOfYear(arr) {
   var day = Math.round(diff / oneDay)
   return day
 }
+
+//Day 325
+//7 - alternating between three values; revisit
+function f(x, cc) { 
+  switch (x) {
+    case cc.a: return cc.b;
+    case cc.b: return cc.c;
+    case cc.c: return cc.a;
+  }
+}
