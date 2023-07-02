@@ -5582,3 +5582,13 @@ function f(x, cc) {
     case cc.c: return cc.a;
   }
 }
+
+//Day 326
+//7 - wentback
+function f(x, cc) { 
+  switch(x) {
+      case cc.a: return cc.b
+      case cc.b: return cc.c
+      case cc.c: return cc.a
+  }
+}
