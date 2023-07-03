@@ -5592,3 +5592,24 @@ function f(x, cc) {
       case cc.c: return cc.a
   }
 }
+
+//Day 327
+//7 - Basic JS - Building a Calculator
+var Calculator = {};
+
+Calculator.add = function(n1,n2) {
+  return n1+n2
+}
+Calculator.subtract = function(n1,n2) {
+  return n1-n2
+}
+Calculator.multiply = function(n1,n2) {
+  return n1*n2
+}
+Calculator.divide = function(n1,n2) {
+  if(n2===0) {
+    return false
+  }
+  return n1/n2
+}
+
