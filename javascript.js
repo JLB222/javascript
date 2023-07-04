@@ -5596,7 +5596,6 @@ function f(x, cc) {
 //Day 327
 //7 - Basic JS - Building a Calculator
 var Calculator = {};
-
 Calculator.add = function(n1,n2) {
   return n1+n2
 }
@@ -5612,4 +5611,28 @@ Calculator.divide = function(n1,n2) {
   }
   return n1/n2
 }
+// a little drier version:
+let Calculator = {
+  add: function(n1,n2) {
+    return n1+n2
+  },
+  subtract: function(n1,n2) {
+    return n1-n2
+  },
+  multiply: function(n1,n2) {
+    return n1*n2
+  },
+  divide: function(n1,n2) {
+    return n2===0 ? false : n1/n2
+  }
+}
+
+//Day 328
+//cleaned up further:
+var Calculator = {
+  add:      (n1,n2) => n1+n2,
+  subtract: (n1,n2) => n1-n2,
+  multiply: (n1,n2) => n1*n2,
+  divide:   (n1,n2) => n2===0 ? false : n1/n2
+};
 
