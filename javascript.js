@@ -5636,3 +5636,21 @@ var Calculator = {
   divide:   (n1,n2) => n2===0 ? false : n1/n2
 };
 
+//Day 329
+//7 - adding array functionality to js
+Array.range = function(start, count) {
+  let result = []
+  let counter = 0
+  for (let i = 0; counter < count; i++) {
+    result.push(start + i)
+    counter++
+  }
+  return result;
+}
+Array.prototype.sum = function() {
+  let total = 0
+  for (let i = 0; i < this.length; i++) {
+    total += this[i]
+  }
+  return total;
+}
