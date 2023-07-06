@@ -5654,3 +5654,23 @@ Array.prototype.sum = function() {
   }
   return total;
 }
+
+//Day 330
+//7 - Sorting Arrays
+//revisit
+function sortArray(a1, a2) {
+  let result = []
+  for (let i = 0; i < a1.length; i++) {
+    let firstLetter = a1[i][0]
+    for (let j = 0; j < a1.length; j++) {
+      if (a2[j].startsWith(firstLetter)) {
+        result.push(a2[j])
+      }
+    }
+  }
+  return result
+}
+//not a big fan of the nested for loop.  let's clean it up
+
+const sortArray = (a1, a2) => a1.map(word1 => a2.find(word2 => word1[0] === word2[0]))
+
