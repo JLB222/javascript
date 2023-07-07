@@ -5674,3 +5674,7 @@ function sortArray(a1, a2) {
 
 const sortArray = (a1, a2) => a1.map(word1 => a2.find(word2 => word1[0] === word2[0]))
 
+//Day 331 
+function sortArray(a1, a2) {
+  return a1.map(word1 => a2.find(word2 => word1[0] === word2[0]))
+}
