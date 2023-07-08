@@ -5678,3 +5678,14 @@ const sortArray = (a1, a2) => a1.map(word1 => a2.find(word2 => word1[0] === word
 function sortArray(a1, a2) {
   return a1.map(word1 => a2.find(word2 => word1[0] === word2[0]))
 }
+
+//Day 332
+//7 - no ifs no buts
+//revisit; multiple ways to do this.  kinda neat
+function noIfsNoButs(a, b) {
+  switch(true) {
+      case (a>b) : return `${a} is greater than ${b}`
+      case (a<b) : return `${a} is smaller than ${b}`
+      default : return `${a} is equal to ${b}`
+  }
+}
