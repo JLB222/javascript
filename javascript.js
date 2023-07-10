@@ -5698,3 +5698,11 @@ function noIfsNoButs(a, b) {
       case a===b : return `${a} is equal to ${b}`
   }
 }
+
+//Day 334
+//7 - Given an array, Take each number in the array and square it if it is even, or square root the number if it is odd. Take this new array and return the sum of it, rounded to two decimal places.
+function sumSquareEvenRootOdd(nums){
+  let result = nums.map(x => x % 2 === 0 ? x*x : Math.sqrt(x)).reduce((a,b) => a+b,0)
+  return Math.round(result * 100) / 100
+}
+
