@@ -5706,3 +5706,9 @@ function sumSquareEvenRootOdd(nums){
   return Math.round(result * 100) / 100
 }
 
+//Day 335
+//7 Power of 4
+//Write a function that returns true if a given parameter is a power of 4, and false if it's not.
+function powerOf4(n) {
+  return Number.isInteger(n) && Number.isInteger(Math.log(n)/Math.log(4));
+}
