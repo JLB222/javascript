@@ -5712,3 +5712,20 @@ function sumSquareEvenRootOdd(nums){
 function powerOf4(n) {
   return Number.isInteger(n) && Number.isInteger(Math.log(n)/Math.log(4));
 }
+
+//Day 336
+//create a function, taking two strings, that returns the count of the number of occurences of the 2nd string in the 1st one.
+function letterCount(word,letter) {
+  let counter = 0
+  for(let i = 0; i < word.length; i++) {
+    word[i] === letter ? counter++ : null
+  }
+  return counter
+}
+
+//or you could:
+
+function letterCounter(word,letter) {
+  return word.split(letter).length - 1
+}
+
