@@ -5729,3 +5729,13 @@ function letterCounter(word,letter) {
   return word.split(letter).length - 1
 }
 
+//Day 337
+//7 - given an object where the values are arrays, determine which key has a value that includes all elements of a given array
+//revisit
+function killer(suspectInfo, dead) {
+  for (let name in suspectInfo) {
+    if (dead.every(deadPerson => suspectInfo[name].includes(deadPerson))) {
+      return name;
+    }
+  }
+}
