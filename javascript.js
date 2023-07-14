@@ -5739,3 +5739,26 @@ function killer(suspectInfo, dead) {
     }
   }
 }
+
+//Day 338
+//anki review
+function repVow(str) {
+  let vowels = "aeiou".split("")
+  let result = str.split("")
+  for (let i = 0; i < str.length; i++) {
+    if (vowels.includes(result[i])) {
+      result[i] = "!"
+    }
+  }
+  return result.join("")
+}
+//337 review
+function killer(suspectInfo, dead) {
+  for (let name in suspectInfo) {
+    if (dead.every((val) => suspectInfo[name].includes(val))) {
+      return name
+    }
+  }
+  return "Killer not found"
+}
+
