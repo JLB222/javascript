@@ -5762,3 +5762,23 @@ function killer(suspectInfo, dead) {
   return "Killer not found"
 }
 
+//Day 339
+//anki review
+function arrayCounter(arr) {
+  let counter = {}
+  for (let i = 0; i < arr.length; i++) {
+    if (counter[arr[i]]) {
+      counter[arr[i]]++
+    } else {
+      counter[arr[i]] = 1
+    }
+  }
+  return counter
+}
+//alternate
+function altArrayCounter(arr) {
+  let counter = {}
+  for (let key of arr) {
+    counter[key] = (counter[key] || 0) +1
+  }
+}
