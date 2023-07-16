@@ -5782,3 +5782,13 @@ function altArrayCounter(arr) {
     counter[key] = (counter[key] || 0) +1
   }
 }
+
+//Day 340
+//337 review; the importance of semantic code
+function killer(suspectInfo, dead) {
+  for (let suspect in suspectInfo) {
+    if (dead.every(victim => suspectInfo[suspect].includes(victim))) {
+      return suspect
+    }
+  }
+ }
