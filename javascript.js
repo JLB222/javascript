@@ -5792,3 +5792,12 @@ function killer(suspectInfo, dead) {
     }
   }
  }
+
+ //Day 341
+ //given two numbers that will be multiplied, determine if the result is a "vampire number"
+ function vampireTest(a, b) {
+  let initial = (a.toString() + b.toString()).split("").sort().join("")
+  let result = (a*b).toString().split("").sort().join("")
+  return initial === result
+}
+
