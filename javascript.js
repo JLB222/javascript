@@ -5801,3 +5801,18 @@ function killer(suspectInfo, dead) {
   return initial === result
 }
 
+//Day 342
+//7 - turn any word into beef taco
+function tacofy(word) {
+  word = word.toLowerCase()
+  let guide = {a: "beef",e: "beef",i: "beef",o: "beef",u: "beef",t: "tomato",l: "lettuce",c: "cheese",g: "guacamole",s: "salsa"}
+  let result = ["shell"]
+  for (let i = 0; i < word.length; i++) {
+    if (guide[word[i]]) {
+      result.push(guide[word[i]])
+    }
+  }
+  result.push("shell")
+  return result
+}
+
