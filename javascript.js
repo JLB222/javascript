@@ -5816,3 +5816,13 @@ function tacofy(word) {
   return result
 }
 
+//Day 343
+//7 - Transpose two strings in an array
+function transposeTwoStrings(arr) {
+  let longer = Math.max(arr[0].length, arr[1].length)
+  let result =[]
+  for (let i = 0; i < longer; i++) {
+    result.push(`${arr[0][i] || " "} ${arr[1][i] || " "}`)
+  }
+	return result.join("\n")
+}
