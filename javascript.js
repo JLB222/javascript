@@ -5826,3 +5826,9 @@ function transposeTwoStrings(arr) {
   }
 	return result.join("\n")
 }
+
+//Day 344
+//7 - unscrambled eggs; you are given a string where "egg" has been inserted after every consonant.  return what the original string must have been
+function unscrambleEggs(word){
+  return word.split("egg").join("")
+}
