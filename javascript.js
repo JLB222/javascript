@@ -5832,3 +5832,17 @@ function transposeTwoStrings(arr) {
 function unscrambleEggs(word){
   return word.split("egg").join("")
 }
+
+//Day 345
+//7 - Turkish numbers, 0-99
+function getTurkishNumber(num){
+	let singleDigits = ["sıfır", "bir", "iki", "üç","dört", "beş", "altı", "yedi", "sekiz", "dokuz"]
+  let dblDigits = ["on", "yirmi", "otuz", "kırk", "elli", "altmış", "yetmiş", "seksen", "doksan"]
+  let splitNumber = num.toString().split("").map(Number)
+  
+  if (num <=9) {
+    return singleDigits[num]
+  } else {
+    return dblDigits[splitNumber[0]-1] + (splitNumber[1]===0? "" : ` ${singleDigits[splitNumber[1]]}`)
+  }
+}
