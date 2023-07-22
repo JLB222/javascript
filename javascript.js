@@ -5846,3 +5846,16 @@ function getTurkishNumber(num){
     return dblDigits[splitNumber[0]-1] + (splitNumber[1]===0? "" : ` ${singleDigits[splitNumber[1]]}`)
   }
 }
+
+//Day 346
+//7 - Upstream/Downstream
+function time(distance,boatSpeed,stream){
+  let speed
+  if (stream.split(" ")[0] === "Downstream") {
+    speed = boatSpeed + +stream.split(" ")[1]
+  } else {
+    speed = boatSpeed - +stream.split(" ")[1]
+  }
+  return +(distance/speed).toFixed(2)
+}
+
