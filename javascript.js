@@ -5859,3 +5859,13 @@ function time(distance,boatSpeed,stream){
   return +(distance/speed).toFixed(2)
 }
 
+//Day 347
+//7 - Cat and Mouse, easy version
+function catMouse(x){
+  return x.split(".").length-1 > 3 ? "Escaped!" : "Caught!"
+}
+// or just
+function catMouse(x){
+  return x.length > 5 ? "Escaped!" : "Caught!"
+}
+
