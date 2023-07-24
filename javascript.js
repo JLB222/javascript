@@ -5869,3 +5869,18 @@ function catMouse(x){
   return x.length > 5 ? "Escaped!" : "Caught!"
 }
 
+//Day 348
+//7 - What time is it?
+function getMilitaryTime(input) {
+  let time = input.split(":")
+  
+  if (time[2].includes("PM") && (time[0] < 12)) {
+    time[0] = +time[0] + 12
+  }
+  
+  if (time[2].includes("AM") && (time[0] === "12")) {
+    time[0] = "00"
+  }
+  return time.join(":").replace(/[AMPM]/gi, "")
+}
+
