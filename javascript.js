@@ -5884,3 +5884,15 @@ function getMilitaryTime(input) {
   return time.join(":").replace(/[AMPM]/gi, "")
 }
 
+//Day 349
+//7 - Tram Capacity
+function tram(stops, exiting, entering){
+  let passengerCount = 0
+  let passengerMax = 0
+  for (let i = 0; i < stops; i++) {
+    passengerCount += entering[i]
+    passengerCount -= exiting[i] 
+    passengerCount > passengerMax ? passengerMax = passengerCount : null
+  }
+  return passengerMax
+}
