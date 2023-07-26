@@ -5896,3 +5896,20 @@ function tram(stops, exiting, entering){
   }
   return passengerMax
 }
+
+//Day 350
+//7 - two numbers are positive
+function twoArePositive(...nums) {
+  let counter = 0
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] > 0) {
+      counter++
+    }
+  }
+  return counter === 2
+}
+
+//alt
+function twoArePositive(a, b, c) {
+  return [...arguments].filter(val => val > 0).length === 2
+}
