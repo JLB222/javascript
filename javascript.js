@@ -5913,3 +5913,18 @@ function twoArePositive(...nums) {
 function twoArePositive(a, b, c) {
   return [...arguments].filter(val => val > 0).length === 2
 }
+
+//Day 351
+function gbfmaker3(name, race, element) {
+  this.name = name
+  this.race = race
+  this.element = element
+}
+
+//7 - Center Yourself
+function center (str, width, fill = ' ') {
+  let length = width - str.length
+  let newString = str.padStart((str.length + Math.ceil(length/2)), fill)
+  newString = newString.padEnd(width, fill)
+  return newString         
+}
