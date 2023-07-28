@@ -5928,3 +5928,19 @@ function center (str, width, fill = ' ') {
   newString = newString.padEnd(width, fill)
   return newString         
 }
+
+//Day 352
+//7 - Unix command line, extract file type
+function linuxType(fileAttribute) {
+  let index = {
+    "-": "file",
+    "d": "directory",
+    "l": "symlink",
+    "c": "character_file",
+    "b": "block_file",
+    "p": "pipe",
+    "s": "socket",
+    "D": "door"
+  }
+  return index[fileAttribute[0]]
+}
