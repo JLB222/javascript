@@ -5944,3 +5944,8 @@ function linuxType(fileAttribute) {
   }
   return index[fileAttribute[0]]
 }
+
+//Day 353
+//7 - search JSON
+const getCharacters=(obj, key, val) => 
+obj.characters.filter(character => character[key]?.toLowerCase() === val.toLowerCase());
