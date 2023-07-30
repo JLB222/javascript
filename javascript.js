@@ -5949,3 +5949,11 @@ function linuxType(fileAttribute) {
 //7 - search JSON
 const getCharacters=(obj, key, val) => 
 obj.characters.filter(character => character[key]?.toLowerCase() === val.toLowerCase());
+
+//Day 354
+// review 353;
+function getCharacters(obj, key, val) {
+  return obj.characters.filter(entry => entry[key].toLowerCase() == val.toLowerCase())
+}
+//I got as far as this but it kept erroring.  I forgot about the optional chaining used in yesterday's solution to avoid throwing an error
+
