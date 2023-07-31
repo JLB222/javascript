@@ -5957,3 +5957,10 @@ function getCharacters(obj, key, val) {
 }
 //I got as far as this but it kept erroring.  I forgot about the optional chaining used in yesterday's solution to avoid throwing an error
 
+//Day 355
+//7 - exclamation marks series #7
+function remove (string) {
+  let result = string.split(" ")
+  result = result.filter(str => str.indexOf("!") !== str.lastIndexOf("!") || str.indexOf("!") === -1)
+  return result.join(" ")
+}
