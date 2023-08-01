@@ -5964,3 +5964,9 @@ function remove (string) {
   result = result.filter(str => str.indexOf("!") !== str.lastIndexOf("!") || str.indexOf("!") === -1)
   return result.join(" ")
 }
+
+//Day 356
+//7 - Between extremes
+function betweenExtremes(numbers) {
+  return Math.max(...numbers) - Math.min(...numbers)
+}
