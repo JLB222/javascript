@@ -6011,3 +6011,9 @@ function giveChange(amount) {
 }
 //at the very least, it's easier to decipher
 
+//Day 358
+//7 - Bingo (Or Not)
+function bingo(arr) {
+  let bingo = [2,7,9,14,15]
+  return bingo.every((num) => arr.includes(num)) ? "WIN" : "LOSE"
+}
