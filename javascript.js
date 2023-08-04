@@ -6017,3 +6017,22 @@ function bingo(arr) {
   let bingo = [2,7,9,14,15]
   return bingo.every((num) => arr.includes(num)) ? "WIN" : "LOSE"
 }
+
+//Day 359
+//review
+function repVowe(str) {
+  return str.replace(/[aeiou]/gi, "")
+}
+
+//7 Convert Decimal Degrees to Deg,Min,Sec
+//WIP
+function convert(degrees) {
+  degrees = degrees.toFixed(4)
+  let result = []
+  result[0] = +degrees.toString().split(".")[0]
+  result[1] = +degrees.toString().split(".")[1] * 6
+  result[2] = +degrees.toString().split(".")[1]
+  return result
+}
+
+// the annoying thing here is that it's easy, the only real complication is the arbitrary desire to have variable array lengths depending on the input
