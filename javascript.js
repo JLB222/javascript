@@ -6030,9 +6030,24 @@ function convert(degrees) {
   degrees = degrees.toFixed(4)
   let result = []
   result[0] = +degrees.toString().split(".")[0]
-  result[1] = +degrees.toString().split(".")[1] * 6
-  result[2] = +degrees.toString().split(".")[1]
+  result[1] = +degrees.toString().split(".")[1]
+  result[2] = +degrees.toString().split(".")[2]
   return result
 }
 
 // the annoying thing here is that it's easy, the only real complication is the arbitrary desire to have variable array lengths depending on the input
+
+//360
+//7 - ATM
+function solve(n) {
+  if (n % 10 !== 0) {return -1}
+  let notes = 0
+  while (n >= 500) {notes++; n -= 500;}
+  while (n >= 200) {notes++; n -= 200;}
+  while (n >= 100) {notes++; n -= 100;}
+  while (n >= 50) {notes++; n -= 50;}
+  while (n >= 20) {notes++; n -= 20;}
+  while (n >= 10) {notes++; n -= 10;}
+
+  return notes
+}
