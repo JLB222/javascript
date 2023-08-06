@@ -6058,4 +6058,3 @@ function tidyNumber(n){
   
   return num === n.toString().split("").map(Number).sort().join()
 }
-
