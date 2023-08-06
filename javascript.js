@@ -6051,3 +6051,11 @@ function solve(n) {
 
   return notes
 }
+
+//Day 361
+function tidyNumber(n){
+  let num = n.toString().split("").map(Number).join()
+  
+  return num === n.toString().split("").map(Number).sort().join()
+}
+
