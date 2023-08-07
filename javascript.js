@@ -6058,3 +6058,9 @@ function tidyNumber(n){
   
   return num === n.toString().split("").map(Number).sort().join()
 }
+
+//Day 362
+//7 Thinkful - List and Loop Drills: Lists of lists
+function processData(data){
+  return data.map(el => el[0] - el[1]).reduce((a,b) => a*b,1)
+}
