@@ -6064,3 +6064,16 @@ function tidyNumber(n){
 function processData(data){
   return data.map(el => el[0] - el[1]).reduce((a,b) => a*b,1)
 }
+
+//Day 363
+//7 - three sticks
+function maxlen(l1, l2) {
+  let nums = [...arguments].sort((a,b) => a - b, 0)
+  if (nums[0]*3 < nums[1]) {
+    return nums[1]/3
+  }
+  if (nums[0]*2<nums[1]) {
+    return nums[0]
+  }
+  return nums[1]/2
+}
