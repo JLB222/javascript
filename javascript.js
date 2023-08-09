@@ -6077,3 +6077,18 @@ function maxlen(l1, l2) {
   }
   return nums[1]/2
 }
+
+//Day 364
+//7 - Who took the car key?
+function whoTookTheCarKey(message) {
+  let result = ""
+  for (let i = 0; i < message.length; i++) {
+    result += String.fromCharCode(parseInt(message[i], 2))
+  }
+  return result
+}
+
+//simplified with map method:
+function whoTookTheCarKey(msg) {
+  return msg.map(el => String.fromCharCode(parseInt(el, 2))).join("")
+}
