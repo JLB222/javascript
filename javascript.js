@@ -6092,3 +6092,19 @@ function whoTookTheCarKey(message) {
 function whoTookTheCarKey(msg) {
   return msg.map(el => String.fromCharCode(parseInt(el, 2))).join("")
 }
+
+//Day 365
+//7 - Is n divisible by (...) ?
+function isDivisible(){
+  for (let i = 0; i < arguments.length; i++) {
+    if (arguments[0] % arguments[i] !== 0) {
+        return false
+    }
+  }
+  return true
+}
+
+//simplified further
+function isDivisible(n1, ...nRest){
+  return nRest.every(el => n1 % el === 0)
+}
