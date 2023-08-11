@@ -6108,3 +6108,19 @@ function isDivisible(){
 function isDivisible(n1, ...nRest){
   return nRest.every(el => n1 % el === 0)
 }
+
+//Day 366
+//review
+function isDivisible(n1, ...nRest){
+  return nRest.every(el => n1 % el === 0)
+}
+
+//7 - Thinkful - Logic Drills: Umbrella
+function takeUmbrella(weather, chance) {
+  return weather === "rainy" ? true : weather === "cloudy" && chance > 0.2 ? true : weather  === "sunny" && chance > 0.5 ? true : false
+}
+
+//slightly cleaner:
+function takeUmbrella(weather, chance) {
+  return weather == 'rainy' ||  (weather == 'cloudy' && chance > 0.2) || (weather == 'sunny' && chance > 0.5)
+}
