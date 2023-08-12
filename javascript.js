@@ -6124,3 +6124,25 @@ function takeUmbrella(weather, chance) {
 function takeUmbrella(weather, chance) {
   return weather == 'rainy' ||  (weather == 'cloudy' && chance > 0.2) || (weather == 'sunny' && chance > 0.5)
 }
+
+//Day 367
+//7 - The Office II - Boredom score
+var boreScore = {
+  accounts: 1,
+  finance: 2,
+  canteen: 10,
+  regulation: 3,
+  trading: 6,
+  change: 6,
+  IS: 8,
+  retail: 5,
+  cleaning: 4,
+  "pissing about": 25
+}
+
+function boredom(staff){
+  let departments = Object.values(staff)
+  let score = 0
+  departments.forEach(el => score += boreScore[el])
+  return score <= 80 ? 'kill me now' : score < 100 ? 'i can handle this' : 'party time!!'
+}
