@@ -6146,3 +6146,10 @@ function boredom(staff){
   departments.forEach(el => score += boreScore[el])
   return score <= 80 ? 'kill me now' : score < 100 ? 'i can handle this' : 'party time!!'
 }
+
+//Day 368
+//7 - this kata maker sucks ass; the logic of his word problems is incorrect.
+function cookPancakes(n, m) { 
+  const time = Math.ceil((n * 2) / m);
+  return time === 1 ? 2 : time;
+}
