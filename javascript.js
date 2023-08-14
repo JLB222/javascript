@@ -6153,3 +6153,24 @@ function cookPancakes(n, m) {
   const time = Math.ceil((n * 2) / m);
   return time === 1 ? 2 : time;
 }
+
+//Day 369
+//7 - tiyFizzBuzz;  change a string's consonants & vowels
+function tiyFizzBuzz(sentence){
+  let consonantsUC = "BCDFGHJKLMNPQRSTVWXYZ"
+  let vowelUC = "AEIOU"
+  let vowelLC = "aeiou"
+  let sent = sentence.split("")
+  for (let i = 0; i < sent.length; i++) {
+    if (consonantsUC.includes(sent[i])) {
+      sent[i] = "Iron"
+    }
+    if (vowelUC.includes(sent[i])) {
+      sent[i] = "Iron Yard"
+    }
+    if (vowelLC.includes(sent[i])) {
+      sent[i] = "Yard"
+    }
+  }
+  return sent.join("")
+}
