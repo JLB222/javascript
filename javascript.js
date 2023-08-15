@@ -6174,3 +6174,16 @@ function tiyFizzBuzz(sentence){
   }
   return sent.join("")
 }
+
+//Day 370
+//7 - Suzuki; lining up his students
+function lineupStudents(students){
+  return students.split(" ").sort((a,b) => b.localeCompare(a)).sort((a,b) => b.length - a.length, 0)
+}
+
+//trimmed down a little:
+//instead of two sort calls, both the lenght comparison and localeCompare happen in the same one
+
+function lineupStudents(students){
+  return students.split(" ").sort((a,b) => b.length - a.length || b.localeCompare(a))
+}
