@@ -6187,3 +6187,59 @@ function lineupStudents(students){
 function lineupStudents(students){
   return students.split(" ").sort((a,b) => b.length - a.length || b.localeCompare(a))
 }
+
+//Day 371
+// 6 - Help Suzuki purchase his Tofu
+function buyTofu(cost,box){
+  //count up your coins
+  let arr = box.split(" ")
+  let mon = arr.filter(el => el === "mon").length
+  let monme = arr.filter(el => el === "monme").length
+  
+  //push what data you currently have to the result array, because mon & monme will be altered by the while statements below
+  let result = [mon,monme,((monme*60) + mon)]
+
+  //find out whether you have exact change & count the coins used
+  let coinsUsed = 0
+  
+  //continually reduce the cost by 60, either using single monme coins, or many mon coins 
+  //reducing the mon coins by 60 in one iteration rather than running the single-coin-while-loop 60 times
+  while (cost >= 60) {
+    monme >= 1 ? (monme -= 1, coinsUsed +=1) : (mon -= 60, coinsUsed += 60)
+    cost -= 60
+    if (mon < 0) {
+      break
+    }
+  }
+  
+  //continually reduce the cost by 1, using mon coins, until you reduce the cost to 0 or run out of mon coins
+  while (cost > 0) {
+    mon >= 1 ? (mon -=1, coinsUsed +=1) : result = "leaving the market"
+    cost -=1
+  }
+  
+  //if you did not have enough coins, the result binding was changed from an array to a string
+  result[3] = (coinsUsed)  //strings are immutable, so if result was changed from an array to a string in the last step, this will do nothing; otherwise it'll add the final thing we need
+  
+  return result
+}
+//!!!this fails if your cost is perfectly divisible by 60 & you don't have enough money!!!
+
+//alternate; I seem to be overestimating the value of mine iterating the cost 60 at a time
+//i ran a test where the cost was 73,000 and we only had 72,999 mon, meaning the below function iterated 72,999 times before failing.  Mine would run about 1/60th of that, but still seemed slower =/
+
+function buyTofu(cost, box) {
+  box = box.split(' ')
+  let mon = box.filter(x => x == 'mon').length
+  let monme = box.filter(x => x == 'monme').length
+  
+  let mon2 = mon, monme2 = monme, paidCoins = 0
+  // Let's try paying with monme
+  while (cost >= 60 && monme2) cost -= 60, monme2--, paidCoins++
+  // Then let's try paying with mon
+  while (cost && mon2) cost--, mon2--, paidCoins++
+  // Can't pay?
+  if (cost) return 'leaving the market'
+  // Can pay?
+  return [mon, monme, monme * 60 + mon, paidCoins]
+}
