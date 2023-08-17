@@ -6182,7 +6182,7 @@ function lineupStudents(students){
 }
 
 //trimmed down a little:
-//instead of two sort calls, both the lenght comparison and localeCompare happen in the same one
+//instead of two sort calls, both the length comparison and localeCompare happen in the same one
 
 function lineupStudents(students){
   return students.split(" ").sort((a,b) => b.length - a.length || b.localeCompare(a))
@@ -6242,4 +6242,11 @@ function buyTofu(cost, box) {
   if (cost) return 'leaving the market'
   // Can pay?
   return [mon, monme, monme * 60 + mon, paidCoins]
+}
+
+//Day 372
+//8 - Suzuki climbing stairs again
+//given an array of arrays containing numbers, total all the numbers
+function stairsIn20(s){
+  return s.flat().reduce((a,b) => a+b,0) * 20
 }
