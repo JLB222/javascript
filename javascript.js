@@ -6250,3 +6250,9 @@ function buyTofu(cost, box) {
 function stairsIn20(s){
   return s.flat().reduce((a,b) => a+b,0) * 20
 }
+
+//Day 373
+//7 - Find Min & Max
+function getMinMax(arr){
+  return [Math.min(...arr), Math.max(...arr)]
+}
