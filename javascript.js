@@ -6256,3 +6256,16 @@ function stairsIn20(s){
 function getMinMax(arr){
   return [Math.min(...arr), Math.max(...arr)]
 }
+
+//Day 374
+//7 - 
+function toLeetSpeak(str) {
+  let word = str.split("")
+  for (let i = 0; i < word.length; i++) {
+    word[i] = alphabet[word[i]]
+  }
+  return word.join("")
+}
+
+//Could also have used the map method:
+return str.split('').map(char => alpha[char] || char).join('');
