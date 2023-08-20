@@ -6269,3 +6269,13 @@ function toLeetSpeak(str) {
 
 //Could also have used the map method:
 return str.split('').map(char => alpha[char] || char).join('');
+
+
+//Day 375
+//7 - transposing a song
+function transpose(song, interval){
+  var sharp = 'A,A#,B,C,C#,D,D#,E,F,F#,G,G#'.split(',');
+  var flat  = 'A,Bb,B,C,Db,D,Eb,E,F,Gb,G,Ab'.split(',');
+  return song.map(note => sharp[(Math.max(flat.indexOf(note), sharp.indexOf(note)) + interval + 12) % 12]);
+}
+
