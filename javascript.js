@@ -6279,3 +6279,8 @@ function transpose(song, interval){
   return song.map(note => sharp[(Math.max(flat.indexOf(note), sharp.indexOf(note)) + interval + 12) % 12]);
 }
 
+//Day 376
+//7 - Where's Wally
+function wheresWally(string){
+  return (" "+string).search(/ Wally\b/) 
+}
