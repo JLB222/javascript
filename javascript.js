@@ -6284,3 +6284,12 @@ function transpose(song, interval){
 function wheresWally(string){
   return (" "+string).search(/ Wally\b/) 
 }
+
+//Day 377
+//7 - Valid HK Phone Number
+function isValidHKPhoneNumber(str) {
+  return str == str.match(/\d\d\d\d\s\d\d\d\d/)
+}
+function hasValidHKPhoneNumber(str) { 
+  return str.match(/\d\d\d\d\s\d\d\d\d/) ? true : false
+}
