@@ -6293,3 +6293,9 @@ function isValidHKPhoneNumber(str) {
 function hasValidHKPhoneNumber(str) { 
   return str.match(/\d\d\d\d\s\d\d\d\d/) ? true : false
 }
+
+//Day 378
+//7 - volume of a cup
+function cupVolume(d1, d2, h) {
+  return +(h / 12 * Math.PI * (d1 ** 2 + d1 * d2 + d2 ** 2)).toFixed(2)
+}
