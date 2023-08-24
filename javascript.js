@@ -6299,3 +6299,10 @@ function hasValidHKPhoneNumber(str) {
 function cupVolume(d1, d2, h) {
   return +(h / 12 * Math.PI * (d1 ** 2 + d1 * d2 + d2 ** 2)).toFixed(2)
 }
+
+//Day 379
+//7 - Hands up
+function getPositions(n) {
+  return [n%3, Math.floor(n/3) % 3, Math.floor(n/9) % 3]
+}
+//I tried to get clever with parseInt because the problem was basically just trinary, but it created more problems than I expected
