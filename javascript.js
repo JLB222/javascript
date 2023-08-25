@@ -6306,3 +6306,9 @@ function getPositions(n) {
   return [n%3, Math.floor(n/3) % 3, Math.floor(n/9) % 3]
 }
 //I tried to get clever with parseInt because the problem was basically just trinary, but it created more problems than I expected
+
+//Day 380
+//7 - Bit manipulation
+function eliminateUnsetBits(number) {
+  return parseInt(number.split("0").join(""), 2) || 0
+}
