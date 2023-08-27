@@ -6319,3 +6319,21 @@ function tailSwap(arr) {
   let newArr = arr.map(string => string.split(':'))
   return [newArr[0][0]+':'+newArr[1][1], newArr[1][0]+':'+newArr[0][1]];
 }
+
+//Day 382
+//7 - The mean of two means
+function getMean(arr, x, y) {
+  if (x <= 1 || y <= 1) {
+    return -1
+  }
+  if (x > arr.length || y > arr.length) {
+    return -1
+  }
+  let num1 = arr.slice(0,x).reduce((a,b) => a+b,0) / x
+  let num2 = arr.slice(-y).reduce((a,b) => a+b,0) / y
+  return (num1+num2)/2
+}
+//alternate
+function getMean(arr, x, y) {
+  x <= 1 || y <= 1 || x > arr.length || y > arr.length ? -1 : (arr.slice(0, x).reduce((pre, val) => pre + val) / x + arr.slice(-y).reduce((pre, val) => pre + val) / y) / 2;
+}
