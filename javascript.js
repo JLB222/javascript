@@ -6337,3 +6337,31 @@ function getMean(arr, x, y) {
 function getMean(arr, x, y) {
   x <= 1 || y <= 1 || x > arr.length || y > arr.length ? -1 : (arr.slice(0, x).reduce((pre, val) => pre + val) / x + arr.slice(-y).reduce((pre, val) => pre + val) / y) / 2;
 }
+
+//Day 383
+//7 - Object Drills: Quarks
+class Quark {
+  constructor(color, flavor) {
+    this.color = color;
+    this.flavor = flavor;
+  }
+  baryon_number = 1/3
+  interact(obj) {
+    let newColor = obj.color
+    obj.color = this.color
+    this.color = newColor
+  }
+}
+
+//alternate
+class Quark {
+  constructor(color, flavor) {
+    this.color = color;
+    this.flavor = flavor;
+    this.baryon_number = 1/3
+  }
+  interact(obj) {
+    [this.color, obj.color] = [obj.color, this.color]
+  }
+}
+
