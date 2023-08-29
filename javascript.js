@@ -6365,3 +6365,8 @@ class Quark {
   }
 }
 
+//Day 384
+//review 7 - Find min and max
+function getMinMax(arr){
+  return [Math.min(...arr), Math.max(...arr)]
+}
