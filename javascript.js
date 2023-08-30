@@ -6370,3 +6370,9 @@ class Quark {
 function getMinMax(arr){
   return [Math.min(...arr), Math.max(...arr)]
 }
+
+//Day 385
+//7 - NATO Phonetic Alphabet
+function nato(word) {
+	return word.split("").map(el => LETTERS[el.toUpperCase()]).join(" ")
+}
