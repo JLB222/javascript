@@ -6376,3 +6376,18 @@ function getMinMax(arr){
 function nato(word) {
 	return word.split("").map(el => LETTERS[el.toUpperCase()]).join(" ")
 }
+
+//Day 386
+//7 Selective fear of numbers
+function AmIAfraid(day, num){
+  switch(day) {
+      case "Monday": return num === 12
+      case "Tuesday": return num > 95
+      case "Wednesday": return num === 34
+      case "Thursday": return num === 0
+      case "Friday": return num % 2 === 0
+      case "Saturday": return num === 56
+      case "Sunday": return Math.abs(num) === 666
+  }
+  return "invalid input"
+}
