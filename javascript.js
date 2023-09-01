@@ -6391,3 +6391,9 @@ function AmIAfraid(day, num){
   }
   return "invalid input"
 }
+
+//Day 387
+//7 - Return substring instance count
+function solution(fullText, searchText){
+  return fullText.split(searchText).length -1
+}
