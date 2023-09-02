@@ -6397,3 +6397,11 @@ function AmIAfraid(day, num){
 function solution(fullText, searchText){
   return fullText.split(searchText).length -1
 }
+
+//Day 388
+//7 - Tail Swap
+function tailSwap(arr) {
+  let result1 = arr[0].split(":")
+  let result2 = arr[1].split(":")
+  return [result1[0]+":"+result2[1], result2[0]+":"+result1[1]]
+}
