@@ -6415,3 +6415,26 @@ function reverseMessage(str) {
   return reversedSentence.join(" ")
 }
 
+//Day 390
+//review
+class GbfCharMaker {
+  constructor(name, race, element, ult) {
+    this.name = name,
+    this.race = race,
+    this.element = element
+    this.ult = ult
+  }
+  ultimate = function(ult) {
+   return `Using ${this.ult}!`
+  }
+}
+
+//7 - perfect squares, perfect fun
+function squareIt(int) {
+  let n = Math.sqrt(int.toString().length);
+  if(n !== Math.floor(n)){
+    return 'Not a perfect square!'
+  } else {
+    return int.toString().split('').map((e,i) => (i+1) % n === 0 && i !== (n**2) - 1 ? `${e}\n` : e).join('');
+  }
+}
