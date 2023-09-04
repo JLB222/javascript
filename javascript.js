@@ -6405,3 +6405,13 @@ function tailSwap(arr) {
   let result2 = arr[1].split(":")
   return [result1[0]+":"+result2[1], result2[0]+":"+result1[1]]
 }
+
+//Day 389
+//7 - Reversed Message
+function reverseMessage(str) {
+  let splitWords = str.split(" ");
+  let reversedWords = splitWords.map(el => el.split("").reverse().join("").toLowerCase())
+  let reversedSentence = reversedWords.reverse().map(el => el.slice(0,1).toUpperCase() + el.slice(1))
+  return reversedSentence.join(" ")
+}
+
