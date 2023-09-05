@@ -6432,9 +6432,19 @@ class GbfCharMaker {
 //7 - perfect squares, perfect fun
 function squareIt(int) {
   let n = Math.sqrt(int.toString().length);
-  if(n !== Math.floor(n)){
+  if(!Number.isInteger(n)){
     return 'Not a perfect square!'
-  } else {
+  } 
+  else {
     return int.toString().split('').map((e,i) => (i+1) % n === 0 && i !== (n**2) - 1 ? `${e}\n` : e).join('');
   }
+}
+
+//Day 391
+//7 - Number to Bytes
+function toBytes (n) {
+	const b = n.toString(2)
+  const l = Math.max(Math.ceil(b.length / 8) * 8, 8)
+  const fullB = b.padStart(l, 0)
+  return fullB.match(/.{8}/g)
 }
