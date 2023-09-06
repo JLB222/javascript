@@ -6448,3 +6448,11 @@ function toBytes (n) {
   const fullB = b.padStart(l, 0)
   return fullB.match(/.{8}/g)
 }
+
+//Day 392
+//7 - C.Wars
+function initials(name){
+  let nameArray = name.split(" ")
+  nameArray = nameArray.map((el,i)=> i+1 === nameArray.length ? el[0].toUpperCase() + el.slice(1) : el[0].toUpperCase())
+  return nameArray.join(".")
+}
