@@ -6456,3 +6456,25 @@ function initials(name){
   nameArray = nameArray.map((el,i)=> i+1 === nameArray.length ? el[0].toUpperCase() + el.slice(1) : el[0].toUpperCase())
   return nameArray.join(".")
 }
+
+//Day 393
+//7 - CryptAnalysis Word Patterns
+function wordPattern(str) {
+  let word = str.toLowerCase()
+  let index = {}
+  let counter = 1
+  for (let letter of word) {
+    if(!index[letter]) {
+      index[letter] = counter
+      counter++
+    }
+  }
+  return word.split("").map(el => index[el] -1).join(".")
+}
+
+//alternate
+function wordPattern(str) {
+  let word = str.toLowerCase()
+  let arr = [...new Set(word)]
+  return word.split("").map(el=> arr.indexOf(el)).join(".")
+}
