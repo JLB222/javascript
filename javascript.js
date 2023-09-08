@@ -6478,3 +6478,12 @@ function wordPattern(str) {
   let arr = [...new Set(word)]
   return word.split("").map(el=> arr.indexOf(el)).join(".")
 }
+
+//Day 394
+//7 - Trimming a string
+const trim = (str, size) => {
+  if(str.length <= size) return str
+  if(size <= 3)return str.slice(0,size) + '...'
+  if(size > 3) return str.slice(0,size-3)+'...' 
+}
+
