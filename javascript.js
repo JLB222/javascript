@@ -6487,3 +6487,18 @@ const trim = (str, size) => {
   if(size > 3) return str.slice(0,size-3)+'...' 
 }
 
+//Day 395
+//review: FizzBuzz
+function fizzer(num) {
+  for (let i = 1; i <= num; i++) {
+    if (i % 15 === 0) {
+      console.log("FizzBuzz")
+    }
+    else if (i % 5 === 0) {
+      console.log("Buzz")
+    }
+    else if (i % 3 === 0) {
+      console.log("Fizz") 
+    } else {console.log(i)}
+  }
+}
