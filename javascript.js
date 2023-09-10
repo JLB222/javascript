@@ -6502,3 +6502,9 @@ function fizzer(num) {
     } else {console.log(i)}
   }
 }
+
+//Day 396
+//review: Sort Numbers
+function solution(nums){
+  return nums ? nums.sort((a,b)=>a-b,0) : []
+}
