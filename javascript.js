@@ -6508,3 +6508,9 @@ function fizzer(num) {
 function solution(nums){
   return nums ? nums.sort((a,b)=>a-b,0) : []
 }
+
+//Day 397
+//8 - Training JS1
+function helloWorld() {
+  return "Hello World!"
+}
