@@ -6514,3 +6514,10 @@ function solution(nums){
 function helloWorld() {
   return "Hello World!"
 }
+
+
+//Day 398
+//7 - All Star Code Challenge 3
+function removeVowels(str){
+  return str.replace(/[aeiou]/gi, "")
+}
