@@ -6521,3 +6521,16 @@ function helloWorld() {
 function removeVowels(str){
   return str.replace(/[aeiou]/gi, "")
 }
+
+//Day 399
+//7 - The old switcheroo
+function vowel2index(str) {
+  let result = str.split("")
+  let vowels = "aeiouAEIOU".split("")
+  for (let i = 0; i < str.length; i++) {
+    if (vowels.includes(result[i])) {
+      result[i] = i+1
+    }
+  }
+  return result.join("")
+}
