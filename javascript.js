@@ -6534,3 +6534,12 @@ function vowel2index(str) {
   }
   return result.join("")
 }
+
+//Day 400
+//6 - Simple Fun 210
+function maximizePoints(team1, team2) {
+  var t1=team1.slice().sort((a,b)=>a-b);
+  var t2=team2.slice().sort((a,b)=>a-b);
+  for (var c=0,j=0,i=0;i<t1.length;i++,j++) if (t1[i]>t2[j]) c++; else j--; 
+  return c
+}
