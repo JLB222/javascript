@@ -6543,3 +6543,18 @@ function maximizePoints(team1, team2) {
   for (var c=0,j=0,i=0;i<t1.length;i++,j++) if (t1[i]>t2[j]) c++; else j--; 
   return c
 }
+
+//Day 401
+//6 Review
+function maximizePoints(team1, team2) {
+  let t1=team1.slice().sort((a,b)=>a-b)
+  let t2=team2.slice().sort((a,b)=>a-b)
+  let count = 0
+  for (let j=0,i=0; i<t1.length; i++,j++) {
+    if (t1[i] > t2[j]) {
+      count++; 
+    } 
+    else j--
+  }
+  return count
+}
