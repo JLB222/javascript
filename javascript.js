@@ -6558,3 +6558,11 @@ function maximizePoints(team1, team2) {
   }
   return count
 }
+
+//Day 402
+function maximizePoints(team1, team2) {
+  let t1 = team1.slice().sort((a,b)=> a-b,0)
+  let t2 = team2.slice().sort((a,b)=> a-b,0)
+  for (var c = 0, i = 0, j = 0; i < t1.length; i++,j++) if (t1[i] > t2[j]) c++; else j--;
+  return c
+}
