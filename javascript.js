@@ -6566,3 +6566,18 @@ function maximizePoints(team1, team2) {
   for (var c = 0, i = 0, j = 0; i < t1.length; i++,j++) if (t1[i] > t2[j]) c++; else j--;
   return c
 }
+
+//Day 403
+//6 - The Lamp: Revisited
+class Lamp {
+  constructor(color, on) {
+    this.color = color
+    this.on = false
+  }
+  toggleSwitch() {
+    this.on = !this.on
+  }
+  state() {
+    return (this.on ? "The lamp is on." : "The lamp is off.")
+  }
+}
