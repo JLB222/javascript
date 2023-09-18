@@ -6581,3 +6581,13 @@ class Lamp {
     return (this.on ? "The lamp is on." : "The lamp is off.")
   }
 }
+
+//Day 404
+//6 - The Book of Mormon
+function Mormons(startingNumber, reach, target) {
+  let count = startingNumber
+  for (var i = 0; count < target; i++) {
+    count += (reach * count)
+  }
+  return i
+}
