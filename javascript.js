@@ -6591,3 +6591,21 @@ function Mormons(startingNumber, reach, target) {
   }
   return i
 }
+
+
+//Day 405
+//6 - The Deaf Rats of Hamelin
+//revisit - Doesn't quite work
+function countDeafRats(town) {
+  let piperPosition = town.indexOf("P")
+  let firstPart = town.slice(0,piperPosition)
+  let secondPart = town.slice(piperPosition)
+  let totalRats = town.split("O").length-1
+  let rightRats = firstPart.split("~O").length-1
+  let leftRats = secondPart.split("O~").length-1
+  
+  return totalRats - rightRats - leftRats
+}
+
+//split is not ideal because it can interpret 3 rats going one way as two rats going the other
+
