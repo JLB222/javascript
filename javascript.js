@@ -6609,3 +6609,16 @@ function countDeafRats(town) {
 
 //split is not ideal because it can interpret 3 rats going one way as two rats going the other
 
+//Day 406
+//6 - Deaf Rats solved
+function countDeafRats(town) {
+  //remove spaces & split at Piper
+  let townHalves = town.split(" ").join("").split("P") 
+  //separate Piper's left and right side into arrays of elements 2 characters long
+  let leftHalf = townHalves[0].match(/.{2}/g)
+  let rightHalf = townHalves[1].match(/.{2}/g)
+  
+  //search the left half for rats going left, and the right half for rats going right (away from Piper)
+  //the optional chaining operator (?) is to force it to evaluate as undefined instead of throwing an error if there is no right or left side, which will make it evaluate 0 due to `|| 0`
+  return (leftHalf?.filter(el => el === "O~").length || 0) + (rightHalf?.filter(el => el === "~O").length || 0)
+}
