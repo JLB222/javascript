@@ -6622,3 +6622,10 @@ function countDeafRats(town) {
   //the optional chaining operator (?) is to force it to evaluate as undefined instead of throwing an error if there is no right or left side, which will make it evaluate 0 due to `|| 0`
   return (leftHalf?.filter(el => el === "O~").length || 0) + (rightHalf?.filter(el => el === "~O").length || 0)
 }
+
+//Day 407
+//review
+function countLetters(str,letter) {
+  return str.split(letter).length - 1
+}
+
