@@ -6629,3 +6629,14 @@ function countLetters(str,letter) {
   return str.split(letter).length - 1
 }
 
+//Day 408
+//6 - Max & min difference
+//unfinished
+function maxAndMin(arr1,arr2){
+  let highest = Math.max(Math.max(...arr1), Math.max(...arr2))
+  let lowest = Math.min(Math.min(...arr1), Math.min(...arr2))
+  console.log(highest, lowest)
+  let difference;
+  
+  return [highest-lowest, 0]
+}
