@@ -6640,3 +6640,13 @@ function maxAndMin(arr1,arr2){
   
   return [highest-lowest, 0]
 }
+
+//Day 409
+//revisit https://www.codewars.com/kata/583c5469977933319f000403/train/javascript
+function maxAndMin(arr1,arr2){
+  return [
+    Math.max( ...arr1.map(n => Math.max( ...arr2.map(m => Math.abs(n - m)) )) ),
+    Math.min( ...arr1.map(n => Math.min( ...arr2.map(m => Math.abs(n - m)) )) )
+  ]
+}
+//nested maps... ugh, my brain.
