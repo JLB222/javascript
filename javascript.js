@@ -6650,3 +6650,15 @@ function maxAndMin(arr1,arr2){
   ]
 }
 //nested maps... ugh, my brain.
+
+//Day 410
+//review
+const square = (int) => int * int
+
+function countTheThings(arr) {
+  let counts = {}
+  for (let i = 0; i < arr.length; i++) {
+    counts[arr[i]] ? counts[arr[i]]++ : counts[arr[i]] = 1
+  }
+  return counts
+}
