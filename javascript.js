@@ -6662,3 +6662,12 @@ function countTheThings(arr) {
   }
   return counts
 }
+
+//Day 411
+//review.  I think I understand, but don't think I'd have ever come up with this on my own.
+function maxAndMin(arr1,arr2){
+  return [
+    Math.max(...arr1.map(n => Math.max(...arr2.map(m => Math.abs(n - m)) )) ),
+    Math.min(...arr1.map(n => Math.min(...arr2.map(m => Math.abs(n - m)) )) )
+  ]
+}
