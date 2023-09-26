@@ -6671,3 +6671,25 @@ function maxAndMin(arr1,arr2){
     Math.min(...arr1.map(n => Math.min(...arr2.map(m => Math.abs(n - m)) )) )
   ]
 }
+
+//Day 412
+//review
+function repVowels(str) {
+  let vowels = "aeiouAEIOU".split("")
+  let result = str.split("")
+  for (let i = 0; i < result.length; i++) {
+    if (vowels.includes(result[i])) {
+      result[i] = "!"
+    }
+  }
+  return result.join("")
+}
+
+//7 - Elevator Distance
+function elevatorDistance(arr) {
+  let distance = 0
+  for (let i = 0; i < arr.length-1; i++) {
+    distance += Math.abs(arr[i] - arr[i+1])
+  }
+  return distance
+}
