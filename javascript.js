@@ -6699,3 +6699,31 @@ function elevatorDistance(arr) {
 function elapsedSeconds(startDate, endDate){
   return (endDate - startDate) / 1000
 }
+
+//review Class 26 - create a pizza object with 4 properties and 3 methods
+//object literal notation:
+let pizza = {}
+pizza.size = "Large"
+pizza.crust = "STUFFED"
+pizza.bread = "regular"
+pizza.cheese = "Double"
+pizza.sauce = "Regular"
+pizza.toppings = []
+pizza.eat = function() {console.log()}
+
+//shitty; have to copy paste to make multiple objects
+
+//factory function:
+let PizzaMaker = function(size, crust, bread, sauce, toppings) {
+  this.size = size;
+  this.crust = crust;
+  this.bread = bread;
+  this.sauce = sauce;
+  this.toppings = toppings
+  this.expectedDeliveryTime = function() {
+    return console.log("I have no idea")
+  }
+  this.price = function() {
+    return `$${(size === "large" ? 10 : 5) + (crust === "stuffed" ? 2 : 1)}`
+  }
+}
