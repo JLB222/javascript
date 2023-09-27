@@ -6693,3 +6693,9 @@ function elevatorDistance(arr) {
   }
   return distance
 }
+
+//Day 413
+//7 - Elapsed Seconds
+function elapsedSeconds(startDate, endDate){
+  return (endDate - startDate) / 1000
+}
