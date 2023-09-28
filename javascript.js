@@ -6727,3 +6727,9 @@ let PizzaMaker = function(size, crust, bread, sauce, toppings) {
     return `$${(size === "large" ? 10 : 5) + (crust === "stuffed" ? 2 : 1)}`
   }
 }
+
+//Day 414
+//7 - Reverse the bits of an integer
+function reverseBits(n) {
+  return parseInt((n.toString(2).split("").reverse().join("")), 2)
+}
