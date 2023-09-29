@@ -6752,3 +6752,13 @@ class PizzaMaker {
     return `$${(this.size === "large" ? 10 : 5) + (this.crust === "stuffed" ? 2 : 1)}`
   }
 }
+//7 - Minimum Steps (Array Series #6)
+function minimumSteps(numbers, target){
+  let arr = numbers.sort((a,b)=> a-b,0)
+  let sum = arr[0]
+  let counter = 0
+  for (let i = 1; sum < target; i++, counter++) {
+    sum += arr[i]
+  }
+  return counter
+}
