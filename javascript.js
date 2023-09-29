@@ -6714,7 +6714,7 @@ pizza.eat = function() {console.log()}
 //shitty; have to copy paste to make multiple objects
 
 //factory function:
-let PizzaMaker = function(size, crust, bread, sauce, toppings) {
+let PizzaMake = function(size, crust, bread, sauce, toppings) {
   this.size = size;
   this.crust = crust;
   this.bread = bread;
@@ -6732,4 +6732,23 @@ let PizzaMaker = function(size, crust, bread, sauce, toppings) {
 //7 - Reverse the bits of an integer
 function reverseBits(n) {
   return parseInt((n.toString(2).split("").reverse().join("")), 2)
+}
+
+//Day 415
+//review - class
+
+class PizzaMaker {
+  constructor(size,crust,bread,sauce,toppings) {
+    this.size = size;
+    this.crust = crust;
+    this.bread = bread;
+    this.sauce = sauce;
+    this.toppings = toppings;
+  }
+  expectedDeliveryTime() {
+    return console.log("I have no idea")
+  }
+  price() {
+    return `$${(this.size === "large" ? 10 : 5) + (this.crust === "stuffed" ? 2 : 1)}`
+  }
 }
