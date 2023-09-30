@@ -6762,3 +6762,11 @@ function minimumSteps(numbers, target){
   }
   return counter
 }
+
+//Day 416
+//7 - 
+function reverseIt(data) {
+  if(typeof data == 'string') return data.split('').reverse().join('');
+  if(typeof data == 'number') return parseFloat(String(data).split('').reverse().join(''));
+  return data;
+}
