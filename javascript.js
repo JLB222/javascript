@@ -6770,3 +6770,16 @@ function reverseIt(data) {
   if(typeof data == 'number') return parseFloat(String(data).split('').reverse().join(''));
   return data;
 }
+
+//Day 417 
+//review
+//constructor function
+function gbfMake(name, race, element, ult) {
+  this.name = name
+  this.race = race
+  this.element = element
+  this.ultimate = function() {
+    console.log(`Using ${ult}`)
+  }
+}
+let siegfried01 = new gbfMake("Siegfreid", "Human", "Earth", "Iunno")
