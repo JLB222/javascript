@@ -6783,3 +6783,11 @@ function gbfMake(name, race, element, ult) {
   }
 }
 let siegfried01 = new gbfMake("Siegfreid", "Human", "Earth", "Iunno")
+
+//Day 418
+//7 - reverseIt
+function reverseIt(data){
+  if (typeof data === "string") {return data.split("").reverse().join("")}
+  if (typeof data === "number") {return parseFloat(data.toString().split("").reverse().join(""))}
+  return data
+}
