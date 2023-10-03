@@ -6791,3 +6791,14 @@ function reverseIt(data){
   if (typeof data === "number") {return parseFloat(data.toString().split("").reverse().join(""))}
   return data
 }
+
+//Day 419
+//7 - RuplesJS 3
+String.prototype.eachChar = function(el) {
+  if (typeof el === "string") {
+    return this.split("").map(x => x+el).join("")
+  }
+  if (typeof el === "function") {
+    return this.split("").map(el).join("")
+  }
+}
