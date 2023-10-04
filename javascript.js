@@ -6802,3 +6802,9 @@ String.prototype.eachChar = function(el) {
     return this.split("").map(el).join("")
   }
 }
+
+//Day 420
+//7 - 
+String.prototype.eachChar = function(el) {
+  return typeof el === "string" ? this.split("").map(x => x+el).join("") : this.split("").map(el).join("")
+}
