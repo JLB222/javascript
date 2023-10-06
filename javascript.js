@@ -2773,7 +2773,7 @@ class Animal {
     this.name = name
   }
 }
-class Dog extends animal {
+class Dog extends Animal {
   constructor(name, breed) {
     super(name)
     this.breed = breed
@@ -6813,4 +6813,74 @@ String.prototype.eachChar = function(el) {
 //review - Internet is out.
 function isItBroke(bin) {
   return bin ? "Fix it" : "Carry on."
+}
+
+//Day 422
+//
+class Creature {
+  constructor(level,hp,ac,fort,rflx,will,perception,strideSpeed) {
+    this.level = level
+    this.hp = hp
+    this.ac = ac
+    this.fort = fort
+    this.rflx = rflx
+    this.will = will
+    this.perception = perception
+    this.strideSpeed = strideSpeed
+
+  }
+}
+class Monster extends Creature{
+  constructor(hp,ac,fort,reflex,will) {
+    super(level,hp,ac,fort,reflex,will,perception,strideSpeed)
+  }
+}
+//dice rolls
+function d4(num=1) {
+  let total = []
+  for (let i = 0; i < num; i++) {
+    total.push(Math.floor((Math.random()*4)) + 1)
+  }
+  console.log(total)
+  return total.reduce((a,b) => a+b,0)
+}
+function d6(num=1) {
+  let total = []
+  for (let i = 0; i < num; i++) {
+    total.push(Math.floor((Math.random()*6)) + 1)
+  }
+  console.log(total)
+  return total.reduce((a,b) => a+b,0)
+}
+function d8(num=1) {
+  let total = []
+  for (let i = 0; i < num; i++) {
+    total.push(Math.floor((Math.random()*8)) + 1)
+  }
+  console.log(total)
+  return total.reduce((a,b) => a+b,0)
+}
+function d10(num=1) {
+  let total = []
+  for (let i = 0; i < num; i++) {
+    total.push(Math.floor((Math.random()*10)) + 1)
+  }
+  console.log(total)
+  return total.reduce((a,b) => a+b,0)
+}
+function d12(num=1) {
+  let total = []
+  for (let i = 0; i < num; i++) {
+    total.push(Math.floor((Math.random()*12)) + 1)
+  }
+  console.log(total)
+  return total.reduce((a,b) => a+b,0)
+}
+function d20(num=1) {
+  let total = []
+  for (let i = 0; i < num; i++) {
+    total.push(Math.floor((Math.random()*20)) + 1)
+  }
+  console.log(total)
+  return total.reduce((a,b) => a+b,0)
 }
