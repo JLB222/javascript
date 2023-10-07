@@ -6818,16 +6818,20 @@ function isItBroke(bin) {
 //Day 422
 //
 class Creature {
-  constructor(level,hp,ac,fort,rflx,will,perception,strideSpeed) {
+  constructor(name,size,level,perception,visionType,abilityArray,hp,ac,fort,rflx,will,strideSpeed) {
+    this.name = name
     this.level = level
+    this.size = size
+    this.perception = perception
+    this.visionType = visionType
+    this.abilityArray = abilityArray
     this.hp = hp
     this.ac = ac
     this.fort = fort
     this.rflx = rflx
     this.will = will
-    this.perception = perception
     this.strideSpeed = strideSpeed
-
+    
   }
 }
 class Monster extends Creature{
@@ -6883,4 +6887,12 @@ function d20(num=1) {
   }
   console.log(total)
   return total.reduce((a,b) => a+b,0)
+}
+
+//Day 423
+//review - 7 - String eachChar
+String.prototype.eachChar = function(char) {
+  if (typeof char === "string")   { return this.split("").map(el => el+char).join("") }
+  if (typeof char === "function") { return this.split("").map(char).join("") }
+  return char
 }
