@@ -6834,11 +6834,11 @@ class Creature {
     
   }
 }
-class Monster extends Creature{
-  constructor(hp,ac,fort,reflex,will) {
-    super(level,hp,ac,fort,reflex,will,perception,strideSpeed)
-  }
-}
+// class Monster extends Creature{
+//   constructor(hp,ac,fort,reflex,will) {
+//     super(level,hp,ac,fort,reflex,will,perception,strideSpeed)
+//   }
+// }
 //dice rolls
 function d4(num=1) {
   let total = []
@@ -6895,4 +6895,15 @@ String.prototype.eachChar = function(char) {
   if (typeof char === "string")   { return this.split("").map(el => el+char).join("") }
   if (typeof char === "function") { return this.split("").map(char).join("") }
   return char
+}
+
+//Day 424
+class Troll extends Creature{
+  constructor(name,size,level,perception,visionType,abilityArray,hp,ac,fort,rflx,will,strideSpeed, languages,skills,regeneration,weaknesses) {
+    super(name,size,level,perception,visionType,abilityArray,hp,ac,fort,rflx,will,strideSpeed)
+    this.languages = [...languages]
+    this.skills = [...skills]
+    this.regeneration = regeneration
+    this.weaknesses = [...weaknesses]
+  }
 }
