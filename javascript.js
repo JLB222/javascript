@@ -6907,3 +6907,17 @@ class Troll extends Creature{
     this.weaknesses = [...weaknesses]
   }
 }
+
+//Day 425
+//7 - Convert the Score
+function scoreboard(string) {
+  let numbers = ["nil", "one", "two", "three", "four", "five","six","seven","eight","nine"]
+  let sentence = string.split(" ")
+  let score = []
+  for (let i = 0; i < sentence.length; i++) {
+    if (numbers.includes(sentence[i])) {
+      score.push(sentence[i])
+    }
+  }
+  return [numbers.indexOf(score[0]), numbers.indexOf(score[1])]
+}
