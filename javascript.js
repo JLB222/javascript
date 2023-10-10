@@ -6817,23 +6817,23 @@ function isItBroke(bin) {
 
 //Day 422
 //
-class Creature {
-  constructor(name,size,level,perception,visionType,abilityArray,hp,ac,fort,rflx,will,strideSpeed) {
-    this.name = name
-    this.level = level
-    this.size = size
-    this.perception = perception
-    this.visionType = visionType
-    this.abilityArray = abilityArray
-    this.hp = hp
-    this.ac = ac
-    this.fort = fort
-    this.rflx = rflx
-    this.will = will
-    this.strideSpeed = strideSpeed
+// class Creature {
+//   constructor(name,size,level,perception,visionType,abilityArray,hp,defenseArr,strideSpeed) {
+//     this.name = name
+//     this.level = level
+//     this.size = size
+//     this.perception = perception
+//     this.visionType = visionType
+//     this.abilityArray = abilityArray
+//     this.hp = hp
+//     this.ac = defenseArr[0]
+//     this.fort = defenseArr[1]
+//     this.rflx = defenseArr[2]
+//     this.will = defenseArr[3]
+//     this.strideSpeed = strideSpeed
     
-  }
-}
+//   }
+// }
 // class Monster extends Creature{
 //   constructor(hp,ac,fort,reflex,will) {
 //     super(level,hp,ac,fort,reflex,will,perception,strideSpeed)
@@ -6898,15 +6898,15 @@ String.prototype.eachChar = function(char) {
 }
 
 //Day 424
-class Troll extends Creature{
-  constructor(name,size,level,perception,visionType,abilityArray,hp,ac,fort,rflx,will,strideSpeed, languages,skills,regeneration,weaknesses) {
-    super(name,size,level,perception,visionType,abilityArray,hp,ac,fort,rflx,will,strideSpeed)
-    this.languages = [...languages]
-    this.skills = [...skills]
-    this.regeneration = regeneration
-    this.weaknesses = [...weaknesses]
-  }
-}
+// class Troll extends Creature{
+//   constructor(name,size,level,perception,visionType,abilityArray,hp,ac,fort,rflx,will,strideSpeed, languages,skills,regeneration,weaknesses) {
+//     super(name,size,level,perception,visionType,abilityArray,hp,ac,fort,rflx,will,strideSpeed)
+//     this.languages = [...languages]
+//     this.skills = [...skills]
+//     this.regeneration = regeneration
+//     this.weaknesses = [...weaknesses]
+//   }
+// }
 
 //Day 425
 //7 - Convert the Score
@@ -6920,4 +6920,47 @@ function scoreboard(string) {
     }
   }
   return [numbers.indexOf(score[0]), numbers.indexOf(score[1])]
+}
+
+//Day 426
+class Creature {
+  constructor(name,size,level,perception,visionType,abilityArray,hp,defenseArr,strideSpeed,strikeAccuracyArr,strikeDamageArr) {
+    this.name = name
+    this.level = level
+    this.size = size
+    this.perception = perception
+    this.visionType = visionType
+    this.abilityArray = abilityArray
+    this.hp = hp
+    this.ac = defenseArr[0]
+    this.fort = defenseArr[1]
+    this.rflx = defenseArr[2]
+    this.will = defenseArr[3]
+    this.strideSpeed = strideSpeed 
+    this.strikeAccuracyArr = strikeAccuracyArr
+    this.strikeDamageArr = strikeDamageArr  //example - 2d10+5: [2, d10, 5]
+  }
+  strike = function() {
+    //Attack Roll
+    
+    //Damage
+    switch(this.strikeDamageArr[1]) {
+      case "d4": return d4(this.strikeDamageArr[0]) + this.strikeDamageArr[2]
+      case "d6": return d6(this.strikeDamageArr[0]) + this.strikeDamageArr[2]
+      case "d8": return d8(this.strikeDamageArr[0]) + this.strikeDamageArr[2]
+      case "d10": return d10(this.strikeDamageArr[0]) + this.strikeDamageArr[2]
+      case "d12": return d12(this.strikeDamageArr[0]) + this.strikeDamageArr[2]
+      default: return "Error"
+    }
+  }
+}
+class Monster extends Creature{
+  constructor(name,size,level,perception,visionType,abilityArray,hp,defenseArr,strideSpeed,languageArr,skillArr,regeneration,weaknessArr,resistanceArr,strikeAccuracyArr,strikeDamageArr) {
+    super(name,size,level,perception,visionType,abilityArray,hp,defenseArr,strideSpeed,strikeAccuracyArr,strikeDamageArr)
+    this.languageArr = languageArr
+    this.skillArr = skillArr
+    this.regeneration = regeneration
+    this.weaknessArr = weaknessArr
+    this.resistanceArr = resistanceArr
+  }
 }
