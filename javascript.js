@@ -6964,3 +6964,16 @@ class Monster extends Creature{
     this.resistanceArr = resistanceArr
   }
 }
+
+//Day 427
+//7 - reduce my fraction
+function reduce(fraction) {
+  let min = Math.min(...fraction)
+  let highestCommonDenominator = 1
+  for (let i = 1; i <= min; i++) {
+    if (fraction[0] % i === 0 && fraction[1] % i === 0) {
+      highestCommonDenominator = i
+    }
+  }
+  return [fraction[0]/highestCommonDenominator, fraction[1]/highestCommonDenominator]
+}
