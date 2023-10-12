@@ -6955,7 +6955,7 @@ class Creature {
   }
 }
 class Monster extends Creature{
-  constructor(name,size,level,perception,visionType,abilityArray,hp,defenseArr,strideSpeed,languageArr,skillArr,regeneration,weaknessArr,resistanceArr,strikeAccuracyArr,strikeDamageArr) {
+  constructor(name,size,level,perception,visionType,abilityArray,hp,defenseArr,strideSpeed,strikeAccuracyArr,strikeDamageArr,languageArr,skillArr,regeneration,weaknessArr,resistanceArr) {
     super(name,size,level,perception,visionType,abilityArray,hp,defenseArr,strideSpeed,strikeAccuracyArr,strikeDamageArr)
     this.languageArr = languageArr
     this.skillArr = skillArr
@@ -6976,4 +6976,15 @@ function reduce(fraction) {
     }
   }
   return [fraction[0]/highestCommonDenominator, fraction[1]/highestCommonDenominator]
+}
+
+//Day 428
+//rolling with advantage or disadvantage; advantage by default
+function d20fortune(binary=true) {
+  let total = []
+  for (let i = 0; i < 2; i++) {
+    total.push(Math.floor((Math.random()*20)) + 1)
+  }
+  console.log(total)
+  return binary ? Math.max(...total) : Math.min(...total)
 }
