@@ -6988,3 +6988,19 @@ function d20fortune(binary=true) {
   console.log(total)
   return binary ? Math.max(...total) : Math.min(...total)
 }
+
+//Day 429
+//review
+function stringEdit(str) {
+  return str.split(",").slice(1,-1).join(" ") || null
+}
+//7 - Find Factors Down to Limit
+function factors(integer, limit){
+  let result = []
+  for (let i = integer; i >= limit; i--) {
+    if (integer % i === 0) {
+      result.push(i)
+    }
+  }
+  return result.sort((a,b)=>a-b,0)
+}
