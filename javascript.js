@@ -6924,8 +6924,8 @@ function scoreboard(string) {
 
 //Day 426
 class Creature {
-  constructor(name,size,level,perception,visionType,abilityArray,hp,defenseArr,strideSpeed,strikeAccuracyArr,strikeDamageArr) {
-    this.name = name
+  constructor(type,size,level,perception,visionType,abilityArray,hp,defenseArr,strideSpeed,strikeAccuracyArr,strikeDamageArr) {
+    this.type = name
     this.level = level
     this.size = size
     this.perception = perception
@@ -6955,8 +6955,9 @@ class Creature {
   }
 }
 class Monster extends Creature{
-  constructor(name,size,level,perception,visionType,abilityArray,hp,defenseArr,strideSpeed,strikeAccuracyArr,strikeDamageArr,languageArr,skillArr,regeneration,weaknessArr,resistanceArr) {
-    super(name,size,level,perception,visionType,abilityArray,hp,defenseArr,strideSpeed,strikeAccuracyArr,strikeDamageArr)
+  constructor(type,size,level,perception,visionType,abilityArray,hp,defenseArr,strideSpeed,strikeAccuracyArr,strikeDamageArr,name,languageArr,skillArr,regeneration,weaknessArr,resistanceArr) {
+    super(type,size,level,perception,visionType,abilityArray,hp,defenseArr,strideSpeed,strikeAccuracyArr,strikeDamageArr)
+    this.name = name
     this.languageArr = languageArr
     this.skillArr = skillArr
     this.regeneration = regeneration
@@ -7003,4 +7004,23 @@ function factors(integer, limit){
     }
   }
   return result.sort((a,b)=>a-b,0)
+}
+
+//Day 430
+//review
+function howManyDays(month) {
+  var days
+  switch(month) {
+    case 4:
+    case 6:
+    case 9:
+    case 11: days =  30; break;
+    case 2: days =  28; break;
+    default: days =  31; break;
+  }
+  return days
+}
+
+function addCommasToNumber(num) {
+  return num.toLocaleString()
 }
