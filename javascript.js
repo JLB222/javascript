@@ -6925,7 +6925,7 @@ function scoreboard(string) {
 //Day 426
 class Creature {
   constructor(type,size,level,perception,visionType,abilityArray,hp,defenseArr,strideSpeed,strikeAccuracyArr,strikeDamageArr) {
-    this.type = name
+    this.type = type
     this.level = level
     this.size = size
     this.perception = perception
@@ -6940,9 +6940,9 @@ class Creature {
     this.strikeAccuracyArr = strikeAccuracyArr
     this.strikeDamageArr = strikeDamageArr  //example - 2d10+5: [2, d10, 5]
   }
-  strike = function() {
+  strike = function(attackNumber) {
     //Attack Roll
-    
+
     //Damage
     switch(this.strikeDamageArr[1]) {
       case "d4": return d4(this.strikeDamageArr[0]) + this.strikeDamageArr[2]
@@ -6981,13 +6981,13 @@ function reduce(fraction) {
 
 //Day 428
 //rolling with advantage or disadvantage; advantage by default
-function d20fortune(binary=true) {
-  let total = []
+function d20fortune(boolean=true) {
+  let rolls = []
   for (let i = 0; i < 2; i++) {
-    total.push(Math.floor((Math.random()*20)) + 1)
+    rolls.push(Math.floor((Math.random()*20)) + 1)
   }
-  console.log(total)
-  return binary ? Math.max(...total) : Math.min(...total)
+  console.log(rolls)
+  return boolean ? Math.max(...rolls) : Math.min(...rolls)
 }
 
 //Day 429
@@ -7023,4 +7023,20 @@ function howManyDays(month) {
 
 function addCommasToNumber(num) {
   return num.toLocaleString()
+}
+
+//Day 431
+//Review - what are the 6 falsy values in JS?  False, undefined, null, NaN, 0, ""
+//strike function:  no arguments = normal strike; true or false argument = fortune or misfortune, respectively
+function strike(fortune) {
+  let rolls = []
+  for (let i = 0; i < 2; i++) {
+    rolls.push(Math.floor((Math.random()*20)) + 1)
+  }
+  console.log(rolls)
+  switch(fortune) {
+    case true: return Math.max(...rolls)
+    case false: return Math.min(...rolls)
+    default: return rolls[0]
+  }
 }
