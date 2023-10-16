@@ -7040,3 +7040,9 @@ function strike(fortune) {
     default: return rolls[0]
   }
 }
+
+//Day 432
+//7 Color Association
+function colourAssociation(array){
+  return array.map((el) => ( { [el[0]] : el[1] } ) )
+}
