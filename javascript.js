@@ -7046,3 +7046,13 @@ function strike(fortune) {
 function colourAssociation(array){
   return array.map((el) => ( { [el[0]] : el[1] } ) )
 }
+
+//Day 433
+//7 - simple "fun" 399 - author's solution below
+function makeSequences(n){
+  let dp=[1,1]
+  for(let i=2;i<=n;i++){
+    dp.push(i%2 ? dp[i-1] : dp[i-1] + dp[i/2])
+  }
+  return dp[n]
+}
