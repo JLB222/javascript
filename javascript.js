@@ -7056,3 +7056,17 @@ function makeSequences(n){
   }
   return dp[n]
 }
+
+//Day 434
+function diff(str){
+  var max = 0
+  var ans = false
+  for (let i = 0; i < str.length; i++) {
+    var arr = str[i].split('-')
+    if (max < Math.abs(arr[0]-arr[1])) {
+      max = Math.abs(arr[0]-arr[1])
+      ans = str[i]
+    }
+  }
+  return ans
+}
