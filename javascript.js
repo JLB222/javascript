@@ -7081,3 +7081,10 @@ function flickSwitch(arr){
   }
   return result
 }
+
+//Day 436 
+//8 - flick switch - 1 line attempt
+function flickSwitch(arr){
+  let status = true
+  return arr.map(el=> el === "flick" ? status = !status : status)
+}
