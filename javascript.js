@@ -7070,3 +7070,14 @@ function diff(str){
   }
   return ans
 }
+
+//Day 435
+//8 - Flick Switch
+function flickSwitch(arr){
+  let result = []
+  let status = true
+  for (let i = 0; i < arr.length; i++) {
+    arr[i] === "flick" ? (status = !status, result.push(status)) : result.push(status)
+  }
+  return result
+}
