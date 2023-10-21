@@ -7088,3 +7088,17 @@ function flickSwitch(arr){
   let status = true
   return arr.map(el=> el === "flick" ? status = !status : status)
 }
+
+//Day 437
+//7 - Simple Fun 203
+function strangeCoach(players) {
+  var ans=[];
+  for(var i=0;i<players.length;i++){
+    if(players.filter(a=>a[0]==players[i][0]).length>=5){
+      if(!ans.includes(players[i][0])){
+        ans.push(players[i][0]);
+      }
+    }
+  }
+  return ans.sort().join('')||'forfeit';  
+}
