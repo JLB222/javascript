@@ -7102,3 +7102,15 @@ function strangeCoach(players) {
   }
   return ans.sort().join('')||'forfeit';  
 }
+
+//Day 438
+//7 - Thinkful - areacode extractor
+function areaCode(text) {
+  return text.split("\(")[1].split("\)")[0]
+}
+//ugly and not what i'd put in production, but it works lol
+//much cleaner alternate:
+function areaCode(text) {
+  return text.slice(text.indexOf('(') + 1, text.indexOf(')'));
+}
+//both of these have the problem of "what if there's a parentheses other than the area code in the string?"  regex should probably be used
