@@ -7114,3 +7114,51 @@ function areaCode(text) {
   return text.slice(text.indexOf('(') + 1, text.indexOf(')'));
 }
 //both of these have the problem of "what if there's a parentheses other than the area code in the string?"  regex should probably be used
+
+
+//treat wounds 
+function treatWounds(dc=15,fortune=false,misfortune=false,) {
+  let rolls = []
+  for (let i = 0; i < 2; i++) {
+    rolls.push(Math.floor((Math.random()*20)) + 1)
+  }
+  console.log(`D20 Rolls: ${rolls}`)
+  let rollResult = fortune ? Math.max(...rolls) : misfortune ? Math.min(...rolls) : rolls[0]
+  if (rollResult >= dc+10) {
+    result = 4
+  } else 
+  if (rollResult >= dc){
+    result = 3
+  } else
+  if (rollResult <= dc-10) {
+    result = 1
+  } else {
+    result = 2
+  }
+  if (rollResult === 20) {result += 1} 
+  if (rollResult === 1) {result -= 1}
+  switch (result) {
+    case 5 :
+    case 4 : return `${rollResult}: You heal ${d8(4)} HP.`;
+    case 3 : return `${rollResult}: You heal ${d8(2)} HP.`;
+    case 2 : return `${rollResult}: Failure.`;
+    case 0 :
+    case 1 : return `${rollResult}: You take ${d8()} damage.`;
+  }
+}
+//still needs a way to accept the character's modifier (medicine, nature, or crafting)
+
+function d8(num=1) {
+  let total = []
+  for (let i = 0; i < num; i++) {
+    total.push(Math.floor((Math.random()*8)) + 1)
+  }
+  console.log(`D8 rolls: ${total}`)
+  return total.reduce((a,b) => a+b,0)
+}
+
+//Day 439
+//areacode extractor 1-line
+function areaCode(text) {
+  return text.match(/\(\d\d\d\)/)[0].slice(1,4)
+}
