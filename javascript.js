@@ -7162,3 +7162,26 @@ function d8(num=1) {
 function areaCode(text) {
   return text.match(/\(\d\d\d\)/)[0].slice(1,4)
 }
+
+//Day 440
+//eloquent javascript exercises: Chapter 4
+
+function range(start,end, step=end<start?-1:1) {
+  let result = []
+  if (end < start) {
+    for (let i = start; i >= end; i+= step) {
+      result.push(i)
+    }
+  } else 
+    for (let i = start; i <= end; i+= step) {
+      result.push(i)
+    }
+  return result
+}
+function sum(numbers) {
+  let total = 0
+  for (let i = 0; i < numbers.length; i++) {
+    total+= numbers[i]
+  }
+  return total
+}
