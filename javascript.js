@@ -7185,3 +7185,22 @@ function sum(numbers) {
   }
   return total
 }
+
+//Day 441
+//Eloquent JS - reversing an array
+function reverseArray(arr) {
+  let result = []
+  for (let i = 0; i < arr.length; i++) {
+    result.unshift(arr[i])
+  }
+  return result
+}
+
+function reverseArrayInPlace(arr) {
+  for (let i = 0; i < Math.floor(arr.length / 2); i++) {
+    let temp = arr[i]
+    arr[i] = arr[arr.length-1-i]
+    arr[arr.length-1-i] = temp
+  }
+  return arr
+}
