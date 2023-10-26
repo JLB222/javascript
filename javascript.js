@@ -7204,3 +7204,18 @@ function reverseArrayInPlace(arr) {
   }
   return arr
 }
+
+//Day 442
+//Review: 3 ways to create functions in JS:
+
+//function declaration
+function thing() {
+  return "DO the thing"
+}
+//function expression
+let thing = function() {
+  return "do the thing"
+}
+
+//fat arrow syntax
+let thing = () => "Do the thing"
