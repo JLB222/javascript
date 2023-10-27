@@ -7219,3 +7219,10 @@ let thing = function() {
 
 //fat arrow syntax
 let thing = () => "Do the thing"
+
+
+//Day 443
+//7 - Triangular Numbers
+function isTriangular(t) {
+  return Math.sqrt(8*t + 1) % 1 == 0;
+}
