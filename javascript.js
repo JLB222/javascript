@@ -7226,3 +7226,19 @@ let thing = () => "Do the thing"
 function isTriangular(t) {
   return Math.sqrt(8*t + 1) % 1 == 0;
 }
+
+//Day 444
+//7 - Even Odd Disparity
+function solve(a){
+  let countEven = 0
+  let countOdd = 0
+  for (let i = 0; i < a.length; i++) {
+    if (a[i] % 2 === 0) {
+      countEven++
+    }
+    if (a[i] % 2 === 1) {
+      countOdd++
+    }
+  }
+  return countEven - countOdd
+}
