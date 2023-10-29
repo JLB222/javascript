@@ -7242,3 +7242,9 @@ function solve(a){
   }
   return countEven - countOdd
 }
+
+//Day 445
+//7 - Santa's Naughty List
+function findChildren(santasList, children) {
+  return children.filter((el,i,arr) => santasList.includes(el) && arr.indexOf(el) === i).sort()
+}
