@@ -7248,3 +7248,17 @@ function solve(a){
 function findChildren(santasList, children) {
   return children.filter((el,i,arr) => santasList.includes(el) && arr.indexOf(el) === i).sort()
 }
+
+//Day 446
+function sillycase(str) {
+  let length = Math.ceil(str.length / 2)
+  let result = []
+  for (let i = 0; i < str.length; i++) {
+    if (i < length) {
+      result.push(str[i].toLowerCase()) 
+    } else {
+      result.push(str[i].toUpperCase())
+    }
+  }
+  return result.join("")
+}
