@@ -7262,3 +7262,15 @@ function sillycase(str) {
   }
   return result.join("")
 }
+
+//alternate
+function sillycase(str) {
+  let mid = Math.round(str.length / 2);
+  return str.substr(0, mid).toLowerCase() + str.substr(mid).toUpperCase();
+}
+
+//Data 447
+//7 - Find the lucky numbers
+function filterLucky(arr) {
+  return arr.filter((el) => el.toString().indexOf("7") !== -1)
+}
