@@ -7274,3 +7274,9 @@ function sillycase(str) {
 function filterLucky(arr) {
   return arr.filter((el) => el.toString().indexOf("7") !== -1)
 }
+
+//Day 448
+//7 - Simple letter removal
+function solve(str, num) {
+  return str.split("").sort().slice(0, num).reduce((pre, val) => pre.replace(val, ``), str)
+}
