@@ -7280,3 +7280,10 @@ function filterLucky(arr) {
 function solve(str, num) {
   return str.split("").sort().slice(0, num).reduce((pre, val) => pre.replace(val, ``), str)
 }
+
+//Day 449
+//7 - review from memory
+//inserted a filter method at one point.  I might have been recalling a different problem.
+function solve(str, num){
+  return str.split("").sort().slice(0,num).reduce((prev,cur) => prev.replace(cur,""), str)
+}
