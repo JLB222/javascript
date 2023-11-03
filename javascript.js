@@ -7287,3 +7287,9 @@ function solve(str, num) {
 function solve(str, num){
   return str.split("").sort().slice(0,num).reduce((prev,cur) => prev.replace(cur,""), str)
 }
+
+//Day 450
+//review from memory
+function solve(str, num){
+  return str.split("").sort().slice(0,num).reduce((prev,curr) => prev.replace(curr, ""), str)
+}
