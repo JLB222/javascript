@@ -7293,3 +7293,13 @@ function solve(str, num){
 function solve(str, num){
   return str.split("").sort().slice(0,num).reduce((prev,curr) => prev.replace(curr, ""), str)
 }
+
+//Day 451
+//7 - Odd Ones Out!
+function oddOnesOut(numArr) {
+  let counts = {}
+  
+  for (let el of numArr) {counts[el] ? counts[el]++ : counts[el] = 1}
+  
+  return numArr.filter(el => counts[el] % 2 === 0)
+}
