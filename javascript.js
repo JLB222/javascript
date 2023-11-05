@@ -7303,3 +7303,10 @@ function oddOnesOut(numArr) {
   
   return numArr.filter(el => counts[el] % 2 === 0)
 }
+
+//Day 452
+//7 - Is it a vowel in this position?
+function checkVowel(string, position) {
+  let vowels = "aeiouAEIOU".split("")
+  return vowels.includes(string[position])
+}
