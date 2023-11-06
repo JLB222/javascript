@@ -7310,3 +7310,9 @@ function checkVowel(string, position) {
   let vowels = "aeiouAEIOU".split("")
   return vowels.includes(string[position])
 }
+
+//Day 453
+//8 - Merging sorted integer arrays
+function mergeArrays(a, b) {
+  return Array.from(new Set(a.concat(b))).sort((a,b) => a-b)
+}
