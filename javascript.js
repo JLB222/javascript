@@ -7316,3 +7316,9 @@ function checkVowel(string, position) {
 function mergeArrays(a, b) {
   return Array.from(new Set(a.concat(b))).sort((a,b) => a-b)
 }
+
+//Day 454
+//8 - Quadratic coefficients solver; aka poorly explained word problem
+function quadratic(x1, x2){
+  return [1, -(x2 + x1), (x1 * x2)]
+}
