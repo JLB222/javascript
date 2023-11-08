@@ -7322,3 +7322,9 @@ function mergeArrays(a, b) {
 function quadratic(x1, x2){
   return [1, -(x2 + x1), (x1 * x2)]
 }
+
+//Day 455
+//7 - review - simple letter removal
+function solve(str, num){
+  return str.split("").sort().slice(0,num).reduce((prev,curr) => prev.replace(curr, ""), str)
+}
