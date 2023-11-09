@@ -7328,3 +7328,16 @@ function quadratic(x1, x2){
 function solve(str, num){
   return str.split("").sort().slice(0,num).reduce((prev,curr) => prev.replace(curr, ""), str)
 }
+
+//Day 456
+//8 - Cascading Subsets
+function eachCons(arr, num) {
+  let result = []
+  for (let i = 0; i < arr.length; i++) {
+    if (arr.slice(i,i+num).length === num) {
+      result.push(arr.slice(i,i+num))
+    }
+  }
+	return result
+}
+
