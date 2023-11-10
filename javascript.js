@@ -7341,3 +7341,8 @@ function eachCons(arr, num) {
 	return result
 }
 
+//Day 457
+//review
+function Heading(props) {
+  return <h1>{props.title}</h1>
+}
