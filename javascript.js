@@ -7346,3 +7346,9 @@ function eachCons(arr, num) {
 function Heading(props) {
   return <h1>{props.title}</h1>
 }
+
+//Day 458
+//8 - Geometry Basics
+function circleCircumference(circle) {
+  return Math.PI * (circle.radius) * 2
+}
