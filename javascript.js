@@ -7352,3 +7352,15 @@ function Heading(props) {
 function circleCircumference(circle) {
   return Math.PI * (circle.radius) * 2
 }
+
+//Day 459
+//8 - Arguments to Binary addition
+function arr2bin(arr){
+  return arr.map(el => typeof(el) === "number" ? el : 0).reduce((prev,curr) => prev + curr, 0).toString(2)
+}
+
+//can make it slightly shorter by putting the map ternary inside the reduce:
+
+function arr2bin(arr){
+  return arr.reduce((prev,curr) => prev + (typeof curr === "number" ? curr : 0), 0).toString(2)
+}
