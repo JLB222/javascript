@@ -7364,3 +7364,12 @@ function arr2bin(arr){
 function arr2bin(arr){
   return arr.reduce((prev,curr) => prev + (typeof curr === "number" ? curr : 0), 0).toString(2)
 }
+
+//Day 460
+//8 - Pole Vault
+function startingMark(bodyHeight){
+  // Remember: Body height of 1.52 m --> starting mark: 9.45 m
+  //           Body height of 1.83 m --> starting mark: 10.67 m
+  var m = (10.67 - 9.45) / (1.83 - 1.52);
+  return Math.round((10.67 + m * bodyHeight - m * 1.83) * 100) / 100;
+}
