@@ -7373,3 +7373,9 @@ function startingMark(bodyHeight){
   var m = (10.67 - 9.45) / (1.83 - 1.52);
   return Math.round((10.67 + m * bodyHeight - m * 1.83) * 100) / 100;
 }
+
+//Day 461
+//review - 7 - Simple letter removal
+function solve(str, num){
+  return str.split("").sort().slice(0,num).reduce((prev,curr) => prev.replace(curr, ""), str)
+}
