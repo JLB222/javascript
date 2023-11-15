@@ -7379,3 +7379,9 @@ function startingMark(bodyHeight){
 function solve(str, num){
   return str.split("").sort().slice(0,num).reduce((prev,curr) => prev.replace(curr, ""), str)
 }
+
+//Day 462
+//8 - Circular Objects
+let circular = {}
+circular.value = "Hello World"
+circular.self  = circular
