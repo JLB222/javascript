@@ -7385,3 +7385,14 @@ function solve(str, num){
 let circular = {}
 circular.value = "Hello World"
 circular.self  = circular
+
+//Day 463
+//7 - Array Mash
+function arrayMash (array1, array2) {
+  let result = []
+  for (let i = 0; i < array1.length; i++) {
+    result.push(array1[i]);
+    result.push(array2[i]);
+  }
+  return result
+}
