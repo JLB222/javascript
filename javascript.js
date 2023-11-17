@@ -7396,3 +7396,15 @@ function arrayMash (array1, array2) {
   }
   return result
 }
+
+//Day 464
+//7 - Count salutes
+function countSalutes(hallway) {
+  let right = 0;
+  let salutes = 0;
+  for (let el of hallway) {
+    if (el === '>') right += 1
+    else if (el === '<') salutes += right
+  }
+  return 2 * salutes;
+}
