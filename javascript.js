@@ -7408,3 +7408,10 @@ function countSalutes(hallway) {
   }
   return 2 * salutes;
 }
+
+//Day 465
+//7 - sort a deck of cards - custom sort - revisit
+function sortCards(arr){
+	let ideal = "A23456789TJQK";
+	return arr.sort((a,b) => ideal.indexOf(a) - ideal.indexOf(b))
+}
