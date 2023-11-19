@@ -7421,4 +7421,4 @@ function sortCards(arr){
 function sortCards(arr){
   let desiredSort = "A23456789TJQK"
   return arr.sort((a,b) => desiredSort.indexOf(a) - desiredSort.indexOf(b))
-}
+} 
