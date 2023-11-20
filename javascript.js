@@ -7415,3 +7415,10 @@ function sortCards(arr){
 	let ideal = "A23456789TJQK";
 	return arr.sort((a,b) => ideal.indexOf(a) - ideal.indexOf(b))
 }
+
+//Day 466
+//reviewing custom sorts
+function sortCards(arr){
+  let desiredSort = "A23456789TJQK"
+  return arr.sort((a,b) => desiredSort.indexOf(a) - desiredSort.indexOf(b))
+}
