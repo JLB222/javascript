@@ -7422,3 +7422,14 @@ function sortCards(arr){
   let desiredSort = "A23456789TJQK"
   return arr.sort((a,b) => desiredSort.indexOf(a) - desiredSort.indexOf(b))
 } 
+
+//Day 467
+//review
+function customSort(arr) {
+  let desiredSort = "BLAHFRG"
+  return arr.sort((a,b) => desiredSort.indexOf(a) - desiredSort.indexOf(b))
+}
+
+function solve(str, num){
+  return str.split("").sort().slice(0,num).reduce((prev,curr) => prev.replace(curr,""), str)
+}
