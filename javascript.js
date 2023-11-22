@@ -7433,3 +7433,16 @@ function customSort(arr) {
 function solve(str, num){
   return str.split("").sort().slice(0,num).reduce((prev,curr) => prev.replace(curr,""), str)
 }
+
+//Day 468
+//7 - Sort the climbing grades
+function sortGrades(arr){
+  let desiredSort = "VBV0V0+V1V2V3V4V5V6V7V8V9V10V11V12V13V14V15V16V17"
+  return arr.sort((a,b) => desiredSort.indexOf(a) - desiredSort.indexOf(b))
+}
+
+//can also be done with an array
+function sortGrades(lst){
+  const grades = ["VB", "V0", "V0+", "V1", "V2", "V3", "V4", "V5", "V6", "V7", "V8", "V9", "V10", "V11", "V12", "V13", "V14", "V15", "V16", "V17"];
+  return lst.sort((a, b) => grades.indexOf(a) - grades.indexOf(b));
+}
