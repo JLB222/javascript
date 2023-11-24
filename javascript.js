@@ -7461,3 +7461,9 @@ class GBFMaker {
     console.log(`Using ${this.ultName}`)
   }
 }
+
+//Day 470
+//7 - Sort by Example
+function exampleSort(arr,exampleArr){
+  return arr.sort((a,b) => exampleArr.indexOf(a) - exampleArr.indexOf(b))
+}
