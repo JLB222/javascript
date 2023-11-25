@@ -7467,3 +7467,9 @@ class GBFMaker {
 function exampleSort(arr,exampleArr){
   return arr.sort((a,b) => exampleArr.indexOf(a) - exampleArr.indexOf(b))
 }
+
+//Day 471
+//7 - sorted list of objects
+function sortList (sortBy, list) {
+  return list.sort((a, b) => a[sortBy] < b[sortBy])
+}
