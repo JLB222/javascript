@@ -7473,3 +7473,9 @@ function exampleSort(arr,exampleArr){
 function sortList (sortBy, list) {
   return list.sort((a, b) => a[sortBy] < b[sortBy])
 }
+
+//Day 472
+//review
+function sortList (sortBy, list) {
+  return list.sort((a,b) => a[sortBy] < b[sortBy])
+}
