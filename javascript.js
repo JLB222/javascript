@@ -7479,3 +7479,13 @@ function sortList (sortBy, list) {
 function sortList (sortBy, list) {
   return list.sort((a,b) => a[sortBy] < b[sortBy])
 }
+
+//Day 473
+//7 - String Scramble
+function scramble(str, arr) {
+  let result = []
+  for (let i = 0; i < str.length; i++) {
+    result[arr[i]] = str[i]
+  }
+  return result.join("")
+}
