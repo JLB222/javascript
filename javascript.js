@@ -7489,3 +7489,13 @@ function scramble(str, arr) {
   }
   return result.join("")
 }
+
+//Day 474
+//review
+function scramble(str, arr) {
+  let result = []
+  for (let i = 0; i < arr.length; i++) {
+    result[arr[i]] = str[i]
+  }
+  return result.join("")
+}
