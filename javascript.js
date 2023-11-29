@@ -7499,3 +7499,14 @@ function scramble(str, arr) {
   }
   return result.join("")
 }
+
+//Day 475
+//7 - String reversing, changing caase, etc
+function reverseAndMirror(s1,s2) {
+  let str2 = s2.split("").reverse().map(el => el === el.toUpperCase() ? el.toLowerCase() : el.toUpperCase()).join("")
+  
+  let str1a = s1.split("").reverse().map(el => el === el.toUpperCase() ? el.toLowerCase() : el.toUpperCase()).join("")
+  let str1b = s1.split("").map(el => el === el.toUpperCase() ? el.toLowerCase() : el.toUpperCase()).join("")
+  
+  return str2 + "@@@" + str1a+str1b
+}
