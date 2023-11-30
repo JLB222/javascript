@@ -7510,3 +7510,23 @@ function reverseAndMirror(s1,s2) {
   
   return str2 + "@@@" + str1a+str1b
 }
+
+//Day 476
+//review
+function solve(str, num){
+  return str.split("").sort().slice(0,num).reduce((prev,curr) => prev.replace(curr,""), str)
+}
+//review - 7 - String scramble
+//P - string & array of integers; they will be valid and of equal length
+//R - string in a different order; each letter will be in a new position indicated by the number in the array.
+//E - abcd, [0,3,1,2] --> acdb  | first letter will go to first number's index (a - 0), 2nd letter to 2nd number (b - 3), etc
+//P - 
+function scramble(str, arr) {
+  // create an empty array that will later house the new string's elements in the correct order (we'll join it at the end)
+  let result = []
+  //for loop that assigns the letters from the original string into the new array at a specific position determined by the given array
+  for (let i = 0; i < str.length; i++) {
+    result[arr[i]] = str[i]
+  }
+  return result.join("")
+}
