@@ -7530,3 +7530,19 @@ function scramble(str, arr) {
   }
   return result.join("")
 }
+
+//Day 477
+//7 - Sum of integers in string
+function sumOfIntegersInString(s){ 
+  return s.match(/\d+/g) === null ? 0 : s.match(/\d+/g).map(Number).reduce((a,b) => a+b,0)
+}
+
+//instead of using Map to make them numbers, you could do that within the reduce by using "+"
+function sumOfIntegersInString(s){ 
+  return s.match(/\d+/g) === null ? 0 : s.match(/\d+/g).reduce((a,b) => a + +b, 0)
+}
+
+//can use an OR operator to get rid of the ternary
+function sumOfIntegersInString(s){ 
+  return (s.match(/\d+/g) || []).reduce((a,b) => a + +b, 0)
+}
