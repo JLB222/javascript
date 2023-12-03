@@ -7556,3 +7556,10 @@ function scramble(str, arr) {
   }
   return result.join("")
 }
+
+//Day 479
+//7 - Smallest value of an array
+function min(arr, toReturn) {
+  let minNum = Math.min(...arr)
+  return toReturn === "value" ? minNum : arr.indexOf(minNum)
+}
