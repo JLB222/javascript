@@ -7563,3 +7563,21 @@ function min(arr, toReturn) {
   let minNum = Math.min(...arr)
   return toReturn === "value" ? minNum : arr.indexOf(minNum)
 }
+
+//Day 480
+//7 - Mysterioius Singularity Numbers (and a waste of time)
+function realNumbers(n){
+  let result = []
+  for (let i = 1; i <= n; i++) {
+    if (i % 2 && i % 3 && i % 5) {
+      result.push(i)
+    }
+  }
+  return result.length
+}
+
+//yet another poorly worded math problem, but this one has performance restraints because some of its arguments are insanely large numbers
+// "correct" answer:
+function realNumbers(n) {
+  return n - ~~(n/2) - ~~(n/3) - ~~(n/5) + ~~(n/6) + ~~(n/10) + ~~(n/15) - ~~(n/30);
+}
