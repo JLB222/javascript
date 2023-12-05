@@ -7581,3 +7581,14 @@ function realNumbers(n){
 function realNumbers(n) {
   return n - ~~(n/2) - ~~(n/3) - ~~(n/5) + ~~(n/6) + ~~(n/10) + ~~(n/15) - ~~(n/30);
 }
+
+//Day 481
+//review
+function scramble(str, arr) {
+  let result = []
+  for (let i = 0; i < str.length; i++) {
+    result[arr[i]] = str[i]
+  }
+  return result.join("")
+}
+
