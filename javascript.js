@@ -7592,3 +7592,12 @@ function scramble(str, arr) {
   return result.join("")
 }
 
+//Day 482
+function smallestInteger(matrix) {
+  let thing = matrix.flat().sort()
+  for (let i = 0; i < 100; i++) {
+    if (!thing.includes(i)) {
+      return i
+    }
+  }
+}
