@@ -7601,3 +7601,11 @@ function smallestInteger(matrix) {
     }
   }
 }
+
+//Day 483
+//7 - "graceful" tipping
+function gracefulTipping(bill) {
+  const withRawTip = bill * 1.15;
+  const multiple = Math.ceil(5 * Math.pow(10, Math.floor(Math.log10(withRawTip)) - 1));
+  return Math.ceil(withRawTip / multiple) * multiple;
+}
