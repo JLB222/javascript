@@ -7609,3 +7609,23 @@ function gracefulTipping(bill) {
   const multiple = Math.ceil(5 * Math.pow(10, Math.floor(Math.log10(withRawTip)) - 1));
   return Math.ceil(withRawTip / multiple) * multiple;
 }
+
+//Day 484
+//review
+class GBFMAKER {
+  constructor(name, race, element, ultName) {
+    this.name = name
+    this.race = race
+    this.element = element
+    this.ultName = ultName
+  }
+  ult() {
+    console.log(`Using ${this.ultName}`)
+  }
+}
+//API basics
+import express from "Express"
+const App = express()
+App.listen(PORT, optionalCallback)
+App.get("/api", reqResCallback)
+
