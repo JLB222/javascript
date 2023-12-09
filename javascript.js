@@ -7629,3 +7629,12 @@ const App = express()
 App.listen(PORT, optionalCallback)
 App.get("/api", reqResCallback)
 
+//Day 485
+//review
+function scramble(str, arr) {
+  let result = []
+  for (let i = 0; i < str.length; i++) {
+    result[arr[i]] = str[i]
+  }
+  return result.join("")
+}
