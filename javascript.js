@@ -7638,3 +7638,11 @@ function scramble(str, arr) {
   }
   return result.join("")
 }
+
+//Day 486
+//7 - Distance from the average
+function distancesFromAverage(arr){
+  let avg = arr.reduce((a,b) => a+b,0) / arr.length
+  let deviations = arr.map(el => +(avg - el).toFixed(2))
+  return deviations
+}
