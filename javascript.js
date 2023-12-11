@@ -7646,3 +7646,10 @@ function distancesFromAverage(arr){
   let deviations = arr.map(el => +(avg - el).toFixed(2))
   return deviations
 }
+
+//Day 487
+//review
+function solve(str, num){
+  let toBeRemoved = str.split("").sort().slice(0,num)
+  return toBeRemoved.reduce((prev,curr) => prev.replace(curr,""), str)
+}
