@@ -7653,3 +7653,9 @@ function solve(str, num){
   let toBeRemoved = str.split("").sort().slice(0,num)
   return toBeRemoved.reduce((prev,curr) => prev.replace(curr,""), str)
 }
+
+//Day 488
+//review
+function strCheck(str1,str2) {
+  return str.split(str2).length -1
+}
