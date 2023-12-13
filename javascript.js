@@ -7659,3 +7659,20 @@ function solve(str, num){
 function strCheck(str1,str2) {
   return str.split(str2).length -1
 }
+
+//Day 489
+//7 - Schedule your Da(rr)ay
+function dayPlan (hours, tasks, duration){
+  let timeLimit = 60 * hours
+  let breakTime = timeLimit - (tasks * duration)
+  let breakDuration = Math.round(breakTime / (tasks -1))
+  let schedule = []
+  for (let i = 1; i <= (tasks * 2 -1); i++) {
+    if (i % 2 === 1) {
+      schedule.push(duration)
+    } else {
+      schedule.push(breakDuration)
+    }
+  }
+  return breakTime >= 0 ? schedule : "You're not sleeping tonight!"
+}
