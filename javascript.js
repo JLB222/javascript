@@ -7676,3 +7676,19 @@ function dayPlan (hours, tasks, duration){
   }
   return breakTime >= 0 ? schedule : "You're not sleeping tonight!"
 }
+
+//Day 490
+//review - String Scramble
+function scramble(str, arr) {
+  let result = []
+  for (let i = 0; i < str.length; i++) {
+    result[arr[i]] = str[i]
+  }
+  return result.join("")
+}
+
+//condensed version using .map()
+
+function scramble(str, arr) {
+  return arr.map((el,i) => str[arr.indexOf(i)]).join("")
+}
