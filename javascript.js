@@ -7692,3 +7692,15 @@ function scramble(str, arr) {
 function scramble(str, arr) {
   return arr.map((el,i) => str[arr.indexOf(i)]).join("")
 }
+
+//Day 491
+class GBFCM {
+  constructor(name, race, ultName) {
+    this.name = name
+    this.race = race
+    this.ultName = ultName
+  }
+  ult() {
+    return `Using ${ultName}!`
+  }
+}
