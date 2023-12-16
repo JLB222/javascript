@@ -7704,3 +7704,13 @@ class GBFCM {
     return `Using ${ultName}!`
   }
 }
+
+//Day 492
+//review
+function arrCount(arr) {
+  let counts = {}
+  for (let el of arr) {
+    counts[el] = (counts[el] || 0) +1
+  }
+  return counts
+}
