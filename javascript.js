@@ -7714,3 +7714,14 @@ function arrCount(arr) {
   }
   return counts
 }
+
+//Day 493
+//review
+function GBFM(name, race, ultName) {
+  this.name = name
+  this.race = race
+  this.ultName = ultName
+  this.ult = function() {
+    return `Using ${ultName}`
+  }
+}
