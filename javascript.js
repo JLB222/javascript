@@ -7725,3 +7725,11 @@ function GBFM(name, race, ultName) {
     return `Using ${ultName}`
   }
 }
+
+//Day 494
+//7 - Quicksum
+function quicksum(packet){
+  if (/[^A-Z\s]/g.test(packet)) return 0
+  let reference = "0ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("")
+  return packet.split("").map((el,i) => reference.includes(el) ? (reference.indexOf(el) * (i+1)) : 0).reduce((a,b) => a+b,0)
+}
