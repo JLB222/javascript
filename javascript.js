@@ -7733,3 +7733,13 @@ function quicksum(packet){
   let reference = "0ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("")
   return packet.split("").map((el,i) => reference.includes(el) ? (reference.indexOf(el) * (i+1)) : 0).reduce((a,b) => a+b,0)
 }
+
+//Day 495
+//7 - Calculaate mean and concatenate string
+function mean(lst){
+  let numbers = lst.filter(el => el.toUpperCase() === el.toLowerCase())
+  let letters = lst.filter(el => el.toUpperCase() !== el.toLowerCase())
+  let avg = numbers.reduce((a,b) => a + +b, 0) / 10
+  
+  return [avg, letters.join("")]
+}
