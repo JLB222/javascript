@@ -7743,3 +7743,13 @@ function mean(lst){
   
   return [avg, letters.join("")]
 }
+
+//Day 496
+//review
+function scramble(str, arr) {
+  let result = []
+  for (let i = 0; i < str.length; i++) {
+    result[arr[i]] = str[i]
+  }
+  return result.join("")
+}
