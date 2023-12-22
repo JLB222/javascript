@@ -7759,3 +7759,9 @@ function scramble(str, arr) {
 function calculate_total(subtotal, tax, tip) {
   return +(subtotal + (subtotal * (tax/100)) + (subtotal * (tip/100))).toFixed(2)
 }
+
+//Day 498
+//review
+function clipStr(str) {
+  return str.split(",").slice(1,-1).join(" ") || null
+}
