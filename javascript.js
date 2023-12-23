@@ -7765,3 +7765,20 @@ function calculate_total(subtotal, tax, tip) {
 function clipStr(str) {
   return str.split(",").slice(1,-1).join(" ") || null
 }
+
+//Day 499
+//review
+class GBFM {
+  constructor(name, race, element, ultName) {
+    this.name = name
+    this.race = race
+    this.element = element
+    this.ultName = ultName
+  }
+  ult() {
+    return `Using ${this.ultName}`
+  }
+  intro() {
+    return `My name is ${this.name}.  You killed my father.  Prepare to die.`
+  }
+}
