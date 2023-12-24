@@ -7782,3 +7782,10 @@ class GBFM {
     return `My name is ${this.name}.  You killed my father.  Prepare to die.`
   }
 }
+
+//Day 500
+//review - simple letter removal
+function solve(str, num){
+  let removed = str.split("").sort().slice(0,num)
+  return removed.reduce((prev,curr) => prev.replace(curr,""), str)
+}
