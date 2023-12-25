@@ -7790,4 +7790,11 @@ function solve(str, num){
   return removed.reduce((prev,curr) => prev.replace(curr,""), str)
 }
 
-blah
+//Day 501
+function holiday() {
+  if (dec25 === true) {
+    return "Merry Christmas!"
+  } else {
+    return "Just another day."
+  }
+}
