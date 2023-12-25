@@ -7789,3 +7789,5 @@ function solve(str, num){
   let removed = str.split("").sort().slice(0,num)
   return removed.reduce((prev,curr) => prev.replace(curr,""), str)
 }
+
+blah
