@@ -7798,3 +7798,10 @@ function holiday() {
     return "Just another day."
   }
 }
+
+//Day 502
+//review
+function customSort(arr) {
+  let desiredSort = "QWERTYUIOP"
+  return arr.sort((a,b) => desiredSort.indexOf(a) - desiredSort.indexOf(b))
+}
