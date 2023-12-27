@@ -7805,3 +7805,13 @@ function customSort(arr) {
   let desiredSort = "QWERTYUIOP"
   return arr.sort((a,b) => desiredSort.indexOf(a) - desiredSort.indexOf(b))
 }
+
+//Day 503
+//review
+function scramble(str, arr) {
+  let result = []
+  for (let i = 0; i < str.length; i++) {
+    result[arr[i]] = str[i]
+  }
+  return result.join("")
+}
