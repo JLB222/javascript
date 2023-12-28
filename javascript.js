@@ -7815,3 +7815,29 @@ function scramble(str, arr) {
   }
   return result.join("")
 }
+
+//Day 504
+//review - 3 ways to make objects
+
+//object literal notation
+let obje = {}
+obje.prop = "X"
+//constructor function
+function objMaker(a,b,c) {
+  this.a = a
+  this.b = b
+  this.c = function() {
+    return c
+  }
+}
+//classes
+class ObjMaker {
+  constuctor(a,b,c) {
+    this.a = a
+    this.b = b
+    this.c = c
+  }
+  doTheThing() {
+    return "THE THING"
+  }
+}
