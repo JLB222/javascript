@@ -7841,3 +7841,11 @@ class ObjMaker {
     return "THE THING"
   }
 }
+
+//Day 505
+//7 - Functional Addition
+function add(n) {
+  return function (x) {
+    return n+x
+  }
+}
