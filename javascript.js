@@ -7849,3 +7849,9 @@ function add(n) {
     return n+x
   }
 }
+
+//Day 506
+//Find the volume of a cone
+function volume(r,h) {
+  return Math.floor(Math.PI * r * r * h / 3)
+}
