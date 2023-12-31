@@ -7855,3 +7855,13 @@ function add(n) {
 function volume(r,h) {
   return Math.floor(Math.PI * r * r * h / 3)
 }
+
+//Day 507
+//7 - Formatting decimal places
+function twoDecimalPlaces(number) {
+  return number > 0 ? Math.floor(number * 100) / 100 : Math.ceil(number * 100) / 100
+}
+//alternate
+function twoDecimalPlaces(number) {
+  return Math.trunc(number*100)/100
+}
