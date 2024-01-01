@@ -7865,3 +7865,17 @@ function twoDecimalPlaces(number) {
 function twoDecimalPlaces(number) {
   return Math.trunc(number*100)/100
 }
+
+//Day 508
+class characterMaker {
+  constructor(name, race, gender, element, ultName) {
+    this.name = name
+    this.race = race
+    this.gender = gender
+    this.element = element
+    this.ultName = ultName
+  };
+  ult() {
+    console.log(`Using ${this.ultName}`)
+  };
+}
