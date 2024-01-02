@@ -7879,3 +7879,20 @@ class characterMaker {
     console.log(`Using ${this.ultName}`)
   };
 }
+
+//Day 509
+//7 - Count the Digit
+function nbDig(upperLimit, searchDigit) {
+  let result = []
+  for (let i = 0; i <= upperLimit; i++) {
+    result.push(i*i)
+  }
+  result = result.map(el => el.toString().split("")).flat().map(Number)
+  let count = 0
+  for (let el of result) {
+    if (el === searchDigit) {
+      count++
+    }
+  }
+  return count
+}
