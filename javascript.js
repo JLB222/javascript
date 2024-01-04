@@ -7902,3 +7902,10 @@ function nbDig(upperLimit, searchDigit) {
 const basic = () => "Hello"  //no parameters necessary, but you'd still need a (); no 'return' or curly brackets necessary because it's a 1-liner
 const medium = el => `Hello, ${el}`  //if there's a single parameter, you don't need ()
 const moderate = (el1, el2) => `${el1} says ${el2}`  //with multiple parameters, you need () again
+
+//Day 511
+//discovery - array.at()
+let index = 3
+let arrExample = [2,4,6,8]
+console.log(arrExample.at(index))  //should produce 8
+//can replace arr[arr.length -1] to get the final element: arr.at(-1)
