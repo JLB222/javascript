@@ -7909,3 +7909,20 @@ let index = 3
 let arrExample = [2,4,6,8]
 console.log(arrExample.at(index))  //should produce 8
 //can replace arr[arr.length -1] to get the final element: arr.at(-1)
+
+//Day 512
+//review - String Scramble
+//P- string & array;  R- string; E- "abcd", [0,3,1,2];
+function scram(str, arr) {
+  let result = []
+  for (let i = 0; i < arr.length; i++) {
+    result[arr[i]] = str[i]
+  }
+  return result.join("")
+}
+
+// result[0] = str[0]
+// result[1] = str[2]
+// result[2] = str[3]
+// result[3] = str[1]
+
