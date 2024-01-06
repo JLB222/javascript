@@ -7926,3 +7926,18 @@ function scram(str, arr) {
 // result[2] = str[3]
 // result[3] = str[1]
 
+//Day 513
+//7 - Odd-Even string sort
+function sortMyString(S) {
+  let odds = []
+  let evens = []
+  for (let i = 0; i < S.length; i++) {
+    if (i % 2 === 0) {
+      evens.push(S.split("")[i])
+    } else {
+      odds.push(S.split("")[i])
+    }
+  }
+  return `${evens.join("")} ${odds.join("")}`
+}
+
