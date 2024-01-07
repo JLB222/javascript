@@ -7941,3 +7941,10 @@ function sortMyString(S) {
   return `${evens.join("")} ${odds.join("")}`
 }
 
+//Day 514
+//alternate 7 
+function sortMyString(S) {
+  let evens = S.split("").filter((el,i) => i % 2 === 0).join("")
+  let odds = S.split("").filter((el,i) => i % 2 === 1).join("")
+  return evens + " " + odds
+}
