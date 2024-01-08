@@ -7948,3 +7948,21 @@ function sortMyString(S) {
   let odds = S.split("").filter((el,i) => i % 2 === 1).join("")
   return evens + " " + odds
 }
+
+//Day 515
+//7 - Strong Number
+function strong(n) {
+  let str = n.toString().split("").map(el => factorialize(+el)).reduce((a,b) => a+b,0)
+  return str === n ? "STRONG!!!!" : "Not Strong !!"
+}
+
+function factorialize(num) {
+  var result = num;
+  if (num === 0 || num === 1) 
+    return 1; 
+  while (num > 1) { 
+    num--;
+    result *= num;
+  }
+  return result;
+}
