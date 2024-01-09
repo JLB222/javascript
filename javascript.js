@@ -7966,3 +7966,16 @@ function factorialize(num) {
   }
   return result;
 }
+
+//Day 516
+//7 - Disarium Number
+function disariumNumber(n){
+  let num = n.toString().split("").map((el, i) => Math.pow(+el, i+1)).reduce((a,b) => a+b, 0)
+  return num === n ? "Disarium !!" : "Not !!"
+}
+
+//an alternate without .map() 
+function disariumNumber(n){
+  let num = n.toString().split("").reduce((prev, curr, i) => prev + Math.pow(curr, i+1), 0)
+  return num === n ? "Disarium !!" : "Not !!"
+}
