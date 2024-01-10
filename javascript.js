@@ -7979,3 +7979,10 @@ function disariumNumber(n){
   let num = n.toString().split("").reduce((prev, curr, i) => prev + Math.pow(curr, i+1), 0)
   return num === n ? "Disarium !!" : "Not !!"
 }
+
+//Day 517
+//review
+function solve(str, num){
+  let letters = str.split("").sort().slice(0,num)
+  return letters.reduce((prev,curr) => prev.replace(curr, ""), str)
+}
