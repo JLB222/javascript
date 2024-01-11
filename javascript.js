@@ -7986,3 +7986,16 @@ function solve(str, num){
   let letters = str.split("").sort().slice(0,num)
   return letters.reduce((prev,curr) => prev.replace(curr, ""), str)
 }
+
+//Day 518
+//review
+class MakeAThing {
+  constuctor(name, race, element, ultName) {
+    this.name = name
+    this.race = race
+    this.element = element
+  }
+  ult() {
+    return `${this.ultName}!!`
+  }
+}
