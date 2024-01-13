@@ -8011,3 +8011,15 @@ function jumpingNumber(n){
   }
   return 'Jumping!!'
 }
+
+//Day 520
+//review
+function jumpingNumber(n){
+  let arr = n.toString().split("")
+  for (let i = 0; i < arr.length-1; i++) {
+    if (Math.abs(arr[i] - arr[i+1]) !== 1) {
+      return "Not!!"
+    }
+  }
+  return "Jumping!!"
+}
