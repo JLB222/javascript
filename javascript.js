@@ -8023,3 +8023,10 @@ function jumpingNumber(n){
   }
   return "Jumping!!"
 }
+
+//Day 521
+//7 - Special Numbr
+function specialNumber(n){
+  let num = n.toString().split("")
+  return num.some(el => +el > 5) ? "NOT!!" : "Special!!"
+}
