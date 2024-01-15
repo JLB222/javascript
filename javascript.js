@@ -8025,8 +8025,14 @@ function jumpingNumber(n){
 }
 
 //Day 521
-//7 - Special Numbr
+//7 - Special Number
 function specialNumber(n){
   let num = n.toString().split("")
   return num.some(el => +el > 5) ? "NOT!!" : "Special!!"
+}
+
+//Day 522
+//alternate Special Number
+function specialNumber(n){
+  return /[6-9]/.test(n) ? "NOT!!" : "Special!!"
 }
