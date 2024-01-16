@@ -8036,3 +8036,13 @@ function specialNumber(n){
 function specialNumber(n){
   return /[6-9]/.test(n) ? "NOT!!" : "Special!!"
 }
+
+//Day 523
+//review - String Scramble
+function scramble(string, array) {
+  let result = []
+  for (let i = 0; i < array.length; i++) {
+    result[array[i]] = string[i]
+  }
+  return result.join("")
+}
