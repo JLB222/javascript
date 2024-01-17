@@ -8046,3 +8046,29 @@ function scramble(string, array) {
   }
   return result.join("")
 }
+
+//Day 524
+//7 - Automorphic Number
+//attempt 1
+function automorphic(number){
+  let numberString = number.toString()
+  let numberSquared = number * number
+  return +numberSquared.toString().split("").slice(-numberString.length).join("") === number ? "Automorphic" : "Not!!"
+}
+
+//cleaned up a little bit
+function automorphic(number){
+  let numberLength = number.toString().length
+  let numberSquaredLastDigits = (number * number).toString().slice(-numberLength)
+  return numberSquaredLastDigits == number ? "Automorphic" : "Not!!"
+}
+
+//stupid one liner using shit I didn't know existed:
+function automorphic(number){
+  return String(number * number).endsWith(String(number)) ? "Automorphic" : "Not!!"
+}
+
+//one liner that's further cleaned up
+function automorphic(number){
+  return `${number * number}`.endsWith(number) ? `Automorphic` : `Not!!`
+}
