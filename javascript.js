@@ -8072,3 +8072,15 @@ function automorphic(number){
 function automorphic(number){
   return `${number * number}`.endsWith(number) ? `Automorphic` : `Not!!`
 }
+
+//Day 525
+//7 - Extra Perfect Numbers
+function extraPerfect(number){
+  let result = []
+  for (let i = 1; i <= number; i++) {
+    if (i % 2 === 1) {
+      result.push(i)
+    }
+  }
+  return result
+}
