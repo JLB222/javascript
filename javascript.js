@@ -8084,3 +8084,9 @@ function extraPerfect(number){
   }
   return result
 }
+
+//Day 526
+//6 - Sum of Two Integers (Challenge:  Simply add two numbers, but you can't use + or -)
+//waste of time; I thought this would be a fun exploration of methods I was unaware of.  It's just a math problem using bitwise operators instead of the normal, logical ones
+const add = (x,y) => y ? add(x^y,(x&y)<<1) : x;
+
