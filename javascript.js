@@ -8090,3 +8090,12 @@ function extraPerfect(number){
 //waste of time; I thought this would be a fun exploration of methods I was unaware of.  It's just a math problem using bitwise operators instead of the normal, logical ones
 const add = (x,y) => y ? add(x^y,(x&y)<<1) : x;
 
+//Day 527
+//review
+function automorphic(number) {
+  return `${number*number}`.endsWith(number) ? "Automorphic" : "Not!!"
+}
+function customSort(array) {
+  let desiredSort = '23456789TJQKA'
+  return array.sort((a,b) => desiredSort.indexOf(a) - desiredSort.indexOf(b))
+}
