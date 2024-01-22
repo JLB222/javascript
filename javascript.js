@@ -8116,3 +8116,17 @@ function fizzBuzz(number) {
     }
   }
 }
+
+//Day 529
+//review
+class granBlueCharMaker {
+  constructor(name, race, element, ultName) {
+    this.name = name
+    this.race = race
+    this.element = element
+    this.ultName = ultName
+  }
+  ult() {
+    console.log(`${this.ultName}!`)
+  }
+}
