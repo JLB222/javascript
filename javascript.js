@@ -8130,3 +8130,9 @@ class granBlueCharMaker {
     console.log(`${this.ultName}!`)
   }
 }
+
+//Day 530
+function numberTester(number) {
+  return `${number * number}`.endsWith(number)
+}
+
