@@ -8136,3 +8136,11 @@ function numberTester(number) {
   return `${number * number}`.endsWith(number)
 }
 
+//Day 531
+//review
+function convertNumberToString(number) {
+  return number.toLocaleString()
+}
+function convertStringIntegersToNumbers(array) {
+  return array.map(Number)
+}
