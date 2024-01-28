@@ -8336,3 +8336,24 @@ function calc(string){
   return total1.split("").map(Number).reduce((a,b) => a+b,0) - total2.split("").map(Number).reduce((a,b) => a+b,0)
 }
 
+//Day 535
+//7 - Debug sum of digits of a number
+
+//before
+function getSumOfDigits(integer) {
+  var sum = null;
+  var digits =  Math.floor(integer).toString();
+  for(var ix = 1; ix < digits.length; ix = sum + 1) {
+    sum =+ digits[ix + 1]);
+  }
+  return sum;
+}
+//after
+function getSumOfDigits(integer) {
+  var sum = 0
+  var digits =  integer.toString();
+  for(var i = 0; i < digits.length; i++) {
+    sum += +digits[i]
+  }
+  return sum
+}
