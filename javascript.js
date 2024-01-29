@@ -8357,3 +8357,13 @@ function getSumOfDigits(integer) {
   }
   return sum
 }
+
+//Day 536
+//7 - Indexed Capitalization
+function capitalize(str,arr){
+  let string = str.split("")
+  for (let i = 0; i < arr.length; i++) {
+    string[arr[i]] = string[arr[i]] ? string[arr[i]].toUpperCase() : null
+  }
+  return string.join("")
+}
