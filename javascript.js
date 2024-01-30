@@ -8367,3 +8367,28 @@ function capitalize(str,arr){
   }
   return string.join("")
 }
+
+//Day 537
+//7 - Building blocks
+class Block{
+  constructor(dataArray){
+    this.width = dataArray[0]
+    this.length = dataArray[1]
+    this.height = dataArray[2]
+  }
+  getWidth() {
+    return this.width
+  }
+  getLength() {
+    return this.length
+  }
+  getHeight() {
+    return this.height
+  }
+  getVolume() {
+    return this.width * this.length * this.height
+  }
+  getSurfaceArea() {
+    return (this.length * this.width * 2) + (this.length * this.height * 2) + (this.width * this.height * 2)
+  }
+}
