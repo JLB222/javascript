@@ -8392,3 +8392,13 @@ class Block{
     return (this.length * this.width * 2) + (this.length * this.height * 2) + (this.width * this.height * 2)
   }
 }
+
+//Day 538
+//review - I hate this one so much
+function scramble(str, arr) {
+  let result = []
+  for (let i = 0; i < str.length; i++) {
+   result[arr[i]] = str[i]
+  }
+  return result.join("")
+}
