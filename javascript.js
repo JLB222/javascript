@@ -8402,3 +8402,12 @@ function scramble(str, arr) {
   }
   return result.join("")
 }
+
+//Day 539
+//review
+class Dog extends Animal {
+  constructor(name, breed) {
+    super(name)
+    this.breed = breed
+  }
+}
