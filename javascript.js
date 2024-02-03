@@ -8419,3 +8419,15 @@ function solve(str, num){
   let toBeRemoved = str.split("").sort().slice(0,num)
   return toBeRemoved.reduce((prev,curr) => prev.replace(curr, ""), str)
 }
+
+//Day 541
+//7 - Array Leaders
+function arrayLeaders(numbers){
+  let result = []
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] > numbers.slice(i+1).reduce((a,b) => a+b,0)) {
+      result.push(numbers[i])
+    }
+  }
+  return result
+}
