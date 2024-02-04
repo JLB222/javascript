@@ -8431,3 +8431,17 @@ function arrayLeaders(numbers){
   }
   return result
 }
+
+//Day 542
+//review
+class gbfCharMake {
+  constructor(name, race, element, ultName) {
+    this.name = name
+    this.race = race
+    this.eleement = element
+    this.ultName = ultName
+  }
+  ult() {
+    return `${this.ultName}!`
+  }
+}
