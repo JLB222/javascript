@@ -8445,3 +8445,10 @@ class gbfCharMake {
     return `${this.ultName}!`
   }
 }
+
+//Day 543
+//review
+function customSort(arr) {
+  let mySort = "23456789TJQKA"
+  return arr.sort((a,b) => mySort.indexOf(a) - mySort.indexOf(b))
+}
