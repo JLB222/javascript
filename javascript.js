@@ -8452,3 +8452,34 @@ function customSort(arr) {
   let mySort = "23456789TJQKA"
   return arr.sort((a,b) => mySort.indexOf(a) - mySort.indexOf(b))
 }
+
+//damage roll for combat tracker
+function damageRoll(arr) {  //format for array is: [numberOfDamageDice, sizeOfDamageDice, flatDamageBonus, damageType]
+  result = []
+  for (let i = 0; i < arr[0]; i++) {
+    result.push(Math.floor((Math.random() * arr[1]) + 1))
+  }
+  console.log(`${arr[0]}d${arr[1]}+${arr[2]}:`, result)
+  return result.reduce((a,b) => a+b, arr[2]) + ` (${arr[3]})`
+}
+
+//Day 544
+//7 - Digital Cypher
+function encode(str, num){
+  let numberResult = []
+  let stringNumArr = num.toString().split("")
+  let length = num.toString().length
+  
+  for (let i = 0; i < str.length; i++) {
+    numberResult.push(str.charCodeAt(i) -96 + parseInt(stringNumArr[i%length], 10))
+  }
+  
+  return numberResult
+}
+
+//simplified a bit with map:
+
+function encode(str, num) {
+	var numString = num.toString()
+  return str.split("").map((el, i) => el.charCodeAt(0) - 96 + +numString[i % numString.length])
+}
