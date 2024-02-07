@@ -8483,3 +8483,58 @@ function encode(str, num) {
 	var numString = num.toString()
   return str.split("").map((el, i) => el.charCodeAt(0) - 96 + +numString[i % numString.length])
 }
+
+//Day 545
+//7 Number to letters
+//too lazy to type out the object, so I'll let a loop do it for me
+let alphabet545a = " ?!abcdefghijklmnopqrstuvwxyz".split("")
+let cipher545a = {}
+for (let i = 29, j = 0; i > 0; i--, j++) {
+  cipher[i] = alphabet[j]
+}
+function switcher(arr){
+  return arr.map(el => cipher[el]).join("")
+}
+
+//console logging the result of the above loop means I don't have to type that shit myself AND I can get rid of the loop so it doesn't fire every time the function is used.  win-win
+let alphabet545b = " ?!abcdefghijklmnopqrstuvwxyz".split("")
+let cipher545b = {
+  '1': 'z',
+  '2': 'y',
+  '3': 'x',
+  '4': 'w',
+  '5': 'v',
+  '6': 'u',
+  '7': 't',
+  '8': 's',
+  '9': 'r',
+  '10': 'q',
+  '11': 'p',
+  '12': 'o',
+  '13': 'n',
+  '14': 'm',
+  '15': 'l',
+  '16': 'k',
+  '17': 'j',
+  '18': 'i',
+  '19': 'h',
+  '20': 'g',
+  '21': 'f',
+  '22': 'e',
+  '23': 'd',
+  '24': 'c',
+  '25': 'b',
+  '26': 'a',
+  '27': '!',
+  '28': '?',
+  '29': ' '
+}
+function switcher(arr){
+  return arr.map(el => cipher[el]).join("")
+}
+
+//cleaned up even more; object not necessary; reverse the alphabet string
+const alpha545c = ' zyxwvutsrqponmlkjihgfedcba!? '
+function switcher (arr) {
+  return arr.map(item => alpha[item]).join('')
+}
