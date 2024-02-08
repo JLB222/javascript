@@ -8538,3 +8538,13 @@ const alpha545c = ' zyxwvutsrqponmlkjihgfedcba!? '
 function switcher (arr) {
   return arr.map(item => alpha[item]).join('')
 }
+
+//546
+//7 - Coding Meetup 5 
+function countLanguages(arr) {
+  let result = {}
+  for (let el of arr) {
+    result[el.language] = (result[el.language] || 0 ) + 1
+  }
+  return result
+}
