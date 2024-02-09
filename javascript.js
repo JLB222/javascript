@@ -8539,7 +8539,7 @@ function switcher (arr) {
   return arr.map(item => alpha[item]).join('')
 }
 
-//546
+//Day 546
 //7 - Coding Meetup 5 
 function countLanguages(arr) {
   let result = {}
@@ -8547,4 +8547,18 @@ function countLanguages(arr) {
     result[el.language] = (result[el.language] || 0 ) + 1
   }
   return result
+}
+
+//Day 547
+//review
+class Animal547 {
+  constructor(name) {
+    this.name=name
+  }
+}
+class Dog547 extends Animal547 {
+  constructor(name, breed) {
+    super(name)
+    this.breed=breed
+  }
 }
