@@ -8455,7 +8455,7 @@ function customSort(arr) {
 
 //damage roll for combat tracker
 function damageRoll(arr) {  //format for array is: [numberOfDamageDice, sizeOfDamageDice, flatDamageBonus, damageType]
-  result = []
+  let result = []
   for (let i = 0; i < arr[0]; i++) {
     result.push(Math.floor((Math.random() * arr[1]) + 1))
   }
@@ -8561,4 +8561,10 @@ class Dog547 extends Animal547 {
     super(name)
     this.breed=breed
   }
+}
+
+//Day 548
+//review
+function question(str) {
+  return str.endsWith("?")
 }
