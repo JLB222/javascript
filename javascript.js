@@ -8568,3 +8568,13 @@ class Dog547 extends Animal547 {
 function question(str) {
   return str.endsWith("?")
 }
+
+//Day 549
+//array.at()
+function seventhThing(arr) {
+  return `The thing in the 7th position is ${arr.at(7)}`
+}
+
+function nthThing(arr, num) {
+  return `The thing in the ${num} position is ${arr.at(num)}`
+}
