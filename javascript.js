@@ -8578,3 +8578,9 @@ function seventhThing(arr) {
 function nthThing(arr, num) {
   return `The thing in the ${num} position is ${arr.at(num)}`
 }
+
+//Day 550
+//review localeCompare - https://www.codewars.com/kata/5701800886306a876a001031/train/javascript
+function lineupStudents(students){
+  return students.split(" ").sort((a,b) => b.length - a.length || b.localeCompare(a))
+}
