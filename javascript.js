@@ -8584,3 +8584,14 @@ function nthThing(arr, num) {
 function lineupStudents(students){
   return students.split(" ").sort((a,b) => b.length - a.length || b.localeCompare(a))
 }
+
+//Day 551
+//array item count
+function mostFrequentItemCount(arr) {
+  if (arr.length === 0) return 0;
+  let counter = {}
+  for (let i = 0; i < arr.length; i++) {
+    counter[arr[i]] = (counter[arr[i]] || 0) +1
+  }
+  return Math.max(...Object.values(counter))
+}
