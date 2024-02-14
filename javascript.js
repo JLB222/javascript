@@ -8570,7 +8570,7 @@ function question(str) {
 }
 
 //Day 549
-//array.at()
+//method review: array.at()
 function seventhThing(arr) {
   return `The thing in the 7th position is ${arr.at(7)}`
 }
@@ -8594,4 +8594,10 @@ function mostFrequentItemCount(arr) {
     counter[arr[i]] = (counter[arr[i]] || 0) +1
   }
   return Math.max(...Object.values(counter))
+}
+
+//Day 552
+//method review: array.concat()
+function smoosh(arr1,arr2) {
+  return arr1.concat(arr2)
 }
