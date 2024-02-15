@@ -8601,3 +8601,9 @@ function mostFrequentItemCount(arr) {
 function smoosh(arr1,arr2) {
   return arr1.concat(arr2)
 }
+
+//Day 553
+//7 - String Merge!
+function stringMerge(string1, string2, letter){
+  return string1.slice(0, string1.indexOf(letter)) + string2.slice(string2.indexOf(letter))
+}
