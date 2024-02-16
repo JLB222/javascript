@@ -8607,3 +8607,14 @@ function smoosh(arr1,arr2) {
 function stringMerge(string1, string2, letter){
   return string1.slice(0, string1.indexOf(letter)) + string2.slice(string2.indexOf(letter))
 }
+
+//Day 554
+//7 - Changing letters
+function swap (string) {
+  const vowels = "aeiou"
+  let result = []
+  for (let i = 0; i < string.length; i++) {
+    vowels.includes(string[i]) ? result.push(string[i].toUpperCase()) : result.push(string[i])
+  }
+  return result.join("")
+}
