@@ -8618,3 +8618,34 @@ function swap (string) {
   }
   return result.join("")
 }
+
+//Day 555
+// universal dice roller
+function damageRoll(arr) {  //format for array is: [numberOfD4s,#D6s,#D8s,#D10s,#D12s,#d20s]
+  let d4s = []
+  let d6s = []
+  let d8s = []
+  let d10s= []
+  let d12s= []
+  let d20s= []
+  for (let i = 0; i < arr[0]; i++) {
+    d4s.push(Math.floor((Math.random() * 4) + 1))
+  }
+  for (let i = 0; i < arr[1]; i++) {
+    d6s.push(Math.floor((Math.random() * 6) + 1))
+  }
+  for (let i = 0; i < arr[2]; i++) {
+    d8s.push(Math.floor((Math.random() * 8) + 1))
+  }
+  for (let i = 0; i < arr[3]; i++) {
+    d10s.push(Math.floor((Math.random() * 10) + 1))
+  }
+  for (let i = 0; i < arr[4]; i++) {
+    d12s.push(Math.floor((Math.random() * 12) + 1))
+  }
+  for (let i = 0; i < arr[5]; i++) {
+    d20s.push(Math.floor((Math.random() * 20) + 1))
+  }
+  console.log(`D4s: ${d4s}, D6s: ${d6s}, D8s: ${d8s}, D10s: ${d10s}, D12s: ${d12s}, D20s: ${d20s}`)
+  return d4s.concat(d6s,d8s,d10s,d12s,d20s).reduce((a,b) => a+b, 0)
+}
