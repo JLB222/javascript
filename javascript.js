@@ -8649,3 +8649,9 @@ function damageRoll(arr) {  //format for array is: [numberOfD4s,#D6s,#D8s,#D10s,
   console.log(`D4s: ${d4s}, D6s: ${d6s}, D8s: ${d8s}, D10s: ${d10s}, D12s: ${d12s}, D20s: ${d20s}`)
   return d4s.concat(d6s,d8s,d10s,d12s,d20s).reduce((a,b) => a+b, 0)
 }
+
+//Day 556
+// array: copyWithin() - allows copy/pasting elements within an array to other parts in the same array without changing its length
+const array1 = ['a', 'b', 'c', 'd', 'e', "f", "g"]
+array1.copyWithin(0,2,4) // should return cdcdefg
+
