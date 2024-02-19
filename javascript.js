@@ -8655,3 +8655,12 @@ function damageRoll(arr) {  //format for array is: [numberOfD4s,#D6s,#D8s,#D10s,
 const array1 = ['a', 'b', 'c', 'd', 'e', "f", "g"]
 array1.copyWithin(0,2,4) // should return cdcdefg
 
+//Day 557
+//review
+function scramble(str, arr) {
+  let result = []
+  for (let i = 0; i < arr.length; i++) {
+    result[arr[i]] = str[i]
+  }
+  return result.join("")
+}
