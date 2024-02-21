@@ -8678,3 +8678,17 @@ class gbfCharacterMaker {
     return `${this.ultName}`
   }
 }
+
+//Day 559
+// array: Array.entries() - returns a new array iterator object that contains the keyvalue paairs for each index in the array.  There seems to be overlapping functionality with arr.forEach().  I don't really understand when to use which.  Even chatGPT struggled to give me an example where array.entries() wins over a forEach loop.
+//example from Chatgpt:  Suppose you have an array of prices representing the cost of items, and you want to calculate the total price after applying a discount to items with odd indices. Using Array.prototype.entries(), you can easily access both the index and the value of each element, allowing you to apply the discount selectively.
+const prices = [10, 20, 30, 40, 50];
+const discount = 0.1; // 10% discount on odd-indexed items
+let totalPrice = 0;
+for (const [index, price] of prices.entries()) {
+    if (index % 2 === 1) { // odd index
+        totalPrice += price * (1 - discount);
+    } else {
+        totalPrice += price;
+    }
+}
