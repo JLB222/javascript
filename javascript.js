@@ -8692,3 +8692,11 @@ for (const [index, price] of prices.entries()) {
         totalPrice += price;
     }
 }
+
+//Day 560
+//7 - All Stars Code Challenge 22
+function toTime(seconds) {
+  let hours = Math.floor(seconds / 3600)
+  let minutes = Math.floor(seconds / 60) - (hours * 60)
+  return `${hours} hour(s) and ${minutes} minute(s)`
+}
