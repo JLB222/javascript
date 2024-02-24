@@ -8707,3 +8707,9 @@ function customSort(arr) {
   const sortType = "A23456789TJQK"
   return arr.sort((prev,curr) => sortType.indexOf(prev) - sortType.indexOf(curr))
 }
+
+//Day 562
+//7 - counting sheep
+function lostSheep(friday,saturday,total){
+  return total - friday.concat(saturday).reduce((a,b) => a+b,0)
+}
