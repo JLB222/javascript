@@ -8700,3 +8700,10 @@ function toTime(seconds) {
   let minutes = Math.floor(seconds / 60) - (hours * 60)
   return `${hours} hour(s) and ${minutes} minute(s)`
 }
+
+//Day 561
+//review
+function customSort(arr) {
+  const sortType = "A23456789TJQK"
+  return arr.sort((prev,curr) => sortType.indexOf(prev) - sortType.indexOf(curr))
+}
