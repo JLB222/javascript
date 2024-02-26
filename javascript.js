@@ -8719,3 +8719,9 @@ function lostSheep(friday,saturday,total){
 function allEven(arr) {
   return arr.every(el => el % 2 === 0)
 }
+
+//Day 564
+//7 
+function greet(name) {
+  return name ? `hello ${name}!` : null
+}
