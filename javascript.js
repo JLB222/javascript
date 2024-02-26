@@ -8713,3 +8713,9 @@ function customSort(arr) {
 function lostSheep(friday,saturday,total){
   return total - friday.concat(saturday).reduce((a,b) => a+b,0)
 }
+
+//Day 563
+//array.every - compares every element in the array to see if they return true when put through your callback function
+function allEven(arr) {
+  return arr.every(el => el % 2 === 0)
+}
