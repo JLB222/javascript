@@ -8725,3 +8725,7 @@ function allEven(arr) {
 function greet(name) {
   return name ? `hello ${name}!` : null
 }
+
+//Day 565
+//array.fill(value, start, end)  fills an array with a given value starting at a given index, inclusive, to an ending index, exclusive.
+let nines = new Array(9).fill(9)
