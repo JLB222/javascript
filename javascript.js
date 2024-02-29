@@ -8746,3 +8746,12 @@ function solve(a,b){
   }
   return result.join("")
 }
+
+//Day 567
+//review
+class Dog extends Animal {
+  constructor(name, breed) {
+    super(name)
+    this.breed = breed
+  }
+}
