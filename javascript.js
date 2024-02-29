@@ -8729,3 +8729,20 @@ function greet(name) {
 //Day 565
 //array.fill(value, start, end)  fills an array with a given value starting at a given index, inclusive, to an ending index, exclusive.
 let nines = new Array(9).fill(9)
+
+//Day 566
+//7 - Unique string characters
+function solve(a,b){
+  let result = []
+  for (let i = 0; i < a.length; i++) {
+    if (!b.includes(a[i])) {
+      result.push(a[i])
+    }
+  }
+  for (let i = 0; i < b.length; i++) {
+    if (!a.includes(b[i])) {
+      result.push(b[i])
+    }
+  }
+  return result.join("")
+}
