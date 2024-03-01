@@ -8755,3 +8755,10 @@ class Dog extends Animal {
     this.breed = breed
   }
 }
+
+//Day 568
+//review string replace
+function solve(str, num){
+  let removed = str.split("").sort().slice(0,num)
+  return removed.reduce((prev,curr) => prev.replace(curr, ""), str)
+}
