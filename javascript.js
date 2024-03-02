@@ -8762,3 +8762,8 @@ function solve(str, num){
   let removed = str.split("").sort().slice(0,num)
   return removed.reduce((prev,curr) => prev.replace(curr, ""), str)
 }
+
+//Day 569
+//array.filter()
+const words = ['spray', 'elite', 'exuberant', 'destruction', 'present'];
+words.filter((el) => el.length === 5) //returns ['spray', 'elite']
