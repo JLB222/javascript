@@ -8767,3 +8767,9 @@ function solve(str, num){
 //array.filter()
 const words = ['spray', 'elite', 'exuberant', 'destruction', 'present'];
 words.filter((el) => el.length === 5) //returns ['spray', 'elite']
+
+//Day 570
+//7 - Find a meeting room
+function meeting(arr){
+  return !arr.includes(`O`) ? `None available!` : arr.indexOf(`O`);
+}
