@@ -8773,3 +8773,8 @@ words.filter((el) => el.length === 5) //returns ['spray', 'elite']
 function meeting(arr){
   return !arr.includes(`O`) ? `None available!` : arr.indexOf(`O`);
 }
+
+//Day 571
+// array.find finds the first element of an array that meets the criteria of the callback function
+const array11 = [5, 12, 8, 130, 44];
+const found = array11.find((element) => element > 10);  //would return 12
