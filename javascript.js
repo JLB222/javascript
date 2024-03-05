@@ -8778,3 +8778,9 @@ function meeting(arr){
 // array.find finds the first element of an array that meets the criteria of the callback function
 const array11 = [5, 12, 8, 130, 44];
 const found = array11.find((element) => element > 10);  //would return 12
+
+//Day 572
+//7 - original price
+function discoverOriginalPrice(discountedPrice, salePercentage){
+  return +(discountedPrice / (1 - salePercentage * .01)).toFixed(2)
+}
