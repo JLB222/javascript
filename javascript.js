@@ -8784,3 +8784,20 @@ const found = array11.find((element) => element > 10);  //would return 12
 function discoverOriginalPrice(discountedPrice, salePercentage){
   return +(discountedPrice / (1 - salePercentage * .01)).toFixed(2)
 }
+
+//Day 573
+// 7 - longest vowel chain
+function solve(str){
+  const vowels = "aeiou"
+  let longest = 0
+  let current = 0
+  for (let i = 0; i < str.length; i++) {
+    if (vowels.includes(str[i])) {
+      current += 1
+    } else {
+      current >= longest? longest = current : null
+      current = 0
+    }
+  }
+ return longest
+}
