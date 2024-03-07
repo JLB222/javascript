@@ -8801,3 +8801,8 @@ function solve(str){
   }
  return longest
 }
+
+//Day 574
+//array.findIndex() - returns the index of the first element in the array that satisifies the callback function
+const array12 = [5, 12, 8, 130, 44];
+array12.findIndex(el => el > 12) // should return 3, the index of 130
