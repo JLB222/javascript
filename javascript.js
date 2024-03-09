@@ -8820,3 +8820,10 @@ class gbfCharMake1 {
     return `${this.ultName}!`
   }
 }
+
+//Day 576
+//array.findLast() & findLastIndex() - logical opposites of find() and findIndex() - searches the array in reverse order
+const array576 = [5, 12, 50, 130, 44];
+
+array576.findLast((element) => element > 45);  //should return 130
+array576.findLastIndex((element) => element > 45)  //should return 3
