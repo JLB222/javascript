@@ -8827,3 +8827,8 @@ const array576 = [5, 12, 50, 130, 44];
 
 array576.findLast((element) => element > 45);  //should return 130
 array576.findLastIndex((element) => element > 45)  //should return 3
+
+//Day 577
+//array.flat()  - creates new array with all sub-array elements concacenated into it up to a specified depth
+const arr577 = [0, 1, [2, [3, [4, 5]]]];
+arr577.flat(Infinity)  // should return [0, 1, 2, 3, 4, 5]
