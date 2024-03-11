@@ -8832,3 +8832,14 @@ array576.findLastIndex((element) => element > 45)  //should return 3
 //array.flat()  - creates new array with all sub-array elements concacenated into it up to a specified depth
 const arr577 = [0, 1, [2, [3, [4, 5]]]];
 arr577.flat(Infinity)  // should return [0, 1, 2, 3, 4, 5]
+
+
+//Day 577
+//review String Scramble
+function scramble(str, arr) {
+  let result = []
+  for (let i =0; i < str.length; i++) {
+    result[arr[i]] = str[i]
+  }
+  return result.join("")
+}
