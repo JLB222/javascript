@@ -8843,3 +8843,13 @@ function scramble(str, arr) {
   }
   return result.join("")
 }
+
+//Day 578
+//7 - Last Survivor
+function lastSurvivor(letters, coords) {
+  letters = letters.split('');
+  for (let i = 0; i < coords.length; i++) {
+     letters.splice(coords[i], 1)
+  }
+  return letters.join('')
+}
