@@ -8853,3 +8853,12 @@ function lastSurvivor(letters, coords) {
   }
   return letters.join('')
 }
+
+//Day 579
+//review
+class Dog extends Animal579 {
+  constructor(name, breed) {
+    super(name)
+    this.breed = breed
+  }
+}
