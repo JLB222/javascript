@@ -8862,3 +8862,9 @@ class Dog extends Animal579 {
     this.breed = breed
   }
 }
+
+//Day 580
+//array.flatMap() - same as using map followed by flat(), but slightly more efficient
+const arr580 = [1, 2, 1];
+const result = arr580.flatMap((num) => (num === 2 ? [2, 2] : 1));  // Expected output: Array [1, 2, 2, 1]
+
