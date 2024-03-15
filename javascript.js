@@ -8868,3 +8868,8 @@ class Dog extends Animal579 {
 const arr580 = [1, 2, 1];
 const result = arr580.flatMap((num) => (num === 2 ? [2, 2] : 1));  // Expected output: Array [1, 2, 2, 1]
 
+//Day 581
+//7 - product array
+function productArray(numbers){
+  return numbers.map(x => numbers.reduce((a,b) => a * b) / x)
+}
