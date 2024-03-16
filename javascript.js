@@ -8873,3 +8873,16 @@ const result = arr580.flatMap((num) => (num === 2 ? [2, 2] : 1));  // Expected o
 function productArray(numbers){
   return numbers.map(x => numbers.reduce((a,b) => a * b) / x)
 }
+
+//Day 582
+//review
+function gbfMake582(name, race, element, ultName) {
+  return {
+    name: name,
+    race: race,
+    element: element,
+    ult: function() {
+      return `${this.ultName}!`
+    }
+  }
+}
