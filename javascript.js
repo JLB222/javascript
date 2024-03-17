@@ -8886,3 +8886,8 @@ function gbfMake582(name, race, element, ultName) {
     }
   }
 }
+
+//Day 583
+//array.forEach() ; executes a given task for each element in the array
+const array583 = ['a', 'b', 'c'];
+array583.forEach((element) => console.log(element))
