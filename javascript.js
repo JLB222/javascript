@@ -8891,3 +8891,9 @@ function gbfMake582(name, race, element, ultName) {
 //array.forEach() ; executes a given task for each element in the array
 const array583 = ['a', 'b', 'c'];
 array583.forEach((element) => console.log(element))
+
+//Day 584
+//review
+function snip584(str) {
+  return str.split(",").slice(1,-1).join(" ") || null
+}
