@@ -8897,3 +8897,15 @@ array583.forEach((element) => console.log(element))
 function snip584(str) {
   return str.split(",").slice(1,-1).join(" ") || null
 }
+
+//Day 585
+//7 - SevenAte9 - Write a function that removes any 9 from a given string that is between two 7s
+function sevenAte9(str) {
+  let numbers = str.split("")
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] == 9 && numbers[i-1] == 7 && numbers[i+1] == 7) {
+      numbers[i] = ""
+    }
+  }
+  return numbers.join("")
+}
