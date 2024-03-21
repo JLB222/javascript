@@ -8916,3 +8916,10 @@ console.log(Array.from('foo'));
 // Expected output: Array ["f", "o", "o"]
 console.log(Array.from([1, 2, 3], (x) => x + x));
 // Expected output: Array [2, 4, 6]
+
+
+//Day 587
+//review - How many occurrences of str2 are in str1
+function countStr587(str1,str2) {
+  return str1.split(str2) -1
+}
