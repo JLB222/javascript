@@ -8923,3 +8923,14 @@ console.log(Array.from([1, 2, 3], (x) => x + x));
 function countStr587(str1,str2) {
   return str1.split(str2) -1
 }
+
+//Day 588
+//7 - Split in parts
+function splitInParts(str, partLength){
+  let result = []
+  let arr = str.split("")
+  for (let i = 0; i < str.length / partLength; i++) {
+    result.push(arr.splice(0, partLength).join(""))
+  }
+  return result.join(" ")
+}
