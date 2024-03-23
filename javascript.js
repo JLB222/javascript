@@ -8934,3 +8934,9 @@ function splitInParts(str, partLength){
   }
   return result.join(" ")
 }
+
+//Day 589
+//array.includes(seachElement, fromIndex) - checks an array to see if it includes a given value, returning true or false
+const pets589 = ['cat', 'dog', 'bat'];
+console.log(pets589.includes('cat'));
+// Expected output: true
