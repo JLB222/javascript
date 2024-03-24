@@ -8940,3 +8940,9 @@ function splitInParts(str, partLength){
 const pets589 = ['cat', 'dog', 'bat'];
 console.log(pets589.includes('cat'));
 // Expected output: true
+
+//Day 590
+//array.indexOf(searchElement, fromIndex) - returns the first index at which an element is found inside an array
+const beasts590 = ['ant', 'bison', 'camel', 'duck', 'bison'];
+console.log(beasts590.indexOf('bison'));
+// Expected output: 1
