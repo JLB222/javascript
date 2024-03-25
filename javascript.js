@@ -8946,3 +8946,13 @@ console.log(pets589.includes('cat'));
 const beasts590 = ['ant', 'bison', 'camel', 'duck', 'bison'];
 console.log(beasts590.indexOf('bison'));
 // Expected output: 1
+
+//Day 591
+//review
+function countAll591(arr) {
+  const counter = {}
+  for (let i = 0; i < arr.length; i++) {
+    counter[arr[i]] = (counter[arr[i]] || 0) +1
+  }
+  return counter
+}
