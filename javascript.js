@@ -8956,3 +8956,10 @@ function countAll591(arr) {
   }
   return counter
 }
+
+//Day 592
+//Array.isArray() - returns true or false on whether or not the passed argument is an array
+console.log(Array.isArray('[]'));
+// Expected output: false
+console.log(Array.isArray([]));
+// Expected output: true
