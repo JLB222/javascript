@@ -8963,3 +8963,14 @@ console.log(Array.isArray('[]'));
 // Expected output: false
 console.log(Array.isArray([]));
 // Expected output: true
+
+//Day 593
+//review
+function repVowels593(str) {
+  const vowels = "aeiouAEIOU"
+  let result = str.split("")
+  for (let i = 0; i < str.length; i++) {
+    vowels.includes(result[i]) ? result[i] = "!" : null
+  }
+  return result.join("")
+}
