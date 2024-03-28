@@ -8974,3 +8974,23 @@ function repVowels593(str) {
   }
   return result.join("")
 }
+
+//Day 594
+//7 - Consecutive Items - https://www.codewars.com/kata/5f6d533e1475f30001e47514/train/javascript
+function consecutive(arr, a, b) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === a && (arr[i-1] === b || arr[i+1] === b)) {
+      return true
+    } 
+  }
+  return false
+}
+
+//slightly cleaned up; for loop not necessary since integers are unique
+function consecutive(arr, a, b) {
+  let index = arr.indexOf(a)
+  if (arr[index-1] === b || arr[index+1] === b) {
+      return true
+  }
+  return false
+}
