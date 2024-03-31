@@ -9013,3 +9013,17 @@ class Dog extends Animal {
     this.breed = breed
   }
 }
+
+//Day 597
+//review
+class GBFcharMaker597 {
+  constructor(name, race, element, ultName) {
+    this.name = name
+    this.race = race
+    this.element = element
+    this.ultName = ultName
+  }
+  ult() {
+    return `${this.ultName}!`
+  }
+}
