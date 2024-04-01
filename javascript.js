@@ -9027,3 +9027,9 @@ class GBFcharMaker597 {
     return `${this.ultName}!`
   }
 }
+
+//Day 598
+//review - Simple Letter Removal
+function solve598(str, num){
+  return str.split("").sort().slice(0,num).reduce((prev,curr) => prev.replace(curr, ""), str)
+}
