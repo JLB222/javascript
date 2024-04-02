@@ -9033,3 +9033,12 @@ class GBFcharMaker597 {
 function solve598(str, num){
   return str.split("").sort().slice(0,num).reduce((prev,curr) => prev.replace(curr, ""), str)
 }
+
+//Day 599
+function scramble(str, arr) {
+  let result = []
+  for (let i = 0; i < arr.length; i++) {
+    result[arr[i]] = str[i]
+  }
+  return result.join("")
+}
