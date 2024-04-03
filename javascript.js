@@ -9042,3 +9042,10 @@ function scramble(str, arr) {
   }
   return result.join("")
 }
+
+//Day 600
+//6 - Count the smiley faces
+function countSmileys(arr) {
+  const smiley = /^[:;][-~]?[)D]$/
+  return arr.reduce((prev,curr) => prev + smiley.test(curr), 0)
+}
