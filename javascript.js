@@ -9049,3 +9049,13 @@ function countSmileys(arr) {
   const smiley = /^[:;][-~]?[)D]$/
   return arr.reduce((prev,curr) => prev + smiley.test(curr), 0)
 }
+
+//Day 601
+//array.join() - combines array elements with a given argument string connecting them.  defaults to ,
+const elements601 = ['Fire', 'Air', 'Water'];
+console.log(elements601.join());
+// Expected output: "Fire,Air,Water"
+console.log(elements601.join(''));
+// Expected output: "FireAirWater"
+console.log(elements601.join('-'));
+// Expected output: "Fire-Air-Water"
