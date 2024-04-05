@@ -9059,3 +9059,22 @@ console.log(elements601.join(''));
 // Expected output: "FireAirWater"
 console.log(elements601.join('-'));
 // Expected output: "Fire-Air-Water"
+
+//Day 602
+//6 - Encrypt this!
+function encryptWord(str) {
+  const firstLetter = str.charCodeAt(0)
+  let result
+  switch (str.length) {
+    case 0: return '';
+    case 1: return firstLetter;
+    case 2: result = [firstLetter, str[1]]; break;
+    case 3: result = [firstLetter, str[2], str[1]]; break;
+    default: result = [firstLetter, str.slice(-1), str.slice(2,-1), str[1]]; break;
+  }
+  return result.join('')
+}
+
+function encryptThis(str) {
+  return str.split(' ').map(encryptWord).join(' ')
+}
