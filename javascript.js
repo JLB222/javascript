@@ -9078,3 +9078,14 @@ function encryptWord(str) {
 function encryptThis(str) {
   return str.split(' ').map(encryptWord).join(' ')
 }
+
+//Day 603
+//array.keys()
+const array603 = ['a', 'b', 'c']
+const iterator = array603.keys()
+for (const key of iterator) {
+  console.log(key)
+}
+// Expected output: 0
+// Expected output: 1
+// Expected output: 2
