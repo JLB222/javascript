@@ -9080,7 +9080,7 @@ function encryptThis(str) {
 }
 
 //Day 603
-//array.keys()
+//array.keys() - 
 const array603 = ['a', 'b', 'c']
 const iterator = array603.keys()
 for (const key of iterator) {
@@ -9089,3 +9089,9 @@ for (const key of iterator) {
 // Expected output: 0
 // Expected output: 1
 // Expected output: 2
+
+//Day 604
+//array.lastIndexOf() - returns the index of the last appearance of an element in an array
+const animals604 = ['Dodo', 'Tiger', 'Penguin', 'Dodo'];
+console.log(animals604.lastIndexOf('Dodo'));
+// Expected output: 3
