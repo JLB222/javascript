@@ -9095,3 +9095,11 @@ for (const key of iterator) {
 const animals604 = ['Dodo', 'Tiger', 'Penguin', 'Dodo'];
 console.log(animals604.lastIndexOf('Dodo'));
 // Expected output: 3
+
+
+//Day 605
+//7 - Sum of integers in string
+function sumOfIntegersInString(str){
+  let integers = str.match(/\d+/g) || []
+  return integers.reduce((a,b) => a + +b, 0)
+}
