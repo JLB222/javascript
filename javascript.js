@@ -9103,3 +9103,10 @@ function sumOfIntegersInString(str){
   let integers = str.match(/\d+/g) || []
   return integers.reduce((a,b) => a + +b, 0)
 }
+
+//Day 606
+//6 - Highest Rank number in an array
+function highestRank(arr) {
+  let occurrences = num => arr.filter(el => el === num).length
+  return arr.sort((a,b) => occurrences(b) - occurrences(a) || b - a)[0];
+}
