@@ -9110,3 +9110,24 @@ function highestRank(arr) {
   let occurrences = num => arr.filter(el => el === num).length
   return arr.sort((a,b) => occurrences(b) - occurrences(a) || b - a)[0];
 }
+
+//Day 607
+//6 - +1 Array
+function upArray(arr){
+  if (arr.some(el => el < 0 || el > 9) || arr.length < 1) {
+    return null
+  }
+  for (let i = 1; i <= arr.length; i++) {
+    if (arr[arr.length-i] === 9) {
+      arr[arr.length-i] = 0
+      if (i === arr.length) {
+        arr.unshift(1); // If the loop reaches the leftmost digit, add 1 to the left
+        break;
+      }
+    } else {
+      arr[arr.length-i]++
+      break;
+    }
+  }
+  return arr
+}
