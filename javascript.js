@@ -9131,3 +9131,12 @@ function upArray(arr){
   }
   return arr
 }
+
+//Day 608
+//Array.map() - execute a function on every element of an array, returning a new array with the changed elements
+
+const array608 = [1, 4, 9, 16];
+// Pass a function to map
+const map608 = array608.map((x) => x * 2);
+console.log(map608);
+// Expected output: Array [2, 8, 18, 32]
