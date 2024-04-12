@@ -9140,3 +9140,8 @@ const array608 = [1, 4, 9, 16];
 const map608 = array608.map((x) => x * 2);
 console.log(map608);
 // Expected output: Array [2, 8, 18, 32]
+
+//Day 609
+//array.of() - make a new array from the passed arguments
+console.log(Array.of('foo', 2, 'bar', true));
+// Expected output: Array ["foo", 2, "bar", true]
