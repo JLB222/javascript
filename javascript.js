@@ -9145,3 +9145,9 @@ console.log(map608);
 //array.of() - make a new array from the passed arguments
 console.log(Array.of('foo', 2, 'bar', true));
 // Expected output: Array ["foo", 2, "bar", true]
+
+//Day 610
+//array.pop() - removes and returns the last element of an array
+const plants610 = ['broccoli', 'cauliflower', 'cabbage', 'kale', 'tomato'];
+console.log(plants610.pop());
+// Expected output: "tomato"
