@@ -9151,3 +9151,12 @@ console.log(Array.of('foo', 2, 'bar', true));
 const plants610 = ['broccoli', 'cauliflower', 'cabbage', 'kale', 'tomato'];
 console.log(plants610.pop());
 // Expected output: "tomato"
+
+//Day 611
+//array.push() - adds the specified elements to the end of an array and returns the new length of the array.
+const animals = ['pigs', 'goats', 'sheep'];
+const count = animals.push('cows');
+console.log(count);
+// Expected output: 4
+console.log(animals);
+// Expected output: Array ["pigs", "goats", "sheep", "cows"]
