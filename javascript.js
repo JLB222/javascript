@@ -9160,3 +9160,14 @@ console.log(count);
 // Expected output: 4
 console.log(animals);
 // Expected output: Array ["pigs", "goats", "sheep", "cows"]
+
+//Day 612
+//7 - Factorial
+function factorial(num){
+  if (num < 0 || num > 12) {throw new RangeError('Argument must be an integer between 0 and 12');}
+  let result = 1
+  for (let i = 0; i < num; i++) {
+    result *= (num - i)
+  }
+  return result
+}
