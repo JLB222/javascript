@@ -9171,3 +9171,9 @@ function factorial(num){
   }
   return result
 }
+
+//Day 613
+//review
+function repVowels613(str) {
+  return str.replace(/[aeiou]/gi, "")
+}
