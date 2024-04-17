@@ -9177,3 +9177,17 @@ function factorial(num){
 function repVowels613(str) {
   return str.replace(/[aeiou]/gi, "")
 }
+
+//Day 614
+//review class extension
+class Animal614 {
+  constructor(name) {
+    this.name = name
+  }
+}
+class Dog614 extends Animal614 {
+  constructor(name, breed) {
+    super(name)
+    this.breed = breed
+  }
+}
