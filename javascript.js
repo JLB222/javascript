@@ -9191,3 +9191,13 @@ class Dog614 extends Animal614 {
     this.breed = breed
   }
 }
+
+//Day 615
+//array.reduce() - executes a user supplied 'reducer' callbaack function on each element of the array, in order, passing in the return value from the calculation on the preceding element.  The final result is a single value
+//reduce(callbackFn, initialValue)
+const array615 = [1, 2, 3, 4, 5, 6];
+// 0 + 1 + 2 + 3 + 4
+const initialValue = 0;
+const sumWithInitial = array615.reduce(
+  (accumulator, currentValue) => accumulator + currentValue, initialValue,
+)
