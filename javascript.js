@@ -9201,3 +9201,14 @@ const initialValue = 0;
 const sumWithInitial = array615.reduce(
   (accumulator, currentValue) => accumulator + currentValue, initialValue,
 )
+
+//Day 616
+//7 - Build a square
+function generateShape(integer){
+  let result = ""
+  for (let i = 0; i < integer; i++) {
+    result += "+".repeat(integer)
+    i < integer-1 ? result += "\n" : null
+  }
+  return result
+}
