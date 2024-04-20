@@ -9212,3 +9212,9 @@ function generateShape(integer){
   }
   return result
 }
+
+//Day 617
+//array.reduceRight() - as reduce, but from right to left
+const array617 = [[0, 1], [2, 3],[4, 5]]
+const result617 = array617.reduceRight((accumulator, currentValue) =>accumulator.concat(currentValue),);
+console.log(result617);  // Expected output: Array [4, 5, 2, 3, 0, 1]
