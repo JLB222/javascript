@@ -9218,3 +9218,13 @@ function generateShape(integer){
 const array617 = [[0, 1], [2, 3],[4, 5]]
 const result617 = array617.reduceRight((accumulator, currentValue) =>accumulator.concat(currentValue),);
 console.log(result617);  // Expected output: Array [4, 5, 2, 3, 0, 1]
+
+//Day 618
+//array.reverse() - reverses an array in place and returns the reference to the same array, the first array element now becoming the last, and the last array element becoming the first
+const array618 = ['one', 'two', 'three'];
+const reversed = array618.reverse();
+// Careful: reverse is destructive -- it changes the original array.
+console.log(array618, reversed);
+// Expected output: ["three", "two", "one"] for both
+
+
