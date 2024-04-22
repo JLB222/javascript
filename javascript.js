@@ -9227,4 +9227,8 @@ const reversed = array618.reverse();
 console.log(array618, reversed);
 // Expected output: ["three", "two", "one"] for both
 
-
+//Day 619
+//review - quick easy way to remove an element from a string if you have no concern for replacing it
+function removeThing(str, thing) {
+  return str.split(thing).join("")
+}
