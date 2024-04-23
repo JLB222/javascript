@@ -9232,3 +9232,9 @@ console.log(array618, reversed);
 function removeThing(str, thing) {
   return str.split(thing).join("")
 }
+
+//Day 620
+//review - Build a square
+function generateShape(integer){
+  return ("+".repeat(integer) + "\n").repeat(integer).trim()
+}
