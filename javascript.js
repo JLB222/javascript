@@ -9238,3 +9238,10 @@ function removeThing(str, thing) {
 function generateShape(integer){
   return ("+".repeat(integer) + "\n").repeat(integer).trim()
 }
+
+//Day 621
+//array.shift() - removes and returns the first element of an array.
+const array621 = [1, 2, 3];
+const firstElement = array1.shift();
+console.log(array621); // Expected output: Array [2, 3]
+console.log(firstElement); // Expected output: 1
