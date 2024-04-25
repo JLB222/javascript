@@ -9245,3 +9245,17 @@ const array621 = [1, 2, 3];
 const firstElement = array1.shift();
 console.log(array621); // Expected output: Array [2, 3]
 console.log(firstElement); // Expected output: 1
+
+//Day 622
+//review
+class GBFMaker622 {
+  constructor(name, race, element, ultName) {
+    this.name=name
+    this.race=race
+    this.element=element
+    this.ultName=ultName
+  }
+  ult() {
+    return `${ultName}!`
+  }
+}
