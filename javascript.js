@@ -9269,3 +9269,9 @@ function scramble(str, arr) {
   }
   return result.join("")
 };
+
+//Day 624
+//array.slice(start, end) - returns a shallow copy of an array from start index (inclusive) to end index (exclusive)
+const animals624 = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+
+console.log(animals624.slice(2)); // Expected output: Array ["camel", "duck", "elephant"]
