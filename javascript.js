@@ -9275,3 +9275,10 @@ function scramble(str, arr) {
 const animals624 = ['ant', 'bison', 'camel', 'duck', 'elephant'];
 
 console.log(animals624.slice(2)); // Expected output: Array ["camel", "duck", "elephant"]
+
+//Day 625
+//array.some(function) - tests to see if even a single element from the array returns true from the given test function
+const array = [1, 2, 3, 4, 5];
+// Checks whether an element is even
+const even = (element) => element % 2 === 0;
+console.log(array.some(even));  // Expected output: true
