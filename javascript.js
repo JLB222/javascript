@@ -9282,3 +9282,13 @@ const array = [1, 2, 3, 4, 5];
 // Checks whether an element is even
 const even = (element) => element % 2 === 0;
 console.log(array.some(even));  // Expected output: true
+
+//Day 626
+//array.sort(compareFunction) - sort an array of elements by comparing their UTF-16 code units values; default is ascending order
+const months = ['March', 'Jan', 'Feb', 'Dec'];
+months.sort();
+console.log(months); // Expected output: Array ["Dec", "Feb", "Jan", "March"]
+
+const array626 = [1, 30, 4, 21, 100000];
+array626.sort();
+console.log(array1); // Expected output: Array [1, 100000, 21, 30, 4]
