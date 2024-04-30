@@ -9292,3 +9292,8 @@ console.log(months); // Expected output: Array ["Dec", "Feb", "Jan", "March"]
 const array626 = [1, 30, 4, 21, 100000];
 array626.sort();
 console.log(array1); // Expected output: Array [1, 100000, 21, 30, 4]
+
+//Day 627
+function lineupStudents(students){
+  return students.split(" ").sort((a,b) => b.length - a.length || b.localeCompare(a))
+}
