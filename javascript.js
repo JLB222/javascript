@@ -9297,3 +9297,9 @@ console.log(array1); // Expected output: Array [1, 100000, 21, 30, 4]
 function lineupStudents(students){
   return students.split(" ").sort((a,b) => b.length - a.length || b.localeCompare(a))
 }
+
+//Day 628
+// array.splice() - changes the contents of an array by removing or replacing existing elements and/or adding new elements in place
+const months628 = ['Jan', 'March', 'April', 'June'];
+months628.splice(1, 0, 'Feb');  // Inserts at index 1
+console.log(months628);  // Expected output: Array ["Jan", "Feb", "March", "April", "June"]
