@@ -9303,3 +9303,9 @@ function lineupStudents(students){
 const months628 = ['Jan', 'March', 'April', 'June'];
 months628.splice(1, 0, 'Feb');  // Inserts at index 1
 console.log(months628);  // Expected output: Array ["Jan", "Feb", "March", "April", "June"]
+
+//Day 629
+//7 - Coding Meetup #6
+function isSameLanguage(list) {
+  return list.every((el,i) => el.language === list[0].language)
+}
