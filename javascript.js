@@ -9309,3 +9309,9 @@ console.log(months628);  // Expected output: Array ["Jan", "Feb", "March", "Apri
 function isSameLanguage(list) {
   return list.every((el,i) => el.language === list[0].language)
 }
+
+//Day 630
+//array.toLocaleString(locales, options) -  returns a string representing the elements of the array. The elements are converted to strings using their toLocaleString methods and these strings are separated by a locale-specific string
+const array630 = [1, 'a', new Date('21 Dec 1997 14:12:00 UTC')];
+const localeString = array630.toLocaleString('ja-JP', { timeZone: 'UTC' });
+console.log(localeString); // Expected output: "1,a,12/21/1997, 2:12:00 PM",
