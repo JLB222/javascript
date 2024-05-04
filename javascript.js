@@ -9315,3 +9315,10 @@ function isSameLanguage(list) {
 const array630 = [1, 'a', new Date('21 Dec 1997 14:12:00 UTC')];
 const localeString = array630.toLocaleString('ja-JP', { timeZone: 'UTC' });
 console.log(localeString); // Expected output: "1,a,12/21/1997, 2:12:00 PM",
+
+//Day 631
+//review - custom sort
+function customSort631(arr) {
+    let customSort = "23456789TJQKA"
+    return arr.sort((a,b) => customSort.indexOf(a) - customSort.indexOf(b))
+}
