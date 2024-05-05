@@ -9322,3 +9322,6 @@ function customSort631(arr) {
     let customSort = "23456789TJQKA"
     return arr.sort((a,b) => customSort.indexOf(a) - customSort.indexOf(b))
 }
+
+//Day 632
+//array.toReversed() - is the copying counterpart of the reverse() method. It returns a new array with the elements in reversed order.
