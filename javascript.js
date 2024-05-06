@@ -9325,3 +9325,13 @@ function customSort631(arr) {
 
 //Day 632
 //array.toReversed() - is the copying counterpart of the reverse() method. It returns a new array with the elements in reversed order.
+
+//Day 633
+//7 - Digits Explosion
+function explode(str) {
+  let result = []
+  for (let i = 0; i < str.length; i++) {
+    result.push(str[i].repeat(+str[i]))
+  }
+  return result.join("")
+}
