@@ -9339,3 +9339,12 @@ function explode(str) {
 //Day 634
 // toSorted() - is the copying version of the sort() method. It returns a new array with the elements sorted in ascending order.
 toSorted(compareFn)
+
+//Day 635
+//review - class extension
+class Dog635 extends Animal {
+  constructor(name,breed) {
+    super(name)
+    this.breed = breed
+  }
+}
