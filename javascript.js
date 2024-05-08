@@ -9335,3 +9335,7 @@ function explode(str) {
   }
   return result.join("")
 }
+
+//Day 634
+// toSorted() - is the copying version of the sort() method. It returns a new array with the elements sorted in ascending order.
+toSorted(compareFn)
