@@ -9352,3 +9352,8 @@ class Dog635 extends Animal {
 //Day 635
 //toSpliced() - is the copying version of the splice() method. It returns a new array with some elements removed and/or replaced at a given index.
 array635.toSpliced(start, deleteCount, item1, item2)
+
+//Day 636
+//toString() - returns a string representing the specified array and its elements.
+const array636 = [1, 2, 'a', '1a'];
+console.log(array636.toString());  // Expected output: "1,2,a,1a"
