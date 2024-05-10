@@ -9348,3 +9348,7 @@ class Dog635 extends Animal {
     this.breed = breed
   }
 }
+
+//Day 635
+//toSpliced() - is the copying version of the splice() method. It returns a new array with some elements removed and/or replaced at a given index.
+array635.toSpliced(start, deleteCount, item1, item2)
