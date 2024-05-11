@@ -9357,3 +9357,9 @@ array635.toSpliced(start, deleteCount, item1, item2)
 //toString() - returns a string representing the specified array and its elements.
 const array636 = [1, 2, 'a', '1a'];
 console.log(array636.toString());  // Expected output: "1,2,a,1a"
+
+//Day 637
+//array.unshift() - adds the specified elements to the beginning of an array and returns the new length of the array.
+const array637 = [1, 2, 3]
+console.log(array637.unshift(4, 5))  // Expected output: 5
+console.log(array637)  // Expected output: Array [4, 5, 1, 2, 3]
