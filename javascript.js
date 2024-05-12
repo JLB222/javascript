@@ -9363,3 +9363,9 @@ console.log(array636.toString());  // Expected output: "1,2,a,1a"
 const array637 = [1, 2, 3]
 console.log(array637.unshift(4, 5))  // Expected output: 5
 console.log(array637)  // Expected output: Array [4, 5, 1, 2, 3]
+
+//Day 638
+//review - simple letter removal
+function solve(str, num){
+  return str.split("").sort().slice(0,num).reduce((prev,curr) => prev.replace(curr, ""), str)
+}
