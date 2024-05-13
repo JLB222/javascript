@@ -9369,3 +9369,10 @@ console.log(array637)  // Expected output: Array [4, 5, 1, 2, 3]
 function solve(str, num){
   return str.split("").sort().slice(0,num).reduce((prev,curr) => prev.replace(curr, ""), str)
 }
+
+//Day 639
+//7 - Maximum Triplet Sum
+function maxTriSum(numbers){
+  let result = Array.from(new Set(numbers.sort((a,b) => b-a,0)))
+  return result[0] + result[1] + result[2]
+}
