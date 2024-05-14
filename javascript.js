@@ -9338,7 +9338,7 @@ function explode(str) {
 
 //Day 634
 // toSorted() - is the copying version of the sort() method. It returns a new array with the elements sorted in ascending order.
-toSorted(compareFn)
+toSorted(compareFn) 
 
 //Day 635
 //review - class extension
@@ -9375,4 +9375,9 @@ function solve(str, num){
 function maxTriSum(numbers){
   let result = Array.from(new Set(numbers.sort((a,b) => b-a,0)))
   return result[0] + result[1] + result[2]
+}
+
+//Day 640
+function multiplyAll(arr) {
+  return (n) => arr.map(el => el * n)
 }
