@@ -9378,6 +9378,11 @@ function maxTriSum(numbers){
 }
 
 //Day 640
+//7 - Currying functions:
 function multiplyAll(arr) {
   return (n) => arr.map(el => el * n)
 }
+
+//Day 641
+//String.at() - takes an integer value and returns a new String consisting of the single UTF-16 code unit located at the specified offset. This method allows for positive and negative integers. Negative integers count back from the last string character.
+'The quick brown fox jumps over the lazy dog.'.at(5) //returns 'u'
