@@ -9386,3 +9386,7 @@ function multiplyAll(arr) {
 //Day 641
 //String.at() - takes an integer value and returns a new String consisting of the single UTF-16 code unit located at the specified offset. This method allows for positive and negative integers. Negative integers count back from the last string character.
 'The quick brown fox jumps over the lazy dog.'.at(5) //returns 'u'
+
+//Day 642
+//String.charAt() -  returns a new string consisting of the single UTF-16 code unit at the given index.  Not deprecated, but .at() is a more modern JS method + it can handle negative numbers.
+'The quick brown fox jumps over the lazy dog.'.charAt(4) //returns 'q'
