@@ -9390,3 +9390,12 @@ function multiplyAll(arr) {
 //Day 642
 //String.charAt() -  returns a new string consisting of the single UTF-16 code unit at the given index.  Not deprecated, but .at() is a more modern JS method + it can handle negative numbers.
 'The quick brown fox jumps over the lazy dog.'.charAt(4) //returns 'q'
+
+//Day 643
+//7 - word values
+function wordValue(arr) {
+  return arr.map((el,i) => el.replace(/\s/g, '')
+                         .split('')
+                         .map(b => (b.charCodeAt() -96))
+                         .reduce((acc, cur) => (acc+=cur),0)*(i+1))
+}
