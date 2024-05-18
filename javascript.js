@@ -9399,3 +9399,7 @@ function wordValue(arr) {
                          .map(b => (b.charCodeAt() -96))
                          .reduce((acc, cur) => (acc+=cur),0)*(i+1))
 }
+
+//Day 644
+//String.charCodeAt() = returns an integer between 0 and 65535 representing the UTF-16 code unit at the given index.
+'The quick brown fox jumps over the lazy dog.'.charCodeAt(4)  //should return 113, q's char code
