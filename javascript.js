@@ -9403,3 +9403,9 @@ function wordValue(arr) {
 //Day 644
 //String.charCodeAt() = returns an integer between 0 and 65535 representing the UTF-16 code unit at the given index.
 'The quick brown fox jumps over the lazy dog.'.charCodeAt(4)  //should return 113, q's char code
+
+//Day 645
+//String.codePointAt() - returns a non-negative integer that is the Unicode code point value of the character starting at the given index. Note that the index is still based on UTF-16 code units, not Unicode code points.
+const icons645 = '☃★♲';
+console.log(icons.codePointAt(0)) // Expected output: "9731"
+console.log(icons645.codePointAt(1));  // Expected output: "9733"
