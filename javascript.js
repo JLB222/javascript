@@ -9418,3 +9418,13 @@ function wordValue(arr) {
                          .map(el2 => (el2.charCodeAt() -96))
                          .reduce((acc, cur) => (acc+cur),0)*(i+1))
 }
+
+//Day 646
+//review - String Scramble
+function scramble(str, arr) {
+  let result = []
+  for (let i = 0; i < str.length; i++) {
+    result[arr[i]] = str[i]
+  }
+  return result.join("")
+};
