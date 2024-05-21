@@ -9409,3 +9409,12 @@ function wordValue(arr) {
 const icons645 = '☃★♲';
 console.log(icons.codePointAt(0)) // Expected output: "9731"
 console.log(icons645.codePointAt(1));  // Expected output: "9733"
+
+//Day 645
+//review - word values
+function wordValue(arr) {
+  return arr.map((el,i) => el.replace(/\s/g, '')
+                         .split('')
+                         .map(el2 => (el2.charCodeAt() -96))
+                         .reduce((acc, cur) => (acc+cur),0)*(i+1))
+}
