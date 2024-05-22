@@ -9428,3 +9428,15 @@ function scramble(str, arr) {
   }
   return result.join("")
 };
+
+//Day 647
+//7 - Basic Sequence Practice
+function sumOfN(n) {
+  let sum = 0
+  let result = []
+  for (let i = 0; i <= Math.abs(n); i++) {
+    n < 0 ? sum -= i : sum += i
+    result.push(sum);
+  }
+  return result
+}
