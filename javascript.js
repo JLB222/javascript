@@ -9440,3 +9440,10 @@ function sumOfN(n) {
   }
   return result
 }
+
+//Day 648
+//String.concat() - concatenates the string arguments to this string and returns a new string.
+const str1 = 'Hello';
+const str2 = 'World';
+
+console.log(str1.concat(' ', str2));  // Expected output: "Hello World"
