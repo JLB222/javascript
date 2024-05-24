@@ -9407,7 +9407,7 @@ function wordValue(arr) {
 //Day 645
 //String.codePointAt() - returns a non-negative integer that is the Unicode code point value of the character starting at the given index. Note that the index is still based on UTF-16 code units, not Unicode code points.
 const icons645 = '☃★♲';
-console.log(icons.codePointAt(0)) // Expected output: "9731"
+console.log(icons645.codePointAt(0)) // Expected output: "9731"
 console.log(icons645.codePointAt(1));  // Expected output: "9733"
 
 //Day 645
@@ -9447,3 +9447,9 @@ const str1 = 'Hello';
 const str2 = 'World';
 
 console.log(str1.concat(' ', str2));  // Expected output: "Hello World"
+
+//Day 649
+//String.endsWith(searchString, endPosition) -  determines whether a string ends with the characters of this string, returning true or false as appropriate.
+const str649 = 'Cats are the best!';
+console.log(str649.endsWith('best!')); // Expected output: true
+console.log(str649.endsWith('best', 17)); // Expected output: true
