@@ -9453,3 +9453,7 @@ console.log(str1.concat(' ', str2));  // Expected output: "Hello World"
 const str649 = 'Cats are the best!';
 console.log(str649.endsWith('best!')); // Expected output: true
 console.log(str649.endsWith('best', 17)); // Expected output: true
+
+//Day 650
+//String.includes() - performs a case-sensitive search to determine whether a given string may be found within this string, returning true or false as appropriate.
+'The quick brown fox jumps over the lazy dog.'.includes('fox') // should return true
