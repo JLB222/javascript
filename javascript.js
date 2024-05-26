@@ -9457,3 +9457,17 @@ console.log(str649.endsWith('best', 17)); // Expected output: true
 //Day 650
 //String.includes() - performs a case-sensitive search to determine whether a given string may be found within this string, returning true or false as appropriate.
 'The quick brown fox jumps over the lazy dog.'.includes('fox') // should return true
+
+//Day 651
+//review
+class gbfMake651 {
+  constructor(name, race, element, ultName) {
+    this.name = name,
+    this.race = race,
+    this.element = element,
+    this.ultName = ultName
+  }
+  ult() {
+    return `${this.ultName}!`
+  }
+}
