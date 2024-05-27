@@ -9462,12 +9462,16 @@ console.log(str649.endsWith('best', 17)); // Expected output: true
 //review
 class gbfMake651 {
   constructor(name, race, element, ultName) {
-    this.name = name,
-    this.race = race,
-    this.element = element,
+    this.name = name
+    this.race = race
+    this.element = element
     this.ultName = ultName
   }
   ult() {
     return `${this.ultName}!`
   }
 }
+
+//Day 652
+//String.indexOf() - searches this string and returns the index of the first occurrence of the specified substring. It takes an optional starting position and returns the first occurrence of the specified substring at an index greater than or equal to the specified number.
+"I think Ruth's dog is cuter than your dog!".indexOf('dog') // should return 15, the index of 'd'
