@@ -9475,3 +9475,9 @@ class gbfMake651 {
 //Day 652
 //String.indexOf() - searches this string and returns the index of the first occurrence of the specified substring. It takes an optional starting position and returns the first occurrence of the specified substring at an index greater than or equal to the specified number.
 "I think Ruth's dog is cuter than your dog!".indexOf('dog') // should return 15, the index of 'd'
+
+//Day 653
+//7 - Evens and Odds - Given a number, convert it to hexadecimal if its odd and binary if its even
+function evensAndOdds(num){
+	return num.toString(num % 2 ? 16 : 2)
+}
