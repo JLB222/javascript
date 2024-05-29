@@ -9481,3 +9481,7 @@ class gbfMake651 {
 function evensAndOdds(num){
 	return num.toString(num % 2 ? 16 : 2)
 }
+
+//Day 654
+//String.isWellFormed() - returns a boolean indicating whether this string contains any lone surrogates.
+"I think Ruth's dog is cuter than your dog!".isWellFormed() // should return true
