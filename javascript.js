@@ -9485,3 +9485,11 @@ function evensAndOdds(num){
 //Day 654
 //String.isWellFormed() - returns a boolean indicating whether this string contains any lone surrogates.
 "I think Ruth's dog is cuter than your dog!".isWellFormed() // should return true
+
+//Day 655
+class Dog655 extends Animal {
+  constructor(name, breed) {
+    super(name)
+    this.breed = breed
+  }
+}
