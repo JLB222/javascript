@@ -9493,3 +9493,13 @@ class Dog655 extends Animal {
     this.breed = breed
   }
 }
+
+//Day 656
+//7 - How many arguments - return the number of arguments passed to the function
+function args_count(...rest) {
+  return rest.length
+}
+//alternate:
+function args_count() {
+  return arguments.length
+}
