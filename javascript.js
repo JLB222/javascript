@@ -9507,3 +9507,11 @@ function args_count() {
 //Day 657
 //lastIndexOf(searchString, position) - searches this string and returns the index of the last occurrence of the specified substring. It takes an optional starting position and returns the last occurrence of the specified substring at an index less than or equal to the specified number.
 "I think Ruth's dog is cuter than your dog!".lastIndexOf('dog')  //should return 38
+
+//Day 658
+//String.localeCompare() - returns a number indicating whether this string comes before, or after, or is the same as the given string in sort order. In implementations with Intl.Collator API support, this method simply calls Intl.Collator.
+const a = 'réservé'; // With accents, lowercase
+const b = 'RESERVE'; // No accents, uppercase
+console.log(a.localeCompare(b));// Expected output: 1
+console.log(a.localeCompare(b, 'en', { sensitivity: 'base' }));// Expected output: 0
+
