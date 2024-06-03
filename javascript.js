@@ -9515,3 +9515,21 @@ const b = 'RESERVE'; // No accents, uppercase
 console.log(a.localeCompare(b));// Expected output: 1
 console.log(a.localeCompare(b, 'en', { sensitivity: 'base' }));// Expected output: 0
 
+//Day 658
+//6 - Consonant value
+function solve(str) {
+  let charCodeArr = str.split("").map(el => "aeiou".includes(el) ? "x" : el.charCodeAt() -96)
+  let sums = []
+  let sum = 0
+  for (let i = 0; i < charCodeArr.length; i++) {
+    if (charCodeArr[i] == "x") {
+      sums.push(sum)
+      sum = 0
+    } else {
+      sum += charCodeArr[i]
+    }
+  }
+  // To handle the case where the last characters are not vowels
+  sums.push(sum); 
+  return Math.max(...sums)
+}
