@@ -9533,3 +9533,7 @@ function solve(str) {
   sums.push(sum); 
   return Math.max(...sums)
 }
+
+//Day 659
+//String.match() - retrieves the result of matching this string against a regular expression.  results inside an array
+'The quick brown fox jumps over the lazy dog. It barked.'.match(/[A-Z]/g)  // Expected output: Array ["T", "I"]
