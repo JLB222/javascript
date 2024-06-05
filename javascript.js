@@ -9537,3 +9537,23 @@ function solve(str) {
 //Day 659
 //String.match() - retrieves the result of matching this string against a regular expression.  results inside an array
 'The quick brown fox jumps over the lazy dog. It barked.'.match(/[A-Z]/g)  // Expected output: Array ["T", "I"]
+
+//Day 660
+//6 - Review consonant value
+function solve(str) {
+  let sums = [];
+  
+  str.split("").reduce((sum, char) => {
+    if ("aeiou".includes(char)) {
+      sums.push(sum);
+      return 0;
+    } else {
+      return sum + char.charCodeAt(0) - 96;
+    }
+  }, 0);
+  
+  // Push the final accumulated sum
+  sums.push(sum);
+  
+  return Math.max(...sums);
+}
