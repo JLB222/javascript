@@ -9557,3 +9557,10 @@ function solve(str) {
   
   return Math.max(...sums);
 }
+
+//Day 661
+//String.padEnd() -  pads this string with a given string (repeated, if needed) so that the resulting string reaches a given length
+const str661 = 'Breaded Mushrooms'
+
+console.log(str661.padEnd(25, '.')); // Expected output: "Breaded Mushrooms........"
+console.log(str661.padEnd(25)); // Expected output: "Breaded Mushrooms        "
