@@ -9583,3 +9583,8 @@ function calculate(str) {
   }
   return sum+"";
 }
+
+//Day 663
+//String.padStart() - pads this string with another string (multiple times, if needed) until the resulting string reaches the given length. The padding is applied from the start of this string.
+const str663 = '5';
+console.log(str663.padStart(2, '0'));// Expected output: "05"
