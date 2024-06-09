@@ -9588,3 +9588,10 @@ function calculate(str) {
 //String.padStart() - pads this string with another string (multiple times, if needed) until the resulting string reaches the given length. The padding is applied from the start of this string.
 const str663 = '5';
 console.log(str663.padStart(2, '0'));// Expected output: "05"
+
+//Day 664
+//review - custom sort
+function customSort664(arr) {
+  let sortOrder = "A23456789TJQK"
+  return arr.sort((a,b) => sortOrder.indexOf(a) - sortOrder.indexOf(b))
+}
