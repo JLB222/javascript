@@ -9595,3 +9595,21 @@ function customSort664(arr) {
   let sortOrder = "A23456789TJQK"
   return arr.sort((a,b) => sortOrder.indexOf(a) - sortOrder.indexOf(b))
 }
+
+//Day 665
+//7 - check three and two
+function checkThreeAndTwo(array) {
+  // Create a count object to store occurrences of each character
+  const count = { "a": 0, "b": 0, "c": 0 };
+  
+  // Count the occurrences of each character in the array
+  array.forEach(char => {
+    count[char]++;
+  });
+  
+  // Extract the values of the counts
+  const counts = Object.values(count);
+  
+  // Check if we have exactly 3 occurrences of one letter and 2 of another
+  return counts.includes(3) && counts.includes(2);
+}
