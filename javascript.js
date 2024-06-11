@@ -9613,3 +9613,9 @@ function checkThreeAndTwo(array) {
   // Check if we have exactly 3 occurrences of one letter and 2 of another
   return counts.includes(3) && counts.includes(2);
 }
+
+//Day 666
+//String.repeat()
+const mood = 'Happy! ';
+
+console.log(`I feel ${mood.repeat(3)}`);  // Expected output: "I feel Happy! Happy! Happy! "
