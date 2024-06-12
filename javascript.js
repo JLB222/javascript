@@ -9619,3 +9619,32 @@ function checkThreeAndTwo(array) {
 const mood = 'Happy! ';
 
 console.log(`I feel ${mood.repeat(3)}`);  // Expected output: "I feel Happy! Happy! Happy! "
+
+//Day 667
+//7 - Compare Strings by Sum of Chars
+function compare(str1, str2) {
+  // Helper function to normalize the string
+  function normalizeAndSum(str) {
+    if (str == null) return 0; // Treat null/undefined as empty string
+    
+    // Convert string to uppercase
+    str = str.toUpperCase();
+    
+    // Check if the string contains only letters
+    if (!/^[A-Z]*$/.test(str)) return 0; // If not, treat as empty
+    
+    // Calculate the sum of ASCII values
+    let sum = 0;
+    for (let char of str) {
+      sum += char.charCodeAt(0);
+    }
+    return sum;
+  }
+  
+  // Normalize and calculate the ASCII sum for both strings
+  const sum1 = normalizeAndSum(str1);
+  const sum2 = normalizeAndSum(str2);
+  
+  // Compare the sums
+  return sum1 === sum2;
+}
