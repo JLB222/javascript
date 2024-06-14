@@ -9654,3 +9654,7 @@ function compare(str1, str2) {
 
 const paragraph = "I think Ruth's dog is cuter than your dog!";
 console.log(paragraph.replace("Ruth's", 'my'));  // Expected output: "I think my dog is cuter than your dog!"
+
+//669
+//review - converting a number to a string with appropriate commas
+(100000).toLocaleString() // should return '100,000'
