@@ -9658,3 +9658,8 @@ console.log(paragraph.replace("Ruth's", 'my'));  // Expected output: "I think my
 //669
 //review - converting a number to a string with appropriate commas
 (100000).toLocaleString() // should return '100,000'
+
+//Day 670
+//String.replaceAll() - returns a new string with all matches of a pattern replaced by a replacement. The pattern can be a string or a RegExp, and the replacement can be a string or a function to be called for each match. The original string is left unchanged.
+const paragraph670 = "I think Ruth's dog is cuter than your dog!";
+console.log(paragraph670.replaceAll('dog', 'monkey')); // Expected output: "I think Ruth's monkey is cuter than your monkey!"
