@@ -9663,3 +9663,12 @@ console.log(paragraph.replace("Ruth's", 'my'));  // Expected output: "I think my
 //String.replaceAll() - returns a new string with all matches of a pattern replaced by a replacement. The pattern can be a string or a RegExp, and the replacement can be a string or a function to be called for each match. The original string is left unchanged.
 const paragraph670 = "I think Ruth's dog is cuter than your dog!";
 console.log(paragraph670.replaceAll('dog', 'monkey')); // Expected output: "I think Ruth's monkey is cuter than your monkey!"
+
+//Day 671
+//String.search() -  executes a search for a match between a regular expression and this string, returning the index of the first match in the string.
+const paragraph671 = "I think Ruth's dog is cuter than your dog!";
+
+// Anything not a word character, whitespace or apostrophe
+const regex671 = /[^\w\s']/g;
+console.log(paragraph671.search(regex671));// Expected output: 41
+console.log(paragraph671[paragraph671.search(regex671)]);// Expected output: "!"
