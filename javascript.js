@@ -9668,7 +9668,17 @@ console.log(paragraph670.replaceAll('dog', 'monkey')); // Expected output: "I th
 //String.search() -  executes a search for a match between a regular expression and this string, returning the index of the first match in the string.
 const paragraph671 = "I think Ruth's dog is cuter than your dog!";
 
-// Anything not a word character, whitespace or apostrophe
-const regex671 = /[^\w\s']/g;
+const regex671 = /[^\w\s']/g; // Anything not a word character, whitespace or apostrophe
 console.log(paragraph671.search(regex671));// Expected output: 41
 console.log(paragraph671[paragraph671.search(regex671)]);// Expected output: "!"
+
+//Day 672
+//7 - Stanton measure - count the number of 1s in a given array, then find the number of occurences of that total's value  (if 3 1s, find the number of 3s)
+function stantonMeasure(arr){
+  let counts = {}
+  for (let el of arr) {
+    counts[el] = (counts[el] || 0) + 1
+  }
+  return counts[counts[1]] || 0
+}
+
