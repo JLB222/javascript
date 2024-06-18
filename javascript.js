@@ -9682,3 +9682,9 @@ function stantonMeasure(arr){
   return counts[counts[1]] || 0
 }
 
+//Day 673
+//String.slice() - extracts a section of this string and returns it as a new string, without modifying the original string.
+
+const str673 = 'The quick brown fox jumps over the lazy dog.';
+console.log(str673.slice(31));  // Expected output: "the lazy dog."
+console.log(str673.slice(4,19)) // Expected output: "quick brown fox"
