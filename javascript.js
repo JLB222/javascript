@@ -9688,3 +9688,18 @@ function stantonMeasure(arr){
 const str673 = 'The quick brown fox jumps over the lazy dog.';
 console.log(str673.slice(31));  // Expected output: "the lazy dog."
 console.log(str673.slice(4,19)) // Expected output: "quick brown fox"
+
+//Day 674
+//7 - greatest common divisor
+function mygcd(x, y) {
+  // Ensure x and y are positive integers
+  if (x <= 0 || y <= 0) throw new Error("Input values must be positive integers");
+
+  // Use Euclidean algorithm
+  while (y !== 0) {
+      let temp = y;
+      y = x % y;
+      x = temp;
+  }
+  return x;
+}
