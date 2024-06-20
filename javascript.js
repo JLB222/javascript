@@ -9703,3 +9703,9 @@ function mygcd(x, y) {
   }
   return x;
 }
+
+//Day 675 
+//review - the euclidean algorithm (which states that if y is 0, GCD is x and vice versa) from yesterday simplified & using recursion
+function mygcd(x,y){
+  return y == 0 ? x : mygcd(y, x % y)
+}
