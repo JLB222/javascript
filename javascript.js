@@ -9709,3 +9709,9 @@ function mygcd(x, y) {
 function mygcd(x,y){
   return y == 0 ? x : mygcd(y, x % y)
 }
+
+//Day 676
+//7 - Array series 2 - given an array and an integer, find the product of the (integer) highest numbers in said array
+function maxProduct(arr, num){
+  return arr.sort((a,b) => b-a,0).slice(0, num).reduce((prev,curr) => prev*curr, 1)
+}
