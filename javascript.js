@@ -9720,3 +9720,7 @@ function maxProduct(arr, num){
 //String.split() - takes a pattern and divides this string into an ordered list of substrings by searching for the pattern, puts these substrings into an array, and returns the array
 'The quick brown fox jumps over the lazy dog.'.split(" ") //should return ['The', 'quick', 'brown', 'fox', 'jumps', 'over', 'the', 'lazy', 'dog.']
 
+//Day 678
+//String.startsWith() - determines whether this string begins with the characters of a specified string, returning true or false as appropriate.
+const str678 = 'Saturday night plans';
+console.log(str678.startsWith('Sat')); // Expected output: true
