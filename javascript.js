@@ -9724,3 +9724,13 @@ function maxProduct(arr, num){
 //String.startsWith() - determines whether this string begins with the characters of a specified string, returning true or false as appropriate.
 const str678 = 'Saturday night plans';
 console.log(str678.startsWith('Sat')); // Expected output: true
+
+//Day 679
+//review - String Scramble
+function scramble(str, arr) {
+  let result = []
+  for (let i=0; i < str.length; i++) {
+    result[arr[i]] = str[i]
+  }
+  return result.join("")
+};
