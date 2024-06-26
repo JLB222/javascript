@@ -9743,3 +9743,7 @@ class Dog680 extends Animal {
     this.breed = breed
   }
 }
+//Day 681
+//String.substring() -  returns the part of this string from the start index up to and excluding the end index, or to the end of the string if no end index is supplied.
+const str681 = 'Mozilla';
+console.log(str681.substring(1, 3)); // Expected output: "oz"
