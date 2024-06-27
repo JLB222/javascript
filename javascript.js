@@ -9747,3 +9747,11 @@ class Dog680 extends Animal {
 //String.substring() -  returns the part of this string from the start index up to and excluding the end index, or to the end of the string if no end index is supplied.
 const str681 = 'Mozilla';
 console.log(str681.substring(1, 3)); // Expected output: "oz"
+
+//Day 682
+//review - 7 - simple letter removal
+function solve(str, num){
+  let toBeRemoved = str.split("").sort().slice(0,num)
+  return toBeRemoved.reduce((prev,curr) => prev.replace(curr, ""), str)
+}
+
