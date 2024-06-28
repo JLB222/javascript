@@ -9755,3 +9755,7 @@ function solve(str, num){
   return toBeRemoved.reduce((prev,curr) => prev.replace(curr, ""), str)
 }
 
+//Day 683
+//String.toLocaleLowerCase() - returns this string converted to lower case, according to any locale-specific case mappings.
+const dotted = 'İstanbul';
+console.log(`EN-US: ${dotted.toLocaleLowerCase('en-US')}`);  // Expected output: "i̇stanbul"
