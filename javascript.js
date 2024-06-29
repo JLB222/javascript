@@ -9759,3 +9759,8 @@ function solve(str, num){
 //String.toLocaleLowerCase() - returns this string converted to lower case, according to any locale-specific case mappings.
 const dotted = 'İstanbul';
 console.log(`EN-US: ${dotted.toLocaleLowerCase('en-US')}`);  // Expected output: "i̇stanbul"
+
+//Day 684
+//String.toLocaleUpperCase()
+const city = 'istanbul';
+console.log(city.toLocaleUpperCase('en-US'));  // Expected output: "ISTANBUL"
