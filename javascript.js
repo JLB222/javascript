@@ -9764,3 +9764,14 @@ console.log(`EN-US: ${dotted.toLocaleLowerCase('en-US')}`);  // Expected output:
 //String.toLocaleUpperCase()
 const city = 'istanbul';
 console.log(city.toLocaleUpperCase('en-US'));  // Expected output: "ISTANBUL"
+
+//Day 685
+//review - constructor function
+function gbfMake685(name, race, element, ultName) {
+  this.name = name 
+  this.race = race 
+  this.element = element 
+  this.ult = function() {
+    return `${this.ultName}`
+  }
+}
