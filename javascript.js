@@ -9775,3 +9775,17 @@ function gbfMake685(name, race, element, ultName) {
     return `${this.ultName}`
   }
 }
+
+//Day 686
+//review - class constructor
+class GbfMaker686 {
+  constructor(name, race, element, ultName) {
+    this.name = name 
+    this.race = race 
+    this.element = element 
+    this.ultName = ultName
+  }
+  ult() {
+    return `${this.ultName}`
+  }
+}
