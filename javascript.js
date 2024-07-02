@@ -9789,3 +9789,8 @@ class GbfMaker686 {
     return `${this.ultName}`
   }
 }
+
+//Day 687
+//String.toLowerCase() - 
+const sentence687 = 'The quick brown fox jumps over the lazy dog.';
+console.log(sentence687.toLowerCase());  // Expected output: "the quick brown fox jumps over the lazy dog."
