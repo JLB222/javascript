@@ -9794,3 +9794,16 @@ class GbfMaker686 {
 //String.toLowerCase() - 
 const sentence687 = 'The quick brown fox jumps over the lazy dog.';
 console.log(sentence687.toLowerCase());  // Expected output: "the quick brown fox jumps over the lazy dog."
+
+//Day 688
+//7 - Maximum Gap
+function maxGap (arr){
+  let numbers = arr.sort((a,b) => a-b, 0)
+  let result = 0
+  for (let i = 0; i < arr.length; i++) {
+    if (result < arr[i+1] - arr[i]) {
+      result = arr[i+1] - arr[i]
+    }
+  }
+  return result
+}
