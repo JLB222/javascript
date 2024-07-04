@@ -9807,3 +9807,10 @@ function maxGap (arr){
   }
   return result
 }
+
+//Day 689
+//review - custom sort
+function customSort689(arr) {
+  let sortOrder = "A23456789TJQK"
+  return arr.sort((a,b) => sortOrder.indexOf(a) - sortOrder.indexOf(b))
+}
