@@ -9814,3 +9814,9 @@ function customSort689(arr) {
   let sortOrder = "A23456789TJQK"
   return arr.sort((a,b) => sortOrder.indexOf(a) - sortOrder.indexOf(b))
 }
+
+//Day 690
+//review 
+function stringSnip690(str) {
+  return str.split("").slice(1,-1).join(" ")  || null
+}
