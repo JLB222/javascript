@@ -9820,3 +9820,7 @@ function customSort689(arr) {
 function stringSnip690(str) {
   return str.split("").slice(1,-1).join(" ")  || null
 }
+
+//Day 691
+//String.toString() - converts a value to a string
+(456).toString() // expect: "456"
