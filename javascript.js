@@ -9824,3 +9824,9 @@ function stringSnip690(str) {
 //Day 691
 //String.toString() - converts a value to a string
 (456).toString() // expect: "456"
+
+//Day 692
+//review
+function numToString(num) {
+  return ["Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"][num]
+}
