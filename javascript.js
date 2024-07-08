@@ -9830,3 +9830,8 @@ function stringSnip690(str) {
 function numToString(num) {
   return ["Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"][num]
 }
+
+//Day 693
+//String.toUpperCase()
+const sentence693 = 'The quick brown fox jumps over the lazy dog.';
+console.log(sentence693.toUpperCase());  // Expected output: "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG."
