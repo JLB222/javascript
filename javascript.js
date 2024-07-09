@@ -9835,3 +9835,8 @@ function numToString(num) {
 //String.toUpperCase()
 const sentence693 = 'The quick brown fox jumps over the lazy dog.';
 console.log(sentence693.toUpperCase());  // Expected output: "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG."
+
+//Day 694
+//String.trim() - removes whitespace from both ends of this string and returns a new string, without modifying the original string.
+const greeting694 = '   Hello world!   ';
+console.log(greeting694.trim());  // Expected output: "Hello world!";
