@@ -9840,3 +9840,9 @@ console.log(sentence693.toUpperCase());  // Expected output: "THE QUICK BROWN FO
 //String.trim() - removes whitespace from both ends of this string and returns a new string, without modifying the original string.
 const greeting694 = '   Hello world!   ';
 console.log(greeting694.trim());  // Expected output: "Hello world!";
+
+//Day 695
+//String.trimEnd() - removes whitespace from the end of this string and returns a new string, without modifying the original string. trimRight() is an alias of this method.
+const greeting695 = '   Hello world!   ';
+console.log(greeting695.trimEnd());  // Expected output: "   Hello world!";
+
