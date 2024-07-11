@@ -9846,3 +9846,8 @@ console.log(greeting694.trim());  // Expected output: "Hello world!";
 const greeting695 = '   Hello world!   ';
 console.log(greeting695.trimEnd());  // Expected output: "   Hello world!";
 
+
+//Day 696
+//String.trimStart() - removes whitespace from the beginning of this string and returns a new string, without modifying the original string. trimLeft() is an alias of this method.
+const greeting696 = '   Hello world!   ';
+console.log(greeting696.trimStart());  // Expected output: "Hello world!   ";
