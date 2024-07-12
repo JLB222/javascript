@@ -9851,3 +9851,9 @@ console.log(greeting695.trimEnd());  // Expected output: "   Hello world!";
 //String.trimStart() - removes whitespace from the beginning of this string and returns a new string, without modifying the original string. trimLeft() is an alias of this method.
 const greeting696 = '   Hello world!   ';
 console.log(greeting696.trimStart());  // Expected output: "Hello world!   ";
+
+//Day 697
+//String.valueOf() -  returns this string value.
+const stringObj = new String('foo');
+console.log(stringObj);  // Expected output: String { "foo" }
+console.log(stringObj.valueOf());  // Expected output: "foo"
