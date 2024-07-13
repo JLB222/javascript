@@ -9857,3 +9857,9 @@ console.log(greeting696.trimStart());  // Expected output: "Hello world!   ";
 const stringObj = new String('foo');
 console.log(stringObj);  // Expected output: String { "foo" }
 console.log(stringObj.valueOf());  // Expected output: "foo"
+
+//Day 698
+//review - str count
+function strCount698(str1,str2) {
+  return str1.split(str2).length -1
+}
