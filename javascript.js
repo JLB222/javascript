@@ -9863,3 +9863,7 @@ console.log(stringObj.valueOf());  // Expected output: "foo"
 function strCount698(str1,str2) {
   return str1.split(str2).length -1
 }
+
+//Day 699
+//review
+[1,2,3,4,5].splice(2,1,"three") // should return [1,2,'three',4,5]
