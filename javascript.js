@@ -9867,3 +9867,11 @@ function strCount698(str1,str2) {
 //Day 699
 //review
 [1,2,3,4,5].splice(2,1,"three") // should return [1,2,'three',4,5]
+
+//Day 700
+//review 99 bottles
+function bottles700(num) {
+  for (let i = num; i > 0; i--) {
+    console.log(`${i} ${i === 1 ? "bottle" : "bottles"} of beer on the wall, ${i} ${i === 1 ? "bottle" : "bottles"} of beer!  Take one down, pass it around, ${i-1} ${i-1 === 1 ? "bottle" : "bottles"} of beer on the wall.`)
+  }
+}
