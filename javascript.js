@@ -9875,3 +9875,7 @@ function bottles700(num) {
     console.log(`${i} ${i === 1 ? "bottle" : "bottles"} of beer on the wall, ${i} ${i === 1 ? "bottle" : "bottles"} of beer!  Take one down, pass it around, ${i-1} ${i-1 === 1 ? "bottle" : "bottles"} of beer on the wall.`)
   }
 }
+
+//Day 701
+//String.fromCharCode() - returns a string created from the specified sequence of UTF-16 code units.
+console.log(String.fromCharCode(65, 90, 97, 122));  // Expected output: "AZaz"
