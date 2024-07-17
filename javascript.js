@@ -9879,3 +9879,14 @@ function bottles700(num) {
 //Day 701
 //String.fromCharCode() - returns a string created from the specified sequence of UTF-16 code units.
 console.log(String.fromCharCode(65, 90, 97, 122));  // Expected output: "AZaz"
+
+//Day 702
+//review - replace Vowels with 
+function repVow702(str) {
+  let vowels = "aeiouAEIOU"
+  let result = str.split("")
+  for (let i = 0; i < str.length; i++) {
+    vowels.includes(result[i]) ? result[i] = "" : null
+  }
+  return result.join("")
+}
