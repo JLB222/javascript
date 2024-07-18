@@ -9890,3 +9890,28 @@ function repVow702(str) {
   }
   return result.join("")
 }
+
+//Day 703 
+//review, class 27
+class NetflixTvShow {
+  constructor(title, genre, numOfEpisodes, episodeLength) {
+    this.title = title
+    this.genre = genre
+    this.numOfEpisodes = numOfEpisodes
+    this.episodeLength = episodeLength
+  }
+  play() {
+    console.log(`Play Episode`)
+  }
+  pause() {
+    console.log(`Pause Episode`)
+  }
+  rewind() {
+    console.log(`Rewinding`)
+  }
+  fastForward() {
+    console.log(`Forwarding`)
+  }
+}
+
+let title001 = new NetflixTvShow("Castlevania", "Adventure", 32, 25)
