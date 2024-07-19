@@ -9915,3 +9915,9 @@ class NetflixTvShow {
 }
 
 let title001 = new NetflixTvShow("Castlevania", "Adventure", 32, 25)
+
+//Day 704
+//review
+function repVowRegEx(str) {
+  return str.replace(/[aeiou]/gi, "")
+}
