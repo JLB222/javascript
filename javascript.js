@@ -9921,3 +9921,10 @@ let title001 = new NetflixTvShow("Castlevania", "Adventure", 32, 25)
 function repVowRegEx(str) {
   return str.replace(/[aeiou]/gi, "")
 }
+
+//Day 705
+//7 - Product Array (Array Series #5)
+function productArray(numbers){
+  let total = numbers.reduce((a,b) => a*b,1)
+  return numbers.map(el => total / el)
+}
