@@ -9928,3 +9928,8 @@ function productArray(numbers){
   let total = numbers.reduce((a,b) => a*b,1)
   return numbers.map(el => total / el)
 }
+
+//Day 706
+//String.fromCodePoint() - returns a string created from the specified sequence of code points.  (An integer between 0 and 0x10FFFF (inclusive))
+
+console.log(String.fromCodePoint(9731, 9733, 9842, 0x2f804));// Expected output: "☃★♲你"
