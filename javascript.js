@@ -9943,3 +9943,47 @@ console.log(`The file was uploaded from: ${filePath}`);  // Expected output: "Th
 const filePath2 = `C:\Development\profile\aboutme.html`;
 console.log(`The file was uploaded from: ${filePath2}`); // Expected output: "The file was uploaded from: C:Developmentprofileaboutme.html"
 
+//Day 708
+//fetch for nasa api project
+async function fetchAPOD() {
+  const apiKey = nasaConfig.apiKey;
+  const yearMonthDay = document.querySelector('input').value
+  const apiUrl = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}&date=${yearMonthDay}`;
+
+  try {
+      const response = await fetch(apiUrl);
+      const data = await response.json();
+      console.log(data)
+
+      const apodContainer = document.getElementById('apodContainer');
+      const newDiv = document.createElement('div');
+      newDiv.classList.add('apod-item');
+
+      const date = document.createElement('h3')
+      date.textContent = data.date
+
+      const description = document.createElement('p');
+      description.textContent = data.explanation;
+
+      let mediaElement;
+      if (data.media_type === 'video') {
+          mediaElement = document.createElement('iframe');
+          mediaElement.src = data.url;
+          mediaElement.width = "640";
+          mediaElement.height = "360";
+      } else {
+          mediaElement = document.createElement('img');
+          mediaElement.src = data.url;
+          mediaElement.alt = data.title;
+          mediaElement.style.maxWidth = "100%";
+      }
+
+      newDiv.appendChild(date)
+      newDiv.appendChild(description);
+      newDiv.appendChild(mediaElement);
+      apodContainer.appendChild(newDiv);
+
+  } catch (error) {
+      console.error('Error fetching NASA APOD:', error);
+  }
+}
