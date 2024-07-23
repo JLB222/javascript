@@ -9933,3 +9933,13 @@ function productArray(numbers){
 //String.fromCodePoint() - returns a string created from the specified sequence of code points.  (An integer between 0 and 0x10FFFF (inclusive))
 
 console.log(String.fromCodePoint(9731, 9733, 9842, 0x2f804));// Expected output: "☃★♲你"
+
+//Day 707
+//String.raw() - used to get the raw string form of template literals — that is, substitutions (e.g. ${foo}) are processed, but escape sequences (e.g. \n) are not.
+//Create a variable that uses a Windows path without escaping the backslashes:
+const filePath = String.raw`C:\Development\profile\aboutme.html`;
+console.log(`The file was uploaded from: ${filePath}`);  // Expected output: "The file was uploaded from: C:\Development\profile\aboutme.html"
+//without String.raw:
+const filePath2 = `C:\Development\profile\aboutme.html`;
+console.log(`The file was uploaded from: ${filePath2}`); // Expected output: "The file was uploaded from: C:Developmentprofileaboutme.html"
+
