@@ -9987,3 +9987,15 @@ async function fetchAPOD() {
       console.error('Error fetching NASA APOD:', error);
   }
 }
+
+
+//Day 709 
+//playing with local storage - class 27
+if (!localStorage.Score) {localStorage.setItem('Score', 0)}
+document.querySelector('button').addEventListener('click', addAnotherOne)
+document.querySelector('span').innerText = localStorage.Score
+
+function addAnotherOne() {
+    localStorage.Score++
+    document.querySelector('span').innerText = localStorage.Score
+}
