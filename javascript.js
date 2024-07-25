@@ -9999,3 +9999,9 @@ function addAnotherOne() {
     localStorage.Score++
     document.querySelector('span').innerText = localStorage.Score
 }
+
+//Day 710
+//review - endsWith()
+function automorphic(number){
+  return `${number * number}`.endsWith(number) ? `Automorphic` : `Not!!`
+}
