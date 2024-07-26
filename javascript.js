@@ -10005,3 +10005,31 @@ function addAnotherOne() {
 function automorphic(number){
   return `${number * number}`.endsWith(number) ? `Automorphic` : `Not!!`
 }
+
+//Day 711
+//6 - Transform to Prime;  Given an array of numbers, determine what number you'd have to add to said array to make the sum of the array's numbers a Prime number
+function minimumNumber(numArr){
+  let total = numArr.reduce((prev,curr) => prev + curr, 0)
+  
+  for (let i = 1; i <= (Math.sqrt(total)); i++) {
+    if (isPrime(total)) {
+      return 0
+    } else 
+    if (isPrime(total+i)){
+      return i
+    }
+  }
+}
+
+function isPrime(num) {
+    if (num <= 1) return false; // 0 and 1 are not prime numbers
+    if (num <= 3) return true; // 2 and 3 are prime numbers
+
+    if (num % 2 === 0 || num % 3 === 0) return false; // eliminate multiples of 2 and 3
+
+    for (let i = 5; i * i <= num; i += 6) {
+        if (num % i === 0 || num % (i + 2) === 0) return false;
+    }
+
+    return true;
+}
