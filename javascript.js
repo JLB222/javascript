@@ -10033,3 +10033,18 @@ function isPrime(num) {
 
     return true;
 }
+
+//Day 712
+//7 - Largest Elements
+function largest(num, arr) {
+  let array = arr.sort((a,b)=> b-a,0)
+  let result = []
+  for (let i = 0; i < num; i++) {
+    result.push(array[i])
+  }
+  return result.sort((a,b) => a-b,0)
+}
+//alternate
+function largest(num, arr) {
+  return [...arr].sort((a,b) => a-b,0).slice(arr.length-num)
+}
