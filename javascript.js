@@ -10048,3 +10048,13 @@ function largest(num, arr) {
 function largest(num, arr) {
   return [...arr].sort((a,b) => a-b,0).slice(arr.length-num)
 }
+
+//Day 713
+//review - counter
+function arrCounter713(arr) {
+  let counter = {}
+  for (let i = 0; i < arr.length; i++) {
+    counter[arr[i]] = (counter[arr[i]] || 0) +1
+  }
+  return counter
+}
