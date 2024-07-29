@@ -10058,3 +10058,11 @@ function arrCounter713(arr) {
   }
   return counter
 }
+
+//Day 714
+//review
+function bottles714(num) {
+  for (let i = num; i > 0; i--) {
+    console.log(`${i} ${i === 1 ? "bottle" : "bottles"} of beer on the wall, ${i} ${i === 1 ? "bottle" : "bottles"} of beer!  Take one down, pass it around, ${i-1} ${i-1 === 1 ? "bottle" : "bottles"} of beer on the wall.`)
+  }
+}
