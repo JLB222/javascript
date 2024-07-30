@@ -10066,3 +10066,12 @@ function bottles714(num) {
     console.log(`${i} ${i === 1 ? "bottle" : "bottles"} of beer on the wall, ${i} ${i === 1 ? "bottle" : "bottles"} of beer!  Take one down, pass it around, ${i-1} ${i-1 === 1 ? "bottle" : "bottles"} of beer on the wall.`)
   }
 }
+
+//Day 715
+//review: classes
+class Dog extends Animal {
+  constructor(name, breed) {
+    super(name)
+    this.breed = breed
+  }
+}
