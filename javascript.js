@@ -10075,3 +10075,10 @@ class Dog extends Animal {
     this.breed = breed
   }
 }
+
+//Day 716
+//review - custom sort
+function customSort716(arr) {
+  let desiredOrder = 'A23456789TJQKA'
+  return [...arr].sort((a,b) => desiredOrder.indexOf(a) - desiredOrder.indexOf(b))
+}
