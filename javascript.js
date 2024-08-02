@@ -10092,3 +10092,9 @@ function multiples(num, int){
   }
   return result
 }
+
+//Day 718
+//7 - Valid Spacing
+function validSpacing(str) {
+  return str === str.trim() && !str.includes("  ")
+}
