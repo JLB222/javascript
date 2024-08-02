@@ -10082,3 +10082,13 @@ function customSort716(arr) {
   let desiredOrder = 'A23456789TJQKA'
   return [...arr].sort((a,b) => desiredOrder.indexOf(a) - desiredOrder.indexOf(b))
 }
+
+//Day 717
+//7 - 
+function multiples(num, int){
+  let result = []
+  for (let i = 1; i <= num; i++) {
+    result.push(int * i)
+  }
+  return result
+}
