@@ -10098,3 +10098,9 @@ function multiples(num, int){
 function validSpacing(str) {
   return str === str.trim() && !str.includes("  ")
 }
+
+//Daay 719
+//Date.getDate() - returns the day of the month for this date according to local time.
+const birthday719 = new Date('August 19, 1975 23:15:30');
+const date719 = birthday719.getDate();
+console.log(date719);// Expected output: 19
