@@ -10099,8 +10099,13 @@ function validSpacing(str) {
   return str === str.trim() && !str.includes("  ")
 }
 
-//Daay 719
-//Date.getDate() - returns the day of the month for this date according to local time.
+//Day 719
+//Date.getDate() - returns the day of the month for this date according to local time.  Returns NaN if the date is invalid.
 const birthday719 = new Date('August 19, 1975 23:15:30');
 const date719 = birthday719.getDate();
 console.log(date719);// Expected output: 19
+
+//Day 720
+//Date.getDay() - returns the day of the week for this date according to local time, where 0 represents Sunday.
+const day720 = birthday719.getDay();  // Sunday - Saturday : 0 - 6
+console.log(day720);  // Expected output: 2
