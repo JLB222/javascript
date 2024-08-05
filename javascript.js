@@ -10109,3 +10109,13 @@ console.log(date719);// Expected output: 19
 //Date.getDay() - returns the day of the week for this date according to local time, where 0 represents Sunday.
 const day720 = birthday719.getDay();  // Sunday - Saturday : 0 - 6
 console.log(day720);  // Expected output: 2
+
+//Day 721
+//review - String Scramble
+function scramble(str, arr) {
+  let result = []
+  for (let i = 0; i < arr.length; i++) {
+    result[arr[i]] = str[i]
+  }
+  return result.join("")
+}
