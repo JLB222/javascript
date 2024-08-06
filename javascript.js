@@ -10119,3 +10119,8 @@ function scramble(str, arr) {
   }
   return result.join("")
 }
+
+//Day 722
+//Date.getFullYear() - returns the year for this date according to local time.
+const moonLanding = new Date('July 20, 69 00:20:18');
+console.log(moonLanding.getFullYear());  // Expected output: 1969
