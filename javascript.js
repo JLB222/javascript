@@ -10124,3 +10124,10 @@ function scramble(str, arr) {
 //Date.getFullYear() - returns the year for this date according to local time.
 const moonLanding = new Date('July 20, 69 00:20:18');
 console.log(moonLanding.getFullYear());  // Expected output: 1969
+
+//Daay 723
+//Date.getHours()
+const birthday = new Date('March 13, 08 04:20:34');
+console.log(birthday.getHours());// Expected output: 4
+console.log(birthday.getMinutes());// Expected output: 20
+console.log(birthday.getSeconds());// Expected output: 34
