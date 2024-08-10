@@ -10141,3 +10141,7 @@ function validSpacing724(str) {
 //Day 725
 //Date.getMonth() - returns the month for this date according to local time, as a zero-based value (where zero indicates the first month of the year).
 console.log(birthday.getMonth())  //should return 2
+
+//Day 726
+//Date.getTime() - returns the number of milliseconds for this date since the epoch, which is defined as the midnight at the beginning of January 1, 1970, UTC.
+console.log(birthday.getTime()) //should return 1205400034000
