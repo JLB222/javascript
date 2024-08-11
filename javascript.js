@@ -10145,3 +10145,9 @@ console.log(birthday.getMonth())  //should return 2
 //Day 726
 //Date.getTime() - returns the number of milliseconds for this date since the epoch, which is defined as the midnight at the beginning of January 1, 1970, UTC.
 console.log(birthday.getTime()) //should return 1205400034000
+
+//Day 727
+//Date.setDate() - changes the day of the month for this date according to local time.
+const event727 = new Date('August 19, 1975 23:15:30');
+event727.setDate(24);
+console.log(event727);  // Expected output: Sun Aug 24 1975 23:15:30 GMT-0500 (Central Daylight Time)
