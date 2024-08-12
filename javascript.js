@@ -10151,3 +10151,17 @@ console.log(birthday.getTime()) //should return 1205400034000
 const event727 = new Date('August 19, 1975 23:15:30');
 event727.setDate(24);
 console.log(event727);  // Expected output: Sun Aug 24 1975 23:15:30 GMT-0500 (Central Daylight Time)
+
+//Day 728
+//review - class constructor
+class gbfCharacterMaker728 {
+  constructor(name, race, element, ultName) {
+    this.name = name
+    this.race = race
+    this.element = element
+    this.ultName = ultName 
+  }
+  ult() {
+    return `${this.ultName}`
+  }
+}
