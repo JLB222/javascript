@@ -10165,3 +10165,9 @@ class gbfCharacterMaker728 {
     return `${this.ultName}`
   }
 }
+
+//Day 729
+//Date.toDateString()
+const event729 = new Date(1993, 6, 28, 14, 39, 7);
+console.log(event729.toString()) // Expected output: "Wed Jul 28 1993 14:39:07 GMT+0200 (CEST)"
+console.log(event729.toDateString()) // Expected output: "Wed Jul 28 1993"
