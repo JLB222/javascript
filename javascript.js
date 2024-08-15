@@ -10171,3 +10171,14 @@ class gbfCharacterMaker728 {
 const event729 = new Date(1993, 6, 28, 14, 39, 7);
 console.log(event729.toString()) // Expected output: "Wed Jul 28 1993 14:39:07 GMT+0200 (CEST)"
 console.log(event729.toDateString()) // Expected output: "Wed Jul 28 1993"
+
+//Day 730
+//Date Object Methods Review 
+//Year:	getFullYear()	setFullYear()	getUTCFullYear()	setUTCFullYear()
+//Month: getMonth()	setMonth()	getUTCMonth()	setUTCMonth()
+//Date: getDate()	setDate()	getUTCDate()	setUTCDate()
+//Hours: getHours()	setHours()	getUTCHours()	setUTCHours()
+//Minutes: getMinutes()	setMinutes()	getUTCMinutes()	setUTCMinutes()
+//Seconds: getSeconds()	setSeconds()	getUTCSeconds()	setUTCSeconds()
+//Milliseconds: getMilliseconds()	setMilliseconds()	getUTCMilliseconds()	setUTCMilliseconds()
+//Day of Week: getDay()	N/A	getUTCDay()	N/A
