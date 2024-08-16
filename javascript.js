@@ -10182,3 +10182,9 @@ console.log(event729.toDateString()) // Expected output: "Wed Jul 28 1993"
 //Seconds: getSeconds()	setSeconds()	getUTCSeconds()	setUTCSeconds()
 //Milliseconds: getMilliseconds()	setMilliseconds()	getUTCMilliseconds()	setUTCMilliseconds()
 //Day of Week: getDay()	N/A	getUTCDay()	N/A
+
+//Day 731
+//7 - Substituting Variables Into Strings: Padded Numbers
+function solution(num){
+  return `Value is ${num.toString().padStart(5, "0")}`
+}
