@@ -10193,3 +10193,10 @@ function solution(num){
 //Array.at() - takes an integer value and returns the item at that index, allowing for positive and negative integers. Negative integers count back from the last item in the array.
 const array732 = [5, 12, 8, 130, 44];
 console.log(`An index of 2 returns ${array732.at(2)}`);// Expected output: "An index of 2 returns 8"
+
+//Day 733
+//Array.concat() - is used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array.
+const array733a = ['a', 'b', 'c'];
+const array733b = ['d', 'e', 'f'];
+const array733c = array733a.concat(array733b);
+console.log(array733c);  // Expected output: Array ["a", "b", "c", "d", "e", "f"]
