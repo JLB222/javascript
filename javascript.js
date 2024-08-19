@@ -10200,3 +10200,10 @@ const array733a = ['a', 'b', 'c'];
 const array733b = ['d', 'e', 'f'];
 const array733c = array733a.concat(array733b);
 console.log(array733c);  // Expected output: Array ["a", "b", "c", "d", "e", "f"]
+
+//Day 734
+//7 - Simple letter removal review
+function solve(str, num){
+  let toBeRemoved = str.split("").sort().slice(0, num)
+  return toBeRemoved.reduce((prev,curr) => prev.replace(curr, ""), str)
+}
