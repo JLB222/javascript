@@ -10207,3 +10207,12 @@ function solve(str, num){
   let toBeRemoved = str.split("").sort().slice(0, num)
   return toBeRemoved.reduce((prev,curr) => prev.replace(curr, ""), str)
 }
+
+
+//Day 735
+//7 - Nickname Generator
+function nicknameGenerator(name){
+  if (name.length < 4) return 'Error: Name too short'
+  let vowels = "aeiou"
+  return vowels.includes(name[2]) ? name.slice(0,4) : name.slice(0,3)
+}
