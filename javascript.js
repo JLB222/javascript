@@ -10208,7 +10208,6 @@ function solve(str, num){
   return toBeRemoved.reduce((prev,curr) => prev.replace(curr, ""), str)
 }
 
-
 //Day 735
 //7 - Nickname Generator
 function nicknameGenerator(name){
@@ -10216,3 +10215,10 @@ function nicknameGenerator(name){
   let vowels = "aeiou"
   return vowels.includes(name[2]) ? name.slice(0,4) : name.slice(0,3)
 }
+
+//Day 736
+//Array.copyWithin(target, start, end) - shallow copies part of this array to another location in the same array and returns this array without modifying its length.
+const array736 = ['a', 'b', 'c', 'd', 'e'];
+console.log(array736.copyWithin(0, 3, 4));
+// Expected output: Array ["d", "b", "c", "d", "e"]
+
