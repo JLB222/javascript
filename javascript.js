@@ -10222,3 +10222,11 @@ const array736 = ['a', 'b', 'c', 'd', 'e'];
 console.log(array736.copyWithin(0, 3, 4));
 // Expected output: Array ["d", "b", "c", "d", "e"]
 
+//Day 737
+//review - class extension
+class Dog737 extends Animal737 {
+  constructor(species, breed) {
+    super(species)
+    this.breed = breed
+  }
+}
