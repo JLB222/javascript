@@ -10230,3 +10230,10 @@ class Dog737 extends Animal737 {
     this.breed = breed
   }
 }
+
+//Day 738
+//Array.entries() - returns a new array iterator object that contains the key/value pairs for each index in the array.
+const array738 = ['a', 'b', 'c'];
+const iterator738 = array738.entries();
+console.log(iterator738.next().value);// Expected output: Array [0, "a"]
+console.log(iterator738.next().value);// Expected output: Array [1, "b"]
