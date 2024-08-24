@@ -10237,3 +10237,9 @@ const array738 = ['a', 'b', 'c'];
 const iterator738 = array738.entries();
 console.log(iterator738.next().value);// Expected output: Array [0, "a"]
 console.log(iterator738.next().value);// Expected output: Array [1, "b"]
+
+//Day 739
+//8 - Sort My Textbooks
+function sorter(arr) {
+  return arr.sort((a, b) => a.toLowerCase() > b.toLowerCase() ? 1 : -1);
+}
