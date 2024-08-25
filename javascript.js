@@ -10243,3 +10243,9 @@ console.log(iterator738.next().value);// Expected output: Array [1, "b"]
 function sorter(arr) {
   return arr.sort((a, b) => a.toLowerCase() > b.toLowerCase() ? 1 : -1);
 }
+
+//Day 740
+//Array.with() - is the copying version of using the bracket notation to change the value of a given index. It returns a new array with the element at the given index replaced with the given value.
+const arr740 = [1, 2, 3, 4, 5];
+console.log(arr740.with(2, 6)); // [1, 2, 6, 4, 5]
+console.log(arr740); // [1, 2, 3, 4, 5]
