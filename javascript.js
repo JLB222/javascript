@@ -10249,3 +10249,12 @@ function sorter(arr) {
 const arr740 = [1, 2, 3, 4, 5];
 console.log(arr740.with(2, 6)); // [1, 2, 6, 4, 5]
 console.log(arr740); // [1, 2, 3, 4, 5]
+
+//Day 741
+//8 - Collinearity
+function collinearity( x1,y1, x2,y2 ) {
+  if (x1===0 && y1===0 || x2===0 && y2===0) {return true}
+  let slope1 = y1/x1
+  let slope2 = y2/x2
+  return slope1 === slope2
+}
