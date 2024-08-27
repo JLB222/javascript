@@ -10258,3 +10258,10 @@ function collinearity( x1,y1, x2,y2 ) {
   let slope2 = y2/x2
   return slope1 === slope2
 }
+
+//Day 742
+//Review 
+"Testing".endsWith("ing") // should return true
+function automorphic(n){
+  return (n * n).toString().endsWith(n) ? "Automorphic" : "Not!!"
+}
