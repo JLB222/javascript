@@ -10265,3 +10265,10 @@ function collinearity( x1,y1, x2,y2 ) {
 function automorphic(n){
   return (n * n).toString().endsWith(n) ? "Automorphic" : "Not!!"
 }
+
+//Day 743
+const array743 = ['one', 'two', 'three'];
+console.log('array1:', array743);// Expected output: "array1:" Array ["one", "two", "three"]
+
+const reversed743 = array743.reverse();
+console.log('reversed:', reversed);// Expected output: "reversed:" Array ["three", "two", "one"]
