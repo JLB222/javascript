@@ -10279,3 +10279,19 @@ console.log('reversed:', reversed);// Expected output: "reversed:" Array ["three
 const months744 = ['Jan', 'March', 'April', 'June'];
 months744.splice(1, 0, 'Feb');  // Inserts at index 1
 console.log(months744);  // Expected output: Array ["Jan", "Feb", "March", "April", "June"]
+
+//Day 745
+//7 - Moves in squared strings
+function vertMirror(str) {
+  return str.split('\n')
+    .map(line => line.split('').reverse().join(''))
+    .join('\n')
+}
+function horMirror(str) {
+  return str.split('\n')
+    .reverse()
+    .join('\n')
+}
+function oper(fct, s) {
+  return fct(s)
+}
