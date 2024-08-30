@@ -10267,8 +10267,15 @@ function automorphic(n){
 }
 
 //Day 743
+//review - Array.reverse() - WARNING:  array is an in=place method, meaning it destroys the original array.
 const array743 = ['one', 'two', 'three'];
 console.log('array1:', array743);// Expected output: "array1:" Array ["one", "two", "three"]
 
 const reversed743 = array743.reverse();
 console.log('reversed:', reversed);// Expected output: "reversed:" Array ["three", "two", "one"]
+
+//Day 744
+//review - Array.splice(start, deleteCount, item1, item2, etc)
+const months744 = ['Jan', 'March', 'April', 'June'];
+months744.splice(1, 0, 'Feb');  // Inserts at index 1
+console.log(months744);  // Expected output: Array ["Jan", "Feb", "March", "April", "June"]
