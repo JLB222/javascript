@@ -10295,3 +10295,15 @@ function horMirror(str) {
 function oper(fct, s) {
   return fct(s)
 }
+
+//Day 746
+//7 - review
+function vertMirror746(str) {
+  return str.split("\n").map(el => el.split("").reverse().join("")).join("\n")
+}
+function horMirror746(str) {
+  return str.split("\n").reverse().join("\n")
+}
+function oper746(fct, str) {
+  return fct(str)
+}
