@@ -10307,3 +10307,13 @@ function horMirror746(str) {
 function oper746(fct, str) {
   return fct(str)
 }
+
+
+//Day 747
+//Array.toReversed() - the copying counterpart of the reverse() method. It returns a new array with the elements in reversed order.
+const items747 = [1, 2, 3];
+console.log(items747); // [1, 2, 3]
+
+const reversedItems747 = items747.toReversed();
+console.log(reversedItems747); // [3, 2, 1]
+console.log(items747); // [1, 2, 3]
