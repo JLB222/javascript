@@ -10317,3 +10317,27 @@ console.log(items747); // [1, 2, 3]
 const reversedItems747 = items747.toReversed();
 console.log(reversedItems747); // [3, 2, 1]
 console.log(items747); // [1, 2, 3]
+
+
+//Day 748
+//7 - Squares sequence
+function squares748(x, n) {
+  if (n <= 0) return []
+  let result = [x]
+  for (let i = 0; i <= n-2; i++) {
+    result.push(result[i] * result[i])
+  }
+  return result
+}
+
+//alt
+
+function squares748a(x, n) {
+  if (n <= 0) return []
+  let result = []
+  for (let i = 0; i < n; i++) {
+    result.push(x)
+    x = x*x
+  }
+  return result
+}
