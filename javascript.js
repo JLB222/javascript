@@ -10341,3 +10341,17 @@ function squares748a(x, n) {
   }
   return result
 }
+
+//Day 749
+//7 - Highest Value Pyramid
+function pyramid(stones, cnt = 0) {
+  const freq = stones.reduce((a, b) => (a[b] = (a[b] || 0) + 1, a), {});
+  for (let take of [3, 2, 1]) {
+    const ds = Object.keys(freq).filter(d => freq[d] >= take);
+    if (!ds.length) return null;
+    const val = Math.max(...ds);
+    cnt += take * val;
+    delete freq[val];
+  }
+  return cnt;
+}
