@@ -10355,3 +10355,8 @@ function pyramid(stones, cnt = 0) {
   }
   return cnt;
 }
+
+//Day 750
+//review 
+Array.sort((prev,curr) => prev-curr, 0)
+Array.forEach((el,i,arr) => console.log(el))
