@@ -10360,3 +10360,18 @@ function pyramid(stones, cnt = 0) {
 //review 
 Array.sort((prev,curr) => prev-curr, 0)
 Array.forEach((el,i,arr) => console.log(el))
+
+//Day 751
+//7 - Clothes size number converter
+//My -thinking too hard- solution:
+function sizeToNumber(size) {
+  if (!validateSize(size)) return null
+  let baseValue = (size.includes("s")) ? 36 : (size.includes("l")) ? 40 : 38
+  size.split("").forEach(el => el === 'x' ? baseValue += size.includes('s') ? -2 : 2 : null)
+  return baseValue
+}
+function validateSize(str) {
+    const pattern = /^(x*[sl]|m)$/;
+    return pattern.test(str);
+}
+
