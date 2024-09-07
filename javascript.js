@@ -10387,3 +10387,7 @@ function sizeToNumber(size) {
   if (/^x+l$/.test(size)) return 40 + (numberOfXs * 2);
   return null
 }
+
+//Day 753
+//String.match(regex) - retrieves the result of matching this string against a regular expression.
+const numberOfXs753 = "xxxxs".match(/x/g)?.length  //should return 4
