@@ -10375,3 +10375,15 @@ function validateSize(str) {
     return pattern.test(str);
 }
 
+
+//Day 752
+//alternate 7 - Clothes size number converter
+function sizeToNumber(size) {
+  if (size == "s") return 36;
+  if (size == "m") return 38;
+  if (size == "l") return 40;
+  const numberOfXs = size.match(/x/g)?.length;
+  if (/^x+s$/.test(size)) return 36 - (numberOfXs * 2);
+  if (/^x+l$/.test(size)) return 40 + (numberOfXs * 2);
+  return null
+}
