@@ -10391,3 +10391,9 @@ function sizeToNumber(size) {
 //Day 753
 //String.match(regex) - retrieves the result of matching this string against a regular expression.
 const numberOfXs753 = "xxxxs".match(/x/g)?.length  //should return 4
+
+//Day 754
+//String.subString() -  returns the part of this string from the start index up to and excluding the end index, or to the end of the string if no end index is supplied.
+const str754 = 'Mozilla';
+console.log(str754.substring(1, 3));// Expected output: "oz"
+console.log(str754.substring(2));// Expected output: "zilla"
