@@ -10397,3 +10397,15 @@ const numberOfXs753 = "xxxxs".match(/x/g)?.length  //should return 4
 const str754 = 'Mozilla';
 console.log(str754.substring(1, 3));// Expected output: "oz"
 console.log(str754.substring(2));// Expected output: "zilla"
+
+//Day 755
+//7 - review
+function sizeToNumber(size) {
+  if (size === "s") return 36
+  if (size === "m") return 38
+  if (size === "l") return 40
+  let numberOfXs = size.match(/x/g)?.length
+  if ((/x+s/).test(size)) return 36 - (2* numberOfXs)
+  if ((/x+l/).test(size)) return 40 + (2* numberOfXs)
+  return null
+}
