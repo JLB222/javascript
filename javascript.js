@@ -10409,3 +10409,10 @@ function sizeToNumber(size) {
   if ((/x+l/).test(size)) return 40 + (2* numberOfXs)
   return null
 }
+
+
+//Day 756
+//7 - 
+function trickery(wordStr,lieStr,friendsLetters) {
+  return [...wordStr].some((c,i) => lieStr[i] !== c && (friendsLetters.includes(c) || friendsLetters.includes(lieStr[i])))
+}
