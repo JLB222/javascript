@@ -10416,3 +10416,12 @@ function sizeToNumber(size) {
 function trickery(wordStr,lieStr,friendsLetters) {
   return [...wordStr].some((c,i) => lieStr[i] !== c && (friendsLetters.includes(c) || friendsLetters.includes(lieStr[i])))
 }
+
+//Day 757
+//review
+class Dog757 extends Animal {
+  constructor(name, breed) {
+    super(name)
+    this.breed = breed
+  }
+}
