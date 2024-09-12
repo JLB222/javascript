@@ -10425,3 +10425,13 @@ class Dog757 extends Animal {
     this.breed = breed
   }
 }
+
+//Day 758
+//7 - Given an array of strings representing the contents of your inventory, determine how many stone picks you can craft
+function stonePick(arr) {
+  let cobblestones = arr.filter(el => el === "Cobblestone").length
+  let wood = arr.filter(el => el === "Wood").length
+  let sticks = arr.filter(el => el === "Sticks").length + (wood * 4)
+  let stonePicks = Math.min(Math.floor(cobblestones / 3), Math.floor(sticks / 2))
+  return stonePicks
+}
