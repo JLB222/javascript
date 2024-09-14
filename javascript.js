@@ -10435,3 +10435,8 @@ function stonePick(arr) {
   let stonePicks = Math.min(Math.floor(cobblestones / 3), Math.floor(sticks / 2))
   return stonePicks
 }
+
+//Day 759
+//review
+const str759 = 'Saturday night plans';
+console.log(str759.startsWith('Sat'));  // Expected output: true
