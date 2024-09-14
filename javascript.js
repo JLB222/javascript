@@ -10440,3 +10440,9 @@ function stonePick(arr) {
 //review
 const str759 = 'Saturday night plans';
 console.log(str759.startsWith('Sat'));  // Expected output: true
+
+//Day 760
+//review
+const greeting760 = '   Hello world!   ';
+console.log(greeting760);  // Expected output: "   Hello world!   ";
+console.log(greeting760.trim());  // Expected output: "Hello world!";
