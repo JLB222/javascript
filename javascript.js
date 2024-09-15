@@ -10446,3 +10446,8 @@ console.log(str759.startsWith('Sat'));  // Expected output: true
 const greeting760 = '   Hello world!   ';
 console.log(greeting760);  // Expected output: "   Hello world!   ";
 console.log(greeting760.trim());  // Expected output: "Hello world!";
+
+//Day 761
+//review
+const paragraph761 = "I think Ruth's dog is cuter than your dog!";
+console.log(paragraph761.replaceAll('dog', 'monkey'));// Expected output: "I think Ruth's monkey is cuter than your monkey!"
