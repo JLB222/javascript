@@ -10451,3 +10451,20 @@ console.log(greeting760.trim());  // Expected output: "Hello world!";
 //review
 const paragraph761 = "I think Ruth's dog is cuter than your dog!";
 console.log(paragraph761.replaceAll('dog', 'monkey'));// Expected output: "I think Ruth's monkey is cuter than your monkey!"
+
+//Day 762
+//7 - Three-cushion Billiards
+function hasScored(str) {
+  let cushionCounter = 0, ballsHit = new Set();
+  for (let char of str) {
+    if ("news".includes(char)) {
+      cushionCounter++;
+    } else {
+      ballsHit.add(char);
+      if (ballsHit.size === 2 && ballsHit.has('R')) {
+        return cushionCounter >= 3;
+      }
+    }
+  }
+  return false;
+}
