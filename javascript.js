@@ -10468,3 +10468,26 @@ function hasScored(str) {
   }
   return false;
 }
+
+//Day 763
+//review - Set.add()
+const set763 = new Set();
+
+set763.add("test")
+set763.add(42)
+set763.add(13)
+
+for (const item of set763) {
+  console.log(item);
+  // Expected output: "test"
+  // Expected output: 42
+  // Expected output: 13
+}
+
+const set763b = new Set("test");
+for (const item of set763b) {
+  console.log(item);
+  // Expected output: "t"
+  // Expected output: "e"
+  // Expected output: "s"
+}
