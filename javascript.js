@@ -10491,3 +10491,15 @@ for (const item of set763b) {
   // Expected output: "e"
   // Expected output: "s"
 }
+
+//Day 764
+//Set.delete()
+const set764 = new Set();
+set764.add({ x: 10, y: 20 }).add({ x: 20, y: 30 });
+
+// Delete any point with `x > 10`.
+set764.forEach((obj) => {
+  if (obj.x > 10) {
+    set764.delete(obj);
+  }
+});
