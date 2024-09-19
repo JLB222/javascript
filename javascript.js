@@ -10503,3 +10503,19 @@ set764.forEach((obj) => {
     set764.delete(obj);
   }
 });
+
+//Day 765
+//review
+function hasScored(str) {
+  let cushionsHit = 0
+  let ballsHit = new Set()
+  for (let char of str) {
+    if ("news".includes(char)) {
+      cushionsHit++
+    } else {
+      ballsHit.add(char)
+      if (ballsHit.size == 2 && ballsHit.has("R")) { return cushionsHit >= 3}
+    }
+  }
+  return false;
+}
