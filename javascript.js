@@ -10519,3 +10519,10 @@ function hasScored(str) {
   }
   return false;
 }
+
+//Day 766
+//Set.clear() - removes all elements from a set.
+//Set.difference() - takes a set and returns a new set containing elements in this set but not in the given set.
+const odds766 = new Set([1, 3, 5, 7, 9]);
+const squares766 = new Set([1, 4, 9]);
+console.log(odds766.difference(squares766)); // Set(3) { 3, 5, 7 }
