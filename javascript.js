@@ -10526,3 +10526,9 @@ function hasScored(str) {
 const odds766 = new Set([1, 3, 5, 7, 9]);
 const squares766 = new Set([1, 4, 9]);
 console.log(odds766.difference(squares766)); // Set(3) { 3, 5, 7 }
+
+//Day 767
+//Set.intersection() - takes a set and returns a new set containing elements in both this set and the given set.
+const odds767 = new Set([1, 3, 5, 7, 9]);
+const squares767 = new Set([1, 4, 9]);
+console.log(odds767.intersection(squares767)); // Set(2) { 1, 9 }
