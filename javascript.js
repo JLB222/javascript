@@ -10532,3 +10532,9 @@ console.log(odds766.difference(squares766)); // Set(3) { 3, 5, 7 }
 const odds767 = new Set([1, 3, 5, 7, 9]);
 const squares767 = new Set([1, 4, 9]);
 console.log(odds767.intersection(squares767)); // Set(2) { 1, 9 }
+
+//Day 768
+//Set.isDisjointFrom() -  takes a set and returns a boolean indicating if this set has no elements in common with the given set.
+const primes768 = new Set([2, 3, 5, 7, 11, 13, 17, 19]);
+const squares768 = new Set([1, 4, 9, 16]);
+console.log(primes768.isDisjointFrom(squares768)); // true
