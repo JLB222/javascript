@@ -10538,3 +10538,16 @@ console.log(odds767.intersection(squares767)); // Set(2) { 1, 9 }
 const primes768 = new Set([2, 3, 5, 7, 11, 13, 17, 19]);
 const squares768 = new Set([1, 4, 9, 16]);
 console.log(primes768.isDisjointFrom(squares768)); // true
+
+//Day 769
+//6 - Even or Odd Accessor
+function target(num) {
+  return num % 2 ? "Odd" : "Even"
+}
+
+const handler = {
+  get(target, prop) {
+    return target(prop)
+  }
+}
+const evenOrOdd = new Proxy(target, handler)
