@@ -10564,3 +10564,13 @@ function hasScored(str) {
   }
   return false
 }
+
+//Day 771
+//review - String Scramble
+function scramble(str, arr) {
+  let result = []
+  for (let i = 0; i < str.length; i++) {
+    result[arr[i]] = str[i]
+  }
+  return result.join("")
+}
