@@ -10574,3 +10574,20 @@ function scramble(str, arr) {
   }
   return result.join("")
 }
+
+//Day 772
+//proxies
+const target772 = {
+  message1: "hello",
+  message2: "everyone",
+};
+
+const handler772  = {
+  get(target, prop, receiver) {
+    return "world";
+  },
+};
+const proxy772  = new Proxy(target, handler2);
+console.log(target772.message1) // hello
+console.log(proxy772.message1); // world
+console.log(proxy772.message2); // world
