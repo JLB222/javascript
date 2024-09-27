@@ -10591,3 +10591,16 @@ const proxy772  = new Proxy(target, handler2);
 console.log(target772.message1) // hello
 console.log(proxy772.message1); // world
 console.log(proxy772.message2); // world
+
+//Day 773
+//review
+function target773(num) {
+  return num % 2 ? "Odd" : "Even"
+}
+const handler773 = {
+  get (target, prop) {
+    return target(prop)
+  }
+}
+const evenOrOdd773 = new Proxy(target773, handler773)
+
