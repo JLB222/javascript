@@ -10593,7 +10593,7 @@ console.log(proxy772.message1); // world
 console.log(proxy772.message2); // world
 
 //Day 773
-//review
+//review - 6 - Even or Odd Accessor
 function target773(num) {
   return num % 2 ? "Odd" : "Even"
 }
@@ -10603,4 +10603,11 @@ const handler773 = {
   }
 }
 const evenOrOdd773 = new Proxy(target773, handler773)
+
+//Day 774
+//Number - Number values represent floating-point numbers like 37 or -9.25.  A number literal like 37 in JavaScript code is a floating-point value, not an integer. There is no separate integer type in common everyday use. 
+Number("123"); // returns the number 123
+Number("123") === 123; // true
+Number("unicorn"); // NaN
+Number(undefined); // NaN
 
