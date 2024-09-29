@@ -10611,3 +10611,7 @@ Number("123") === 123; // true
 Number("unicorn"); // NaN
 Number(undefined); // NaN
 
+//Day 775
+//Number.isInteger()
+console.log(Number.isInteger(20.3))  //false
+console.log(Number.isInteger(20)) //true
