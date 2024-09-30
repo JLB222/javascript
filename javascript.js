@@ -10615,3 +10615,40 @@ Number(undefined); // NaN
 //Number.isInteger()
 console.log(Number.isInteger(20.3))  //false
 console.log(Number.isInteger(20)) //true
+
+//Day 776
+//internet is down; hopefully fixed tomorrow.  So here's some stuff I made (for my FriendO idea) to not go mad with boredom:
+const arrayOfBirthDates = [...document.getElementsByClassName('birthDate')]
+console.log(arrayOfBirthDates)
+arrayOfBirthDates.forEach(el => {
+        if (new Date(el.innerHTML).getMonth() - currentMonth >= 3) {
+            //if their birthday is three or more months from now, turn green
+            console.log("The current month is: " + whatMonthIsIt(currentMonth));
+            el.style.background = 'green'
+        }
+        if (new Date(el.innerHTML).getMonth() - currentMonth == 2) {
+            //if their birthday is three or more months from now, turn yellow
+            console.log("The current month is: " + whatMonthIsIt(currentMonth));
+            el.style.background = 'yellow'
+        }
+    }
+)
+
+function whatMonthIsIt(num) {
+    switch (num) {
+        case 0: return "January"; break;
+        case 1: return "February"; break;
+        case 2: return "March"; break;
+        case 3: return "April"; break;
+        case 4: return "May"; break;
+        case 5: return "June"; break;
+        case 6: return "July"; break;
+        case 7: return "August"; break;
+        case 8: return "September"; break;
+        case 9: return "October"; break;
+        case 10: return "November"; break;
+        case 11: return "December"; break;
+    
+        default: return "Dude there's only 12 months; what did you enter?"
+    }
+}
