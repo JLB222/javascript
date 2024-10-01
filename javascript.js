@@ -10627,7 +10627,7 @@ arrayOfBirthDates.forEach(el => {
             el.style.background = 'green'
         }
         if (new Date(el.innerHTML).getMonth() - currentMonth == 2) {
-            //if their birthday is three or more months from now, turn yellow
+            //if their birthday is two months from now, turn yellow
             console.log("The current month is: " + whatMonthIsIt(currentMonth));
             el.style.background = 'yellow'
         }
@@ -10651,4 +10651,11 @@ function whatMonthIsIt(num) {
     
         default: return "Dude there's only 12 months; what did you enter?"
     }
+}
+
+//Day 777
+//internet still down 
+function customSort777(arr) {
+  const sortingMethod = "A23456789TJQK"
+  return arr.sort((a,b) => sortingMethod.indexOf(a) - sortingMethod.indexOf(b))
 }
