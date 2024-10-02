@@ -10659,3 +10659,7 @@ function customSort777(arr) {
   const sortingMethod = "A23456789TJQK"
   return arr.sort((a,b) => sortingMethod.indexOf(a) - sortingMethod.indexOf(b))
 }
+
+//Day 778
+//Number.parseFloat() - parses an argument and returns a floating point number. If a number cannot be parsed from the argument, it returns NaN.
+console.log(Number.parseFloat(2.0 * Math.PI))
