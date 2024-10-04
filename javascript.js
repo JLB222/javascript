@@ -10676,3 +10676,16 @@ function hasScored779(str) {
   }
   return false
 }
+
+//Day 780
+class GBFcharMaker780 {
+  constructor(name, race, element, ultName) {
+    this.name = name
+    this.element = element
+    this.race = race 
+    this.ultName = ultName
+  }
+  ult() {
+    return `${this.ultName}`
+  }
+}
