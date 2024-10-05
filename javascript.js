@@ -10689,3 +10689,13 @@ class GBFcharMaker780 {
     return `${this.ultName}`
   }
 }
+
+//Day 781
+//Number.toString()
+console.log((123).toString())  //expected:  "123"
+
+//Number.toPrecision()
+console.log((1.23).toPrecision(4));  // Expected output: "1.230"
+console.log((1.234).toPrecision(4));  // Expected output: "1.234"
+console.log((1.23456789).toPrecision(4));  // Expected output: "1.235"
+console.log((1).toPrecision(4));  // Expected output: "1.000"
