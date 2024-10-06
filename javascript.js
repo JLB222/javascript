@@ -10699,3 +10699,10 @@ console.log((1.23).toPrecision(4));  // Expected output: "1.230"
 console.log((1.234).toPrecision(4));  // Expected output: "1.234"
 console.log((1.23456789).toPrecision(4));  // Expected output: "1.235"
 console.log((1).toPrecision(4));  // Expected output: "1.000"
+
+//Day 782
+//Number.isNaN() - static method determines whether the passed value is the number value NaN, and returns false if the input is not of the Number type. It is a more robust version of the original, global isNaN() function.
+console.log(Number.isNaN(NaN))  //true
+console.log(Number.isNaN(100))  //false
+console.log(Number.isNaN('100F'))  //false
+
