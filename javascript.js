@@ -10706,3 +10706,14 @@ console.log(Number.isNaN(NaN))  //true
 console.log(Number.isNaN(100))  //false
 console.log(Number.isNaN('100F'))  //false
 
+//Day 783
+//arrow function review
+const double783 = el => el * 2  //one line function, one parameter
+const multiply783 = (el1, el2) => el1 * el2 //one line function, two or more parameters
+const ifElse783 = (el1, el2) => {  //multiLine function, two or more parameters
+  if (el1 === el2) {
+    return 'Same!'
+  } else return 'Different!'
+}
+
+
