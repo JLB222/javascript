@@ -10738,3 +10738,23 @@ console.log(map1.get('a'));// Expected output: 1
 
 map1.set('a', 97);
 console.log(map1.get('a'));// Expected output: 97
+
+//Day 787
+//6 - The lost beginning
+function beginning(str) {
+  let n
+  let numberString
+  let result
+  
+  for (let i = 1; i <= str.length; i++) {
+    result = n = +str.slice(0, i);
+    numberString = '';
+
+    while (numberString.length < str.length) {
+      numberString += n
+      n++
+    }
+
+    if (numberString === str) return result;
+  }
+}
