@@ -10793,3 +10793,7 @@ class Clock {
       this.timer = setInterval(this.render, 1000);
     };
 }
+
+//Day 789
+const str789 = 'Saturday night plans';
+console.log(str789.startsWith('Sat')); // Expected output: true
