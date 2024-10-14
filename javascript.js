@@ -10797,3 +10797,33 @@ class Clock {
 //Day 789
 const str789 = 'Saturday night plans';
 console.log(str789.startsWith('Sat')); // Expected output: true
+
+//Day 790
+//6 - Alphabet Slices 
+function solution(str) {
+  let result = [];
+  let i = 0;
+
+  while (i < str.length - 1) {
+      let j = i + 1;
+
+      // Expand j while the characters are consecutive
+      while (j < str.length && str.charCodeAt(j) - str.charCodeAt(j - 1) === 1) {
+          j++;
+      }
+
+      // If we found a sequence of 2 or more consecutive letters
+      if (j - i >= 2) {
+          result.push([i, j]);  // Add the start/end indices of the consecutive sequence to the result
+      }
+
+      i = j;  // Move to the next potential start of sequence
+  }
+  let modifiedStr = str.split('');
+    result.forEach(([start, end]) => {
+        let consecutiveStr = str.slice(start, end);
+        let reversedStr = consecutiveStr.split('').reverse().join('');
+        modifiedStr.splice(start, end - start, ...reversedStr);
+    });
+  return modifiedStr.join("");
+}
