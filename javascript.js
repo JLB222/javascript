@@ -10827,3 +10827,21 @@ function solution(str) {
     });
   return modifiedStr.join("");
 }
+
+//Day 791
+//review - three-cushion billiards
+function hasScored(str) {
+  let cushionsHit = 0
+  let ballsHit = new Set()
+  for (let i = 0; i < str.length; i++) {
+    if ("news".includes(str[i])) {
+      cushionsHit++
+    } else {
+      ballsHit.add(str[i])
+    }
+    if (ballsHit.size == 2 && ballsHit.has("R")) {
+      return cushionsHit >= 3
+    }
+}
+  return false;
+}
