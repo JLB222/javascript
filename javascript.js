@@ -10845,3 +10845,27 @@ function hasScored(str) {
 }
   return false;
 }
+
+//Day 792
+//friendo class prototype
+class Friendo {
+  constructor(nameFirst, nameMiddle, nameLast, dateBirthday, dateBirthYear, contactPhone, contactEmail, contactHomeAddress) {
+      this.nameFirst = nameFirst
+      this.nameMiddle = nameMiddle
+      this.nameLast = nameLast
+      this.name = [this.nameFirst, this.nameMiddle, this.nameLast]
+      this.dateBirthday = dateBirthday
+      this.dateBirthYear = dateBirthYear
+      this.contactPhone = contactPhone
+      this.contactEmail = contactEmail
+      this.contactHomeAddress = contactHomeAddress
+  }
+  birthdayAlert() {
+      let today = new Date()
+      if (new Date(this.dateBirthday).getMonth() == today.getMonth()) {
+          console.log(`${this.nameFirst}'s birthday is this month!`)
+      } else {
+          console.log(`${this.nameFirst}'s birthday is NOT this month!`)
+      }
+  }
+}
