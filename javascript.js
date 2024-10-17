@@ -10869,3 +10869,19 @@ class Friendo {
       }
   }
 }
+
+//Day 793
+//start of the herald cipher:  change the vowels
+function heraldCipher(str) {
+  let vowels = "aeioua"
+  let string = str.toLowerCase()
+  let stringArr = string.split("")
+  //vowel changer:  all vowels should be changed to the next vowel in the alphabet
+  for (let i = 0; i < stringArr.length; i++) {
+    if (vowels.includes(stringArr[i])) {
+      stringArr[i] = vowels[vowels.indexOf(stringArr[i]) +1]
+    }
+  }
+  
+  return stringArr.join("")
+}
