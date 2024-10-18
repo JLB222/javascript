@@ -10885,3 +10885,10 @@ function heraldCipher(str) {
   
   return stringArr.join("")
 }
+
+//Day 794
+//6 - Array combinations
+function solve(arr) {
+  let uniqueNumCounts = arr.map(el => new Set(el).size)
+  return uniqueNumCounts.reduce((acc, curr) => acc * curr, 1)
+};
