@@ -10872,7 +10872,7 @@ class Friendo {
 
 //Day 793
 //start of the herald cipher:  change the vowels
-function heraldCipher(str) {
+function heraldCipher793(str) {
   let vowels = "aeioua"
   let string = str.toLowerCase()
   let stringArr = string.split("")
@@ -10892,3 +10892,38 @@ function solve(arr) {
   let uniqueNumCounts = arr.map(el => new Set(el).size)
   return uniqueNumCounts.reduce((acc, curr) => acc * curr, 1)
 };
+
+//Day 795
+//cipher map 
+const heraldCipherMap = {
+  'a': 'e',
+  'A': "E",
+  'e': 'i',
+  'E': 'I',
+  'i':'o',
+  'I':'O',
+  'o':'u',
+  'O':'U',
+  'u':'a',
+  'U':'A',
+  'b':'p',
+  'B':"P",
+  'f':'v',
+  'F':'V',
+  'g':'k',
+  'G':'K',
+  'p':'b',
+  'P':'B',
+  's':'z',
+  'S':'Z',
+  't':'d',
+  'T':'D',
+  'v':'f',
+  'V':'F',
+  'z':'s',
+  'Z':'S'
+}
+
+function heraldCipher(str) {
+  return str.split("").map(el => heraldCipherMap[el] || el).join("")
+}
