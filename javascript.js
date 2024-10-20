@@ -10927,3 +10927,9 @@ const heraldCipherMap = {
 function heraldCipher(str) {
   return str.split("").map(el => heraldCipherMap[el] || el).join("")
 }
+
+//Day 796
+//Sets are weird;  apparently when a new set is declared, it treats whatever you get it as iterable and thus adds everything it can.  The add method does not iterate and thus adds everything as 1 element
+let example796 = new Set('1,2,3,4,5') // results in: {'1', ',', '2', '3', '4', '5'}
+let example796b = new Set() 
+example796b.add('1,2,3,4,5') //results in {'1,2,3,4,5'}
