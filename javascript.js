@@ -10933,3 +10933,19 @@ function heraldCipher(str) {
 let example796 = new Set('1,2,3,4,5') // results in: {'1', ',', '2', '3', '4', '5'}
 let example796b = new Set() 
 example796b.add('1,2,3,4,5') //results in {'1,2,3,4,5'}
+
+
+//Day 797
+//Array.from(arrayLike, mapFn, thisArg) - 
+let x797 = {length:5}
+Array.from(x797) // should return [undefined, undefined, undefined, undefined, undefined]
+// OR 
+Array.from({length:5}) // should return [undefined, undefined, undefined, undefined, undefined]
+Array.from({length:5}, el => 1) //should return [1, 1, 1, 1, 1]
+
+//7 - Number from identity matrix
+function idMatrixToBitValue(sizeNum) {
+    let bitString = Array.from({length: sizeNum * sizeNum}, (el,i) => (i%(n+1) === 0 ? '1' : '0')).join("")
+    const decimalValue = BigInt('0b' + bitString);
+    return decimalValue;
+}
