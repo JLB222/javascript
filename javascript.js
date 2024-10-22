@@ -10949,3 +10949,21 @@ function idMatrixToBitValue(sizeNum) {
     const decimalValue = BigInt('0b' + bitString);
     return decimalValue;
 }
+
+//Day 798
+//review - 7 - Three cushion billiards
+function hasScored(str) {
+  let cushionsHit = 0
+  let ballsHit = new Set()
+  for (let char of str) {
+    if ('news'.includes(char)) {
+      cushionsHit++
+    } else {
+      ballsHit.add(char) 
+    }
+    if (ballsHit.size == 2 && ballsHit.has('R')) {
+      return cushionsHit >= 3
+    }
+  }
+  return false
+}
