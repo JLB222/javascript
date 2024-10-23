@@ -10967,3 +10967,12 @@ function hasScored(str) {
   }
   return false
 }
+
+//Day 799
+//review, 7 - Simple letter removal
+function solve(str, num){
+  let strArr = str.split("")
+  let sortedStrArr = strArr.sort()
+  let lettersToRemove = sortedStrArr.slice(0, num)
+  return lettersToRemove.reduce((prev,curr) => prev.replace(curr, ""), str)
+}
