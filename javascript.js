@@ -10976,3 +10976,27 @@ function solve(str, num){
   let lettersToRemove = sortedStrArr.slice(0, num)
   return lettersToRemove.reduce((prev,curr) => prev.replace(curr, ""), str)
 }
+
+//Day 800
+//review - 6 - Duplicate Encoder
+function duplicateEncode(word){
+  let stringBuilder = []
+  let letters = {}
+  
+  for (let i = 0; i < word.length; i++) {
+    letters[word[i].toLowerCase()] = (letters[word[i].toLowerCase()] || 0) +1
+  }
+  for (let i = 0; i < word.length; i++) {
+    if (letters[word[i].toLowerCase()] === 1) {
+      stringBuilder.push(`(`)
+    } else {
+      stringBuilder.push(`)`)
+    }
+  }
+  return stringBuilder.join("")
+}
+
+// simplified, but worse time complexity.  running indexOf and lastIndexOf inside a map is essentially two loops inside a loop.
+function duplicateEncode(word){
+  return word.toLowerCase().split("").map((el,arr) => arr.indexOf(el) == arr.lastIndexOf(el) ? "(" : ")").join("")
+}
