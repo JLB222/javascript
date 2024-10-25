@@ -11000,3 +11000,38 @@ function duplicateEncode(word){
 function duplicateEncode(word){
   return word.toLowerCase().split("").map((el,arr) => arr.indexOf(el) == arr.lastIndexOf(el) ? "(" : ")").join("")
 }
+
+//code I wrote some weeks ago for a codewars problem
+function duplicateEncode(word){
+  let stringBuilder = []
+  let letters = {}
+  
+  for (let i = 0; i < word.length; i++) {
+    letters[word[i].toLowerCase()] = (letters[word[i].toLowerCase()] || 0) +1
+  }
+  for (let i = 0; i < word.length; i++) {
+    if (letters[word[i].toLowerCase()] === 1) {
+      stringBuilder.push(`(`)
+    } else {
+      stringBuilder.push(`)`)
+    }
+  }
+  return stringBuilder.join("")
+}
+
+// code I wrote two days ago, thinking it was an improvement but the time complexity is worse
+function duplicateEncode(word){
+  return word.toLowerCase().split("").map((el,arr) => arr.indexOf(el) == arr.lastIndexOf(el) ? "(" : ")").join("")
+}
+
+//Day 801
+function jewelCounter(jewels,stones) {
+  let jewelCount = 0
+  for (let stone of stones) {
+    if (jewels.includes(stone)) {
+      jewelCount++
+    }
+  }
+  return jewelCount
+}
+//so this is O(n*m) because includes will loop through jewels every time, not quite as bad as O(n^2), but still not ideal
