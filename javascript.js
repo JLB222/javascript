@@ -11001,29 +11001,6 @@ function duplicateEncode(word){
   return word.toLowerCase().split("").map((el,arr) => arr.indexOf(el) == arr.lastIndexOf(el) ? "(" : ")").join("")
 }
 
-//code I wrote some weeks ago for a codewars problem
-function duplicateEncode(word){
-  let stringBuilder = []
-  let letters = {}
-  
-  for (let i = 0; i < word.length; i++) {
-    letters[word[i].toLowerCase()] = (letters[word[i].toLowerCase()] || 0) +1
-  }
-  for (let i = 0; i < word.length; i++) {
-    if (letters[word[i].toLowerCase()] === 1) {
-      stringBuilder.push(`(`)
-    } else {
-      stringBuilder.push(`)`)
-    }
-  }
-  return stringBuilder.join("")
-}
-
-// code I wrote two days ago, thinking it was an improvement but the time complexity is worse
-function duplicateEncode(word){
-  return word.toLowerCase().split("").map((el,arr) => arr.indexOf(el) == arr.lastIndexOf(el) ? "(" : ")").join("")
-}
-
 //Day 801
 function jewelCounter(jewels,stones) {
   let jewelCount = 0
@@ -11034,4 +11011,40 @@ function jewelCounter(jewels,stones) {
   }
   return jewelCount
 }
-//so this is O(n*m) because includes will loop through jewels every time, not quite as bad as O(n^2), but still not ideal
+//so this is O(n*m) because includes() will loop through jewels every time, not quite as bad as O(n^2), but still not ideal
+
+//Day 802
+class Clock {
+  constructor({ template }) {
+    this.template = template;
+  }
+
+  render() {
+    let date = new Date();
+
+    let hours = date.getHours();
+    if (hours < 10) hours = '0' + hours;
+
+    let mins = date.getMinutes();
+    if (mins < 10) mins = '0' + mins;
+
+    let secs = date.getSeconds();
+    if (secs < 10) secs = '0' + secs;
+
+    let output = this.template
+      .replace('h', hours)
+      .replace('m', mins)
+      .replace('s', secs);
+
+    console.log(output);
+  }
+
+  stop() {
+    clearInterval(this.timer);
+  }
+
+  start() {
+    this.render();
+    this.timer = setInterval(() => this.render(), 1000);
+  }
+}
