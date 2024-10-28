@@ -11081,3 +11081,54 @@ class Rabbit extends Animal {
     this.hide(); // and then hide
   }
 }
+
+//Day 804
+//6 - PhoneWords
+function phoneWords(stringOfNums) {
+  let letterMap = {
+    0: " ",
+    1: "",
+    2: 'a',
+    22: 'b',
+    222: 'c',
+    3: 'd',
+    33: 'e',
+    333: 'f',
+    4: 'g',
+    44: 'h',
+    444: 'i',
+    5: 'j',
+    55: 'k',
+    555: 'l',
+    6: 'm',
+    66: 'n',
+    666: 'o',
+    7: 'p',
+    77: 'q',
+    777: 'r',
+    7777: 's',
+    8: 't',
+    88: 'u',
+    888: 'v',
+    9: 'w',
+    99: 'x',
+    999: 'y',
+    9999: 'z',
+  }
+  let result = [] //holding spot for dialed numbers
+  let code = '' //consecutive numbers build a temporary string
+  let maxLength = { '0': 1, '2': 3, '3': 3, '4': 3, '5': 3, '6': 3, '7': 4, '8': 3, '9': 4 }
+  for (let i = 0; i < stringOfNums.length; i++) {
+    code += stringOfNums[i]
+    if (code.length === maxLength[stringOfNums[i]]) {
+      result.push(code)
+      code = ''
+    }
+    //if current number and next number are NOT the same, push that number sequence to result, and reset the code string
+    if (stringOfNums[i] != stringOfNums[i+1]) {
+      result.push(code)
+      code = ''
+    }
+  }
+  return result.map((el) => letterMap[el]).join("")
+}
