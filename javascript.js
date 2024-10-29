@@ -11132,3 +11132,21 @@ function phoneWords(stringOfNums) {
   }
   return result.map((el) => letterMap[el]).join("")
 }
+
+//Day 805
+function countCharacters(str) {
+  let counter = {}
+  for (let char of str) {
+    counter[char] = (counter[char] || 0) + 1
+  }
+  let mostFrequentCharacter = ''
+  let characterOccurrences = 0
+  for (let key in counter) {
+    if (counter[key] > characterOccurrences) {
+      characterOccurrences = counter[key]
+      mostFrequentCharacter = key
+    }
+  }
+  console.log([mostFrequentCharacter, characterOccurrences])
+  return mostFrequentCharacter
+}
