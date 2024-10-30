@@ -11137,7 +11137,7 @@ function phoneWords(stringOfNums) {
 function countCharacters(str) {
   let counter = {}
   for (let char of str) {
-    counter[char] = (counter[char] || 0) + 1
+    counter[char] = (counter[char] || 0) + 1  //counter[char] = counter[char] +1 || 1
   }
   let mostFrequentCharacter = ''
   let characterOccurrences = 0
@@ -11149,4 +11149,22 @@ function countCharacters(str) {
   }
   console.log([mostFrequentCharacter, characterOccurrences])
   return mostFrequentCharacter
+}
+
+//Day 806
+//review - 7: three cushion billiards
+function hasScored806(str) {
+  let cushionCounter = 0  //needs to be 3 before 2nd object ball is hit 
+  let ballsHit = new Set()
+  for (let letter of str) {
+    if ('news'.includes(letter)) {
+      cushionCounter++
+    } else {
+      ballsHit.add(letter)
+    }
+    if (ballsHit.size == 2 && ballsHit.has('R')) {
+      return cushionCounter >= 3
+    }
+  }
+  return false;
 }
