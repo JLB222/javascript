@@ -11168,3 +11168,22 @@ function hasScored806(str) {
   }
   return false;
 }
+
+//Day 807
+//Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
+function dupeChecker(arr) {
+  let counter = {}
+  for (let el of arr) {
+    if (counter[el]) {
+      return true
+    } else {
+      counter[el] = true
+    }
+  } 
+  return false
+}
+
+//alternate 
+function dupeCheckerB(arr) {
+  return new Set(arr).size !== arr.length
+}
