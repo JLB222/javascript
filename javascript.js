@@ -11211,3 +11211,13 @@ function digitMultiplication(str) {
   }
   return sumTotal + product
 }
+
+//Day 809
+const person1 = { 
+  name: "Alice",
+  age: 30
+}
+const person2 = person1
+person2.age = person1.age + 1 
+
+//what are their ages?  Both 31, because both objects are pointing to the same place in memory
