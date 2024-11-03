@@ -11221,3 +11221,15 @@ const person2 = person1
 person2.age = person1.age + 1 
 
 //what are their ages?  Both 31, because both objects are pointing to the same place in memory
+
+//Day 810
+//review, constructor function
+function characterMaker810(name, race, gender, element, ultName) {
+  this.name = name
+  this.race = race
+  this.gender = gender
+  this.element = element
+  this.ult = function() {  
+    console.log(ultName)
+  }
+}
