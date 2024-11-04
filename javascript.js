@@ -11233,3 +11233,29 @@ function characterMaker810(name, race, gender, element, ultName) {
     console.log(ultName)
   }
 }
+
+//Day 811
+//review
+class Dog811 extends Animal {
+  constructor(name, breed) {
+    super(name)
+    this.breed = breed
+  }
+}
+//Given an array of numbers, return all pairs that add up to a given sum. The numbers can be used more than once.
+function returnPairs(arr, num) {
+  let result = []
+  let counter = {}
+  for (let el of arr) {
+    counter[el] = (counter[el] || 0) + 1
+  }
+  for (let el in counter) {
+    let difference = (num - +el)
+    if (counter[difference]) {
+      result.push([+el, difference])
+      counter[el]--
+      counter[difference]--
+    }
+  }
+  return result
+}
