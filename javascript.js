@@ -11270,3 +11270,8 @@ function bestFriend(txt, a, b) {
   }
   return true
 }
+
+//Day 813
+function strNumTrim(str) {
+  return str.split(",").slice(1,-1).join(" ") || null
+}
