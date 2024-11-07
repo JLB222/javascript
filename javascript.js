@@ -11275,3 +11275,34 @@ function bestFriend(txt, a, b) {
 function strNumTrim(str) {
   return str.split(",").slice(1,-1).join(" ") || null
 }
+
+//Day 814
+//6 - Perform operation to make string empty
+function lastNonEmptyStringA(str) {
+  let results = [str]
+  let alphabet = 'abcdefghijklmnopqrstuvwxyz'.split("")
+  let loopString = str
+  while (loopString.length > 0) {
+    loopString = alphabet.reduce((prev, curr) => prev.replace(curr,""), loopString)
+    results.push(loopString)
+  }
+
+  return results[results.length-2]
+}
+
+//2nd try using only letters in string instead of entire alphabet; still too time complex
+function lastNonEmptyStringB(str) {
+  let results = [str]
+  let letterCounter = {}
+  for (let el of str) {
+    letterCounter[el] = (letterCounter[el] || 0) + 1
+  }
+  let alphabet = Object.keys(letterCounter)
+  let loopString = str
+  while (loopString.length > 0) {
+    loopString = alphabet.reduce((prev, curr) => prev.replace(curr,""), loopString)
+    results.push(loopString)
+  }
+
+  return results[results.length-2]
+}
