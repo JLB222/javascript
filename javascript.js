@@ -11306,3 +11306,21 @@ function lastNonEmptyStringB(str) {
 
   return results[results.length-2]
 }
+
+//Day 815
+//review 7 - Three-cushion billiards
+function hasScored815(str) {
+  let cushionsHit = 0
+  let ballsHit = new Set()
+  for (let letter of str) {
+    if ('news'.includes(letter)) {
+      cushionsHit++
+    } else {
+      ballsHit.add(letter)
+    }
+    if (ballsHit.size == 2 && ballsHit.has("R")) {
+      return cushionsHit >= 3
+    }
+  }
+  return false;
+}
