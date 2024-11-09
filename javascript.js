@@ -11324,3 +11324,10 @@ function hasScored815(str) {
   }
   return false;
 }
+
+//Day 816
+//review
+function repVowels816(str) {
+  return str.replace(/[aeiou]/gi, "")
+}
+//num % 1 === 0
