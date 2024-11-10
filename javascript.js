@@ -11331,3 +11331,15 @@ function repVowels816(str) {
   return str.replace(/[aeiou]/gi, "")
 }
 //num % 1 === 0
+
+//Day 816
+// reduceRight()
+const array816 = [
+  [0, 1],
+  [2, 3],
+  [4, 5],
+];
+const result816 = array816.reduceRight((accumulator, currentValue) =>
+  accumulator.concat(currentValue),
+);
+console.log(result816);  // Expected output: Array [4, 5, 2, 3, 0, 1]
