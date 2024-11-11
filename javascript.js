@@ -11343,3 +11343,13 @@ const result816 = array816.reduceRight((accumulator, currentValue) =>
   accumulator.concat(currentValue),
 );
 console.log(result816);  // Expected output: Array [4, 5, 2, 3, 0, 1]
+
+//Day 817
+//Fibonacci
+function fibonacci(num) {
+  let numSequence = [0,1]
+  for (let i = 2; i <= num; i++) {
+    numSequence[i] = numSequence[i-2] + numSequence[i-1]
+  }
+  return numSequence[numSequence.length-1]
+}
