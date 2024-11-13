@@ -11360,3 +11360,10 @@ function fibonacciRecursion(num) {
   if (num < 2) {return num}
   else { return fibonacciRecursion(num - 2) + fibonacciRecursion(num - 1) }
 }
+
+//Day 819
+//custom sort review
+function sort(arr) {
+  let customSort = "A23456789TJQK"
+  return [...arr].sort((a,b) => customSort.indexOf(a) - customSort.indexOf(b))
+}
