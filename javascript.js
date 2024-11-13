@@ -11346,10 +11346,17 @@ console.log(result816);  // Expected output: Array [4, 5, 2, 3, 0, 1]
 
 //Day 817
 //Fibonacci
-function fibonacci(num) {
+function fibonacciForLoop(num) {
   let numSequence = [0,1]
   for (let i = 2; i <= num; i++) {
     numSequence[i] = numSequence[i-2] + numSequence[i-1]
   }
-  return numSequence[numSequence.length-1]
+  return numSequence[num]
+}
+
+//Day 818
+//Fibonacci with recursion
+function fibonacciRecursion(num) {
+  if (num < 2) {return num}
+  else { return fibonacciRecursion(num - 2) + fibonacciRecursion(num - 1) }
 }
