@@ -11367,3 +11367,16 @@ function sort(arr) {
   let customSort = "A23456789TJQK"
   return [...arr].sort((a,b) => customSort.indexOf(a) - customSort.indexOf(b))
 }
+
+//Day 820
+//Fibonacci with recursion & memoization
+function fibonacciRecursionMemo(num) {
+  const memo = {}
+  if (num < 2) {return num} 
+  else
+  if (memo[num]) {return memo[num]}
+  else { 
+    memo[num] = fibonacciRecursionMemo(num - 2) + fibonacciRecursionMemo(num - 1) 
+    return memo[num]
+  }
+}
