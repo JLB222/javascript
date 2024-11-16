@@ -11380,3 +11380,10 @@ function fibonacciRecursionMemo(num) {
     return memo[num]
   }
 }
+
+//Day 821
+//Array.toSorted() - the copying version of the sort() method. It returns a new array with the elements sorted in ascending order.
+const months821 = ["Mar", "Jan", "Feb", "Dec"];
+const sortedMonths821 = months.toSorted();
+console.log(sortedMonths); // ['Dec', 'Feb', 'Jan', 'Mar']
+console.log(months); // ['Mar', 'Jan', 'Feb', 'Dec']
