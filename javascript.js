@@ -11387,3 +11387,22 @@ const months821 = ["Mar", "Jan", "Feb", "Dec"];
 const sortedMonths821 = months.toSorted();
 console.log(sortedMonths); // ['Dec', 'Feb', 'Jan', 'Mar']
 console.log(months); // ['Mar', 'Jan', 'Feb', 'Dec']
+
+//Day 822
+//Array.toSpliced() - the copying version of the splice() method. It returns a new array with some elements removed and/or replaced at a given index.
+const months_822 = ["Jan", "Mar", "Apr", "May"];
+
+// Inserting an element at index 1
+const months2_822 = months_822.toSpliced(1, 0, "Feb");
+console.log(months2_822); // ["Jan", "Feb", "Mar", "Apr", "May"]
+
+// Deleting two elements starting from index 2
+const months3_822 = months2_822.toSpliced(2, 2);
+console.log(months3_822); // ["Jan", "Feb", "May"]
+
+// Replacing one element at index 1 with two new elements
+const months4_822 = months3_822.toSpliced(1, 1, "Feb", "Mar");
+console.log(months4_822); // ["Jan", "Feb", "Mar", "May"]
+
+// Original array is not modified
+console.log(months_822); // ["Jan", "Mar", "Apr", "May"]
