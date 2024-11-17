@@ -11406,3 +11406,9 @@ console.log(months4_822); // ["Jan", "Feb", "Mar", "May"]
 
 // Original array is not modified
 console.log(months_822); // ["Jan", "Mar", "Apr", "May"]
+
+//Day 823
+// review
+function automorphic823(num){
+  return String(num * num).endsWith(num) ? "Automorphic" : "Not!!"
+}
