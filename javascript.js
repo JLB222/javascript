@@ -11412,3 +11412,26 @@ console.log(months_822); // ["Jan", "Mar", "Apr", "May"]
 function automorphic823(num){
   return String(num * num).endsWith(num) ? "Automorphic" : "Not!!"
 }
+
+//Day 824
+//class 27 stuff - Create a Netflix TV show class with a constructor that makes Netflix TV shows with 4 properties and 3 methods
+class NetflixTvShow824 {
+  constructor(title, genre, episodeCount, episodeLength) {
+    this.title = title
+    this.genre = genre 
+    this.episodeCount = episodeCount
+    this.episodeLength = episodeLength
+  }
+  play() {
+    //play the episode
+  }
+  pause() {
+    //pause the playback
+  }
+  nextEpisode() {
+    //go to next episode
+  }
+  previousEpisode() {
+    //go to previous episode
+  }
+}
