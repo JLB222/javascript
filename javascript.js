@@ -11459,3 +11459,21 @@ function numberWordB(num) {
   const numbers = ["Zero","One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"]
   return numbers[num]
 }
+
+//Day 826
+//review - 7 - three-cushion billiards
+function hasScored(str) {
+  let cushionsHit = 0
+  let ballsHit = new Set()
+  for (let letter of str) {
+    if ("nesw".includes(letter)) {
+      cushionsHit++
+    } else {
+      ballsHit.add(letter)
+    }
+    if (ballsHit.size == 2 && ballsHit.has("R")) {
+      return cushionsHit >= 3
+    }
+  }
+  return false;
+}
