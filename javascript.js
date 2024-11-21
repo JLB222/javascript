@@ -11477,3 +11477,20 @@ function hasScored(str) {
   }
   return false;
 }
+
+//Day 827
+//6 - review
+function lastNonEmptyString(str) {
+
+  const counts = str
+    .split('')
+    .reduceRight((acc, curr) => (acc[curr] = ++acc[curr] || 1, acc), {});
+  
+  const max_count = Math.max(...Object.values(counts));
+  
+  return Object.keys(counts)
+    .filter(char => counts[char] === max_count)
+    .reverse()
+    .join('');
+  
+}
