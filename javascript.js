@@ -11494,3 +11494,13 @@ function lastNonEmptyString(str) {
     .join('');
   
 }
+
+//Day 828
+//review - String Scramble
+function scramble(str, arr) {
+  let result = []
+  for (let i = 0; i < arr.length; i++) {
+    result[arr[i]] = str[i]
+  }
+  return result.join("")
+}
