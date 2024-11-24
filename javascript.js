@@ -11510,7 +11510,24 @@ function scramble(str, arr) {
 function beerOnTheWall(num) {
   for (let i = num; i > 0; i--) {
     console.log(
-      `${i} ${i == 1 ? 'bottle': 'bottles'} of beer on the wall, num string of beer!  Take one down, pass it around, ${i-1} ${i-1 == 1 ? 'bottle': 'bottles'} of beer on the wall~!`
+      `${i} ${i == 1 ? 'bottle': 'bottles'} of beer on the wall, ${i} ${i == 1 ? 'bottle': 'bottles'} of beer!  Take one down, pass it around, ${i-1} ${i-1 == 1 ? 'bottle': 'bottles'} of beer on the wall~!`
     )
   }
+}
+
+//Day 830
+//review
+function lastNonEmptyString830(str) {
+  const counts = str
+    .split('')
+    .reduceRight(
+      (acc, curr) => (acc[curr] = (acc[curr] || 0) +1, acc), {}
+    );
+  
+  const maxCount = Math.max(...Object.values(counts));
+  
+  return Object.keys(counts)
+    .filter(char => counts[char] === maxCount)
+    .reverse()
+    .join('');
 }
