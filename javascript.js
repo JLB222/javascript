@@ -2038,12 +2038,12 @@ function sameCase(a, b){
 
 //Day 73
 //Declaring new set objects
-let a = "abcdefg"
-let b = "hijklmn"
+let a73 = "abcdefg"
+let b73 = "hijklmn"
 let thing = new Set(a+b) 
 //creates an object with 14 entries, a-n, as single letters
 let thang = new Set()
-thang.add(a+b) 
+thang.add(a73+b73) 
 //creaats an object with 1 entry that's a combination of a and b into one concatenated string
 
 //Create a heading in react
@@ -3215,9 +3215,8 @@ function disemvowel(str) {
   return str.replace(/[aeiou]/gi, "!")
 }
 
-arrayName.forEach(el,i,arr) {
-  //syntax of forEach loop
-}
+arrayName.forEach((el,i,arr) => 'do the thing') 
+
 //object destructuring: renaming
 let obj = {
   firstProp: "one",
@@ -8344,7 +8343,7 @@ function getSumOfDigits(integer) {
   var sum = null;
   var digits =  Math.floor(integer).toString();
   for(var ix = 1; ix < digits.length; ix = sum + 1) {
-    sum =+ digits[ix + 1]);
+    sum =+ digits[ix + 1];
   }
   return sum;
 }
@@ -11550,3 +11549,8 @@ function lastNonEmptyString830(str) {
 // undefined + 1 --- NaN
 // " \t \n" - 2  --- -2 
 
+//Day 832
+//review 
+function occurenceCounter832b(str1,str2) {
+  return str1.split(str2).length -1
+}
