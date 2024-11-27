@@ -11551,6 +11551,12 @@ function lastNonEmptyString830(str) {
 
 //Day 832
 //review 
-function occurenceCounter832b(str1,str2) {
+function occurenceCounter832(str1,str2) {
   return str1.split(str2).length -1
 }
+
+//Day 833
+//review
+let array833 = ["this","is","a","test"]
+array833.push("waffles")  // ["this","is","a","test", "waffles"]
+array833.pop() // ["this","is","a","test"]
