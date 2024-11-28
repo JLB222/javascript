@@ -11560,3 +11560,14 @@ function occurenceCounter832(str1,str2) {
 let array833 = ["this","is","a","test"]
 array833.push("waffles")  // ["this","is","a","test", "waffles"]
 array833.pop() // ["this","is","a","test"]
+
+//Day 834
+//Array.flat()
+
+const arr834 = [0, 1, [2, [3, [4, 5]]]];
+console.log(arr834.flat());
+// expected output: Array [0, 1, 2, Array [3, Array [4, 5]]]
+console.log(arr834.flat(2));
+// expected output: Array [0, 1, 2, 3, Array [4, 5]]
+console.log(arr834.flat(Infinity));
+// expected output: Array [0, 1, 2, 3, 4, 5]
