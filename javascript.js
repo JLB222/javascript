@@ -11571,3 +11571,11 @@ console.log(arr834.flat(2));
 // expected output: Array [0, 1, 2, 3, Array [4, 5]]
 console.log(arr834.flat(Infinity));
 // expected output: Array [0, 1, 2, 3, 4, 5]
+
+//Day 835
+//review
+function countTheThing(str, str2) {
+  const regex = new RegExp(str2,'g')
+  const anyMatches = str.match(regex).length
+  return anyMatches ? anyMatches : 0
+}
