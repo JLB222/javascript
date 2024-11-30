@@ -11579,3 +11579,9 @@ function countTheThing(str, str2) {
   const anyMatches = str.match(regex).length
   return anyMatches ? anyMatches : 0
 }
+
+//Day 836
+//review
+function strToNum(arr) {
+  return arr.map(Number)
+}
