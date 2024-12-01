@@ -11585,3 +11585,9 @@ function countTheThing(str, str2) {
 function strToNum(arr) {
   return arr.map(Number)
 }
+
+//Day 837
+//7 - Christmas Trash Party
+function compareTrash(trash1, trash2){
+  return (trash1 == trash2) && (typeof trash1 == typeof trash2)
+}
