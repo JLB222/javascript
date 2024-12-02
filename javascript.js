@@ -11591,3 +11591,12 @@ function strToNum(arr) {
 function compareTrash(trash1, trash2){
   return (trash1 == trash2) && (typeof trash1 == typeof trash2)
 }
+
+//Day 838
+////7 - You Complete Me
+function complete(str){
+  for (let i = 1; i <= str.length; i++) {
+    if (str.slice(i) == [...str.slice(i)].reverse().join(''))
+    return str + [...str.slice(0,i)].reverse().join('')
+  }
+} 
