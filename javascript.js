@@ -11600,3 +11600,16 @@ function complete(str){
     return str + [...str.slice(0,i)].reverse().join('')
   }
 } 
+
+//Day 839
+//review
+function disemVowel839(str) {
+  let result = str.split("")
+  let vowels = "aeiouAEIOU"
+  for (let i = 0; i < result.length; i++) {
+    if (vowels.includes(result[i])) {
+      result[i] = "!"
+    }
+  }
+  return result.join("")
+}
