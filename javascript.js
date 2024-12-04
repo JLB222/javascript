@@ -11613,3 +11613,21 @@ function disemVowel839(str) {
   }
   return result.join("")
 }
+
+//Day 840
+//review - 7 - three cushion billiards
+function hasScored(str) {
+  let cushionCounter = 0 
+  let ballsHit = new Set()
+  for (let letter of str) {
+    if ("news".includes(letter)) {
+        cushionCounter++
+        } else {
+          ballsHit.add(letter)
+        }
+    if (ballsHit.size >= 2 && ballsHit.has("R")) {
+      return cushionCounter >= 3
+    }
+  }
+  return false;
+}
