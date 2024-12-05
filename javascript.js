@@ -11631,3 +11631,21 @@ function hasScored(str) {
   }
   return false;
 }
+
+//Day 841
+//7 - Consecutive vowels in string
+function getTheVowels(word) {
+  let vowelSequence = "aeiou"; // correct sequence of vowels
+  let currentVowelIndex = 0; // index of vowel in the sequence currentlly being checked
+  let consecutiveCount = 0; // how many consecutive vowels are in the word
+  
+  //  check every letter of the word against current vowel
+  for (letter of word) {
+    if (letter == vowelSequence[currentVowelIndex]) {
+      consecutiveCount++;
+      currentVowelIndex = (currentVowelIndex + 1) % vowelSequence.length;
+    }
+  }
+  
+  return consecutiveCount;
+}
