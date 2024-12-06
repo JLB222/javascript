@@ -11649,3 +11649,9 @@ function getTheVowels(word) {
   
   return consecutiveCount;
 }
+
+//Day 842
+//review - String.trim() - removes whitespace from both ends of this string and returns a new string, without modifying the original string.
+const greeting842 = '   Hello world!   ';
+console.log(greeting842);  // Expected output: "   Hello world!   ";
+console.log(greeting842.trim());  // Expected output: "Hello world!";
