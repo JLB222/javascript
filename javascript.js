@@ -11655,3 +11655,9 @@ function getTheVowels(word) {
 const greeting842 = '   Hello world!   ';
 console.log(greeting842);  // Expected output: "   Hello world!   ";
 console.log(greeting842.trim());  // Expected output: "Hello world!";
+
+//Day 843
+//review
+let a843 = prompt("First number?", 1);
+let b843 = prompt("Second number?", 2);
+alert(a843 + b843); // '12', not 3.  This is because the data is returned as a string and is concatenated.
