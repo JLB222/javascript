@@ -11661,3 +11661,18 @@ console.log(greeting842.trim());  // Expected output: "Hello world!";
 let a843 = prompt("First number?", 1);
 let b843 = prompt("Second number?", 2);
 alert(a843 + b843); // '12', not 3.  This is because the data is returned as a string and is concatenated.
+
+//Day 844
+//review
+class GBFcharMaker844 {
+  constructor(name,race,gender,element,ultName) {
+    this.name = name 
+    this.race = race
+    this.gender= gender 
+    this.element = element 
+    this.ultName = ultName 
+  }
+  ult() {
+    return `${this.ultName}!`
+  }
+}
