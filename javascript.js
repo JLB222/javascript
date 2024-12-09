@@ -11676,3 +11676,32 @@ class GBFcharMaker844 {
     return `${this.ultName}!`
   }
 }
+
+//Day 845
+//6 - Finite State Automata
+class StateMachine {
+  constructor({init, transitions}) {
+    this.state = init;
+    this.transitions = transitions
+  }
+  prep() {
+    const prepareObject = this.transitions.find(obj => obj.method === 'prep')
+    this.state == prepareObject.current ? this.state = prepareObject.target : null
+    return this.state
+  }
+  move() {
+    const moveObject = this.transitions.find(obj => obj.method === 'move')
+    this.state == moveObject.current ? this.state = moveObject.target : null
+    return this.state
+  }
+  slow() {
+    const slowObject = this.transitions.find(obj => obj.method === 'slow')
+    this.state == slowObject.current ? this.state = slowObject.target : null
+    return this.state
+  }
+  stop() {
+    const stopObject = this.transitions.find(obj => obj.method === 'stop')
+    this.state == stopObject.current ? this.state = stopObject.target : null
+    return this.state
+  }
+}
