@@ -11705,3 +11705,18 @@ class StateMachine {
     return this.state
   }
 }
+
+//Day 846
+// continued; class with dynamically created methods
+class StateMachine {
+  constructor({ init, transitions }) {
+    this.state = init;
+    transitions.forEach(({ method, current,  target }) => {
+      this[method] = () => {
+        if (this.state == current) {
+          this.state = target;
+        }
+      };
+    });
+  }
+}
