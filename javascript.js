@@ -11720,3 +11720,14 @@ class StateMachine {
     });
   }
 }
+
+//Day 847
+//review - what's effectively happening in the reduce method
+function reduce(array, combine, start) {
+  let current = start;
+  for (let element of array) {
+    current = combine(current, element);
+  }
+  return current;
+}
+reduce([1, 2, 3, 4], (a, b) => a + b, 0) // returns 10
