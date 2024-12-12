@@ -11731,3 +11731,10 @@ function reduce(array, combine, start) {
   return current;
 }
 reduce([1, 2, 3, 4], (a, b) => a + b, 0) // returns 10
+
+//Day 848
+//7 - Some but not all
+function someButNotAll(seq, pred){
+  const arr = Array.from(seq);
+  return arr.some(pred) && !arr.every(pred);
+}
