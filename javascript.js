@@ -11763,3 +11763,7 @@ for (const str of strings) {
 // "c�ab"
 // "abc"
 // "ab😄c"
+
+//Day 850
+//String.search() - executes a search for a match between a regular expression (or string) and this string, returning the index of the first match in the string.
+"I think Ruth's dog is cuter than your dog!".search("I") // returns 0
