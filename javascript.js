@@ -11767,3 +11767,18 @@ for (const str of strings) {
 //Day 850
 //String.search() - executes a search for a match between a regular expression (or string) and this string, returning the index of the first match in the string.
 "I think Ruth's dog is cuter than your dog!".search("I") // returns 0
+
+//Day 851
+//review - switch statements
+function howManydays(month){
+  var days;
+  switch (month){
+    case 4:
+    case 6:
+    case 9:
+    case 11: days = 30; break;
+    case 2: days = 28; break;
+    default: days = 31; break;
+  }
+  return days;
+}
