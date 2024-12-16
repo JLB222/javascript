@@ -11782,3 +11782,18 @@ function howManydays(month){
   }
   return days;
 }
+
+//Day 852 
+//review
+class StateMachine852 {
+  constructor({ init, transitions }) {
+    this.state = init;
+    transitions.forEach(({method,current,target}) => {
+      this[method] = () => {
+        if (this.state == current) {
+          this.state = target
+        }
+      }
+    })
+  }
+}
