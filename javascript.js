@@ -11797,3 +11797,9 @@ class StateMachine852 {
     })
   }
 }
+
+//Day 853
+//7 - map over a list of lists (array of arrays)
+function gridMap(fn,arr) {
+  return arr.map(el => el.map(fn))
+}
