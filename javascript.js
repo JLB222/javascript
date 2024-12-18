@@ -11803,3 +11803,13 @@ class StateMachine852 {
 function gridMap(fn,arr) {
   return arr.map(el => el.map(fn))
 }
+
+//Day 854
+//review -- 99 bottles of beer
+function bottles854(num) {
+  for (let i = num; i > 0; i--) {
+    console.log(
+      `${i} ${i === 1? "bottle" : "bottles"} of beer on the wall, ${i} ${i === 1? "bottle" : "bottles"} of beer!  Take one down, pass it around, ${i-1} ${i === 1? "bottle" : "bottles"} of beer on the wall~`
+    )
+  }
+}
