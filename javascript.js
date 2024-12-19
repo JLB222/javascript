@@ -11813,3 +11813,18 @@ function bottles854(num) {
     )
   }
 }
+
+//Day 855
+//review
+class StateMachine855 {
+  constructor({ init, transitions }) {
+    this.state = init;
+    transitions.forEach(({method,current,target}) => {
+      this[method] = () => {
+        if (this.state === current) {
+          this.state = target
+        }
+      }
+    })
+  }
+}
