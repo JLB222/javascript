@@ -11828,3 +11828,13 @@ class StateMachine855 {
     })
   }
 }
+
+//Day 856
+//review
+function countElements856(arr) {
+  let counter = {}
+  for (let i = 0; i < arr.length; i++) {
+    counter[arr[i]] = (counter[arr[i]] || 0) + 1
+  }
+  return counter
+}
