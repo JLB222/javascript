@@ -11851,3 +11851,8 @@ function hasScored(str) {
   }
   return false
 }
+
+//Day 858
+//review
+const str858 = 'The quick brown fox jumps over the lazy dog.';
+console.log(str858.slice(31));// Expected output: "the lazy dog."
