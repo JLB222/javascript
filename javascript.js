@@ -11856,3 +11856,13 @@ function hasScored(str) {
 //review
 const str858 = 'The quick brown fox jumps over the lazy dog.';
 console.log(str858.slice(31));// Expected output: "the lazy dog."
+
+//Day 859
+//7 - [Code Golf] Return Odd No Matter What 
+//gross answer demanded by kata
+alwaysOdd=n=>n%2?n:n-1
+
+//better, more readable answer
+function alwaysOdd(num) {
+  return num % 2 ? num : num - 1
+}
