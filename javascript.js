@@ -11866,3 +11866,18 @@ alwaysOdd=n=>n%2?n:n-1
 function alwaysOdd(num) {
   return num % 2 ? num : num - 1
 }
+
+//Day 860
+//review - finite state automata 1
+class StateMachine860 {
+  constructor({ init, transitions }) {
+    this.state = init;
+    transitions.forEach(({method,current,target}) => {
+      this[method] = () => {
+        if (this.state === current) {
+          this.state = target
+        }
+      }
+    })
+  }
+}
