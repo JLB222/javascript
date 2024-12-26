@@ -11884,3 +11884,12 @@ class StateMachine860 {
 
 //Day 861
 //Christmas.  I ain't codin on Christmas.  Sue me.
+
+//Day 862
+//Review
+const paragraph862 = "I think Ruth's dog is cuter than your dog!";
+console.log(paragraph862.replace("Ruth's", 'my'));
+// Expected output: "I think my dog is cuter than your dog!"
+const regex862 = /Dog/i;
+console.log(paragraph862.replace(regex862, 'ferret'));
+// Expected output: "I think Ruth's ferret is cuter than your dog!"
