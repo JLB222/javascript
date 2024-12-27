@@ -11893,3 +11893,9 @@ console.log(paragraph862.replace("Ruth's", 'my'));
 const regex862 = /Dog/i;
 console.log(paragraph862.replace(regex862, 'ferret'));
 // Expected output: "I think Ruth's ferret is cuter than your dog!"
+
+//Day 863
+//review
+const paragraph863 = "I think Ruth's dog is cuter than your dog!";
+console.log(paragraph863.replaceAll('dog', 'monkey'));
+// Expected output: "I think Ruth's monkey is cuter than your monkey!"
