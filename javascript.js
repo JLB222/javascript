@@ -11899,3 +11899,18 @@ console.log(paragraph862.replace(regex862, 'ferret'));
 const paragraph863 = "I think Ruth's dog is cuter than your dog!";
 console.log(paragraph863.replaceAll('dog', 'monkey'));
 // Expected output: "I think Ruth's monkey is cuter than your monkey!"
+
+//Day 864
+//review
+class StateMachine {
+  constructor({ init, transitions }) {
+    this.state = init;
+    transitions.forEach(({method, current, target}) => {
+      this[method] = () => {
+        if (this.state === current) {
+          this.state = target
+        }
+      }
+    })
+  }
+}
