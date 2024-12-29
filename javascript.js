@@ -11914,3 +11914,13 @@ class StateMachine {
     })
   }
 }
+
+//Day 865
+//review
+const paragraph865 = "I think Ruth's dog is cuter than your dog!";
+// Anything not a word character, whitespace or apostrophe
+const regex865 = /[^\w\s']/g;
+console.log(paragraph865.search(regex865));
+// Expected output: 41
+console.log(paragraph865[paragraph865.search(regex865)]);
+// Expected output: "!"
