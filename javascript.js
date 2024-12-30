@@ -11924,3 +11924,9 @@ console.log(paragraph865.search(regex865));
 // Expected output: 41
 console.log(paragraph865[paragraph865.search(regex865)]);
 // Expected output: "!"
+
+//Day 866
+//review
+const str866 = 'The quick brown fox jumps over the lazy dog.';
+console.log(str866.slice(31));
+// Expected output: "the lazy dog."
