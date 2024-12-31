@@ -11930,3 +11930,9 @@ console.log(paragraph865[paragraph865.search(regex865)]);
 const str866 = 'The quick brown fox jumps over the lazy dog.';
 console.log(str866.slice(31));
 // Expected output: "the lazy dog."
+
+//Day 867
+//review 
+const str867 = 'The quick brown fox jumps over the lazy dog.';
+const words867 = str867.split(' ');
+console.log(words867[3]);
