@@ -11936,3 +11936,12 @@ console.log(str866.slice(31));
 const str867 = 'The quick brown fox jumps over the lazy dog.';
 const words867 = str867.split(' ');
 console.log(words867[3]);
+
+//Day 868
+//review - Array.at()
+const array868 = [5, 12, 8, 130, 44];
+let index868 = 2;
+console.log(`An index of ${index868} returns ${array868.at(index868)}`); // Expected output: "An index of 2 returns 8"
+index868 = -2;
+console.log(`An index of ${index868} returns ${array868.at(index868)}`); // Expected output: "An index of -2 returns 130"
+
