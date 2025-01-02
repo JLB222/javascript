@@ -11945,3 +11945,13 @@ console.log(`An index of ${index868} returns ${array868.at(index868)}`); // Expe
 index868 = -2;
 console.log(`An index of ${index868} returns ${array868.at(index868)}`); // Expected output: "An index of -2 returns 130"
 
+//Day 869
+//review
+class Dog869 extends Animal {
+  constructor(name, breed) {
+    super(name)
+    this.breed = breed
+  }
+}
+let numbers869 = [1,2,8,7,3,9,6,8,4,9]
+let evens869 = numbers869.filter(el => el % 2 === 0)  //should return [2,8,6,8,4]
