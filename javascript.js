@@ -11955,3 +11955,18 @@ class Dog869 extends Animal {
 }
 let numbers869 = [1,2,8,7,3,9,6,8,4,9]
 let evens869 = numbers869.filter(el => el % 2 === 0)  //should return [2,8,6,8,4]
+
+//Day 870
+//review - Finite State Automata
+class StateMachine {
+  constructor({ init, transitions }) {
+    this.state = init;
+    transitions.forEach( ({method,current,target}) => {
+      this[method] = function() {
+        if (this.state === current) {
+          this.state = target
+        }
+      }
+    })
+  }
+}
