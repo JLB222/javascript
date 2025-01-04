@@ -11970,3 +11970,9 @@ class StateMachine {
     })
   }
 }
+
+//Day 871
+//review 
+function multiplayEachNumber(num) {
+  return num.toString().split("").map(Number).reduce((a,b) => a * b, 1)
+}
