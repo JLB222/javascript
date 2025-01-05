@@ -11976,3 +11976,10 @@ class StateMachine {
 function multiplayEachNumber(num) {
   return num.toString().split("").map(Number).reduce((a,b) => a * b, 1)
 }
+
+//Day 872
+//review
+function numToString(num) {
+  return num.toLocaleString()
+}
+// 5000 would return '5,000'
