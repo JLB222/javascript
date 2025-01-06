@@ -11983,3 +11983,10 @@ function numToString(num) {
   return num.toLocaleString()
 }
 // 5000 would return '5,000'
+
+//Day 873
+//review custom sort
+function customSort873(arr) {
+  const desiredSort = '23456789TJQKA'
+  return [...arr].sort((a,b) => desiredSort.indexOf(a) - desiredSort.indexOf(b))
+}
