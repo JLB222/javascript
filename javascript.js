@@ -11990,3 +11990,9 @@ function customSort873(arr) {
   const desiredSort = '23456789TJQKA'
   return [...arr].sort((a,b) => desiredSort.indexOf(a) - desiredSort.indexOf(b))
 }
+
+//Day 874
+//review
+const isBelowThreshold = (currentValue) => currentValue < 40;
+const array876 = [1, 30, 39, 29, 10, 13];
+console.log(array876.every(isBelowThreshold)); // Expected output: true
