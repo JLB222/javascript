@@ -11996,3 +11996,9 @@ function customSort873(arr) {
 const isBelowThreshold = (currentValue) => currentValue < 40;
 const array876 = [1, 30, 39, 29, 10, 13];
 console.log(array876.every(isBelowThreshold)); // Expected output: true
+
+//Day 875
+//review
+const words875 = ['spray', 'elite', 'exuberant', 'destruction', 'present'];
+const result875 = words875.filter((word) => word.length > 6);
+console.log(result875);  // Expected output: Array ["exuberant", "destruction", "present"]
