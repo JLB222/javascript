@@ -12002,3 +12002,9 @@ console.log(array876.every(isBelowThreshold)); // Expected output: true
 const words875 = ['spray', 'elite', 'exuberant', 'destruction', 'present'];
 const result875 = words875.filter((word) => word.length > 6);
 console.log(result875);  // Expected output: Array ["exuberant", "destruction", "present"]
+
+//Day 876
+//review - 7 - Simple letter removal
+function solve876(str, num) {
+  return str.split("").sort().slice(0, num).reduce((pre, val) => pre.replace(val, ``), str)
+}
