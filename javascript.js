@@ -12008,3 +12008,22 @@ console.log(result875);  // Expected output: Array ["exuberant", "destruction", 
 function solve876(str, num) {
   return str.split("").sort().slice(0, num).reduce((pre, val) => pre.replace(val, ``), str)
 }
+
+//Day 877
+//review - Three cushion billiards
+function hasScored(str) {
+  let cushionCount = 0
+  let ballsHit = new Set()
+  for (let i = 0; i < str.length; i++) {
+    if ('news'.includes(str[i])) {
+      cushionCount++
+    } else {
+      ballsHit.add(str[i])
+    }
+    if (ballsHit.size == 2 && ballsHit.has("R")) {
+      return cushionCount >= 3
+    }
+  }
+  
+  return false;
+}
