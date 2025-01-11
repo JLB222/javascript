@@ -12027,3 +12027,16 @@ function hasScored(str) {
   
   return false;
 }
+
+//Day 878
+//review - finite state automata
+class StateMachine {
+  constructor({ init, transitions }) {
+    this.state = init;
+    transitions.forEach(el => {
+      this[el.method] = function() {
+        if (this.state == el.current ) {this.state = el.target}
+      }
+    })
+  }
+}
