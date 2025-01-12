@@ -12040,3 +12040,12 @@ class StateMachine {
     })
   }
 }
+
+//Day 879
+//review
+const array879 = ['a', 'b', 'c'];
+array879.forEach((element, index, array) => console.log(`${element} is at index ${index} in the array of: [${array}]`));
+
+// "a is at index 0 in the array of: [a,b,c]"
+// "b is at index 1 in the array of: [a,b,c]"
+// "c is at index 2 in the array of: [a,b,c]"
