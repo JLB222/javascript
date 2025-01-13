@@ -12049,3 +12049,19 @@ array879.forEach((element, index, array) => console.log(`${element} is at index 
 // "a is at index 0 in the array of: [a,b,c]"
 // "b is at index 1 in the array of: [a,b,c]"
 // "c is at index 2 in the array of: [a,b,c]"
+
+//Day 880
+//7 - Commenting Made Easy
+function comment(text, style) {
+  switch (style) {
+      case "Bash" : case "Python" : return `# ${text.replace(/\n/g, "\n# ")}`
+      case "Bash Multiline"       : return `: "\n${text}\n"`
+      case "JavaDoc"              : return `/**\n* ${text.replace(/\n/g, "\n* ")}\n*/`
+      case "Python Multiline"     : return `"""\n${text}\n"""`
+      case "Javascript"           : return `// ${text.replace(/\n/g, "\n// ")}`
+      case "Javascript Multiline" : return `/*\n${text}\n*/`
+      case "SGML"                 : return `<!-- ${text.replace(/\n/g, " -->\n<!-- ")} -->`
+      case "SQL"                  : return `-- ${text.replace(/\n/g, "\n-- ")}`
+      default                     : throw new Error("Unsupported language")
+  }
+}
