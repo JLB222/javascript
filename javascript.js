@@ -12065,3 +12065,12 @@ function comment(text, style) {
       default                     : throw new Error("Unsupported language")
   }
 }
+
+//Day 881
+//review
+const array881 = [1, 2, 3];
+console.log(array881.includes(2)); // Expected output: true
+
+const pets881 = ['cat', 'dog', 'bat'];
+console.log(pets881.includes('cat')); // Expected output: true
+console.log(pets881.includes('at')); // Expected output: false
