@@ -12074,3 +12074,16 @@ console.log(array881.includes(2)); // Expected output: true
 const pets881 = ['cat', 'dog', 'bat'];
 console.log(pets881.includes('cat')); // Expected output: true
 console.log(pets881.includes('at')); // Expected output: false
+
+//Day 882
+//review
+const array882 = [1, 2, 3, 4];
+
+// 0 + 1 + 2 + 3 + 4
+const initialValue882 = 0;
+const sumWithInitial882 = array1.reduce(
+  (accumulator, currentValue) => accumulator + currentValue,
+  initialValue882,
+);
+
+console.log(sumWithInitial882);  // Expected output: 10
