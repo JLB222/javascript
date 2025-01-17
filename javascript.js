@@ -12105,3 +12105,16 @@ function fizzBuzz883(num) {
     }
   }
 }
+
+//Day 884
+//7 - Decimal Time Conversion aka waste of time
+function toIndustrial(time){
+  return typeof time === "number" ? +(time / 60).toFixed(2) : +((Math.trunc(time.replace(":", ".")) + (time.replace(":", ".") % 1) / 0.6)).toFixed(2);
+}
+
+function toNormal(time){
+  let hours = Math.trunc(Math.round(time * 60) / 60);
+  let minutes = Math.round(time * 60) % 60;
+  minutes < 10 ? minutes = `0${minutes}` : minutes;
+  return `${hours}:${minutes}`;
+}
