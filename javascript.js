@@ -12118,3 +12118,9 @@ function toNormal(time){
   minutes < 10 ? minutes = `0${minutes}` : minutes;
   return `${hours}:${minutes}`;
 }
+
+//Day 845
+//review
+const str845 = 'The quick brown fox jumps over the lazy dog.';
+const words845 = str845.split(' ');
+console.log(words845);  // ["The", "quick", "brown", "fox", "jumps", "over", "the", "lazy", "dog."]
