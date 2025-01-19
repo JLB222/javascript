@@ -12124,3 +12124,18 @@ function toNormal(time){
 const str845 = 'The quick brown fox jumps over the lazy dog.';
 const words845 = str845.split(' ');
 console.log(words845);  // ["The", "quick", "brown", "fox", "jumps", "over", "the", "lazy", "dog."]
+
+//Day 846
+//review - Finite State Automata 1
+class StateMachine846 {
+  constructor({ init, transitions }) {
+    this.state = init;
+    for (let obj of transitions) {
+      this[obj.method] = () => {
+        if (this.state === obj.current) {
+          this.state = obj.target
+        }
+      }
+    }
+  }
+}
