@@ -12139,3 +12139,8 @@ class StateMachine846 {
     }
   }
 }
+
+//Day 847
+//review
+let alphaArray = "abcdefghijklmnopqrstuvwxyz".split("")
+let alphaArray2 = [..."abcdefghijklmnopqrstuvwxyz"]
