@@ -12144,3 +12144,9 @@ class StateMachine846 {
 //review
 let alphaArray = "abcdefghijklmnopqrstuvwxyz".split("")
 let alphaArray2 = [..."abcdefghijklmnopqrstuvwxyz"]
+
+//Day 848
+//7 - Perpendicular lines
+function maxBisectors(num) {
+  return Math.floor(num / 2) * Math.ceil(num / 2)
+}
