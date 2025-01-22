@@ -12150,3 +12150,11 @@ let alphaArray2 = [..."abcdefghijklmnopqrstuvwxyz"]
 function maxBisectors(num) {
   return Math.floor(num / 2) * Math.ceil(num / 2)
 }
+
+//Day 849
+//review, created obsidian vault
+
+String.raw() 
+String.fromCharCode(utf16CharCodeNumber) - Static method 
+String.fromCodePoint(UnicodeCodePointNumber) - Static method
+String.at(indexNumber) - instance method
