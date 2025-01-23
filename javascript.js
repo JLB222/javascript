@@ -12158,3 +12158,12 @@ String.raw()
 String.fromCharCode(utf16CharCodeNumber) - Static method 
 String.fromCodePoint(UnicodeCodePointNumber) - Static method
 String.at(indexNumber) - instance method
+
+//Day 850
+//review
+class Dog850 extends Animal {
+  constructor(species, breed) {
+    super(species) 
+    this.breed = breed
+  }
+}
