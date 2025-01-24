@@ -12155,9 +12155,9 @@ function maxBisectors(num) {
 //review, created obsidian vault
 
 String.raw() 
-String.fromCharCode(utf16CharCodeNumber) - Static method 
-String.fromCodePoint(UnicodeCodePointNumber) - Static method
-String.at(indexNumber) - instance method
+String.fromCharCode(utf16CharCodeNumber)// - Static method 
+String.fromCodePoint(UnicodeCodePointNumber)// - Static method
+String.at(indexNumber)//- instance method
 
 //Day 850
 //review
@@ -12166,4 +12166,10 @@ class Dog850 extends Animal {
     super(species) 
     this.breed = breed
   }
+}
+
+//Day 851
+//review - localeCompare
+function lineupStudents(students){
+  return students.split(" ").sort((a,b) => b.length - a.length || b.localeCompare(a))
 }
