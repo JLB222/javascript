@@ -12173,3 +12173,11 @@ class Dog850 extends Animal {
 function lineupStudents(students){
   return students.split(" ").sort((a,b) => b.length - a.length || b.localeCompare(a))
 }
+
+//Day 852
+//review
+const sentence852 = 'The quick brown fox jumps over the lazy dog.';
+
+const index852 = 6; 
+console.log(`The character at index ${index852} is ${sentence852.charAt(index852)}`);
+// Expected output: "The character at index 4 is i"
