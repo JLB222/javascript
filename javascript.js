@@ -12181,3 +12181,10 @@ const sentence852 = 'The quick brown fox jumps over the lazy dog.';
 const index852 = 6; 
 console.log(`The character at index ${index852} is ${sentence852.charAt(index852)}`);
 // Expected output: "The character at index 4 is i"
+
+//Day 853
+//Review - String.charCodeAt()
+const sentence853 = 'The quick brown fox jumps over the lazy dog.';
+const index853 = 4;
+console.log(`Character code ${sentence853.charCodeAt(index853)} is equal to ${sentence853.charAt(index853)}`,);
+// Expected output: "Character code 113 is equal to q"
