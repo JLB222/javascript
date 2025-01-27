@@ -12188,3 +12188,16 @@ const sentence853 = 'The quick brown fox jumps over the lazy dog.';
 const index853 = 4;
 console.log(`Character code ${sentence853.charCodeAt(index853)} is equal to ${sentence853.charAt(index853)}`,);
 // Expected output: "Character code 113 is equal to q"
+
+
+//Day 854
+//Leet Code - Course Schedule IV
+function checkIfPrerequisite(numCourses, prerequisites, queries) {
+  let prereqs = {}
+
+  prerequisites.forEach((el) => prereqs[el[1]] ? prereqs[el[1]].push(el[0]) : prereqs[el[1]] = [el[0]])
+
+  return queries.map((el) => prereqs[el[1]]?.includes(el[0]) || false)
+};
+
+//this works for a few of the test cases but not all; needs to be more robust.  I was introduced to the 'Floyd Warshall Algorithm"
