@@ -12201,3 +12201,13 @@ function checkIfPrerequisite(numCourses, prerequisites, queries) {
 };
 
 //this works for a few of the test cases but not all; needs to be more robust.  I was introduced to the 'Floyd Warshall Algorithm"
+
+//Day 855
+//review - string scramble
+function scramble(str, arr) {
+  let result = []
+  for (let i = 0; i < str.length; i++) {
+    result[arr[i]] = str[i]
+  }
+  return result.join("")
+}
