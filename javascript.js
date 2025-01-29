@@ -12211,3 +12211,12 @@ function scramble(str, arr) {
   }
   return result.join("")
 }
+
+//Day 856
+//LeetCode 2620 - Counter  -  Closures
+var createCounter = function(num) {
+  let timesInvoked = 0
+  return function() {
+     return num + timesInvoked++
+  };
+};
