@@ -12220,3 +12220,18 @@ var createCounter = function(num) {
      return num + timesInvoked++
   };
 };
+
+//Day 857
+//review - Finite State Automata
+class StateMachine857 {
+  constructor({ init, transitions }) {
+    this.state = init;
+    transitions.forEach(obj => {
+      this[obj.method] = () => {
+        if (this.state == obj.current) {
+          this.state = obj.target
+        }
+      }
+    })
+  }
+}
