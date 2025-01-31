@@ -12235,3 +12235,12 @@ class StateMachine857 {
     })
   }
 }
+
+//Day 858
+//review classes
+class Dog858 extends Animal {
+  constructor(parameterYoureStealingFromAnimal, parameter) {
+    super(parameterYoureStealingFromAnimal)
+    this.parameter = parameter
+  }
+}
