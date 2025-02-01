@@ -12244,3 +12244,21 @@ class Dog858 extends Animal {
     this.parameter = parameter
   }
 }
+
+//Day 859
+//review
+function hasScored(str) {
+  let ballsHit = new Set()
+  let cushionsHit = 0
+  for (let letter of str) {
+    if ('news'.includes(letter)) {
+      cushionsHit++
+    } else {
+      ballsHit.add(letter)
+    }
+    if (ballsHit.size >= 2 && ballsHit.has("R")) {
+      return cushionsHit >= 3
+    }
+  }
+  return false;
+}
