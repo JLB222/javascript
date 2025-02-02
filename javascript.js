@@ -12262,3 +12262,9 @@ function hasScored(str) {
   }
   return false;
 }
+
+//Day 860
+//review - String.padEnd(targetLength, padString)
+const str860 = 'Breaded Mushrooms';
+console.log(str860.padEnd(25, '.'));
+// Expected output: "Breaded Mushrooms........"
