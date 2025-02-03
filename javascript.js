@@ -12268,3 +12268,9 @@ function hasScored(str) {
 const str860 = 'Breaded Mushrooms';
 console.log(str860.padEnd(25, '.'));
 // Expected output: "Breaded Mushrooms........"
+
+//Day 861
+//review - split a sentence into an array with 1 word per element
+"this is a test".split(" ")
+//round a number to the nearest 10 value
+Math.round(number * 10) / 10
