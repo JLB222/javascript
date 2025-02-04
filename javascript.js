@@ -12274,3 +12274,21 @@ console.log(str860.padEnd(25, '.'));
 "this is a test".split(" ")
 //round a number to the nearest 10 value
 Math.round(number * 10) / 10
+
+//Day 862
+//fizzbuzz review
+function fizzBuzz862(num) {
+  for (let i = 1; i <= num; i++) {
+    if (i % 15 === 0) {
+      console.log('fizzBuzz')
+    } else 
+    if (i % 5 === 0) {
+      console.log('buzz')
+    } else 
+    if (i % 3 === 0) {
+      console.log('fizz')
+    } else {
+      console.log(i)
+    }
+  }
+}
