@@ -12292,3 +12292,12 @@ function fizzBuzz862(num) {
     }
   }
 }
+
+//Day 863
+//review
+class Cat extends Animal {
+  constructor(species, breed) {
+    super(species)
+    this.breed = breed
+  }
+}
