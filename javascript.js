@@ -12301,3 +12301,9 @@ class Cat extends Animal {
     this.breed = breed
   }
 }
+
+//Day 864
+//review - PREP with leon
+function sumTheArray(arr) {
+  return arr.reduce((a,b) => a+ +b, 0)
+}
