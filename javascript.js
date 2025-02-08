@@ -12307,3 +12307,12 @@ class Cat extends Animal {
 function sumTheArray(arr) {
   return arr.reduce((a,b) => a+ +b, 0)
 }
+
+//Day 865
+//review - Object.fromEntries()
+const entries865 = [
+  ['foo', 'bar'],
+  ['baz', 42],
+];
+const obj865 = Object.fromEntries(entries865);
+console.log(obj865);  // Expected output: Object { foo: "bar", baz: 42 }
