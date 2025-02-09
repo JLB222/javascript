@@ -12326,3 +12326,8 @@ const returnedTarget866 = Object.assign(target866, source866);
 
 console.log(target866);  // Expected output: Object { a: 1, b: 4, c: 5 }
 console.log(returnedTarget866 === target866);  // Expected output: true
+
+//Day 867
+function purchase(itemID, money) {
+  return player.money -= itemID.cost
+}
