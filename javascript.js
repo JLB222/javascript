@@ -12341,3 +12341,12 @@ const object1 = {
 };
 
 console.log(Object.keys(object1));// Expected output: Array ["a", "b", "c"]
+
+//Day 869
+//review classes
+class Frog extends Animal {
+  constructor(species, jumpDistance) {
+    super(species)
+    this.jumpDistance = jumpDistance
+  }
+}
