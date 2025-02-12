@@ -12350,3 +12350,14 @@ class Frog extends Animal {
     this.jumpDistance = jumpDistance
   }
 }
+
+//Day 870
+//Object.values()
+const object870 = {
+  a: "somestring",
+  b: 42,
+  c: false,
+};
+
+console.log(Object.values(object870));
+// Expected output: Array ["somestring", 42, false]
