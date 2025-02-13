@@ -12361,3 +12361,49 @@ const object870 = {
 
 console.log(Object.values(object870));
 // Expected output: Array ["somestring", 42, false]
+
+
+//Day 871
+//Class29
+
+//BoulderBadge 
+//variables
+let bulbasaurCandies = 16-5
+let caterpieCandies = 7-1
+let weedleCandies = 7-1
+let totalCandy = bulbasaurCandy + caterpieCandy + weedleCandy
+console.log(totalCandy)
+
+//conditionals & functions
+function fahrenheitToCelcius(tempInF) {
+  return (num - 32) * 5 / 9
+}
+function canHeFight(currentTempInF) {
+  return fahrenheitToCelcius > 0 ? "He can fight!" : "It's too cold for him!"
+}
+
+//loops
+function iChooseLoop(numOfEnemyPokemon) {
+  for (let i = 0; i < numOfEnemyPokemon; i++) {
+    console.log("Pikachu, I choose you!")
+  }
+}
+
+//CascadeBadge
+function reverseTheList(arr) {
+  console.log(arr.reverse())
+}
+
+function greaterSum(arr1,arr2) {
+  let sumOfArr1 = arr1.reduce((a,b) => a+ b**2, 0)
+  let sumOfArr2 = arr2.reduce((a,b) => a+ b**3, 0)
+  return sumOfArr1 > sumOfArr2
+}
+
+function filter(arr) {
+  return arr.filter((el,i) => el % i === 0)
+}
+
+function addItUp(arr) {
+  return arr.reduce((a,b) => a+ +b, 0)
+}
