@@ -12407,3 +12407,21 @@ function filter(arr) {
 function addItUp(arr) {
   return arr.reduce((a,b) => a+ +b, 0)
 }
+
+//Day 872
+//Class30
+class EspressoMachine {
+  constructor(make, model, color, price) {
+    this.make = make 
+    this.model = model
+    this.color = color 
+    this.price = price 
+  }
+  start() {
+    console.log(`Starting...`)
+  }
+  stop() {
+    console.log('Stopping...')
+  }
+}
+let gaggia = new EspressoMachine('red','Gaggia', 'Classic Pro', 400)
