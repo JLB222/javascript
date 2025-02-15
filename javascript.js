@@ -12425,3 +12425,18 @@ class EspressoMachine {
   }
 }
 let gaggia = new EspressoMachine('red','Gaggia', 'Classic Pro', 400)
+
+//Day 873
+//review - 6
+class StateMachine873 {
+  constructor({ init, transitions }) {
+    this.state = init;
+    transitions.forEach(obj => {
+      this[obj.method] = () => {
+        if (this.state == obj.current) {
+          this.state = obj.target
+        }
+      }
+    })
+  }
+}
