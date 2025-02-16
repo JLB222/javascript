@@ -12440,3 +12440,12 @@ class StateMachine873 {
     })
   }
 }
+
+//Day 874
+//review - parseFloat() - argument is first coerced to a string and leading whitespace is ignored
+function circumference(r) {
+  return parseFloat(r) * 2.0 * Math.PI;
+}
+
+console.log(circumference(4.567));  // Expected output: 28.695307297889173
+console.log(circumference("4.567abcdefgh"));  // Expected output: 28.695307297889173
