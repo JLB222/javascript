@@ -12449,3 +12449,9 @@ function circumference(r) {
 
 console.log(circumference(4.567));  // Expected output: 28.695307297889173
 console.log(circumference("4.567abcdefgh"));  // Expected output: 28.695307297889173
+
+///Day 875
+//review
+const months875 = ["Jan", "March", "April", "June"];
+months875.splice(1, 0, "Feb");  // Inserts at index 1
+console.log(months875);  // Expected output: Array ["Jan", "Feb", "March", "April", "June"]
