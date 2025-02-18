@@ -12455,3 +12455,11 @@ console.log(circumference("4.567abcdefgh"));  // Expected output: 28.69530729788
 const months875 = ["Jan", "March", "April", "June"];
 months875.splice(1, 0, "Feb");  // Inserts at index 1
 console.log(months875);  // Expected output: Array ["Jan", "Feb", "March", "April", "June"]
+
+//Day 876
+//7 - sum of integers in string
+function sumOfIntegersInString(str) {
+  let regex = /\d+/g
+  let allNumbers = str.match(regex) || []
+  return allNumbers.reduce((a,b) => a+ +b, 0)
+}
