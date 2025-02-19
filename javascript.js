@@ -12463,3 +12463,12 @@ function sumOfIntegersInString(str) {
   let allNumbers = str.match(regex) || []
   return allNumbers.reduce((a,b) => a+ +b, 0)
 }
+
+//Day 877
+//review - extending classes
+class Cat877 extends Animal {
+  constructor(name, breed) {
+    super(name)
+    this.breed = breed
+  }
+}
