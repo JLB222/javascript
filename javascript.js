@@ -12472,3 +12472,21 @@ class Cat877 extends Animal {
     this.breed = breed
   }
 }
+
+//Day 878
+// code what-if:  if i combine my sandrock app's item and character data into one list
+let items878 = []
+fetch('items.json')
+    .then(response => response.json())
+    .then(data => {
+        items878 = data
+        updateSearchResults(); 
+    })
+    .catch(error => console.error("Error loading data:", error))
+fetch('characters.json')
+    .then(response => response.json())
+    .then(data => {
+        items878 = [...items878, data] //this would put the item data and character data into the same array, which I could then sort so it's all together alphabetically
+        updateSearchResults(); 
+    })
+    .catch(error => console.error("Error loading data:", error))
