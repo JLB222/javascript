@@ -12505,3 +12505,20 @@ function expect(val) {
       }
   }
 };
+
+//Day 880
+function createCounter(init) {
+  let initialValue = init
+  let currentValue = init
+  return {
+      increment: function() {
+          return currentValue += 1
+      },
+      decrement: function() {
+          return currentValue -= 1
+      },
+      reset: function() {
+          return currentValue = initialValue
+      }
+  }
+};
