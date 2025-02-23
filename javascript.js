@@ -12507,6 +12507,7 @@ function expect(val) {
 };
 
 //Day 880
+//2665: Counter II
 function createCounter(init) {
   let initialValue = init
   let currentValue = init
@@ -12521,4 +12522,14 @@ function createCounter(init) {
           return currentValue = initialValue
       }
   }
+};
+
+//Day 881
+//2635:  Apply Transform Over Each Element in Array
+function map(arr, fn) {
+  let result = []
+  for (let i = 0; i < arr.length; i++) {
+      result.push(fn(arr[i], i))
+  }
+  return result
 };
