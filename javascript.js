@@ -12533,3 +12533,15 @@ function map(arr, fn) {
   }
   return result
 };
+
+//Day 882
+//2634: Filter Elements from Array
+function filter(arr, fn) {
+  let result = []
+  for (let i = 0; i < arr.length; i++) {
+      if (fn(arr[i],i)) {
+          result.push(arr[i])
+      }
+  }
+  return result
+};
