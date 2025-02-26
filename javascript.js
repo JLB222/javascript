@@ -12545,3 +12545,10 @@ function filter(arr, fn) {
   }
   return result
 };
+
+//Day 883
+//review - custom sort
+function sort883(arr) {
+  let customSort = "A23456789TJQK"
+  return arr.sort((a,b) => customSort.indexOf(a) - customSort.indexOf(b))
+}
