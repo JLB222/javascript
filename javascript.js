@@ -12552,3 +12552,9 @@ function sort883(arr) {
   let customSort = "A23456789TJQK"
   return arr.sort((a,b) => customSort.indexOf(a) - customSort.indexOf(b))
 }
+
+//Day 884
+//review 
+const months884 = ["Jan", "March", "April", "June"];
+months884.splice(1, 0, "Feb");  // Inserts at index 1
+console.log(months884);  // Expected output: Array ["Jan", "Feb", "March", "April", "June"]
