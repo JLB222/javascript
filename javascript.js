@@ -12558,3 +12558,12 @@ function sort883(arr) {
 const months884 = ["Jan", "March", "April", "June"];
 months884.splice(1, 0, "Feb");  // Inserts at index 1
 console.log(months884);  // Expected output: Array ["Jan", "Feb", "March", "April", "June"]
+
+//Day 885
+//2626:  Array Reduce Transformation
+function reduce(arr, callback, init = 0) {
+  for (let i = 0; i < arr.length; i++) {
+    init = callback(init, arr[i])
+  }
+  return init
+}
