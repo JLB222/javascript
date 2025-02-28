@@ -12567,3 +12567,18 @@ function reduce(arr, callback, init = 0) {
   }
   return init
 }
+
+//Day 886
+//review - class constructor
+class gbfCharacterMaker886 {
+  constructor(name, race, gender, element, ultName) {
+    this.name = name 
+    this.race = race 
+    this.gender = gender, 
+    this.element = element,
+    this.ultName = ultName 
+  }
+  ult() {
+    return `${this.ultName}!!`
+  }
+}
