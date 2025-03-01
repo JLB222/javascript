@@ -12582,3 +12582,15 @@ class gbfCharacterMaker886 {
     return `${this.ultName}!!`
   }
 }
+
+//Dau 887
+//review class extension
+class characterSkills extends gbfCharacterMaker886 {
+  constructor (name, race, gender, element, ultName, skill1) {
+    super(name, race, gender, element, ultName)
+    this.skillOne = skill1
+  }
+  skill() {
+    return this.skillOne
+  }
+}
