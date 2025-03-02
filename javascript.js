@@ -12594,3 +12594,12 @@ class characterSkills extends gbfCharacterMaker886 {
     return this.skillOne
   }
 }
+
+//Day 888
+//review
+const items888 = [1, 2, 3];
+console.log(items888); // [1, 2, 3]
+
+const reversedItems888 = items888.toReversed();
+console.log(reversedItems888); // [3, 2, 1]
+console.log(items888); // [1, 2, 3]
