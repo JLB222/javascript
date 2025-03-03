@@ -12603,3 +12603,15 @@ console.log(items888); // [1, 2, 3]
 const reversedItems888 = items888.toReversed();
 console.log(reversedItems888); // [3, 2, 1]
 console.log(items888); // [1, 2, 3]
+
+//Day 889
+//review
+const months889 = ["Mar", "Jan", "Feb", "Dec"];
+const sortedMonths889 = months889.toSorted();
+console.log(sortedMonths889); // ['Dec', 'Feb', 'Jan', 'Mar']
+console.log(months889); // ['Mar', 'Jan', 'Feb', 'Dec']
+
+const values889 = [1, 10, 21, 2];
+const sortedValues889 = values889.toSorted((a, b) => a - b);
+console.log(sortedValues889); // [1, 2, 10, 21]
+console.log(values889); // [1, 10, 21, 2]
