@@ -12615,3 +12615,21 @@ const values889 = [1, 10, 21, 2];
 const sortedValues889 = values889.toSorted((a, b) => a - b);
 console.log(sortedValues889); // [1, 2, 10, 21]
 console.log(values889); // [1, 10, 21, 2]
+
+//Day 890
+//review
+function hasScored(str) {
+  let cushionCounter = 0
+  let ballsHit = new Set()
+  for (let i = 0; i < str.length; i++) {
+    if ("news".includes(str[i])) {
+      cushionCounter++
+    } else {
+      ballsHit.add(str[i])
+    }
+    if (ballsHit.size == 2 && ballsHit.has("R")) {
+      return cushionCounter >= 3
+    }
+  }
+  return false;
+}
