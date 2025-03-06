@@ -12633,3 +12633,11 @@ function hasScored(str) {
   }
   return false;
 }
+
+//Day 891
+//review
+const months891 = ["Jan", "Mar", "Apr", "May"];
+
+// Inserting an element at index 1
+const months891b = months891.toSpliced(1, 0, "Feb");
+console.log(months891b); // ["Jan", "Feb", "Mar", "Apr", "May"]
