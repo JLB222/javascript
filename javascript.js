@@ -12644,7 +12644,7 @@ console.log(months891b); // ["Jan", "Feb", "Mar", "Apr", "May"]
 
 //Day 892
 //2629. Function Composition
-var compose = function(functions) {
+function compose(functions) {
   return function(x) {
       let current = x
       for (let i = functions.length-1; i >= 0; i--) {
@@ -12652,4 +12652,10 @@ var compose = function(functions) {
       }
       return current
   }
+};
+
+//Day 893
+//2703. Return Length of Arguments Passed
+function argumentsLength(...args) {
+  return args.length
 };
