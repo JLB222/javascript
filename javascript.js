@@ -12641,3 +12641,15 @@ const months891 = ["Jan", "Mar", "Apr", "May"];
 // Inserting an element at index 1
 const months891b = months891.toSpliced(1, 0, "Feb");
 console.log(months891b); // ["Jan", "Feb", "Mar", "Apr", "May"]
+
+//Day 892
+//2629. Function Composition
+var compose = function(functions) {
+  return function(x) {
+      let current = x
+      for (let i = functions.length-1; i >= 0; i--) {
+          current = functions[i](current)
+      }
+      return current
+  }
+};
