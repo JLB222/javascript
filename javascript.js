@@ -12659,3 +12659,9 @@ function compose(functions) {
 function argumentsLength(...args) {
   return args.length
 };
+
+//Day 894
+//review
+const array894 = [1, 2, 3];
+console.log(array894.unshift(4, 5));// Expected output: 5
+console.log(array894);// Expected output: Array [4, 5, 1, 2, 3]
