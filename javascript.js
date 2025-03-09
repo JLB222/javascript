@@ -12665,3 +12665,9 @@ function argumentsLength(...args) {
 const array894 = [1, 2, 3];
 console.log(array894.unshift(4, 5));// Expected output: 5
 console.log(array894);// Expected output: Array [4, 5, 1, 2, 3]
+
+//Day 895
+//review - endsWith
+function automorphic(num){
+  return String(num * num).endsWith(num) ? "Automorphic" : "Not!!"
+}
