@@ -12671,3 +12671,20 @@ console.log(array894);// Expected output: Array [4, 5, 1, 2, 3]
 function automorphic(num){
   return String(num * num).endsWith(num) ? "Automorphic" : "Not!!"
 }
+
+//Day 896
+//2666. Allow One Function Call
+function once(fn) {
+  let hasBeenCalled = false
+  let result
+
+  return function(...args){
+      if (!hasBeenCalled) {
+          result = fn(...args)
+          hasBeenCalled = true
+          return result
+      } else {
+          return undefined
+      }
+  }
+};
