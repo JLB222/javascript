@@ -12688,3 +12688,10 @@ function once(fn) {
       }
   }
 };
+
+//Day 897
+//review
+function customSort897(arr) {
+  let desiredOrder = "A23456789TJQK"
+  return arr.sort((a,b) => desiredOrder.indexOf(a) - desiredOrder.indexOf(b))
+}
