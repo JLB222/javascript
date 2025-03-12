@@ -12695,3 +12695,18 @@ function customSort897(arr) {
   let desiredOrder = "A23456789TJQK"
   return arr.sort((a,b) => desiredOrder.indexOf(a) - desiredOrder.indexOf(b))
 }
+
+//Day 898
+//review 
+class StateMachine898 {
+  constructor({ init, transitions }) {
+    this.state = init;
+    transitions.forEach((obj) => {
+      this[obj.method] = () => {
+        if (this.state === obj.current) {
+          this.state = obj.target
+        }
+      }
+    })
+  }
+}
