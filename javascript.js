@@ -12710,3 +12710,9 @@ class StateMachine898 {
     })
   }
 }
+
+//Day 899
+//review
+const isBelowThreshold899 = (currentValue) => currentValue < 40;
+const array899 = [1, 30, 39, 29, 10, 13];
+console.log(array899.every(isBelowThreshold));// Expected output: true
