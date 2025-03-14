@@ -12716,3 +12716,17 @@ class StateMachine898 {
 const isBelowThreshold899 = (currentValue) => currentValue < 40;
 const array899 = [1, 30, 39, 29, 10, 13];
 console.log(array899.every(isBelowThreshold));// Expected output: true
+
+//Day 900
+//2623. Memoize
+function memoize(fn) {
+  let data = {}
+  const memoizedFn = function(...args) {
+      let key = JSON.stringify(args)
+      if (!data.hasOwnProperty(key)) {
+          data[key] = fn(...args)
+      }
+      return data[key]
+  }
+  return memoizedFn
+}
