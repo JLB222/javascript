@@ -12730,3 +12730,9 @@ function memoize(fn) {
   }
   return memoizedFn
 }
+
+//Day 901
+//review
+function letterTest(letter) {
+  return letter.toUpperCase() !== letter.toLowerCase()
+}
