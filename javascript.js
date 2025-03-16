@@ -12736,3 +12736,12 @@ function memoize(fn) {
 function letterTest(letter) {
   return letter.toUpperCase() !== letter.toLowerCase()
 }
+
+//Day 902
+//review class extension
+class Dog902 extends Animal {
+  constructor(name, breed) {
+    super(name)
+    this.breed = breed
+  }
+}
