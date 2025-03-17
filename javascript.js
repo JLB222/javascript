@@ -12745,3 +12745,11 @@ class Dog902 extends Animal {
     this.breed = breed
   }
 }
+
+//Day 903
+//review React - create a component
+function Heading(props) {
+  return <div>
+    <h1>Welcome!</h1>
+  </div>
+}
