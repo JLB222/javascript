@@ -12753,3 +12753,9 @@ function Heading(props) {
     <h1>Welcome!</h1>
   </div>
 }
+
+//Day 904
+//2723. Add Two Promises
+var addTwoPromises = async function(promise1, promise2) {
+  return await promise1 + await promise2
+};
