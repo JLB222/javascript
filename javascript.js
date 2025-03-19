@@ -12759,3 +12759,9 @@ function Heading(props) {
 var addTwoPromises = async function(promise1, promise2) {
   return await promise1 + await promise2
 };
+
+//Day 905
+//2621. Sleep
+async function sleep(millis) {
+  return new Promise(resolve => setTimeout(resolve, millis))
+}
