@@ -12765,3 +12765,11 @@ var addTwoPromises = async function(promise1, promise2) {
 async function sleep(millis) {
   return new Promise(resolve => setTimeout(resolve, millis))
 }
+
+//Day 906
+//2715
+function cancellable(fn, args, t) {
+  const cancelFn = function() { clearTimeout(timer) }
+  const timer = setTimeout(() => fn(...args), t)
+  return cancelFn
+};
