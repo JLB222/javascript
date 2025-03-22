@@ -12779,3 +12779,32 @@ function cancellable(fn, args, t) {
 function lineupStudents(students){
   return students.split(" ").sort((a,b) => b.length - a.length || b.localeCompare(a))
 }
+
+//Day 908
+//Closures - A closure is when a function "remembers" the variables from its outer scope even after that outer function has finished executing.  Closures allow for data encapsulation, private variables, and function factories.
+
+function createCounter() {
+  let count = 0; // Private variable
+
+  return {
+    increment: function () {
+      count++;
+      console.log(`Count is now: ${count}`);
+    },
+    decrement: function () {
+      count--;
+      console.log(`Count is now: ${count}`);
+    },
+    getCount: function () {
+      return count;
+    },
+  };
+}
+const counter = createCounter();
+
+counter.increment(); // Count is now: 1
+counter.increment(); // Count is now: 2
+counter.decrement(); // Count is now: 1
+
+console.log(counter.getCount()); // 1
+console.log(counter.count); // undefined (can't access `count` directly!)
