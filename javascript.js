@@ -12781,7 +12781,8 @@ function lineupStudents(students){
 }
 
 //Day 908
-//Closures - A closure is when a function "remembers" the variables from its outer scope even after that outer function has finished executing.  Closures allow for data encapsulation, private variables, and function factories.
+//Closures - A closure is when a function "remembers" the variables from its outer scope even after that outer function has finished executing.  
+//Closures allow for data encapsulation, private variables, and function factories.
 
 function createCounter() {
   let count = 0; // Private variable
@@ -12808,3 +12809,12 @@ counter.decrement(); // Count is now: 1
 
 console.log(counter.getCount()); // 1
 console.log(counter.count); // undefined (can't access `count` directly!)
+
+//Day 909
+//review - closure counter
+var createCounter = function(num) {
+  let timesInvoked = 0
+  return function() {
+     return num + timesInvoked++
+  };
+};
