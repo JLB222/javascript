@@ -12829,3 +12829,9 @@ console.log(array910.fill(0, 2, 4));  // Expected output: Array [1, 2, 0, 0]
 console.log(array910.fill(5, 1));  // Expected output: Array [1, 5, 5, 5]
 
 console.log(array910.fill(6));  // Expected output: Array [6, 6, 6, 6]
+
+//Day 911
+//
+const words911 = ["spray", "elite", "exuberant", "destruction", "present"];
+const result911 = words911.filter((word) => word.length > 6);
+console.log(result911);// Expected output: Array ["exuberant", "destruction", "present"]
