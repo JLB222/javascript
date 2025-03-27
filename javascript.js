@@ -12831,7 +12831,14 @@ console.log(array910.fill(5, 1));  // Expected output: Array [1, 5, 5, 5]
 console.log(array910.fill(6));  // Expected output: Array [6, 6, 6, 6]
 
 //Day 911
-//
+//review - filter()
 const words911 = ["spray", "elite", "exuberant", "destruction", "present"];
 const result911 = words911.filter((word) => word.length > 6);
 console.log(result911);// Expected output: Array ["exuberant", "destruction", "present"]
+
+//Day 912
+//review - map()
+
+const array912 = [1, 4, 9, 16];
+const map912 = array912.map((x) => x * 2);
+console.log(map912);  // Expected output: Array [2, 8, 18, 32]
