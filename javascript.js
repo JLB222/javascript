@@ -12849,3 +12849,7 @@ function gbfMake913(name, race) {
   this.name = name
   this.race = race
 }
+
+//Day 914
+//review 
+const double914 = (num) => num * 2
