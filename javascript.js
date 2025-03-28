@@ -12842,3 +12842,10 @@ console.log(result911);// Expected output: Array ["exuberant", "destruction", "p
 const array912 = [1, 4, 9, 16];
 const map912 = array912.map((x) => x * 2);
 console.log(map912);  // Expected output: Array [2, 8, 18, 32]
+
+//Day 913
+//review
+function gbfMake913(name, race) {
+  this.name = name
+  this.race = race
+}
