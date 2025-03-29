@@ -12853,3 +12853,13 @@ function gbfMake913(name, race) {
 //Day 914
 //review 
 const double914 = (num) => num * 2
+
+//Day 915
+//review - reduce()
+const array915 = [1, 2, 3, 4];
+// 0 + 1 + 2 + 3 + 4
+const sumWithInitial915 = array915.reduce(
+  (accumulator, currentValue) => accumulator + currentValue,
+  0
+);
+console.log(sumWithInitial);  // Expected output: 10
