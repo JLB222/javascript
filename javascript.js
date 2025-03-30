@@ -12863,3 +12863,8 @@ const sumWithInitial915 = array915.reduce(
   0
 );
 console.log(sumWithInitial);  // Expected output: 10
+
+//Day 916
+//review
+const arr916 = [1,2,3]
+arr916.reverse() //should return [3,2,1]
