@@ -12868,3 +12868,10 @@ console.log(sumWithInitial);  // Expected output: 10
 //review
 const arr916 = [1,2,3]
 arr916.reverse() //should return [3,2,1]
+
+//Day 917
+//review
+const array917 = [1, 2, 3, 4, 5];
+// Checks whether an element is even
+const even917 = (element) => element % 2 === 0;
+console.log(array.some(even917));// Expected output: true
