@@ -12875,3 +12875,9 @@ const array917 = [1, 2, 3, 4, 5];
 // Checks whether an element is even
 const even917 = (element) => element % 2 === 0;
 console.log(array.some(even917));// Expected output: true
+
+//Day 918
+//review
+function trim918(str) {
+  return str.split(",").slice(1,-1).join(" ") || null
+}
