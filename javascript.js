@@ -12881,3 +12881,15 @@ console.log(array.some(even917));// Expected output: true
 function trim918(str) {
   return str.split(",").slice(1,-1).join(" ") || null
 }
+
+//Day 919
+//Review - class extension
+class Dog919 extends Animal {
+  constructor(name, breed) {
+    super(name)
+    this.breed = breed
+  }
+}
+
+//review - array.find() - best for an array of objects
+list919.find(x => x.language === "Python")
