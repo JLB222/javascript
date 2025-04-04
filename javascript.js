@@ -12926,3 +12926,18 @@ class Domestic extends Animal920 {
 
 //   "Why do they have to talk like this!?  Who writes this!?  Fuck it, I'm writin' a book.  This shit is gettin' on my nerves."
 //   -Leon, Class 31, in regards to how Polymorphism is explained
+
+//Day 921
+//review - Finite State Automata
+class StateMachine921 {
+  constructor({ init, transitions }) {
+    this.state = init;
+    for (let obj of transitions) {
+      this[obj.method] = () => {
+      if (this.state === obj.current) {
+        this.state = obj.target
+      }
+      }
+    }
+  }
+}
