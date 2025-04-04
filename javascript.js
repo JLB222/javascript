@@ -12893,3 +12893,36 @@ class Dog919 extends Animal {
 
 //review - array.find() - best for an array of objects
 list919.find(x => x.language === "Python")
+
+//Day 920
+//Class 31
+class Animal920 {
+  constructor(name, noise) {
+    this.name = name 
+    this.noise = noise
+  }
+  speak() {
+    console.log( `${this.name} says ${this.noise}!`)
+  }
+}
+
+class Wild extends Animal920 {
+  constructor(name, noise, naturalHabitat) {
+    super(name, noise)
+    this.naturalHabitat = naturalHabitat
+  }
+  speak() {
+    super.speak()
+    console.log("Wild animal speaks.")
+  }
+}
+
+class Domestic extends Animal920 {
+  constructor(name, noise, job) {
+    super(name, noise) 
+    this.job = job
+  }
+}
+
+//   "Why do they have to talk like this!?  Who writes this!?  Fuck it, I'm writin' a book.  This shit is gettin' on my nerves."
+//   -Leon, Class 31, in regards to how Polymorphism is explained
