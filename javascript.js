@@ -12941,3 +12941,10 @@ class StateMachine921 {
     }
   }
 }
+
+//Day 922
+//review
+const array922 = [1, 2, 3];
+const firstElement922 = array922.shift();
+console.log(array922); // Expected output: Array [2, 3]
+console.log(firstElement922); // Expected output: 1
