@@ -12948,3 +12948,9 @@ const array922 = [1, 2, 3];
 const firstElement922 = array922.shift();
 console.log(array922); // Expected output: Array [2, 3]
 console.log(firstElement922); // Expected output: 1
+
+//Day 923
+//7 - Get the current hand
+function getCurrentHand(arr) {
+  return [...new Set(arr.slice(0, arr.length - 4))].filter(x => !arr.slice(-4).includes(x))
+}
