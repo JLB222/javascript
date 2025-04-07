@@ -12954,3 +12954,17 @@ console.log(firstElement922); // Expected output: 1
 function getCurrentHand(arr) {
   return [...new Set(arr.slice(0, arr.length - 4))].filter(x => !arr.slice(-4).includes(x))
 }
+
+//Day 924
+//review
+function barista(coffees){
+  coffees.sort((a,b) => a-b, 0)
+  let times = []
+  let sum = 0
+  for (let i = 0; i < coffees.length; i++) {
+    let current = coffees[i] + (i > 0 ? 2 : 0) + sum
+    times.push(current)
+    sum = current
+  }
+  return times.reduce((acc,curr) => acc+curr,0)
+}
