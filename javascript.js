@@ -12968,3 +12968,21 @@ function barista(coffees){
   }
   return times.reduce((acc,curr) => acc+curr,0)
 }
+
+//Day 925
+//review 
+function hasScored(str) {
+  let cushionCounter = 0
+  let ballsHit = new Set()
+  for (let letter of str) {
+    if ("news".includes(letter)) {
+      cushionCounter++
+    } else {
+      ballsHit.add(letter)
+    }
+    if (ballsHit.size >= 2) {
+      return cushionCounter >= 3
+    }
+  }
+  return false;
+}
