@@ -12986,3 +12986,11 @@ function hasScored(str) {
   }
   return false;
 }
+
+//Day 926
+//review
+const array926 = ["one", "two", "three"];
+console.log(array926);  // ["one", "two", "three"]
+
+const reversed926 = array926.reverse();
+console.log(reversed926);  // ["three", "two", "one"]
