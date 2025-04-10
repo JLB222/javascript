@@ -12994,3 +12994,36 @@ console.log(array926);  // ["one", "two", "three"]
 
 const reversed926 = array926.reverse();
 console.log(reversed926);  // ["three", "two", "one"]
+
+//Day 927
+//class 32 
+class Contractor {
+  constructor(name, role) {
+    this._name = name 
+    this._role = role 
+  }
+  get name() {
+    return this._name
+  }
+  get role() {
+    return this._role
+  }
+
+  sayHello() {
+    console.log(`Hi my name is ${this._name} and I'm on the ${this._role} team!`)
+  }
+}
+
+class frontEndContractor extends Contractor {
+  constructor(name, role, frontEndUnique) {
+    super(name,role)
+    this.frontEndUnique = frontEndUnique
+  }
+}
+
+class backEndContractor extends Contractor {
+  constructor(name, role, backEndUnique) {
+    super(name,role)
+    this.backEndUnique = backEndUnique
+  }
+}
