@@ -13027,3 +13027,13 @@ class backEndContractor extends Contractor {
     this.backEndUnique = backEndUnique
   }
 }
+
+//Day 927
+//review
+function scramble927(str, arr) {
+  let result = []
+  for (let i = 0; i < str.length; i++) {
+    result[arr[i]] = str[i]
+  }
+  return result.join("")
+};
