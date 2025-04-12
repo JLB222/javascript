@@ -13037,3 +13037,10 @@ function scramble927(str, arr) {
   }
   return result.join("")
 };
+
+//Day 928
+//review - simple letter removal
+function solve(str, num){
+  let toBeRemoved = str.split("").sort().slice(0,num)
+  return toBeRemoved.reduce((prev, curr) => prev.replace(curr, ""), str)
+}
