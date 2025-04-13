@@ -13044,3 +13044,11 @@ function solve(str, num){
   let toBeRemoved = str.split("").sort().slice(0,num)
   return toBeRemoved.reduce((prev, curr) => prev.replace(curr, ""), str)
 }
+
+//Day 929
+//review
+const array929 = [1, 2, 3];
+const firstElement929 = array929.shift();
+
+console.log(array929);// Expected output: Array [2, 3]
+console.log(firstElement929);// Expected output: 1
