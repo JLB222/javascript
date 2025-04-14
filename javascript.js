@@ -13052,3 +13052,15 @@ const firstElement929 = array929.shift();
 
 console.log(array929);// Expected output: Array [2, 3]
 console.log(firstElement929);// Expected output: 1
+
+
+//Day 930
+//2725 - Interval Cancellation
+let cancellable = function(fn, args, t) {
+  fn(...args)
+  let timer = setInterval(() => fn(...args), t)
+  function cancelFn() {
+     clearInterval(timer) 
+  }
+  return cancelFn
+};
