@@ -13064,3 +13064,12 @@ let cancellable = function(fn, args, t) {
   }
   return cancelFn
 };
+
+//Day 931
+//review - react props
+function Card931(props){
+  return <div>
+    <img src={props.imageURL}></img>
+  </div>
+}
+<Card931 imageURL = "assets/example.png"></Card931>
