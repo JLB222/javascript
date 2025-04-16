@@ -13073,3 +13073,34 @@ function Card931(props){
   </div>
 }
 <Card931 imageURL = "assets/example.png"></Card931>
+
+//Day 932
+//review - promises 
+function houseOne() {
+  return new Promise((res,rej) => {
+    setTimeout(() => {
+      res(`Paper delivered to house 1`)
+    } , 1000)
+  })
+}
+function houseTwo() {
+  return new Promise((res,rej) => {
+    setTimeout(() => {
+      res(`Paper delivered to house 2`)
+    } , 5000)
+  })
+}
+function houseThree() {
+  return new Promise((res,rej) => {
+    setTimeout(() => {
+      res(`Paper delivered to house 3`)
+    } , 2000)
+  })
+}
+houseOne()
+  .then(data => console.log(data))
+  .then(houseTwo)
+  .then(data => console.log(data))
+  .then(houseThree)
+  .then(data => console.log(data))
+  .catch(err => console.log(err))
