@@ -13104,3 +13104,16 @@ houseOne()
   .then(houseThree)
   .then(data => console.log(data))
   .catch(err => console.log(err))
+
+  //Day 933
+  //review - classes & static
+  class Animal933 {
+    static planet = "earth"
+    constructor(genus, species) {
+      this.genus = genus
+      this.species = species
+    }
+  }
+
+  let creature933 = new Animal933("Homo", "Sapien")
+  creature933.planet //should return undefined
