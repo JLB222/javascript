@@ -13105,15 +13105,43 @@ houseOne()
   .then(data => console.log(data))
   .catch(err => console.log(err))
 
-  //Day 933
-  //review - classes & static
-  class Animal933 {
-    static planet = "earth"
-    constructor(genus, species) {
-      this.genus = genus
-      this.species = species
-    }
+//Day 933
+//review - classes & static
+class Animal933 {
+  static planet = "earth"
+  constructor(genus, species) {
+    this.genus = genus
+    this.species = species
   }
+}
 
-  let creature933 = new Animal933("Homo", "Sapien")
-  creature933.planet //should return undefined
+let creature933 = new Animal933("Homo", "Sapien")
+creature933.planet //should return undefined
+
+//Day 934
+//Leetcode - 1. Two Sum
+//two passes
+function twoSum(nums, target) {
+  let map = new Map()
+  for (let i = 0; i < nums.length; i++) {
+      map.set(nums[i], i)
+  }
+  for (let i = 0; i < nums.length; i++) {
+      let complement = target - nums[i];
+      if (map.has(complement) && map.get(complement) !== i) {
+          return [i, map.get(complement)]
+      }
+  }
+};
+//one pass
+function twoSum(nums, target) {
+  let map = new Map()
+  for (let i = 0; i < nums.length; i++) {
+      let complement = target - nums[i];
+      if (map.has(complement) && map.get(complement) !== i) {
+          return [i, map.get(complement)]
+      } else {
+        map.set(nums[i], i)
+      }
+  }
+};
