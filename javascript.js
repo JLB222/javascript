@@ -13151,3 +13151,14 @@ function twoSum(nums, target) {
 function Heading935() {
   return <h1>Welcome!</h1>
 }
+
+//Day 936
+//review - slice()
+const animals936 = ["ant", "bison", "camel", "duck", "elephant"];
+
+console.log(animals936.slice(2));// Expected output: Array ["camel", "duck", "elephant"]
+console.log(animals936.slice(2, 4));// Expected output: Array ["camel", "duck"]
+console.log(animals936.slice(1, 5));// Expected output: Array ["bison", "camel", "duck", "elephant"]
+console.log(animals936.slice(-2));// Expected output: Array ["duck", "elephant"]
+console.log(animals936.slice(2, -1));// Expected output: Array ["camel", "duck"]
+console.log(animals936.slice());// Expected output: Array ["ant", "bison", "camel", "duck", "elephant"]
