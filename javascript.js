@@ -13162,3 +13162,24 @@ console.log(animals936.slice(1, 5));// Expected output: Array ["bison", "camel",
 console.log(animals936.slice(-2));// Expected output: Array ["duck", "elephant"]
 console.log(animals936.slice(2, -1));// Expected output: Array ["camel", "duck"]
 console.log(animals936.slice());// Expected output: Array ["ant", "bison", "camel", "duck", "elephant"]
+
+//Day 937 
+function barista(coffees){
+  coffees.sort((a,b) => a-b, 0)
+  let individualWaitTimes = [coffees[0]]
+  for (let i = 1; i < coffees.length; i++) {
+    individualWaitTimes.push(coffees[i] + 2 + individualWaitTimes[i-1])
+  }
+  return individualWaitTimes.reduce((a,b) => a+b, 0) || 0
+}
+
+//Day 938
+function contact(hallway) {
+  const array = hallway.match(/>-*</g)
+  return array ? Math.floor(Math.min(...array.map(el => el.length)) / 2) : -1
+}
+
+//Day 939
+function greet(name) {
+  return name ? `hello ${name}!` : null
+}
