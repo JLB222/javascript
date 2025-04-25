@@ -13193,3 +13193,21 @@ function mostFrequentItemCount(arr) {
   }
   return Math.max(...Object.values(counter))
 }
+
+//Day 941
+function distinct(arr) {
+  let result = []
+  for (let i = 0; i < arr.length; i++) {
+    if (!result.includes(arr[i])) {
+      result.push(arr[i])
+    }
+  }
+  return result
+}
+
+//alternate 
+
+function distinct(arr) {
+  let filter = new Set(a)
+  return [...filter]
+}
