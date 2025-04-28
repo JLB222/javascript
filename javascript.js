@@ -13236,3 +13236,10 @@ function calculator(a,b,sign){
     return "unknown value"
   }
 }
+
+//Day 944
+class Ball944 {
+  constructor(ballType = "regular") {
+    this.ballType = ballType
+  }
+}
