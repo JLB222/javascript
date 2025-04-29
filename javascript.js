@@ -13243,3 +13243,9 @@ class Ball944 {
     this.ballType = ballType
   }
 }
+
+//Day 945
+function greet(nameStr) {
+  let formattedName = nameStr[0].toUpperCase() + nameStr.slice(1).toLowerCase()
+  return `Hello ${formattedName}!`
+};
