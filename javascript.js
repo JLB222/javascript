@@ -13249,3 +13249,14 @@ function greet(nameStr) {
   let formattedName = nameStr[0].toUpperCase() + nameStr.slice(1).toLowerCase()
   return `Hello ${formattedName}!`
 };
+
+//Day 946
+function removeEveryOther(arr){
+  let result = []
+  for (let i = 0; i < arr.length; i++) {
+    if (i % 2 === 0) {
+      result.push(arr[i])
+    }
+  }
+  return result
+}
