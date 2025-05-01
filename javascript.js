@@ -13260,3 +13260,8 @@ function removeEveryOther(arr){
   }
   return result
 }
+
+//Day 947
+function square(num) {
+  return num*num
+}
