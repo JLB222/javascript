@@ -13265,3 +13265,12 @@ function removeEveryOther(arr){
 function square(num) {
   return num*num
 }
+
+//Day 948
+function monkeyCount(n) {
+  let arr = []
+  for (let i = 1; i <= n; i++) {
+    arr.push(i)
+  }
+  return arr
+}
