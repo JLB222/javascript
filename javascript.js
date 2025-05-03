@@ -13274,3 +13274,17 @@ function monkeyCount(n) {
   }
   return arr
 }
+
+//Day 949
+class StateMachine949 {
+  constructor({ init, transitions }) {
+    this.state = init;
+    transitions.forEach((el) => {
+      this[el.method] = () => {
+        if (this.state === el.current) {
+          this.state = el.target
+        }
+      }
+    })
+  }
+}
