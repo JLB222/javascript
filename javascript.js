@@ -13288,3 +13288,8 @@ class StateMachine949 {
     })
   }
 }
+
+//Day 950
+function getASCII(char){
+  return char.charCodeAt(0)
+}
