@@ -13293,3 +13293,8 @@ class StateMachine949 {
 function getASCII(char){
   return char.charCodeAt(0)
 }
+
+//Day 951
+function isRubyComing(list) {
+  return list.some(entry => entry.language === "Ruby")
+}
