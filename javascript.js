@@ -13298,3 +13298,10 @@ function getASCII(char){
 function isRubyComing(list) {
   return list.some(entry => entry.language === "Ruby")
 }
+
+//Day 952
+class Solution952 {
+  static main() {
+    console.log("Hello World!")
+  }
+}
