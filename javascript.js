@@ -13329,3 +13329,12 @@ function newAvg(arr, newavg) {
     return Math.ceil(result)
   }
 }
+
+//Day 956
+function sumDigits(number) {
+  return Math.abs(number)
+   .toString()
+   .split("")
+   .map(Number)
+   .reduce((a,b) => a+b, 0)
+}
