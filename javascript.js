@@ -13319,3 +13319,13 @@ function aliasGen(first, last){
   
   return firstName[first[0].toUpperCase()] + " " + surname[last[0].toUpperCase()]
 }
+
+//Day 955
+function newAvg(arr, newavg) {
+  let result = (newavg * (arr.length+1)) - (arr.reduce((a,b) => a+b,0))
+  if (result <= 0) {
+    throw new Error('Expected New Average is too low')
+  } else {
+    return Math.ceil(result)
+  }
+}
