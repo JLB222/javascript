@@ -13338,3 +13338,16 @@ function sumDigits(number) {
    .map(Number)
    .reduce((a,b) => a+b, 0)
 }
+
+//Day 957
+function isNice(arr){
+  let nice = arr.length > 0 ? true : false;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr.includes(arr[i]+1) || arr.includes(arr[i]-1)) {
+      //
+    } else {
+      nice = false
+    }
+  }
+  return nice
+}
