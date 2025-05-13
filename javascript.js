@@ -13351,3 +13351,13 @@ function isNice(arr){
   }
   return nice
 }
+
+//Day 958
+function findUniq(arr) {
+  arr.sort((a,b) => a-b, 0)
+  if (arr[0] !== arr[1]) {
+    return arr[0]
+  } else {
+    return arr[arr.length-1]
+  }
+}
