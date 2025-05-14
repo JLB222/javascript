@@ -13370,3 +13370,15 @@ function monkeyCount(num) {
   }
   return result
 }
+
+//Day 960
+//review
+function repVow960(str) {
+  let vowels = "aeiouAEIOU"
+  let arr = str.split("")
+  for (let i = 0; i < str.length; i++) {
+    if (vowels.includes(str[i])) 
+      arr[i] = "!"
+  }
+  return arr.join("")
+}
