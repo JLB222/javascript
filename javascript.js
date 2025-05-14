@@ -13361,3 +13361,12 @@ function findUniq(arr) {
     return arr[arr.length-1]
   }
 }
+
+//Day 959
+function monkeyCount(num) {
+  let result = []
+  for (let i = 1; i <= num; i++) {
+    result.push(i)
+  }
+  return result
+}
