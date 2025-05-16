@@ -13382,3 +13382,8 @@ function repVow960(str) {
   }
   return arr.join("")
 }
+
+//Day 961
+function unscrambleEggs(word){
+  return word.split("egg").join("")
+}
