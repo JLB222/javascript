@@ -13387,3 +13387,14 @@ function repVow960(str) {
 function unscrambleEggs(word){
   return word.split("egg").join("")
 }
+
+//Day 962
+function remove (string) {  
+  let str = string.split("")
+  for(let i = 0; i < string.length; i++) {
+    if (str[str.length-1] === "!") {
+      str.pop()
+    }
+  }
+  return str.join("")
+}
