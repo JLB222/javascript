@@ -13409,3 +13409,10 @@ function sevenAte9(str) {
   }
   return numbers.join("")
 }
+
+//Day 964
+class Cat964 extends Animal964 {
+  speak() {
+    return `${this.name} meows.`
+  }
+}
