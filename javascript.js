@@ -13416,3 +13416,13 @@ class Cat964 extends Animal964 {
     return `${this.name} meows.`
   }
 }
+
+//Day 965
+function encode(str) {
+  //lowercase entire string
+  let result = str.toLowerCase().split("")
+  //loop through every element of array
+  //convert letter to its character code, subtract 96
+  result = result.map(el => el.toUpperCase() !== el.toLowerCase() ? el.charCodeAt(0) -96 : el)
+  return result.join("")
+}
