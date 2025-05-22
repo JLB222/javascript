@@ -13479,3 +13479,8 @@ function hasScored(str) {
   }
   return false
 }
+
+//Day 968
+function killcount(counselors, jason){
+  return counselors.filter((el) => el[1] < jason).map(el => el[0])
+}
