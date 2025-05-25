@@ -13499,3 +13499,9 @@ function comment(text, style) {
         default                     : throw new Error("Unsupported language")
     }
 }
+
+//Day 970
+function nthterm(first, n, c){
+  return first + (n * c)
+}
+
