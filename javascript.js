@@ -13513,3 +13513,11 @@ function seqlist(first, constant, length) {
   }
   return result
 }
+
+//Day 971
+class Dog971 extends Animal {
+  constructor(name, breed) {
+    super(name)
+    this.breed = breed
+  }
+}
