@@ -13505,3 +13505,11 @@ function nthterm(first, n, c){
   return first + (n * c)
 }
 
+//Day 971
+function seqlist(first, constant, length) {
+  let result = []
+  for (let i = 0; i < length; i++) {
+    result.push(first + (i*constant))
+  }
+  return result
+}
