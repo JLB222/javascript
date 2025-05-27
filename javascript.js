@@ -13521,3 +13521,8 @@ class Dog971 extends Animal {
     this.breed = breed
   }
 }
+
+//Day 972
+function capMe(names) {
+  return names.map(el => el[0].toUpperCase() + el.slice(1).toLowerCase())
+}
