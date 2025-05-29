@@ -13526,3 +13526,9 @@ class Dog971 extends Animal {
 function capMe(names) {
   return names.map(el => el[0].toUpperCase() + el.slice(1).toLowerCase())
 }
+
+//Day 973
+function calculate(str) {
+
+  return eval(str.replace(/plus/gi, '+').replace(/minus/gi, '-')).toString();
+}
