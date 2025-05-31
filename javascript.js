@@ -13546,3 +13546,9 @@ function howManydays(month){
   }
   return days;
 }
+
+//Day 975
+function customSort975(arr) {
+  let desiredOrder = 'A23456789TJQK'
+  return [...arr].sort((a,b) => desiredOrder.indexOf(a) - desiredOrder.indexOf(b))
+}
