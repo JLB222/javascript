@@ -13552,3 +13552,8 @@ function customSort975(arr) {
   let desiredOrder = 'A23456789TJQK'
   return [...arr].sort((a,b) => desiredOrder.indexOf(a) - desiredOrder.indexOf(b))
 }
+
+//Day 976
+function Heading976() {
+  return <h1>Welcome</h1>
+}
