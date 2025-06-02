@@ -13557,3 +13557,37 @@ function customSort975(arr) {
 function Heading976() {
   return <h1>Welcome</h1>
 }
+
+//Day 977
+//7 - Quadrants 2
+function quadrantSegment(A, B) {
+  function whichQuadrant(coordinate) {
+    if (coordinate.x > 0 && coordinate.y > 0) {
+      return 1
+    } 
+    if (coordinate.x < 0 && coordinate.y > 0) {
+      return 2
+    } 
+    if (coordinate.x < 0 && coordinate.y < 0) {
+      return 3
+    } 
+    if (coordinate.x > 0 && coordinate.y < 0) {
+      return 4
+    } 
+  }
+  return whichQuadrant(A) !== whichQuadrant(B)
+}
+
+//Day 978
+//review
+function isAnagram978(test, original) {
+  let firstWordArr = test.toLowerCase().split("").sort().join("")
+  let secondWordArr = original.toLowerCase().split("").sort().join("")
+  return firstWordArr === secondWordArr
+}
+
+//Day 979
+//review
+function duckDuckGoose(players, goose) {
+  return players[(goose-1) % players.length].name
+}
