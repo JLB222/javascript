@@ -13596,3 +13596,8 @@ function duckDuckGoose(players, goose) {
 function countDevelopers(list) {
   return list.filter(x => x.continent === "Europe" && x.language === "JavaScript").length
 }
+
+//Day 981
+function multiplyDigits981(num) {
+  return num.toString().split("").map(Number).reduce((a,b) => a*b, 1)
+}
