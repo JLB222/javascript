@@ -13591,3 +13591,8 @@ function isAnagram978(test, original) {
 function duckDuckGoose(players, goose) {
   return players[(goose-1) % players.length].name
 }
+
+//Day 980
+function countDevelopers(list) {
+  return list.filter(x => x.continent === "Europe" && x.language === "JavaScript").length
+}
