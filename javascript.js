@@ -13601,3 +13601,9 @@ function countDevelopers(list) {
 function multiplyDigits981(num) {
   return num.toString().split("").map(Number).reduce((a,b) => a*b, 1)
 }
+
+//Day 982
+//review
+function saleHotdogs982(n){
+  return n < 5 ? n * 100 : n < 10 ? n * 95 : n * 90
+}
