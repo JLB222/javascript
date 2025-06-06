@@ -13607,3 +13607,9 @@ function multiplyDigits981(num) {
 function saleHotdogs982(n){
   return n < 5 ? n * 100 : n < 10 ? n * 95 : n * 90
 }
+
+//Day 983
+function greetDevelopers(list) {
+  list.forEach(entry => entry.greeting = `Hi ${entry.firstName}, what do you like the most about ${entry.language}?`)
+  return list
+}
