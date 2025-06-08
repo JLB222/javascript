@@ -13625,3 +13625,17 @@ function getFirstPython(list) {
   }
   return result
 }
+
+//Day 985
+//review
+class GBFMaker985 {
+  constructor(name, race, element, ultName) {
+    this.name = name 
+    this.race = race 
+    this.element = element 
+    this.ultName = ultName 
+  }
+  ult() {
+    return `${this.ultName}!`
+  }
+}
