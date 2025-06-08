@@ -13613,3 +13613,15 @@ function greetDevelopers(list) {
   list.forEach(entry => entry.greeting = `Hi ${entry.firstName}, what do you like the most about ${entry.language}?`)
   return list
 }
+
+//Day 984
+function getFirstPython(list) {
+  let result = "There will be no Python developers"
+  for (let entry of list) {
+    if (entry.language === "Python") {
+      result = `${entry.firstName}, ${entry.country}`
+      break
+    }
+  }
+  return result
+}
