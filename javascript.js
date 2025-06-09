@@ -13639,3 +13639,13 @@ class GBFMaker985 {
     return `${this.ultName}!`
   }
 }
+
+//Day 986
+//review 
+function bottleCount(num)  {
+  for (let i = num; i > 0; i--) {
+    console.log(
+      `${i} ${i == 1 ? "bottle" : "bottles"} of beer on the wall! ${i} ${i == 1 ? "bottle" : "bottles"} of beer!  Take one down, pass it around, ${i-1} ${i - 1 == 1? "bottle" : "bottles"} of beer on the wall!`
+    )
+  }
+}
