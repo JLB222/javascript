@@ -13649,3 +13649,12 @@ function bottleCount(num)  {
     )
   }
 }
+
+//Day 987
+//review
+function countItUp(arr) {
+  let counter = {}
+  for (let i = 0; i < arr.length; i++) {
+    counter[arr[i]] = (counter[arr[i]] || 0) +1
+  }
+}
