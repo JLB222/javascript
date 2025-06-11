@@ -13658,3 +13658,17 @@ function countItUp(arr) {
     counter[arr[i]] = (counter[arr[i]] || 0) +1
   }
 }
+
+//Day 988
+class StateMachine {
+  constructor({ init, transitions }) {
+    this.state = init;
+    transitions.forEach((el) => {
+      this[el.method] = () => {
+        if (this.state === el.current) {
+          this.state = el.target
+        }
+      }
+    })
+  }
+}
