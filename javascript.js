@@ -13672,3 +13672,12 @@ class StateMachine {
     })
   }
 }
+
+//Day 989
+//review
+class Dog989 extends Animal{
+  constructor(name, breed) {
+    super(name)
+    this.breed = breed
+  }
+}
