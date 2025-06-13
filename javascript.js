@@ -13660,7 +13660,7 @@ function countItUp(arr) {
 }
 
 //Day 988
-class StateMachine {
+class StateMachine988 {
   constructor({ init, transitions }) {
     this.state = init;
     transitions.forEach((el) => {
@@ -13679,5 +13679,20 @@ class Dog989 extends Animal{
   constructor(name, breed) {
     super(name)
     this.breed = breed
+  }
+}
+
+//Day 990
+//review
+class StateMachine990 {
+  constructor({ init, transitions }) {
+    this.state = init;
+      for (let obj of transitions) {
+        this[obj.method] = () => {
+        if (this.state === obj.current) {
+          this.state = obj.target
+        }
+        }
+      }
   }
 }
