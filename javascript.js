@@ -13696,3 +13696,11 @@ class StateMachine990 {
       }
   }
 }
+
+
+//Day 991
+class Ball991 {
+  constructor(ballType = "regular") {
+    this.ballType = ballType
+  }
+}
