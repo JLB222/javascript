@@ -13729,3 +13729,18 @@ function complete(str){
 function isSameLanguage(list) {
   return list.every((el,i) => el.language === list[0].language)
 }
+
+//Day 995
+//review 
+class StateMachine {
+  constructor({ init, transitions }) {
+    this.state = init;
+    for (let el of transitions) {
+      this[el.method] = () => {
+        if (this.state == el.current) {
+          this.state = el.target
+        }
+      }
+    }
+  }
+}
