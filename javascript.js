@@ -13785,3 +13785,21 @@ function findEvenIndex(arr){
   }
   return -1
 }
+
+//Day 1000
+const digitRacers = str => {
+  const stats =
+        [...str]
+          .reduce((acc, dgt, idx) =>
+             (acc[dgt] = [acc[dgt][0] + 1, idx], acc), Array(10).fill([0]))
+          .reduce((acc, [count, idx], dgt, arr) =>
+             (acc[count] = [...(acc[count] ?? []), dgt].sort((a, b) => arr[b][1] - arr[a][1]), acc), {});
+  
+  const result =
+        Object.entries(stats)
+          .reverse()
+          .map(([, dgts], idx, {length: len}) =>
+             (idx === len - 1 && stats[0] ? 'Absent digits' : `${idx+1}${['st','nd','rd'][idx] ?? 'th'} place`) + `: ${dgts.join`, `}`); 
+                            
+  return result.join`\n` + (!stats[0] ? '\nAll digits present' : '');
+}
