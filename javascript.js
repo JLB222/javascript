@@ -13830,3 +13830,10 @@ class StateMachine1002 {
     })
   }
 }
+
+//Day 1003
+//review
+let alphabetA = "abcdefghijklmnopqrstuvwxyz".split("")
+//OR
+let alphabetB = "abcdefghijklmnopqrstuvwxyz"
+let alphabetArr = [...alphabetB]
