@@ -13816,3 +13816,17 @@ function findShort(s){
   }
   return shortest.length
 }
+
+//Day 1002
+class StateMachine1002 {
+  constructor({ init, transitions }) {
+    this.state = init;
+    transitions.forEach((el) => {
+      this[el.method] = () => {
+        if (this.state == el.current) {
+          this.state = el.target
+        }
+      }
+    })
+  }
+}
