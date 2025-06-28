@@ -13837,3 +13837,9 @@ let alphabetA = "abcdefghijklmnopqrstuvwxyz".split("")
 //OR
 let alphabetB = "abcdefghijklmnopqrstuvwxyz"
 let alphabetArr = [...alphabetB]
+
+//Day 1004
+//8 - Lost Without a Map
+function maps(x){
+  return x.map((x) => x*2)
+}
