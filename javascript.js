@@ -13861,3 +13861,18 @@ function simpleMultiplication(number) {
 function past(h, m, s){
   return ((h*3600) + (m * 60) + s) * 1000
 }
+
+//Day 1008
+//review 
+class StateMachine1008 {
+  constructor({ init, transitions }) {
+    this.state = init;
+    transitions.forEach((el) => {
+      this[el.method] = () => {
+        if (this.state == el.current) {
+          this.state = el.target
+        }
+      }
+    })
+  }
+}
