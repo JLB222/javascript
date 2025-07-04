@@ -13882,3 +13882,11 @@ class StateMachine1008 {
 const binaryArrayToNumber1009 = arr => {
   return parseInt(arr.join(""), 2)
 }
+
+//1010
+class Dog1010 extends Animal {
+  constructor(name, breed) {
+    super(name)
+    this.breed = breed
+  }
+}
