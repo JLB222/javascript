@@ -13903,3 +13903,9 @@ function sillycase(str) {
 function litres(time) {
   return Math.floor(time / 2);
 }
+
+//Day 1013
+//review - You Can't Code Under Pressure #1
+function doubleInteger(i) {
+  return i*2;
+}
