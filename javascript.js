@@ -13948,3 +13948,8 @@ function whatday(num) {
       default: return "Wrong, please enter a number between 1 and 7"
   }
 }
+
+//Day 1018
+function unusualFive() {
+  return "fucku".length
+}
