@@ -13995,3 +13995,32 @@ function firstNonConsecutive (arr) {
  }
   return null
 }
+
+//Day 1021
+//String Scramble
+function scramble(str, arr) {
+  //variable to hold arr result
+  let result = []
+  //loop through given array
+  for (let i = 0; i < arr.length; i++) {
+    //put string element in result array at its specific new place
+    result[arr[i]] = str[i]
+  }
+  //return the result array as a string
+  return result.join("")
+};
+
+//Day 1022
+//review
+function hasScored1022(str) {
+  let ballsHit = new Set()
+  let cushionsHit = 0
+  for (let i = 0; i < str.length; i++) {
+    "news".includes(str[i]) ? cushionsHit++ : ballsHit.add(str[i])
+    if (ballsHit.size == 2) {
+      return cushionsHit > 2
+    }
+  }
+  return false;
+}
+
