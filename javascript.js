@@ -14029,3 +14029,18 @@ function hasScored1022(str) {
 function distanceBetweenPoints(a, b) { 
   return Math.sqrt((b.x - a.x) ** 2 + (b.y - a.y) ** 2)
 }
+
+//Day 1024
+//review
+class StateMachine1024 {
+  constructor({ init, transitions }) {
+    this.state = init;
+    for (let el of transitions) {
+      this[el.method] = () => {
+        if (this.state == el.current) {
+          this.state = el.target
+        }
+      }
+    }
+  }
+}
