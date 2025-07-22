@@ -14092,3 +14092,11 @@ function countBy(x, n) {
 function sumMix(x){
   return x.reduce((a,b) => a + +b, 0)
 }
+
+//Day 1029
+//review - basic API
+//const express = require("express") or import express from express 
+//const App = express()
+
+//App.listen(port, optCallback) {}
+//App.get("/api", callbackFunction)
