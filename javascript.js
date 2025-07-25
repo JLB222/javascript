@@ -14114,3 +14114,9 @@ function mergeArrays(arr1, arr2) {
 function switchItUp(number){
   return ["Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"][number]
 }
+
+//Day 1032
+//8 - Remove first and last character - https://www.codewars.com/kata/56bc28ad5bdaeb48760009b0/solutions/javascript
+function removeChar(str){
+  return str.slice(1, -1)
+};
