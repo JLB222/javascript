@@ -14178,3 +14178,18 @@ function mango(quantity, price){
 function mango(quantity, price){
   return price * (quantity - Math.floor(quantity/3))
 }
+
+//Day 1039
+//review - Finite State Automata
+class StateMachine1039 {
+  constructor({ init, transitions }) {
+    this.state = init;
+    for (let obj of transitions) {
+      this[obj.method] = () => {
+        if (this.state == obj.current) {
+          this.state = obj.target
+        }
+      }
+    }
+  }
+}
