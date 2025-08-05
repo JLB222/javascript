@@ -14281,3 +14281,16 @@ function cutCube(volume, n) {
 function splitAndMerge(string, separator) {
   return string.split(" ").map(el => el.split("").join(separator)).join(" ")
 }
+
+//Day 1048
+//8 - Simple Change Machine - https://www.codewars.com/kata/57238766214e4b04b8000011/train/javascript
+function changeMe(moneyIn){
+	switch (moneyIn) {
+  	case '£5': return '20p '.repeat(25).trim()
+  	case '£2': return '20p '.repeat(10).trim()
+  	case '£1': return '20p '.repeat(5).trim()
+  	case '50p': return '20p 20p 10p'
+  	case '20p': return '10p 10p'
+    default: return moneyIn
+  }
+}
