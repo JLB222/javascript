@@ -14229,7 +14229,32 @@ function powersOfTwo(n){
 }
 
 //Day 1043
-//8 - Convert Boolean to Yes or No
+//8 - Convert Boolean to Yes or No - https://www.codewars.com/kata/53369039d7ab3ac506000467/train/javascript
 function boolToWord( bool ){
   return bool ? "Yes" : "No"
+}
+
+//Day 1044
+//8 - Welcome! - https://www.codewars.com/kata/577ff15ad648a14b780000e7/train/javascript
+function greet(language) {
+	let languageGreetingDatabase = {
+     english: "Welcome",
+     czech: "Vitejte",
+     danish: "Velkomst",
+     dutch: "Welkom",
+     estonian: "Tere tulemast",
+     finnish: "Tervetuloa",
+     flemish: "Welgekomen",
+     french: "Bienvenue",
+     german: "Willkommen",
+     irish: "Failte",
+     italian: "Benvenuto",
+     latvian: "Gaidits",
+     lithuanian: "Laukiamas",
+     polish: "Witamy",
+     spanish: "Bienvenido",
+     swedish: "Valkommen",
+     welsh: "Croeso"
+  }
+  return languageGreetingDatabase[language] || "Welcome"
 }
