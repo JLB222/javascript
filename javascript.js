@@ -14227,3 +14227,9 @@ function powersOfTwo(n){
   }
   return result;
 }
+
+//Day 1043
+//8 - Convert Boolean to Yes or No
+function boolToWord( bool ){
+  return bool ? "Yes" : "No"
+}
