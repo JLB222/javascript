@@ -14258,3 +14258,10 @@ function greet(language) {
   }
   return languageGreetingDatabase[language] || "Welcome"
 }
+
+//Day 1045
+//8 - Area of a Square - https://www.codewars.com/kata/5748838ce2fab90b86001b1a/train/javascript
+function squareArea(A){
+  let radius = A * 2 / Math.PI
+  return radius * radius
+}
