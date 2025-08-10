@@ -14294,3 +14294,13 @@ function changeMe(moneyIn){
     default: return moneyIn
   }
 }
+
+//Day 1049
+//8 - Freudian Translator - https://www.codewars.com/kata/5713bc89c82eff33c60009f7/train/javascript
+function toFreud(string) {
+  if (string.length > 0) {
+    return string.split(" ").map(el => "sex").join(" ")
+  } else {
+    return string
+  }
+}
