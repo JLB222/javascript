@@ -14304,3 +14304,9 @@ function toFreud(string) {
     return string
   }
 }
+
+//Day 1050
+//8 - Is it a number? - https://www.codewars.com/kata/57126304cdbf63c6770012bd/train/javascript
+function isDigit(s) {
+  return s == parseFloat(s)
+}
