@@ -14310,3 +14310,9 @@ function toFreud(string) {
 function isDigit(s) {
   return s == parseFloat(s)
 }
+
+//Day 1051
+//8 - Count Words - https://www.codewars.com/kata/570cc83df616a85944001315/train/javascript
+function countWords(str) {
+  return (str.match(/[^\s]+/g) || []).length;
+}
