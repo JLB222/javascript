@@ -14323,3 +14323,16 @@ function solve(str, num){
     let toBeRemoved = str.split("").sort("").slice(0,num)
     return toBeRemoved.reduce((prev, val) => prev.replace(val, ""), str)
 }
+
+//Day 1053
+//8 - No zeroes for heroes - https://www.codewars.com/kata/570a6a46455d08ff8d001002/train/javascript
+function noBoringZeros(n) {
+  let limit = n.toString().length
+  let result = n
+  for (let i = 0; i < limit; i++) {
+    if (result.toString().endsWith("0") ) {
+      result = (result / 10)
+    } else break
+  }
+  return result
+}
