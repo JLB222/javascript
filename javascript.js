@@ -14342,3 +14342,9 @@ function noBoringZeros(n) {
 function describeAge(a) {
   return a>64?"You're a(n) elderly":a> 17?"You're a(n) adult":a> 12?"You're a(n) teenager":"You're a(n) kid"
 }
+
+//Day 1055
+//review
+function giveNumberCommas(num) {
+  return num.toLocaleString()
+}
