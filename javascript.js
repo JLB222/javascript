@@ -14336,3 +14336,9 @@ function noBoringZeros(n) {
   }
   return result
 }
+
+//Day 1054
+//8 - Be Concise I: Ternary Operator - https://www.codewars.com/kata/56f3f6a82010832b02000f38/train/javascript
+function describeAge(a) {
+  return a>64?"You're a(n) elderly":a> 17?"You're a(n) adult":a> 12?"You're a(n) teenager":"You're a(n) kid"
+}
