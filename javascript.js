@@ -14348,3 +14348,18 @@ function describeAge(a) {
 function giveNumberCommas(num) {
   return num.toLocaleString()
 }
+
+//Day 1056
+//8 - alternating case - https://www.codewars.com/kata/56efc695740d30f963000557/train/javascript
+String.prototype.toAlternatingCase = function () {
+  let result = this.split("")
+  for (let i = 0; i < result.length; i++) {
+   if (result[i] == result[i].toUpperCase()) {
+     result[i] = result[i].toLowerCase()
+   } else
+    if (result[i] == result[i].toLowerCase()) {
+     result[i] = result[i].toUpperCase()
+    } 
+   }
+  return result.join("")
+}
