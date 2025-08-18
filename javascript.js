@@ -14363,3 +14363,7 @@ String.prototype.toAlternatingCase = function () {
    }
   return result.join("")
 }
+
+//Day 1057
+//8 - is really NaN - https://www.codewars.com/kata/56c24c58e0c0f741d4001aef/train/javascript
+const isReallyNaN = Number.isNaN
