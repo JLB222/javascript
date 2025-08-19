@@ -14367,3 +14367,9 @@ String.prototype.toAlternatingCase = function () {
 //Day 1057
 //8 - is really NaN - https://www.codewars.com/kata/56c24c58e0c0f741d4001aef/train/javascript
 const isReallyNaN = Number.isNaN
+
+//Day 1058
+//Birthday!
+function isItMyBirthday(date) {
+  return date.getMonth() === 7 && date.getDate() === 19
+}
