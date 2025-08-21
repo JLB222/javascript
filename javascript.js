@@ -14374,7 +14374,7 @@ function isItMyBirthday(date) {
   return date.getMonth() === 7 && date.getDate() === 19
 }
 
-//Day 1058
+//Day 1059
 //8 - Safen User Input - https://www.codewars.com/kata/56bcaedfcf6b7f2125001118/train/javascript
 function htmlspecialchars(formData) {
   let result = formData.split("")
@@ -14393,4 +14393,12 @@ function htmlspecialchars(formData) {
     }
   }
   return result.join("")
+}
+
+//Day 1060
+//review
+function bottles1060(num) {
+  for (let i = num; i > 0; i--) {
+    console.log(`${i} ${i === 1 ? "bottle" : "bottles"} of beer on the wall, ${i} ${i === 1 ? "bottle" : "bottles"} of beer!  Take one down, pass it around, ${i-1} ${i-1 === 1 ? "bottle" : "bottles"} of beer on the wall.`)
+  }
 }
