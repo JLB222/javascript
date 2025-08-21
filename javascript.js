@@ -14373,3 +14373,24 @@ const isReallyNaN = Number.isNaN
 function isItMyBirthday(date) {
   return date.getMonth() === 7 && date.getDate() === 19
 }
+
+//Day 1058
+//8 - Safen User Input - https://www.codewars.com/kata/56bcaedfcf6b7f2125001118/train/javascript
+function htmlspecialchars(formData) {
+  let result = formData.split("")
+  for (let i = 0; i < result.length; i++) {
+    if (result[i] === "<") {
+      result[i] = "&lt;"
+    }
+    if (result[i] === ">") {
+      result[i] = "&gt;"
+    }
+    if (result[i] === '"') {
+      result[i] = "&quot;"
+    }
+    if (result[i] === "&") {
+      result[i] = "&amp;"
+    }
+  }
+  return result.join("")
+}
