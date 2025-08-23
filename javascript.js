@@ -14408,3 +14408,9 @@ function bottles1060(num) {
 function lowercaseCount(str){
   return str.match(/[a-z]/g)?.length || 0
 }
+
+//Day 1062
+function validateHello(greetings) {
+  let res =  /hello|ciao|salut|hallo|hola|ahoj|czesc/i.test(greetings) 
+  return res
+}
