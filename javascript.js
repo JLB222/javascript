@@ -14402,3 +14402,9 @@ function bottles1060(num) {
     console.log(`${i} ${i === 1 ? "bottle" : "bottles"} of beer on the wall, ${i} ${i === 1 ? "bottle" : "bottles"} of beer!  Take one down, pass it around, ${i-1} ${i-1 === 1 ? "bottle" : "bottles"} of beer on the wall.`)
   }
 }
+
+//Day 1061
+//8 - regex count lowercase letters - https://www.codewars.com/kata/56a946cd7bd95ccab2000055/train/javascript
+function lowercaseCount(str){
+  return str.match(/[a-z]/g)?.length || 0
+}
