@@ -14431,3 +14431,8 @@ function validateUsr(username) {
   
   return validator.test(username);
 }
+
+//Day 1064
+function validateCode (code) {
+  return (/^[1-3]/).test(code.toString())
+}
