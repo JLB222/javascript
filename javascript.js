@@ -14436,3 +14436,19 @@ function validateUsr(username) {
 function validateCode (code) {
   return (/^[1-3]/).test(code.toString())
 }
+
+//Day 1065
+function rps(p1, p2){
+  if (p1 === p2) { return "Draw!"}
+  let result
+  if (p1 === "scissors") {
+    result = (p2 === "paper") ? "Player 1 won!" : "Player 2 won!"
+  }
+  if (p1 === "paper") {
+    result = (p2 === "rock") ? "Player 1 won!" : "Player 2 won!"
+  }
+  if (p1 === "rock") {
+    result = (p2 === "scissors") ? "Player 1 won!" : "Player 2 won!"
+  }
+  return result
+};
