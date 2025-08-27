@@ -14452,3 +14452,16 @@ function rps(p1, p2){
   }
   return result
 };
+
+//Day 1066
+function calculateTip(amount, rating) {
+  let tipAmounts = {
+    terrible: "0",
+    poor: ".05",
+    good: ".1",
+    great: '.15',
+    excellent: ".2"
+  }
+  if (!tipAmounts[rating.toLowerCase()]) {return "Rating not recognised"}
+  return Math.ceil(amount * tipAmounts[rating.toLowerCase()])
+}
