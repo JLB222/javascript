@@ -14465,3 +14465,18 @@ function calculateTip(amount, rating) {
   if (!tipAmounts[rating.toLowerCase()]) {return "Rating not recognised"}
   return Math.ceil(amount * tipAmounts[rating.toLowerCase()])
 }
+
+//Day 1067
+//review
+class StateMachine1067 {
+  constructor({ init, transitions }) {
+    this.state = init;
+    for (let transition of transitions) {
+      this[transition.method] = () => {
+        if (this.state === transition.current) {
+          this.state = transition.target
+        }
+      }
+    }
+  }
+}
