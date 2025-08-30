@@ -14503,3 +14503,12 @@ function nextIdB(ids){
    }
   }
 }
+
+//Day 1069
+//review class extension
+class Bird extends Animal {
+  constructor(name, canTalk) {
+    super(name)
+    this.canTalk = canTalk
+  }
+}
