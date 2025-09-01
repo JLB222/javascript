@@ -14518,3 +14518,35 @@ function amIWilson(p) {
   // "The only known Wilson primes are 5, 13 and 563."
   return p==5 || p==13 || p==563
 }
+
+//Day 1071
+//8 - A strange trip to the market - https://www.codewars.com/kata/55ccdf1512938ce3ac000056/train/javascript
+function isLochNessMonster(s) {
+  return s.includes("3.50") || s.includes("tree fiddy") || s.includes("three fifty")  
+}
+//7 - How many socks for a pair? - https://www.codewars.com/kata/6863033d9c452af74e0983b7/javascript
+function socks(colors,pairs) {
+  return pairs * 2 + (colors - 1)
+}
+//6 incomplete
+function minXPath(grid) {
+  let data = grid.split("\n")
+  let n = data.length
+  let mostXsInRow = 0
+  let mostXsInColumn = 0
+  let uniqueXs = 0
+  
+  for (let i = 0; i < n+n+2; i++) {
+    if (data[i].split("x").length -1 > mostXsInRow) {
+      mostXsInRow = data[i].split("x").length -1
+    }
+    for (let j = 0; j < data[i].length; j++) {
+      if (data[i][j] == "x") {
+        
+      }
+    }
+  }
+  console.log(data)
+  
+  return Math.min((n-mostXsInRow), (n-mostXsInColumn), (n-uniqueXs))
+}
