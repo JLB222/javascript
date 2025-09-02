@@ -14550,3 +14550,26 @@ function minXPath(grid) {
   
   return Math.min((n-mostXsInRow), (n-mostXsInColumn), (n-uniqueXs))
 }
+
+//Day 1072
+//8 - get character from ascii value - https://www.codewars.com/kata/55ad04714f0b468e8200001c/train/javascript
+function getChar(num){
+  return String.fromCharCode(num)
+}
+//7 
+function realNumbers(n){
+  // Numbers divisible by 2
+  let divisibleBy2 = Math.floor(n / 2)
+  
+  // Numbers divisible by 3 that are NOT
+  // divisible by 2 because that would mean
+  // subtracting the same Natural Number twice
+  let divisibleBy3 = Math.round(n / 3 / 2)
+  
+  
+  // Numbers divisible by 5 that are NOT
+  // divisible by 2 or 3
+  let divisibleBy5 = Math.floor(n / 5) - Math.round(n / 5 / 3 / 2) - Math.floor(n / 5 / 2)
+  
+  return n - divisibleBy2 - divisibleBy3 - divisibleBy5
+}
