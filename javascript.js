@@ -14573,3 +14573,19 @@ function realNumbers(n){
   
   return n - divisibleBy2 - divisibleBy3 - divisibleBy5
 }
+
+//Day 1073
+//8 - Find the smallest integer in array - a
+function findSmallestInt(arr) {
+  return Math.min(...arr)
+}
+
+function findSmallestIntOFW(arr) {
+  let smallest = arr[0]
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] < smallest) {
+      smallest = arr[i]
+    }
+  }
+  return smallest
+}
