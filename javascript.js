@@ -14589,3 +14589,16 @@ function findSmallestIntOFW(arr) {
   }
   return smallest
 }
+
+//Day 1074
+//8 - Lexical this - https://www.codewars.com/kata/55a13556ca4a6d0ab4000003/train/javascript
+let Person = function(){
+  let person = {
+    _name: "Leroy",
+    _friends: [],
+    fillFriends(people) { 
+        this._friends.push(...people)
+  }
+}
+  return person;
+}
