@@ -14602,3 +14602,14 @@ let Person = function(){
 }
   return person;
 }
+
+//Day 1075
+//8 - DNA to RNA conversion - https://www.codewars.com/kata/5556282156230d0e5e000089/train/javascript
+function DNAtoRNA(dna) {
+  return dna.replaceAll("T", "U")
+}
+
+//7 - Spiraling Box - https://www.codewars.com/kata/63b84f54693cb10065687ae5/train/javascript
+function createBox(width, height) {
+  return [...Array(height)].map((el, i) => [...Array(width)].map((el, j) => Math.min(i + 1, j + 1, height - i, width - j)));
+}
