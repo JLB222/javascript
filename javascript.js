@@ -14613,3 +14613,28 @@ function DNAtoRNA(dna) {
 function createBox(width, height) {
   return [...Array(height)].map((el, i) => [...Array(width)].map((el, j) => Math.min(i + 1, j + 1, height - i, width - j)));
 }
+
+//Day 1076
+//8 - Basic subclasses - Adam & Eve - https://www.codewars.com/kata/547274e24481cfc469000416/train/javascript
+class God{
+  static create() {
+    return [new Man("Adam"), new Woman("Eve")]
+  }
+}
+class Human {
+  constructor(name) {
+    this.name = name
+  }
+}
+
+class Man extends Human {
+  constructor(name) {
+    super(name)
+  }
+}
+
+class Woman extends Human {
+  constructor(name) {
+    super(name)
+  }
+}
