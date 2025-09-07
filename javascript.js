@@ -14638,3 +14638,22 @@ class Woman extends Human {
     super(name)
   }
 }
+
+//Day 1077
+//8 - Enumerable Magic #1 - True for All? - https://www.codewars.com/kata/54598d1fcbae2ae05200112c/train/javascript
+function all( arr, fun ){
+  return arr.every(fun)
+}
+//without .every()
+function all(arr, fun ){
+  return arr.filter(fun).length === arr.length
+}
+//without any pre-built methods
+function all( arr, fun ){
+  for (let i = 0; i < arr.length; i++) {
+    if (fun(arr[i]) == false) {
+      return false
+    }
+  }
+  return true
+}
