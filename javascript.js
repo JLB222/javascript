@@ -14657,3 +14657,9 @@ function all( arr, fun ){
   }
   return true
 }
+
+//Day 1078
+//review
+function createBox1078(width, height) {
+  return [...Array(height)].map((el, i) => [...Array(width)].map((el, j) => Math.min(i + 1, j + 1, height - i, width - j)));
+}
