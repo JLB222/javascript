@@ -14663,3 +14663,12 @@ function all( arr, fun ){
 function createBox1078(width, height) {
   return [...Array(height)].map((el, i) => [...Array(width)].map((el, j) => Math.min(i + 1, j + 1, height - i, width - j)));
 }
+
+//Day 1079
+//8 - What's up next - https://www.codewars.com/kata/542ebbdb494db239f8000046/train/javascript
+function nextItem (iterable, item){
+  const iter = iterable[Symbol.iterator]();
+  for (let el of iter) {
+    if (el === item) return iter.next().value;
+  }
+}
