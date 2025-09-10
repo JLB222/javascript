@@ -14672,3 +14672,20 @@ function nextItem (iterable, item){
     if (el === item) return iter.next().value;
   }
 }
+
+//Day 1080
+//8 - Color Ghost - https://www.codewars.com/kata/53f1015fa9fe02cbda00111a/train/javascript
+class Ghost {
+  constructor(color) {
+    this.possibleColors = ['white','yellow','purple','red']
+    this.color = this.possibleColors[this.d4()]
+  }
+  d4() {
+    return Math.floor(Math.random() * 4)
+  }
+}
+
+//alternate
+function Ghost() {
+  this.color = ["white","yellow","purple","red"][Math.floor(Math.random() * 4)];
+};
