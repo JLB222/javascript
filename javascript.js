@@ -14689,3 +14689,16 @@ class Ghost {
 function Ghost() {
   this.color = ["white","yellow","purple","red"][Math.floor(Math.random() * 4)];
 };
+
+//Day 1081
+//8 - Swap Values - https://www.codewars.com/kata/5388f0e00b24c5635e000fc6/train/javascript
+function swapValues(arr) {
+    var temp = arr[0];
+    arr[0] = arr[1];
+    arr[1] = temp;
+}
+
+//7 - Maid Ep2: Christmas Trash Party - https://www.codewars.com/kata/639df18a29d4991916ba5cdd/train/javascript
+function compareTrash(trash1, trash2){
+  return (trash1 == trash2) && (typeof trash1 == typeof trash2)
+}
