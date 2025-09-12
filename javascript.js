@@ -14702,3 +14702,21 @@ function swapValues(arr) {
 function compareTrash(trash1, trash2){
   return (trash1 == trash2) && (typeof trash1 == typeof trash2)
 }
+
+//Day 1082
+//review
+function hasScored(str) {
+  let ballsHit = new Set()
+  let cushionsHit = 0
+  for (let letter of str) {
+    if ("nesw".includes(letter) ) {
+      cushionsHit++
+    } else {
+      ballsHit.add(letter)
+    }
+    if (ballsHit.size == 2 && ballsHit.has("R")) {
+      return cushionsHit >= 3
+    }
+  }
+  return false;
+}
