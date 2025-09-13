@@ -14720,3 +14720,7 @@ function hasScored(str) {
   }
   return false;
 }
+
+//Day 1083
+//8 - Mr Freeze - https://www.codewars.com/kata/514a3996d22ce03198000003/train/javascript
+Object.freeze(MrFreeze)
