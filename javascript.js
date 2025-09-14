@@ -14724,3 +14724,20 @@ function hasScored(str) {
 //Day 1083
 //8 - Mr Freeze - https://www.codewars.com/kata/514a3996d22ce03198000003/train/javascript
 Object.freeze(MrFreeze)
+
+//Day 1084
+//7 - Trilingual Democracy
+function trilingualDemocracy(group) {
+  const uniqueLanguages = [...new Set(group)];
+
+  if (uniqueLanguages.length === 1) {
+    return uniqueLanguages[0];
+  }
+  
+  if (uniqueLanguages.length === 2) {
+    return group.split('').find(lang => group.indexOf(lang) === group.lastIndexOf(lang));
+  }
+
+  const allLanguages = ['D', 'F', 'I', 'K'];
+  return allLanguages.find(lang => !group.includes(lang));
+}
