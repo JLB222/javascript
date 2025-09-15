@@ -14741,3 +14741,22 @@ function trilingualDemocracy(group) {
   const allLanguages = ['D', 'F', 'I', 'K'];
   return allLanguages.find(lang => !group.includes(lang));
 }
+
+//Day 1085
+//review - Spiral Box
+function createBox(width, height) {
+  return [...Array(height)].map((el, i) => [...Array(width)].map((el, j) => Math.min(i + 1, j + 1, height - i, width - j)));
+}
+
+//7 - get the current hand - https://www.codewars.com/kata/62c77ad28db7de003d1c3eca/train/javascript
+function getCurrentHand(arr) {
+  //determine all the unique cards
+  let deck = new Set(arr)
+  //focus on the last 4 that were played, as they must be in the pile
+  let pile = arr.slice(arr.length-4)
+  //remove pile cards from deck to know what's in the hand
+  for (let i = 0; i < pile.length; i++) {
+    deck.delete(pile[i])
+  }
+  return [...deck]
+}
