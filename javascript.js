@@ -14760,3 +14760,22 @@ function getCurrentHand(arr) {
   }
   return [...deck]
 }
+
+//Day 1086
+//review
+function all( arr, fun ){
+  return arr.every(fun)
+}
+//without .every()
+function all(arr, fun ){
+  return arr.filter(fun).length === arr.length
+}
+//without any pre-built methods
+function all( arr, fun ){
+  for (let i = 0; i < arr.length; i++) {
+    if (fun(arr[i]) == false) {
+      return false
+    }
+  }
+  return true
+}
