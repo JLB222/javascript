@@ -14779,3 +14779,27 @@ function all( arr, fun ){
   }
   return true
 }
+
+//Day 1087
+//review
+class StateMachine1087 {
+  constructor({ init, transitions }) {
+    this.state = init;
+    for (let el of transitions) {
+      this[el.method] = () => {
+        if (this.state === el.current) {
+          this.state = el.target
+        }
+      }
+    }
+  }
+}
+
+function gbfCharMaker1087(name, race, element, ultName) {
+  this.name = name
+  this.race = race 
+  this.element = element
+  this.ult = function() {
+    console.log(ultName)
+  }
+}
