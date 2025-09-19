@@ -14803,3 +14803,18 @@ function gbfCharMaker1087(name, race, element, ultName) {
     console.log(ultName)
   }
 }
+
+//Day 1088
+//Class 35 - Promises & Async Await
+//callback hell || pyramid of doom
+function houseOne() {
+  setTimeout(() => {
+    console.log(`Paper delivered to house 1`)
+    setTimeout(() => {
+      console.log(`Paper delivered to house 2`)
+      setTimeout(()  => {
+        console.log(`Paper delivered to house 3`)
+      }, 3000)
+    }, 4000)
+  }, 5000)
+}
