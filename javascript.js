@@ -14840,3 +14840,10 @@ function filterVowels(str) {
   return string.join("")
 }
 
+//Day 1090
+//review
+string.toUpperCase() !== string.toLowerCase()  // this can test for letters while ignoring symbols like ! or ?
+
+function repLetters(str) {
+  return str.replace(/[a-z]/gi, "?")
+}
