@@ -14847,3 +14847,9 @@ string.toUpperCase() !== string.toLowerCase()  // this can test for letters whil
 function repLetters(str) {
   return str.replace(/[a-z]/gi, "?")
 }
+
+//Day 1091
+//review - Spiraling Box - https://www.codewars.com/kata/63b84f54693cb10065687ae5/train/javascript
+function createBox1091(width, height) {
+  return [...Array(height)].map((el, i) => [...Array(width)].map((el2, j) => Math.min(i+1, j+1, height - i, width - j)))
+}
