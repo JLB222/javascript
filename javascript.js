@@ -14853,3 +14853,29 @@ function repLetters(str) {
 function createBox1091(width, height) {
   return [...Array(height)].map((el, i) => [...Array(width)].map((el2, j) => Math.min(i+1, j+1, height - i, width - j)))
 }
+
+//Day 1092
+//class review
+class Dog1092 extends Animal {
+  constructor(name, breed) {
+    super(name)
+    this.breed = breed
+  }
+}
+
+//7 - Consecutive Vowels in a String - https://www.codewars.com/kata/62a933d6d6deb7001093de16/train/javascript
+function getTheVowels(word) {
+  let startingIndex = word.indexOf('a')
+  if (startingIndex === -1) {return 0}
+  let vowels = [..."aeiou"]
+  let currentVowelCheck = 0
+  let vowelCounter = 1  
+  for (let i = startingIndex; i < word.length; i++) {
+    if (word[i+1] === vowels[(currentVowelCheck +1) % 5]) {
+      vowelCounter++
+      currentVowelCheck++
+    }
+  }
+  
+  return vowelCounter
+}
