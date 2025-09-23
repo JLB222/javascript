@@ -14879,3 +14879,24 @@ function getTheVowels(word) {
   
   return vowelCounter
 }
+
+//Day 1093
+//7 - The Robber Language - https://www.codewars.com/kata/629e4d5f24b98110a83b2d0d/train/javascript
+//the below answers fails the test, but the test conditions fail to explain why
+function robberEncode(sentence) {
+  let sentArr = [...sentence]
+  const consonants = "bcdfghjklmnpqrstwxyzBCDFGHJKLMNPQRSTVWXYZ"
+  for (let i = 0; i < sentence.length; i++) {
+    if (consonants.includes(sentArr[i])) {
+      sentArr[i] = sentArr[i] === sentArr[i].toUpperCase() ? sentArr[i] + "O" + sentArr[i] : sentArr[i] + "o" + sentArr[i]
+    }
+  }
+  return sentArr.join("")
+}
+
+//alternate
+function robberEncode (sentence) {
+  return sentence
+    .replace(/[bcdfghjklmnpqrstvwxyz]/g, '$&o$&')
+    .replace(/[BCDFGHJKLMNPQRSTVWXYZ]/g, '$&O$&');
+}
