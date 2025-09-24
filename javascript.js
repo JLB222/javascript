@@ -14900,3 +14900,9 @@ function robberEncode (sentence) {
     .replace(/[bcdfghjklmnpqrstvwxyz]/g, '$&o$&')
     .replace(/[BCDFGHJKLMNPQRSTVWXYZ]/g, '$&O$&');
 }
+
+//Day 1094
+//7 - Next Element Generator - https://www.codewars.com/kata/61fab7a6a0e59f000ef08feb/train/javascript
+function* nextIndex(array) {
+  while (true) yield* array;
+}
