@@ -14927,3 +14927,15 @@ function oddOrEven(num) {
   if (num % 2 === 1) {return 'Either'}
   return (num / 2) % 2 === 1 ? 'Odd' : "Even"
 }
+
+//Day 1097
+//review 
+function yearDays1097(year){
+  let fourHundred = year/400 % 1
+  let oneHundred = year/100 % 1
+  let four = year/4 % 1
+  
+  let standard = four || (fourHundred && !oneHundred)
+  
+  return `${year} has ${standard?365:366} days`
+}
