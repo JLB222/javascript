@@ -14946,3 +14946,10 @@ function yearDays1097(year){
 function flip1098(d, a){
   return d === "L" ? a.sort((a,b) => a-b).reverse() : a.sort((a,b) => a-b)
 }
+
+//Day 1099
+//review 
+//Create a function that accepts 2 string arguments and returns an integer of the count of occurrences the 2nd argument is found in the first one.
+function check1099(str1,str2) {
+  return str1.split(str2).length -1
+}
