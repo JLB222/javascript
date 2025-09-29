@@ -14939,3 +14939,10 @@ function yearDays1097(year){
   
   return `${year} has ${standard?365:366} days`
 }
+
+//Day 1098
+//review
+//8 - Gravity Flip.  Given an array of numbers, sort the numbers with the largest numbers on the left or right given another input, "L" or "R"
+function flip1098(d, a){
+  return d === "L" ? a.sort((a,b) => a-b).reverse() : a.sort((a,b) => a-b)
+}
