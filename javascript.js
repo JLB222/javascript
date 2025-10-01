@@ -14953,3 +14953,14 @@ function flip1098(d, a){
 function check1099(str1,str2) {
   return str1.split(str2).length -1
 }
+
+//Day 1100
+//7 - cubes in the box - https://www.codewars.com/kata/61432694beeca7000f37bb57/train/javascript
+function f(x,y,z){
+  const min = Math.min(x, y, z)
+  let sum = 0
+  for(let i = 0; i < min; ++i) {
+    sum += (x - i) * (y - i) * (z - i)
+  }
+  return sum
+}
