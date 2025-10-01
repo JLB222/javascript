@@ -14964,3 +14964,9 @@ function f(x,y,z){
   }
   return sum
 }
+
+//Day 1101
+//review
+function createBox1101(width, height) {
+  return [...Array(height)].map((el, i) => [...Array(width)].map((el2, j) => Math.min(i+1, j+1, height - i, width - j)))
+}
