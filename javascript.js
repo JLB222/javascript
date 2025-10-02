@@ -14970,3 +14970,10 @@ function f(x,y,z){
 function createBox1101(width, height) {
   return [...Array(height)].map((el, i) => [...Array(width)].map((el2, j) => Math.min(i+1, j+1, height - i, width - j)))
 }
+
+//Day 1102
+//review
+String.split("t").length -1
+String.match(/t/g).length 
+const newObj = {}
+const {propertyName1, propertyName2} = objectName
