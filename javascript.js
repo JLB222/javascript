@@ -14977,3 +14977,20 @@ String.split("t").length -1
 String.match(/t/g).length 
 const newObj = {}
 const {propertyName1, propertyName2} = objectName
+
+//Day 1103
+//class 35 pt 2
+async function getACuteDogPhoto() {
+  try {
+    const res = fetch()
+    const data = res.json()
+
+    await Promise.all([res,data])
+    console.log(data)
+  }
+  catch(error) {
+    console.log(error)
+    //return `It'll be fiiine'
+    throw `Aw shit, it's broken`
+  }
+}
