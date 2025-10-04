@@ -14994,3 +14994,16 @@ async function getACuteDogPhoto() {
     throw `Aw shit, it's broken`
   }
 }
+
+//Day 1104
+//review
+class GbfChar1104 {
+  constructor(name,element,ultName) {
+    this.name = name
+    this.element = element
+    this.ultName = ultName
+  }
+  Ult() {
+    console.log(`${this.ultName}`)
+  }
+}
