@@ -15007,3 +15007,9 @@ class GbfChar1104 {
     console.log(`${this.ultName}`)
   }
 }
+
+//Day 1105
+//review
+function Heading1105 {
+  return <h1>Hello!</h1>
+}
