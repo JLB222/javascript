@@ -15013,3 +15013,11 @@ class GbfChar1104 {
 function Heading1105 {
   return <h1>Hello!</h1>
 }
+
+//Day 1106
+//7 - Next Element Generator - https://www.codewars.com/kata/61fab7a6a0e59f000ef08feb
+function* nextElementGenerator(array) {
+  while (true) {
+    yield* array;
+  }
+}
