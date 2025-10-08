@@ -15035,3 +15035,14 @@ function countDuplicates(name, age, height) {
   }
   return entries.length - Object.entries(counter).length
 }
+
+//Day 1108
+//review
+ function Ship1108(draft,crew) {
+  this.draft = draft;
+  this.crew = crew;
+ }
+ 
+ Ship1108.prototype.isWorthIt = function() {
+   return (this.draft - (this.crew * 1.5)) > 20
+ }
