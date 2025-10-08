@@ -15021,3 +15021,17 @@ function* nextElementGenerator(array) {
     yield* array;
   }
 }
+
+//Day 1107 
+//7 - Counting Duplicates Across Multiple Lists - https://www.codewars.com/kata/6113c2dc3069b1001b8fdd05/train/javascript
+function countDuplicates(name, age, height) {
+  let entries = []
+  for (let i = 0; i < name.length; i++) {
+    entries.push(name[i] + age[i] + height[i])
+  }
+  let counter = {}
+  for (let i = 0; i < entries.length; i++) {
+      counter[entries[i]] = (counter[entries[i]] || 0) + 1
+  }
+  return entries.length - Object.entries(counter).length
+}
