@@ -15046,3 +15046,18 @@ function countDuplicates(name, age, height) {
  Ship1108.prototype.isWorthIt = function() {
    return (this.draft - (this.crew * 1.5)) > 20
  }
+
+ //Day 1109
+ //review Finite State Automata
+ class StateMachine1109 {
+  constructor({ init, transitions }) {
+    this.state = init;
+    for (let el of transitions) {
+      this[el.method] = () => {
+        if (this.state === el.current) {
+          this.state = el.target
+        }
+      }
+    }
+  }
+}
