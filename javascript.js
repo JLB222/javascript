@@ -15061,3 +15061,17 @@ function countDuplicates(name, age, height) {
     }
   }
 }
+
+//Day 1110
+//7 - previous multiple of three - https://www.codewars.com/kata/61123a6f2446320021db987d/train/javascript
+function prevMultOfThree(num){
+  let currentNum = num
+  for (let i = 0; i < num.toString().length; i++) {
+    if (currentNum % 3 === 0) {
+      return currentNum
+    } else {
+      currentNum = Math.floor(currentNum / 10)
+    }
+  }
+  return null
+}
