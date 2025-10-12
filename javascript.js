@@ -15087,3 +15087,9 @@ function positiveSum1111(arr) {
   }
   return sum
 }
+
+//Day 1112
+//review
+function convertNumToStringWithCommas(num) {
+  return num.toLocaleString()
+}
