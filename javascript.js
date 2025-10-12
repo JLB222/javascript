@@ -15075,3 +15075,15 @@ function prevMultOfThree(num){
   }
   return null
 }
+
+//Day 1111
+//review 
+function positiveSum1111(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 0) {
+      sum += arr[i]
+    }
+  }
+  return sum
+}
