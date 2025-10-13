@@ -15093,3 +15093,22 @@ function positiveSum1111(arr) {
 function convertNumToStringWithCommas(num) {
   return num.toLocaleString()
 }
+//Day 1113
+//review
+function createBox1113(width, height) {
+  return [...Array(height)].map((el, i) => [...Array(width)].map((el2, j) => Math.min(i+1, j+1, height - i, width - j)))
+}
+//7 - I'm everywhere! - https://www.codewars.com/kata/6097a9f20d32c2000d0bdb98/train/javascript
+function i(word) {
+  let counter = 0
+  let vowels = "aeiouAEIOU"
+  for (let i = 0; i < word.length; i++) {
+    if (vowels.includes(word[i])) {
+      counter++
+    }
+  }
+  if (word[0] === word[0]?.toLowerCase() || word[0] === 'I' || counter >= (word.length / 2)) {
+    return 'Invalid word'
+  }
+  return "i" + word
+}
