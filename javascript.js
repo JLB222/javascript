@@ -15112,3 +15112,19 @@ function i(word) {
   }
   return "i" + word
 }
+
+//Day 1114
+//first tryyyyy
+//7 - What a "Classy" Song - https://www.codewars.com/kata/6089c7992df556001253ba7d/train/javascript
+class Song {
+  constructor(title, artist) {
+    this.title = title
+    this.artist = artist
+    this.listeners = new Set()
+  }
+  howMany(newListenerArr) {
+    let currentListenerNumber = this.listeners.size
+    newListenerArr.forEach(el => this.listeners.add(el.toLowerCase()))
+    return this.listeners.size - currentListenerNumber
+  }
+}
