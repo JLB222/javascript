@@ -15128,3 +15128,18 @@ class Song {
     return this.listeners.size - currentListenerNumber
   }
 }
+
+//Day 1115
+//refactor:
+function largest(num, arr) {
+  let array = arr.sort((a,b)=> b-a,0)
+  let result = []
+  for (let i = 0; i < num; i++) {
+    result.push(array[i])
+  }
+  return result.sort((a,b) => a-b,0)
+}
+//new
+function largest(num, arr) {
+  return arr.sort((a,b) => a-b,0).slice(0,num)
+}
