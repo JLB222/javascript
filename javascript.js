@@ -15143,3 +15143,30 @@ function largest(num, arr) {
 function largest(num, arr) {
   return arr.sort((a,b) => a-b,0).slice(0,num)
 }
+
+//Day 1116
+//refactor this
+function reverseSeq(n) {
+  let numbers = [];
+  for (let i = 1; i <= n; i++) {
+    numbers.unshift(i)
+  }
+  return numbers
+}
+//into:
+function reverseSeq(n) {
+  return Array.from({ length: n }, (_, i) => n - i);
+}
+
+//7 - Ce*s*r*d Strings - https://www.codewars.com/kata/5ff6060ed14f4100106d8e6f/train/javascript
+function uncensor(infected, discovered) {
+  let infectedArr = [...infected]
+  let asteriskCounter = 0
+  for (let i = 0; i < infected.length; i++) {
+    if (infectedArr[i] === "*") {
+      infectedArr[i] = discovered[asteriskCounter]
+      asteriskCounter++
+    }
+  }
+  return infectedArr.join("")
+}
