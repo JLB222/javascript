@@ -15181,3 +15181,25 @@ function plant(seed, water, fert, temp){
     return "-".repeat(water).repeat(water) + seed
   }
 }
+
+//Day 1118
+//sArCaSmCaSe
+function sarcasm(sentence) {
+  let text = sentence.toLowerCase()
+  let wordArr = text.split(" ")
+  let letterArr = []
+  for (let i = 0; i < wordArr.length; i++) {
+    letterArr.push(wordArr[i].split(""))
+  }
+  let result = []
+  for (let i = 0; i < letterArr.length; i++) {
+    for (let j = 0; j < letterArr[i].length; j++) {
+      if (j % 2 !== 0) {
+        letterArr[i][j] = letterArr[i][j].toUpperCase()
+      }
+    }
+    result.push(letterArr[i].join(""))
+  }
+
+  return result.join(" ")
+}
