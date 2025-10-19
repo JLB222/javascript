@@ -15203,3 +15203,9 @@ function sarcasm(sentence) {
 
   return result.join(" ")
 }
+
+//Day 1119 
+//review
+function isRubyComing1119(list) {
+  return list.some(entry => entry.language === "Ruby")
+}
