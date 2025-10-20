@@ -15209,3 +15209,13 @@ function sarcasm(sentence) {
 function isRubyComing1119(list) {
   return list.some(entry => entry.language === "Ruby")
 }
+
+//Day 1120
+//7 - Closure Counter - https://www.codewars.com/kata/60edafd71dad1800563cf933/train/javascript
+function counter(){
+  let number = 0
+  return function() {
+    number++
+    return number
+  }
+}
