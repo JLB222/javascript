@@ -15219,3 +15219,9 @@ function counter(){
     return number
   }
 }
+
+//Day 1121
+//review - sorting alphabetically and by length
+function lineupStudents(students){
+  return students.split(" ").sort((a,b) => b.localeCompare(a)).sort((a,b) => b.length - a.length, 0)
+}
