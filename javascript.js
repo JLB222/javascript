@@ -15225,3 +15225,24 @@ function counter(){
 function lineupStudents(students){
   return students.split(" ").sort((a,b) => b.localeCompare(a)).sort((a,b) => b.length - a.length, 0)
 }
+
+//Day 1122
+//Codewars
+//7 - Alphabetical Grid - https://www.codewars.com/kata/60a94f1443f8730025d1744b/train/javascript
+function grid(num) {
+  const alphabet = "abcdefghijklmnopqrstuvwxyz"
+  return num < 0 ? null : Array.from({length: num}, (_, i) => Array.from({length: num}, (_, j) => alphabet[(i + j) % 26]).join(" ")).join("\n")
+}
+
+//LeetCode - Two Sum - https://leetcode.com/problems/two-sum/description/?envType=problem-list-v2&envId=hash-table
+function twoSum(numArr, target) {
+    let map = new Map()
+    for (let i = 0; i < numArr.length; i++) {
+        let complement = target - numArr[i]
+        if (map.has(complement) && map.get(complement) !== i) {
+            return [map.get(complement), i]
+        } else {
+            map.set(numArr[i], i)
+        }
+    }
+};
