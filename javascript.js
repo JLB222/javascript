@@ -15246,3 +15246,27 @@ function twoSum(numArr, target) {
         }
     }
 };
+
+//Day 1123
+//review - bracket VS dot notation
+let example1123 = {
+  "x": 3,
+  "y": 5,
+  "z": 9
+}
+let x = "z"
+//example1123.x ---> should return 3
+//example[x] is the same as example["z"] // both should return 9
+
+//attempt - Longest Substring Without Repeating Characters - https://leetcode.com/problems/longest-substring-without-repeating-characters/?envType=problem-list-v2&envId=hash-table
+function lengthOfLongestSubstring(str) {
+    let subStringMap = new Map()
+    for (let j = 0; j < str.length; j++) {
+        for (let i = 0; i < str.length; i++) {
+            if (!subStringMap[str.slice(j,i+j+1)] && str.slice(j,i+j+1).length === new Set(str.slice(j,i+j+1)).size) {
+                subStringMap.set(str.slice(j,i+j+1), new Set(str.slice(j,i+j+1)).size)
+            }
+        }
+    }
+    return Math.max(...Object.keys(subStringMap))
+};
