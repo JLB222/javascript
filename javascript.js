@@ -15270,3 +15270,110 @@ function lengthOfLongestSubstring(str) {
     }
     return Math.max(...Object.keys(subStringMap))
 };
+
+//Day 1124
+//7 - Sort the Bytes - https://www.codewars.com/kata/6076d4edc7bf5d0041b31dcf/train/javascript
+function sortBytes(uint32) {
+  //convert to binary & ensure all 32 digits are present
+  let binaryRep = uint32.toString(2).padStart(32, "0")
+  //split into 4x 8-digit numbers
+  let binaryArr = [
+    binaryRep.slice(0,8),
+    binaryRep.slice(8,16),
+    binaryRep.slice(16,24),
+    binaryRep.slice(24,32)
+  ]
+  //sort those numbers from greatest to least
+  binaryArr.sort((a,b) => b-a)
+  //recombine these into one long binary number
+  let newBinaryRep = binaryArr.join("")
+  //convert it to an integer
+  return Number.parseInt(newBinaryRep, 2)
+}
+
+//leetcode 13 - Roman to Integer - 
+//first try (not seeing the pattern roman numerals have)
+function romanToInt(str) {
+    let map = {
+        "I": 1,
+        "V": 5,
+        "X": 10,
+        "L": 50,
+        "C": 100,
+        "D": 500,
+        "M": 1000,
+        "IV": 4,
+        "IX": 9,
+        "XL": 40, 
+        "XC": 90,
+        "CD": 400,
+        "CM": 900
+    }
+    let result = 0
+    for (let i = 0; i < str.length; i++) {
+        //check for Is
+        if (str[i] === "I") {
+            if (str[i+1] === "V") {
+                i++
+                result += map["IV"]
+            } else
+            if (str[i+1] === "X") {
+                i++
+                result += map["IX"]
+            } else {
+                result += map["I"]
+            }
+        } else
+        //check for Xs
+        if (str[i] === "X") {
+            if (str[i+1] === "L") {
+                i++
+                result += map["XL"]
+            } else
+            if (str[i+1] === "C") {
+                i++
+                result += map["XC"]
+            } else {
+                result += map["X"]
+            }
+        } else
+        //check for Cs
+        if (str[i] === "C") {
+            if (str[i+1] === "D") {
+                i++
+                result += map["CD"]
+            } else
+            if (str[i+1] === "M") {
+                i++
+                result += map["CM"]
+            } else {
+                result += map["C"]
+            }
+        } else {
+            result += map[str[i]]
+        }
+    }
+    return result
+};
+
+//second try (after realizing)
+function romanToInt(str) {
+    let map = {
+        "I": 1,
+        "V": 5,
+        "X": 10,
+        "L": 50,
+        "C": 100,
+        "D": 500,
+        "M": 1000,
+    }
+    let result = 0
+    for (let i = 0; i < str.length; i++) {
+        if (map[str[i]] < map[str[i+1]]) {
+            result -= map[str[i]]
+        } else {
+            result += map[str[i]]
+        }
+    }
+    return result
+};
