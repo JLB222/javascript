@@ -15291,6 +15291,7 @@ function sortBytes(uint32) {
   return Number.parseInt(newBinaryRep, 2)
 }
 
+//Day 1125
 //leetcode 13 - Roman to Integer - 
 //first try (not seeing the pattern roman numerals have)
 function romanToInt(str) {
@@ -15377,3 +15378,8 @@ function romanToInt(str) {
     }
     return result
 };
+
+//Day 1126
+//review
+const multByTwo = (el) => el * 2
+[1,2,"e","r",5].indexOf(2) // should return 1
