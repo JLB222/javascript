@@ -15383,3 +15383,9 @@ function romanToInt(str) {
 //review
 const multByTwo = (el) => el * 2
 [1,2,"e","r",5].indexOf(2) // should return 1
+
+//Day 1127
+//review - spiraling box
+function createBox1127(width, height) {
+  return [...Array(height)].map((el, i) => [...Array(width)].map((el,j) => Math.min(i+1,j+1,height-i,width-j)))
+}
