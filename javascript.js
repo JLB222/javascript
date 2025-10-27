@@ -15389,3 +15389,27 @@ const multByTwo = (el) => el * 2
 function createBox1127(width, height) {
   return [...Array(height)].map((el, i) => [...Array(width)].map((el,j) => Math.min(i+1,j+1,height-i,width-j)))
 }
+
+//Day 1128
+//7 - Strange Mathematics - https://www.codewars.com/kata/604517d65b464d000d51381f/train/javascript
+function strangeMath(num, target){
+  let numberSequence = []
+  for (let i = 1; i <= num; i++) {
+    numberSequence.push(i)
+  }
+  numberSequence.sort().join("")
+  return numberSequence.indexOf(target) + 1
+}
+
+//hash review - two sum
+function twoSum(nums, target) {
+    let map = new Map()
+    for (let i = 0; i < nums.length; i++) {
+        let difference = target - nums[i]
+        if (map.has(difference) && map.get(difference) !== i) {
+            return [i, map.get(difference)]
+        } else {
+            map.set(nums[i], i)
+        }
+    }
+};
