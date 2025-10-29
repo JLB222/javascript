@@ -15413,3 +15413,27 @@ function twoSum(nums, target) {
         }
     }
 };
+
+//Day 1129
+//7 - Doubleton number - https://www.codewars.com/kata/604287495a72ae00131685c7/train/javascript
+function doubleton(num){
+  let result = num + 1
+  while (new Set(result.toString()).size != 2) {
+    result ++
+  }
+ return result
+}  
+
+//141 - Linked List Cycle
+function hasCycle(head) {
+    let visited = new Map()
+    let current = head
+    while (current !== null) {
+        if (visited.has(current)) {
+            return true
+        } 
+        visited.set(current)
+        current = current.next
+    }
+    return false
+};
