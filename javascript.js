@@ -15437,3 +15437,13 @@ function hasCycle(head) {
     }
     return false
 };
+
+//Day 1130
+function stringToNum(arr) {
+  return arr.map((el) => +el)
+}
+
+//or
+function stringToNumB(arr) {
+  return arr.map(Number)
+}
