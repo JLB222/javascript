@@ -15447,3 +15447,21 @@ function stringToNum(arr) {
 function stringToNumB(arr) {
   return arr.map(Number)
 }
+
+//Day 1131
+//7 - separate basic types - https://www.codewars.com/kata/60113ded99cef9000e309be3/train/javascript
+function separateTypes(input) {
+  let result = {}
+  for (let i = 0; i < input.length; i++) {
+    if (typeof input[i] === "number") {
+      result.number ? result.number.push(input[i]) : result.number = [input[i]]
+    }
+    if (typeof input[i] === "string") {
+      result.string ? result.string.push(input[i]) : result.string = [input[i]]
+    }
+    if (typeof input[i] === "boolean") {
+      result.boolean ? result.boolean.push(input[i]) : result.boolean = [input[i]]
+    }
+  }
+  return result
+}
