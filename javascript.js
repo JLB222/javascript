@@ -15465,3 +15465,23 @@ function separateTypes(input) {
   }
   return result
 }
+
+//Day 1132
+//7 - Shifter Words - https://www.codewars.com/kata/603b2bb1c7646d000f900083/train/javascript
+function shifter(str){
+  if (!str) return 0
+  const shifterLetters = "HINOSXZMW"
+  //convert to arr with split
+  let stringArr = str.split(" ")
+  //map or filter arr using shifter-determining code
+  stringArr = stringArr.filter((word) => word.split("").every((letter) => shifterLetters.includes(letter)))
+  //create new set with filtered array
+  let result = new Set(stringArr)
+  //return set's size
+  return result.size
+}
+
+//or 
+function shifter2(str) {
+  return new Set( str.match( /\b[HINOSXZMW]+\b/g ) ).size ;
+}
