@@ -15485,3 +15485,9 @@ function shifter(str){
 function shifter2(str) {
   return new Set( str.match( /\b[HINOSXZMW]+\b/g ) ).size ;
 }
+
+//Day 1133
+//review
+function numToString1133(num) {
+  return ["Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"][num]
+}
