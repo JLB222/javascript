@@ -15491,3 +15491,17 @@ function shifter2(str) {
 function numToString1133(num) {
   return ["Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"][num]
 }
+
+//Day 1134
+//review
+function repVowels(str) {
+  let vowels = ["a", "e", "i", "o", "u"]
+  let string = str.split("")
+  for (let i = 0; i < str.length; i++) {
+    if (vowels.includes(string[i].toLowerCase())) {
+      string[i] = "!"
+    }
+  }
+  return string.join("")
+}
+
