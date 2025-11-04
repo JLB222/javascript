@@ -15505,3 +15505,9 @@ function repVowels(str) {
   return string.join("")
 }
 
+//Day 1135
+//7 - Game hit the target - https://www.codewars.com/kata/5ffc226ce1666a002bf023d2/train/javascript
+function solution(mtrx){
+  let newArr = mtrx.filter((arr) => arr.includes('>') && arr.includes('x')).flat()
+  return newArr.indexOf('>') < newArr.indexOf('x')
+}
