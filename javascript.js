@@ -15533,3 +15533,11 @@ function grader1136(score) {
     return "F"
   }
 }
+
+//Day 1137
+//7 - Is this a valid chess 960 position? - https://www.codewars.com/kata/61488fde47472d000827a51d/train/javascript
+function isValidChess960 (pieces) {
+  const bishopsGood = (pieces.lastIndexOf('B') - pieces.indexOf('B')) % 2 == 1;
+  const kingBetweenRooks = Boolean(pieces.match(/R.*K.*R/));
+	return bishopsGood && kingBetweenRooks;
+}
