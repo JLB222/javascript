@@ -15511,3 +15511,25 @@ function solution(mtrx){
   let newArr = mtrx.filter((arr) => arr.includes('>') && arr.includes('x')).flat()
   return newArr.indexOf('>') < newArr.indexOf('x')
 }
+
+//Day 1136
+//review
+function grader1136(score) {
+  if (score > 1) {
+    return "F"
+  }
+  if (score >= 0.9) {
+    return "A"
+  }
+  if (score >= 0.8) {
+    return "B"
+  }
+  if (score >= 0.7) {
+    return "C"
+  }
+  if (score >= 0.6) {
+    return "D"
+  } else {
+    return "F"
+  }
+}
