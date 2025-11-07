@@ -15556,3 +15556,12 @@ class StateMachine1138 {
     })
   }
 }
+
+//Day 1139
+function scramble1139(str, arr) {
+  let result = []
+  for (let i = 0; i < str.length; i++) {
+    result[arr[i]] = str[i]
+  }
+  return result.join("")
+};
