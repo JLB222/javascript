@@ -15541,3 +15541,18 @@ function isValidChess960 (pieces) {
   const kingBetweenRooks = Boolean(pieces.match(/R.*K.*R/));
 	return bishopsGood && kingBetweenRooks;
 }
+
+//Day 1138
+//review
+class StateMachine1138 {
+  constructor({ init, transitions }) {
+    this.state = init;
+    transitions.forEach(({method, current, target}) => {
+      this[method] = () => {
+        if (this.state === current) {
+          this.state = target
+        }
+      }
+    })
+  }
+}
