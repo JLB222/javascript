@@ -15565,3 +15565,17 @@ function scramble1139(str, arr) {
   }
   return result.join("")
 };
+
+//Day 1140
+//7 - Loop Array - https://www.codewars.com/kata/5fd8aa5743b49e0012d43e50/train/javascript
+function loopArr(arr, direction, steps) {
+  let result = [...arr]
+  for (let i = 0; i < steps; i++) {
+    if (direction == 'left') {
+      result.push(result.shift())
+    } else {
+      result.unshift(result.pop())
+    }
+  }
+  return result
+}
