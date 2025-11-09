@@ -15579,3 +15579,46 @@ function loopArr(arr, direction, steps) {
   }
   return result
 }
+
+//Day 1141
+//7 - Dice Rotation - https://www.codewars.com/kata/5ff2093d375dca00170057bc/train/javascript
+function rotations(dieArray) {
+  console.log(dieArray);
+
+  const possiblities = [1, 2, 3, 4, 5, 6].map((target) => {
+    let temp = 0;
+    dieArray.forEach((number) => {
+      temp += calcRequiredRotationForTarget(number, target);
+    });
+
+    return temp;
+  });
+  console.log("possiblities", possiblities);
+
+  return Math.min(...possiblities);
+}
+
+function calcRequiredRotationForTarget(number, target) {
+  if (number === target) return 0;
+
+  if (number === 1 && target === 6) {
+    return 2;
+  }
+  if (number === 2 && target === 5) {
+    return 2;
+  }
+  if (number === 3 && target === 4) {
+    return 2;
+  }
+
+  if (number === 6 && target === 1) {
+    return 2;
+  }
+  if (number === 5 && target === 2) {
+    return 2;
+  }
+  if (number === 4 && target === 3) {
+    return 2;
+  }
+  return 1;
+}
