@@ -15622,3 +15622,11 @@ function calcRequiredRotationForTarget(number, target) {
   }
   return 1;
 }
+
+//Day 1142
+//7 - Boxlines - https://www.codewars.com/kata/6129095b201d6b000e5a33f0/train/javascript
+function f(x,y,z){
+  return x * (y + 1) * (z + 1) +
+         y * (z + 1) * (x + 1) +
+         z * (x + 1) * (y + 1);
+}
