@@ -15630,3 +15630,30 @@ function f(x,y,z){
          y * (z + 1) * (x + 1) +
          z * (x + 1) * (y + 1);
 }
+
+//Day 1143
+//7 - Duplicate Sandwich 
+function duplicateSandwich(arr) {
+  let duplicate
+  for (let i = 0; i < arr.length; i++) {
+    if (arr.indexOf(arr[i]) !== arr.lastIndexOf(arr[i])) {
+      duplicate = arr[i]
+    }
+  }
+  return arr.slice(arr.indexOf(duplicate) + 1, arr.lastIndexOf(duplicate))
+}
+
+//better time complexity
+function duplicateSandwich(list) {
+  let seen = {}
+  let double = undefined;
+
+  for (let i = 0; i < list.length; i++) {
+    let ele = list[i];
+
+    ele in seen ? (double = seen[ele]) : (seen[ele] = i);
+    if (double != undefined) {
+      return list.slice(double + 1, i);
+    }
+  }
+}
