@@ -15657,3 +15657,9 @@ function duplicateSandwich(list) {
     }
   }
 }
+
+//Day 1144
+//review
+function countOccurrences(str, target) {
+  return str.split(target).length - 1
+}
