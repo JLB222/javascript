@@ -15663,3 +15663,9 @@ function duplicateSandwich(list) {
 function countOccurrences(str, target) {
   return str.split(target).length - 1
 }
+
+//Day 1145
+//review
+function createBox1145(width, height) {
+  return [...Array(height)].map((el, i) => [...Array(width)].map((el,j) => Math.min(i+1,j+1,height-i,width-j)))
+}
