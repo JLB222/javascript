@@ -15669,3 +15669,11 @@ function countOccurrences(str, target) {
 function createBox1145(width, height) {
   return [...Array(height)].map((el, i) => [...Array(width)].map((el,j) => Math.min(i+1,j+1,height-i,width-j)))
 }
+
+//Day 1146
+//review
+function humanYearsCatYearsDogYears1146 (humanYears) {
+  let catYears = humanYears === 1 ? 15 : humanYears === 2 ? 24 : humanYears >= 3 ? 16 + 4*humanYears : null
+  let dogYears = humanYears === 1 ? 15 : humanYears === 2 ? 24 : humanYears >= 3 ? 14 + 5*humanYears : null
+  return [humanYears,catYears,dogYears];
+}
