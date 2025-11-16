@@ -15677,3 +15677,11 @@ function humanYearsCatYearsDogYears1146 (humanYears) {
   let dogYears = humanYears === 1 ? 15 : humanYears === 2 ? 24 : humanYears >= 3 ? 14 + 5*humanYears : null
   return [humanYears,catYears,dogYears];
 }
+
+//Day 1147
+//7 - Mirror, Mirror on the wall - https://www.codewars.com/kata/5f55ecd770692e001484af7d/train/javascript
+function mirror(data) {
+  let result = [...data].sort((a,b) => a - b)
+  let addition = result.slice(0, result.length-1).reverse()
+  return result.concat(addition)
+}
