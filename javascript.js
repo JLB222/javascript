@@ -15685,3 +15685,18 @@ function mirror(data) {
   let addition = result.slice(0, result.length-1).reverse()
   return result.concat(addition)
 }
+
+//Day 1148
+//review 
+class Animal1148 {
+  constructor(name) {
+    this.name = name
+  }
+}
+
+class Dog1148 extends Animal1148 {
+  constructor(name,breed) {
+    super(name) 
+    this.breed = breed
+  }
+}
