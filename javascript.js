@@ -15700,3 +15700,41 @@ class Dog1148 extends Animal1148 {
     this.breed = breed
   }
 }
+
+//Day 1149
+//7 - Fusion Chamber Shutdown - https://www.codewars.com/kata/5fde1ea66ba4060008ea5bd9/solutions/javascript
+function burner(c, h, o) {
+  let carbon = c
+  let hydrogen = h
+  let oxygen = o
+  let water, co2, methane
+  
+  //water molecules
+  if (hydrogen >= 2 * oxygen) {
+    water = oxygen
+  } else {
+    water = Math.floor(hydrogen / 2)
+  }
+  oxygen -= water
+  hydrogen -= water * 2
+  
+  //carbon dioxide molecules
+  if (oxygen >= 2 * carbon) {
+    co2 = carbon
+  } else {
+    co2 = Math.floor(oxygen / 2)
+  }
+  carbon -= co2
+  oxygen -= co2 * 2
+  
+  //methane molecules
+  if (hydrogen >= 4 * carbon) {
+    methane = carbon
+  } else {
+    methane = Math.floor(hydrogen / 4)
+  }
+  carbon -= methane
+  hydrogen -= methane
+
+  return [water, co2, methane].map(el => Math.floor(el));
+}
