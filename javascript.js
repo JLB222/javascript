@@ -15738,3 +15738,9 @@ function burner(c, h, o) {
 
   return [water, co2, methane].map(el => Math.floor(el));
 }
+
+//Day 1150
+//review
+function multipleOfIndex1150(array) {
+  return array.filter((num, ind) => num % ind === 0)
+}
