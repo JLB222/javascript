@@ -15775,3 +15775,25 @@ function solve(stones) {
   }
   return count
 }
+
+//Day 1153
+//7 - 'How much kata should i complete?' - https://www.codewars.com/kata/5fd8bd0e23708100225415dc/train/javascript
+function howMuchTo(scor, cur) {
+  let numKata = parseInt(cur.match(/\d/g))
+  let temp = 0,  out = 0;
+  
+  if (cur.includes("dan")){
+    temp = requiredScore["dan_" + numKata];
+  }else{
+    temp = requiredScore["kyu_" + numKata]
+  }
+  
+  while (temp < scor) {
+    if (temp >= requiredScore["kyu_" + (numKata - 1)]){
+      numKata--
+    }
+    temp += solvingScore[numKata]
+    out += 1
+  }
+  return out
+}
