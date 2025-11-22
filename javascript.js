@@ -15797,3 +15797,9 @@ function howMuchTo(scor, cur) {
   }
   return out
 }
+
+//Day 1154
+//7 - Right in the Centre - https://www.codewars.com/kata/5f5da7a415fbdc0001ae3c69/train/javascript
+function isInMiddle(seq) {
+    return seq.length > 4 ? isInMiddle(seq.slice(1, -1)) : seq.includes(`abc`);
+}
