@@ -15803,3 +15803,21 @@ function howMuchTo(scor, cur) {
 function isInMiddle(seq) {
     return seq.length > 4 ? isInMiddle(seq.slice(1, -1)) : seq.includes(`abc`);
 }
+
+//Day 1155
+//review
+function hasScored1155(str) {
+  let cushionsHit = 0
+  let ballsHit = new Set()
+  for (let i = 0; i < str.length; i++) {
+    if ("news".includes(str[i])) {
+      cushionsHit++
+    } else {
+      ballsHit.add(str[i])
+    }
+    if (ballsHit.size >= 2) {
+      return cushionsHit >= 3
+    }
+  }
+  return false;
+}
