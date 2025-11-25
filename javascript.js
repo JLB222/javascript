@@ -15821,3 +15821,57 @@ function hasScored1155(str) {
   }
   return false;
 }
+
+//Day 1156
+//7 - Negative Connotation - https://www.codewars.com/kata/5ef0456fcd067000321baffa/train/javascript
+function connotation(str) {
+  let words = str.toLowerCase().split(" ").filter(el => el.length > 0)
+  let firstHalf = "abcdefghijklm"
+  let firstHalfCounter = 0
+  let secondHalfCounter = 0
+  for (let i = 0; i < words.length; i++) {
+    firstHalf.includes(words[i][0]) ? firstHalfCounter++ : secondHalfCounter++
+  }
+  return firstHalfCounter >= secondHalfCounter
+}
+
+//Day 1157
+//react practice - https://codesandbox.io/p/sandbox/changing-complex-state-forked-vov9ew?file=%2Fsrc%2Fcomponents%2FApp.jsx%3A4%2C3-7%2C6
+function App() {
+  let [fullName, setFullName] = useState({
+    firstName: "",
+    lastName: "",
+  });
+  
+function handleFullName(event) {
+  let { name, value } = event.target;
+
+  setFullName((prev) => ({
+    ...prev,
+    [name]: value,
+  }));
+}
+
+  return (
+    <div className="container">
+      <h1>
+        Hello {fullName.firstName} {fullName.lastName}
+      </h1>
+      <form>
+        <input
+          onChange={handleFullName}
+          name="firstName"
+          placeholder="First Name"
+          value={fullName.firstName}
+        />
+        <input
+          onChange={handleFullName}
+          name="lastName"
+          placeholder="Last Name"
+          value={fullName.lastName}
+        />
+        <button>Submit</button>
+      </form>
+    </div>
+  );
+}
