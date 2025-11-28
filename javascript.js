@@ -15887,3 +15887,9 @@ function pickIt1158(arr){
 
 //Day 1159
 //Happy Thanksgiving!
+
+//Day 1160
+//review
+function remove(integer_list, values_list){
+  return integer_list.filter(el => !values_list.includes(el))
+}
