@@ -15893,3 +15893,9 @@ function pickIt1158(arr){
 function remove(integer_list, values_list){
   return integer_list.filter(el => !values_list.includes(el))
 }
+
+//Day 1161
+//review 
+function commaToSpace(str) {
+  return str.split(",").slice(0,-1).join(" ") || null
+}
