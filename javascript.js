@@ -15899,3 +15899,20 @@ function remove(integer_list, values_list){
 function commaToSpace(str) {
   return str.split(",").slice(0,-1).join(" ") || null
 }
+
+//Day 1162
+//7 - Graceful Tipping - https://www.codewars.com/kata/5eb27d81077a7400171c6820/train/javascript
+function gracefulTipping(bill) {
+  const billPlusTip = 1.15 * bill
+  const numStr = `${billPlusTip}`
+  const digitsBeforeDecimalAmount = numStr.indexOf(".") === -1 ? numStr.length : numStr.indexOf(".")
+
+  if (digitsBeforeDecimalAmount === 1) {
+    return Math.ceil(billPlusTip)
+  }
+
+  const zerosAmount = digitsBeforeDecimalAmount - 2
+  const multiplier = 5 * (10 ** zerosAmount)
+
+  return Math.ceil(billPlusTip / multiplier) * multiplier
+}
