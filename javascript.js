@@ -15916,3 +15916,10 @@ function gracefulTipping(bill) {
 
   return Math.ceil(billPlusTip / multiplier) * multiplier
 }
+
+//Day 1163
+//review
+function repVowels1163(str) {
+  let vowels = "aeiouAEIOU"
+  return str.split("").map(el => vowels.includes(el) ? "!" : el).join("")
+}
