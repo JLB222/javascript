@@ -15923,3 +15923,24 @@ function repVowels1163(str) {
   let vowels = "aeiouAEIOU"
   return str.split("").map(el => vowels.includes(el) ? "!" : el).join("")
 }
+
+//Day 1164
+//leetcode 202 - Happy Number - https://leetcode.com/problems/happy-number/description/?envType=problem-list-v2&envId=hash-table
+function isHappy(n) {
+    function sumOfSquares(num) {
+    let answer = 0
+    while (num > 0) {
+        let remainder = num % 10
+        answer += remainder * remainder
+        num = Math.floor(num/10)
+    }
+    return answer
+    }
+    let slow = n
+    let fast = n
+    do {
+        slow = sumOfSquares(slow)
+        fast = sumOfSquares(sumOfSquares(fast))
+    } while (slow !== fast)
+    return slow === 1
+};
