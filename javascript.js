@@ -15944,3 +15944,17 @@ function isHappy(n) {
     } while (slow !== fast)
     return slow === 1
 };
+
+//Day 1165
+//7 - Red Knight - https://www.codewars.com/kata/5fc4349ddb878a0017838d0f/train/javascript
+
+//first try
+function redKnight(N, P) {
+  if (N == 0) return [(P % 2) === 0 ? "White" : "Black", P*2]
+  if (N == 1) return [(P % 2) === 0 ? "Black" : "White", P*2]
+}
+
+//refactor, less understandable
+function redKnight(N, P) {
+  return [(N+P) % 2 ? "Black" : "White", P*2]
+}
