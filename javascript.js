@@ -15958,3 +15958,32 @@ function redKnight(N, P) {
 function redKnight(N, P) {
   return [(N+P) % 2 ? "Black" : "White", P*2]
 }
+
+//Day 1166
+//205 - Isomorphic Strings 
+//works but is quite slow and misuses maps
+function isIsomorphic(s, t) {
+  let first = new Map();
+  let second = new Map();
+  let verdict = true;
+  for (let i = 0; i < s.length; i++) {
+    if (first[s[i]]) {
+      first[s[i]].push(i);
+    } else {
+      first[s[i]] = [i];
+    }
+  }
+  for (let i = 0; i < t.length; i++) {
+    if (second[t[i]]) {
+      second[t[i]].push(i);
+    } else {
+      second[t[i]] = [i];
+    }
+  }
+  for (let i = 0; i < s.length; i++) {
+    if (first[s[i]].toString() !== second[t[i]].toString()) {
+      verdict = false;
+    }
+  }
+  return verdict;
+}
