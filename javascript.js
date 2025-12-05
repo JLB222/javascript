@@ -15987,3 +15987,10 @@ function isIsomorphic(s, t) {
   }
   return verdict;
 }
+
+//Day 1167
+//spiraling box review
+function createBox(width, height) {
+  return [...Array(height)].map((el, i) => [...Array(width)].map((el, j) => Math.min(i + 1, j + 1, height - i, width - j)));
+}
+
