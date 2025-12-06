@@ -15994,3 +15994,23 @@ function createBox(width, height) {
   return [...Array(height)].map((el, i) => [...Array(width)].map((el, j) => Math.min(i + 1, j + 1, height - i, width - j)));
 }
 
+//Day 1168
+//review
+function isHappy1168(n) {
+    function sumOfSquares(num) {
+        let sum = 0
+        while (num > 0) {
+            remainder = num % 10
+            sum += remainder * remainder
+            num = Math.floor(num / 10)
+        }
+        return sum
+    }
+    let slow = n
+    let fast = n
+    do {
+        slow = sumOfSquares(slow)
+        fast = sumOfSquares(sumOfSquares(fast))
+    } while (slow !== fast)
+    return slow === 1
+};
