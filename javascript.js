@@ -16014,3 +16014,11 @@ function isHappy1168(n) {
     } while (slow !== fast)
     return slow === 1
 };
+
+//Day 1169
+//review
+function reverseIt1169(data) {
+  if(typeof data == 'string') return data.split('').reverse().join('');
+  if(typeof data == 'number') return parseFloat(String(data).split('').reverse().join(''));
+  return data;
+}
