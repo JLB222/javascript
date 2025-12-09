@@ -16022,3 +16022,18 @@ function reverseIt1169(data) {
   if(typeof data == 'number') return parseFloat(String(data).split('').reverse().join(''));
   return data;
 }
+
+//Day 1170
+//7 - Grouping in string - https://www.codewars.com/kata/5ee8ba31b44cc30032cbce04/train/javascript
+function isConsecutive(str){
+  let elements = new Set()
+  for (let i = 0; i < str.length; i++) {
+    if (elements.has(str[i])) {
+      return false
+    }
+    if (str[i] !== str[i+1]) {
+      elements.add(str[i])
+    }
+  }
+  return true
+}
