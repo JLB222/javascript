@@ -16037,3 +16037,15 @@ function isConsecutive(str){
   }
   return true
 }
+
+//Day 1171
+//review
+function sevenAteNine(str) {
+  let numbers = str.split("")
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] == 9 && numbers[i-1] == 7 && numbers[i+1] == 7) {
+      numbers[i] = ""
+    }
+  }
+  return numbers.join("")
+}
