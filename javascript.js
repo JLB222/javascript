@@ -16049,3 +16049,18 @@ function sevenAteNine(str) {
   }
   return numbers.join("")
 }
+
+//Day 1172
+//review
+class StateMachine1172 {
+  constructor({ init, transitions }) {
+    this.state = init;
+    for (let el of transitions) {
+      this[el.method] = () => {
+        if (this.state == el.current) {
+          this.state = el.target
+        }
+      }
+    }
+  }
+}
