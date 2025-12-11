@@ -7623,7 +7623,7 @@ class GBFMAKER {
   }
 }
 //API basics
-import express from "Express"
+//import express from "Express"
 const App = express()
 App.listen(PORT, optionalCallback)
 App.get("/api", reqResCallback)
@@ -16064,3 +16064,17 @@ class StateMachine1172 {
     }
   }
 }
+
+//Day 1173
+//205 - Isomorphic Strings
+var isIsomorphic = function(s, t) {
+    if (s.length != t.length) return false
+    let mapOne = new Map()
+    let mapTwo = new Map()
+    for (let i = 0; i < s.length; i++) {
+        if (mapOne[s[i]] !== mapTwo[t[i]]) {return false}
+        mapOne[s[i]] = i
+        mapTwo[t[i]] = i
+    }
+    return true
+};
