@@ -16078,3 +16078,13 @@ var isIsomorphic = function(s, t) {
     }
     return true
 };
+
+//Day 1174
+//7 - Most Sales - https://www.codewars.com/kata/5e16ffb7297fe00001114824/train/javascript
+function top3(products, amounts, prices) {
+   return products
+    .map((name, index) => ({ name, index, revenue: amounts[index] * prices[index] }))
+    .sort((a, b) => b.revenue - a.revenue || a.index - b.index)     
+    .slice(0, 3)
+    .map(product => product.name)
+}
