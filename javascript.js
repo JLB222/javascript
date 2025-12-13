@@ -16088,3 +16088,13 @@ function top3(products, amounts, prices) {
     .slice(0, 3)
     .map(product => product.name)
 }
+
+//Day 1175 
+//review
+function noIfsNoButs1175(a, b) {
+  switch(true) {
+      case a>b   : return `${a} is greater than ${b}`
+      case a<b   : return `${a} is smaller than ${b}`
+      case a===b : return `${a} is equal to ${b}`
+  }
+}
