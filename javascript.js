@@ -16098,3 +16098,13 @@ function noIfsNoButs1175(a, b) {
       case a===b : return `${a} is equal to ${b}`
   }
 }
+
+//Day 1176
+//review 
+function countElementsForOf1176(arr) {
+  let counter = {}
+  for (let num of arr) {
+    counter[num] = (counter[num] || 0) +1
+  }
+  return counter
+}
