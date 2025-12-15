@@ -16108,3 +16108,9 @@ function countElementsForOf1176(arr) {
   }
   return counter
 }
+
+//Day 1177
+//most sales review
+function top3(products, amounts, prices) {
+  return products.map((productName, index) => ({productName, index, profit: amounts[index] * prices[index]})).sort((a,b) => b.profit - a.profit || b.index - a.index).slice(0,3).map(el => el.productName)
+}
