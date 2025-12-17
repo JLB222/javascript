@@ -16114,3 +16114,13 @@ function countElementsForOf1176(arr) {
 function top3(products, amounts, prices) {
   return products.map((productName, index) => ({productName, index, profit: amounts[index] * prices[index]})).sort((a,b) => b.profit - a.profit || b.index - a.index).slice(0,3).map(el => el.productName)
 }
+
+//Day 1178 
+//review
+function reverse(array) {
+  let result = []
+  for (let i = 0; i < array.length; i++) {
+    result.unshift(array[i])
+  }
+  return result
+}
