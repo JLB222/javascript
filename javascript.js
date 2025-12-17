@@ -16124,3 +16124,18 @@ function reverse(array) {
   }
   return result
 }
+
+//Day 1179
+//review
+function howManydays1179(month){
+  var days;
+  switch (month){
+    case 4:
+    case 6:
+    case 9:
+    case 11: days = 30; break;
+    case 2: days = 28; break;
+    default: days = 31; break;
+  }
+  return days;
+}
