@@ -16139,3 +16139,21 @@ function howManydays1179(month){
   }
   return days;
 }
+
+//Day 1180
+//7 - Best Perk or Cash Out - 
+function pick(preferred, blacklisted, options) {
+  let answers = ["A", "B", "C"]
+  let sortedByWeightArr = options.map((el, i) => {
+      if (preferred.has(el[0]) && !blacklisted.has(el[0])) {
+        return {name: el, weight: el[1] * 100, index: i}
+      }
+      if (blacklisted.has(el[0])) {
+        return {name: el, weight: 0, index: i}
+      } else {
+        return {name: el, weight: el[1], index: i}
+      }
+    }).sort((a,b) => b.weight-a.weight)
+  
+  return sortedByWeightArr[0].weight > 0 ? answers[sortedByWeightArr[0].index] : "D"
+}
