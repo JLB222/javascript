@@ -16141,7 +16141,7 @@ function howManydays1179(month){
 }
 
 //Day 1180
-//7 - Best Perk or Cash Out - 
+//7 - Best Perk or Cash Out - https://www.codewars.com/kata/69347c0454f16273e13b56e8/train/javascript
 function pick(preferred, blacklisted, options) {
   let answers = ["A", "B", "C"]
   let sortedByWeightArr = options.map((el, i) => {
@@ -16156,4 +16156,15 @@ function pick(preferred, blacklisted, options) {
     }).sort((a,b) => b.weight-a.weight)
   
   return sortedByWeightArr[0].weight > 0 ? answers[sortedByWeightArr[0].index] : "D"
+}
+
+
+//Day 1181
+//review - Most Sales
+function top3_1181(products, amounts, prices) {
+  return products
+    .map((el, i) => ({name: el, index: i, revenue: prices[i] * amounts[i]}))
+    .sort((a,b) => b.revenue - a.revenue || a.index - b.index)  //make sure you have descending revenue but ascending index
+    .slice(0,3)
+    .map(el => el.name)
 }
