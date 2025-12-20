@@ -16168,3 +16168,18 @@ function top3_1181(products, amounts, prices) {
     .slice(0,3)
     .map(el => el.name)
 }
+
+//Day 1182
+//review - given an array of numbers, if any of the numbers are the character codes for lowercase aeiou, replace those numbers with the appropriate letter
+function isVow1182(arr){
+  for (let i = 0; i < arr.length; i++) {
+    switch (arr[i]) {
+        case 97: arr[i] = "a"; break;
+        case 101: arr[i] = "e"; break;
+        case 105: arr[i] = "i"; break;
+        case 111: arr[i] = "o"; break;
+        case 117: arr[i] = "u"; break;
+    }
+  }
+  return arr
+}
