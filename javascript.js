@@ -16183,3 +16183,94 @@ function isVow1182(arr){
   }
   return arr
 }
+
+let metals = {
+    "Tungsten": 3422,
+    "Rhenium": 3186,
+    "Osmium": 3033,
+    "Tantalum": 3017,
+    "Molybdenum": 2623,
+    "Niobium": 2477,
+    "Iridium": 2446,
+    "Ruthenium": 2334,
+    "Hafnium": 2233,
+    "Technetium": 2157,
+    "Zirconium": 1855,
+    "Vanadium": 1910,
+    "Chromium": 1907,
+    "Titanium": 1668,
+    "Cobalt": 1495,
+    "Nickel": 1455,
+    "Yttrium": 1526,
+    "Iron": 1538,
+    "Scandium": 1541,
+    "Beryllium": 1287,
+    "Manganese": 1246,
+    "Thorium": 1750,
+    "Barium": 727,
+    "Calcium": 842,
+    "Strontium": 777,
+    "Magnesium": 650,
+    "Aluminum": 660,
+    "Zinc": 419,
+    "Cadmium": 321,
+    "Gallium": 30,
+    "Indium": 157,
+    "Tin": 232,
+    "Lead": 328,
+    "Bismuth": 271,
+    "Mercury": -39,
+    "Francium": 27,
+    "Cesium": 29,
+    "Rubidium": 39,
+    "Potassium": 64,
+    "Sodium": 98,
+    "Lithium": 180,
+    "Gold": 1064,
+    "Silver": 962,
+    "Copper": 1085,
+    "Palladium": 1555,
+    "Platinum": 1768,
+    "Radium": 700,
+    "Actinium": 1050,
+    "Protactinium": 1572,
+    "Uranium": 1132,
+    "Neptunium": 639,
+    "Plutonium": 640,
+    "Americium": 1176,
+    "Curium": 1340,
+    "Berkelium": 986,
+    "Californium": 900,
+    "Einsteinium": 860,
+    "Fermium": 1527,
+    "Mendelevium": 827,
+    "Lawrencium": 1620,
+    "Rutherfordium": null,
+    "Dubnium": null,
+    "Seaborgium": null,
+    "Bohrium": null,
+    "Hassium": null,
+    "Meitnerium": null,
+    "Darmstadtium": null,
+    "Roentgenium": null,
+    "Copernicium": null,
+    "Nihonium": null,
+    "Flerovium": null,
+    "Moscovium": null,
+    "Livermorium": null,
+    "Tennessine": null,
+    "Oganesson": null
+}
+
+let metalNames = []
+let metalTemps = []
+for (let key in metals) {
+  metalNames.push(key)
+  metalTemps.push(metals[key])
+}
+let metalObjects = []
+for (let i = 0; i < metalNames.length; i++) {
+  metalObjects[i] = {name: metalNames[i], meltingPoint: metalTemps[i]}
+}
+
+metalObjects.sort((a,b) => b.meltingPoint - a.meltingPoint)
