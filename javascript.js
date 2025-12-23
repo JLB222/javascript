@@ -16284,3 +16284,10 @@ function countItems(arr) {
     counts[arr[i]] = (counts[arr[i]] || 0) + 1
   }
 }
+
+//Day 1184
+//7 - Happy Birthday - https://www.codewars.com/kata/5e96332d18ac870032eb735f/train/javascript
+function womensAge(num) {
+  let base = Math.floor(num/2)
+  return `${num}? That\'s just ${(Math.floor(num / base)) +""+ (num % base)}, in base ${base}!`
+}
