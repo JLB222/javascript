@@ -16291,3 +16291,6 @@ function womensAge(num) {
   let base = Math.floor(num/2)
   return `${num}? That\'s just ${(Math.floor(num / base)) +""+ (num % base)}, in base ${base}!`
 }
+
+//Day 1185
+//Christmas Eve!
