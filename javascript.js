@@ -16307,3 +16307,13 @@ function countTheThings1187(arr) {
   }
   return counts
 }
+
+//Day 1188
+//review
+function scramble1188(str, arr) {
+  let result = []
+  for (let i = 0; i < str.length; i++) {
+    result[arr[i]] = str[i]
+  }
+  return result.join("")
+}
