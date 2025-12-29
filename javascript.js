@@ -16317,3 +16317,9 @@ function scramble1188(str, arr) {
   }
   return result.join("")
 }
+
+//Day 1189
+//review
+function betweenExtremes1189(numbers) {
+  return Math.max(...numbers) - Math.min(...numbers)
+}
