@@ -16338,3 +16338,9 @@ function howManyDays1190(month) {
   }
   return days
 }
+
+//Day 1191
+//review
+function digits1191(n) {
+  return n.toString().length
+}
