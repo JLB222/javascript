@@ -16323,3 +16323,18 @@ function scramble1188(str, arr) {
 function betweenExtremes1189(numbers) {
   return Math.max(...numbers) - Math.min(...numbers)
 }
+
+//Day 1190
+//review
+function howManyDays1190(month) {
+  var days
+  switch(month) {
+    case 4:
+    case 6:
+    case 9:
+    case 11: days =  30; break;
+    case 2: days =  28; break;
+    default: days =  31; break;
+  }
+  return days
+}
