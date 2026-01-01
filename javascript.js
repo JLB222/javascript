@@ -16346,6 +16346,14 @@ function digits1191(n) {
 }
 
 //Day 1192
+//review
 function zeroToNine1192(n) {
   return "Zero One Two Three Four Five Six Seven Eight Nine".split(" ")[n]
+}
+
+//Day 1193
+//review
+function encode1193(str, num) {
+	var numString = num.toString()
+  return str.split("").map((el, i) => el.charCodeAt(0) - 96 + +numString[i % numString.length])
 }
