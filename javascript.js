@@ -16344,3 +16344,8 @@ function howManyDays1190(month) {
 function digits1191(n) {
   return n.toString().length
 }
+
+//Day 1192
+function zeroToNine1192(n) {
+  return "Zero One Two Three Four Five Six Seven Eight Nine".split(" ")[n]
+}
