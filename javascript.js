@@ -16357,3 +16357,9 @@ function encode1193(str, num) {
 	var numString = num.toString()
   return str.split("").map((el, i) => el.charCodeAt(0) - 96 + +numString[i % numString.length])
 }
+
+//Day 1194
+//review
+function noOdds1194( values ){
+  return values.filter(x => x % 2 ===0)
+}
