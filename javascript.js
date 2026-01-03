@@ -16363,3 +16363,9 @@ function encode1193(str, num) {
 function noOdds1194( values ){
   return values.filter(x => x % 2 ===0)
 }
+
+//Day 1195
+//review
+function periodIsLate1195(last, today, cycleLength){
+  return ( ( today.getTime() - last.getTime() ) / 86400000) > cycleLength
+}
