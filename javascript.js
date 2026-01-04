@@ -16369,3 +16369,9 @@ function noOdds1194( values ){
 function periodIsLate1195(last, today, cycleLength){
   return ( ( today.getTime() - last.getTime() ) / 86400000) > cycleLength
 }
+
+//Day 1196
+//review
+function convert1196(num) {
+  return ["Zero", "One", "Two","Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"][num]
+}
