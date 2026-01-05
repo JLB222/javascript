@@ -16375,3 +16375,23 @@ function periodIsLate1195(last, today, cycleLength){
 function convert1196(num) {
   return ["Zero", "One", "Two","Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"][num]
 }
+
+//Day 1197
+//Best Perk or Cash Out Review
+function pick(preferred, blacklisted, options) {
+  let answers = ["A", "B", "C"]
+  let sortedByWeightArr = options.map((el, i) => {
+      if (preferred.has(el[0]) && !blacklisted.has(el[0])) {
+        return {name: el, weight: el[1] * 100, index: i}
+      }
+      if (blacklisted.has(el[0])) {
+        return {name: el, weight: 0, index: i}
+      } else {
+        return {name: el, weight: el[1], index: i}
+      }
+    }).sort((a,b) => b.weight-a.weight)
+  
+  let highestWeightOption = sortedByWeightArr[0]
+  
+  return highestWeightOption.weight == 0 ? "D" : answers[highestWeightOption.index]
+}
