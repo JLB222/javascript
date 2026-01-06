@@ -16395,3 +16395,15 @@ function pick(preferred, blacklisted, options) {
   
   return highestWeightOption.weight == 0 ? "D" : answers[highestWeightOption.index]
 }
+
+//Day 1198
+//review
+function inAscOrder1198(arr) {
+  for(let i = 0; i < arr.length - 1; i++) {
+    if (arr[i] > arr[i+1]) {
+      return false; 
+    }
+  }
+  return true;
+}
+
