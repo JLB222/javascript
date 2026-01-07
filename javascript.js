@@ -16407,3 +16407,12 @@ function inAscOrder1198(arr) {
   return true;
 }
 
+//Day 1199
+//reviewing Best Sales
+function top3_1199(products, amounts, prices) {
+   return products
+    .map((name, index) => ({ name, index, revenue: amounts[index] * prices[index] }))
+    .sort((a, b) => b.revenue - a.revenue || a.index - b.index)     
+    .slice(0, 3)
+    .map(product => product.name)
+}
