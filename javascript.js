@@ -16416,3 +16416,9 @@ function top3_1199(products, amounts, prices) {
     .slice(0, 3)
     .map(product => product.name)
 }
+
+//Day 1200
+//review
+function noOdds_1200( values ){
+  return values.filter(x => x % 2 === 0)
+}
