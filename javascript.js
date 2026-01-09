@@ -16422,3 +16422,10 @@ function top3_1199(products, amounts, prices) {
 function noOdds_1200( values ){
   return values.filter(x => x % 2 === 0)
 }
+
+//Day 1201
+//review - custom sort 
+function customSort1201(arr) {
+  const order = "A23456789TJQK"
+  return arr.sort((a,b) => order.indexOf(a) - order.indexOf(b))
+}
