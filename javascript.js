@@ -16435,3 +16435,23 @@ function customSort1201(arr) {
 function createBox1202(width, height) {
   return [...Array(height)].map((el, i) => [...Array(width)].map((el, j) => Math.min(i + 1, j + 1, height - i, width - j)));
 }
+
+//Day 1203
+//review 
+function sumFactorial_1203(arr){
+  let sum = 0
+  for (let i = 0; i < arr.length; i++) {
+    sum += factorialize(arr[i])
+  }
+  return sum
+}
+
+function factorialize_1203(num) {
+  if (num < 0) 
+        return -1;
+  else if (num == 0) 
+      return 1;
+  else {
+      return (num * factorialize(num - 1));
+  }
+}
