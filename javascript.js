@@ -16455,3 +16455,10 @@ function factorialize_1203(num) {
       return (num * factorialize(num - 1));
   }
 }
+
+
+//Day 1204
+//7 - Grid Index - https://www.codewars.com/kata/5f5802bf4c2cc4001a6f859e/train/javascript
+function gridIndex(grid, indices) {
+  return indices.map((el) => grid.flat()[el-1]).join("")
+}
