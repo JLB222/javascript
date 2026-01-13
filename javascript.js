@@ -16462,3 +16462,15 @@ function factorialize_1203(num) {
 function gridIndex(grid, indices) {
   return indices.map((el) => grid.flat()[el-1]).join("")
 }
+
+//Day 1205
+//review
+function jumpingNumber_1205(n){
+  let arr = n.toString().split('')
+  for(i = 0; i < arr.length-1; i++){
+    if(Math.abs(arr[i] - arr[i+1]) !== 1 ){
+      return 'Not!!'
+    }
+  }
+  return 'Jumping!!'
+}
