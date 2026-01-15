@@ -16474,3 +16474,8 @@ function jumpingNumber_1205(n){
   }
   return 'Jumping!!'
 }
+
+//Day 1206
+//review
+const words_1206 = ['spray', 'elite', 'exuberant', 'destruction', 'present'];
+words_1206.filter((el) => el.length === 5) //returns ['spray', 'elite']
