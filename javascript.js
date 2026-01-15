@@ -16479,3 +16479,10 @@ function jumpingNumber_1205(n){
 //review
 const words_1206 = ['spray', 'elite', 'exuberant', 'destruction', 'present'];
 words_1206.filter((el) => el.length === 5) //returns ['spray', 'elite']
+
+//Day 1207
+//review
+//8 Enumerable Magic 2
+function any_1207(arr, fun){
+  return arr.some(fun)
+}
