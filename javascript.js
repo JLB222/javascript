@@ -16486,3 +16486,10 @@ words_1206.filter((el) => el.length === 5) //returns ['spray', 'elite']
 function any_1207(arr, fun){
   return arr.some(fun)
 }
+
+//Day 1208
+//review - Simple Letter Removal
+function solve_1208(str, num){
+    let toBeRemoved = str.split("").sort("").slice(0,num)
+    return toBeRemoved.reduce((prev, val) => prev.replace(val, ""), str)
+}
