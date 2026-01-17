@@ -16493,3 +16493,16 @@ function solve_1208(str, num){
     let toBeRemoved = str.split("").sort("").slice(0,num)
     return toBeRemoved.reduce((prev, val) => prev.replace(val, ""), str)
 }
+
+//Day 1209
+//review
+function repVowels_1209(str) {
+  let vowels = "aeiouAEIOU".split("")
+  let result = str.split("")
+  for (let i = 0; i < result.length; i++) {
+    if (vowels.includes(result[i])) {
+      result[i] = "!"
+    }
+  }
+  return result.join("")
+}
