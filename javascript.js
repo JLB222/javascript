@@ -16512,3 +16512,13 @@ function repVowels_1209(str) {
 function nato_1210(word) {
 	return word.split("").map(el => LETTERS[el.toUpperCase()]).join(" ")
 }
+
+//Day 1211
+//7 - Possible side lengths of a triangle excluding right triangles - https://www.codewars.com/kata/5e81303e7bf0410025e01031/train/javascript
+function sideLen(x, y) {
+  let a = [(x**2 + y**2)**0.5, (y**2 - x**2)**0.5], r = [];
+  for (let i = y - x + 1; i < y + x; i++)
+    if (!a.includes(i))
+      r.push(i);
+  return r;
+}
