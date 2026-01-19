@@ -16506,3 +16506,9 @@ function repVowels_1209(str) {
   }
   return result.join("")
 }
+
+//Day 1210
+//review - 7 - NATO Phonetic Alphabet
+function nato_1210(word) {
+	return word.split("").map(el => LETTERS[el.toUpperCase()]).join(" ")
+}
