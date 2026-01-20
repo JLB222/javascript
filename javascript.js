@@ -16522,3 +16522,12 @@ function sideLen(x, y) {
       r.push(i);
   return r;
 }
+
+//Day 1212
+//review
+class Dog1212 extends Animal {
+  constructor(species, name, breed) {
+    super(species, name)
+    this.breed = breed
+  }
+}
