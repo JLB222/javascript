@@ -16546,3 +16546,10 @@ function top3_1214(products, amounts, prices) {
   let topThree = revenue.sort((a,b) => b.profit - a.profit || a.index - b.index)
   return topThree.slice(0,3).map(el => el.name)
 }
+
+//Day 1215 
+//review 
+//7 - Hello World without strings
+function helloWorld_1215(){
+  return String.fromCharCode(72,101,108,108,111, 44,32, 87,111,114,108,100, 33)
+}
