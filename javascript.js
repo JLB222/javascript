@@ -16531,3 +16531,10 @@ class Dog1212 extends Animal {
     this.breed = breed
   }
 }
+
+//Day 1213
+//7 - Product ID from URL - https://www.codewars.com/kata/5e2c7639b5d728001489d910/train/javascript
+function getProductId(url){
+  let arr = url.split("-")
+  return arr[arr.length-2]
+}
