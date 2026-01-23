@@ -16538,3 +16538,11 @@ function getProductId(url){
   let arr = url.split("-")
   return arr[arr.length-2]
 }
+
+//Day 1214
+//review
+function top3_1214(products, amounts, prices) {
+  let revenue = products.map((el,i) => ({name: el, profit: amounts[i] * prices[i], index: i}))
+  let topThree = revenue.sort((a,b) => b.profit - a.profit || a.index - b.index)
+  return topThree.slice(0,3).map(el => el.name)
+}
