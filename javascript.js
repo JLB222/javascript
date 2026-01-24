@@ -16553,3 +16553,10 @@ function top3_1214(products, amounts, prices) {
 function helloWorld_1215(){
   return String.fromCharCode(72,101,108,108,111, 44,32, 87,111,114,108,100, 33)
 }
+
+//Day 1216
+//review
+//7 - Suzuki; lining up his students
+function lineupStudents_1216(students){
+  return students.split(" ").sort((a,b) => b.localeCompare(a)).sort((a,b) => b.length - a.length, 0)
+}
