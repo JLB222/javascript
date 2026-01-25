@@ -16560,3 +16560,13 @@ function helloWorld_1215(){
 function lineupStudents_1216(students){
   return students.split(" ").sort((a,b) => b.localeCompare(a)).sort((a,b) => b.length - a.length, 0)
 }
+
+//Day 1217
+// 8 - produce an array of numbers in reverse order, starting with n
+function reverseSeq_1217(n) {
+  let numbers = [];
+  for (let i = 1; i <= n; i++) {
+    numbers.unshift(i)
+  }
+  return numbers
+}
