@@ -16570,3 +16570,16 @@ function reverseSeq_1217(n) {
   }
   return numbers
 }
+
+//Day 1218
+//7 - Minimum to multiple - https://www.codewars.com/kata/5e030f77cec18900322c535d/train/javascript
+function minimum(a, x) {
+  let increment = a
+  let decrement = a
+  for (let i = 0; i < x; i++) {
+    if (increment % x === 0) return increment - a
+    if (decrement % x === 0) return a - decrement
+    increment++
+    decrement--
+  }
+}
