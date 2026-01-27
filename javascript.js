@@ -16583,3 +16583,9 @@ function minimum(a, x) {
     decrement--
   }
 }
+
+//Day 1219
+//refactor line 258
+function findLongest_1210(str){
+    return str.split(" ").sort((a,b) => b.length - a.length)[0]
+}
