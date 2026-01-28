@@ -16589,3 +16589,13 @@ function minimum(a, x) {
 function findLongest_1210(str){
     return str.split(" ").sort((a,b) => b.length - a.length)[0]
 }
+
+
+//Day 1220
+//class extension review
+class Dog extends Animal {
+  constructor(name, breed) {
+    super(name)
+    this.breed = breed
+  }
+}
