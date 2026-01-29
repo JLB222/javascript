@@ -16599,3 +16599,18 @@ class Dog extends Animal {
     this.breed = breed
   }
 }
+
+//Day 1221
+//review - state machine
+class StateMachine_1221 {
+  constructor({ init, transitions }) {
+    this.state = init;
+    for (let obj of transitions) {
+      this[obj.method] = () => {
+        if (this.state === obj.current) {
+          this.state = obj.target
+        }
+      }
+    }
+  }
+}
