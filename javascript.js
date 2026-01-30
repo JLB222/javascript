@@ -16614,3 +16614,15 @@ class StateMachine_1221 {
     }
   }
 }
+
+//Day 1222
+//review
+//7 - Factorial
+function factorial_1222(num){
+  if (num < 0 || num > 12) {throw new RangeError('Argument must be an integer between 0 and 12');}
+  let result = 1
+  for (let i = 0; i < num; i++) {
+    result *= (num - i)
+  }
+  return result
+}
