@@ -16646,3 +16646,13 @@ function pick_1223(preferred, blacklisted, options) {
   
   return highestWeightOption.weight == 0 ? "D" : answers[highestWeightOption.index]
 }
+
+//Day 1224
+//review
+function multiples_1224(num, int){
+  let result = []
+  for (let i = 1; i <= num; i++) {
+    result.push(int * i)
+  }
+  return result
+}
