@@ -17353,3 +17353,9 @@ function solve_1283(str, num){
 function numStrToArr(arr){
   return arr.split(",").slice(1,-1).join(" ") || null
 }
+
+//Day 1285
+//7r - original price
+function discoverOriginalPrice_1285(discountedPrice, salePercentage){
+  return +(discountedPrice / (1 - salePercentage * .01)).toFixed(2)
+}
