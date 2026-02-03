@@ -16656,3 +16656,11 @@ function multiples_1224(num, int){
   }
   return result
 }
+
+//Day 1225
+//review, refactor
+//7 - Product of largest pair
+function maxProduct_1225(a) {
+  let arr = a.sort((a,b) => b-a, 0)
+  return arr[0] * arr[1]
+}
