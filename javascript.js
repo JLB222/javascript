@@ -16664,3 +16664,20 @@ function maxProduct_1225(a) {
   let arr = a.sort((a,b) => b-a, 0)
   return arr[0] * arr[1]
 }
+
+//Day 1226
+//7 - How many urinals are free? - https://www.codewars.com/kata/5e2733f0e7432a000fb5ecc4/train/javascript
+function getFreeUrinals(urinals){
+  if(urinals.includes("11")) return -1
+  
+  let n = 0, arr = urinals.split("")
+  
+  for(let i = 0; i < arr.length; i++){
+    //we use != 1 instead of == 0 to account for the Undefined we will get when we check the previous value of the first element or the next value of the last element
+    if(arr[i] == '0' && arr[i + 1] != '1' && arr[i - 1] != '1'){
+      n++
+      arr[i] = '1'
+    }
+  }
+  return n
+}
