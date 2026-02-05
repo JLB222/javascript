@@ -16681,3 +16681,12 @@ function getFreeUrinals(urinals){
   }
   return n
 }
+
+//Day 1227
+//review
+//7 - Functional Addition
+function add_1227(n) {
+  return function (x) {
+    return n+x
+  }
+}
