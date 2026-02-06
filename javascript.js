@@ -16690,3 +16690,11 @@ function add_1227(n) {
     return n+x
   }
 }
+
+//Day 1228
+//review
+function top3_1228(products, amounts, prices) {
+  let productObjects = products.map((el, i) => ({name: el, index: 1, profits: amounts[i] * prices[i]}))
+  
+  return productObjects.sort((a,b) => b.profits - a.profits || a.index - b.index).slice(0,3).map(el => el.name)
+}
