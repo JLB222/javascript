@@ -16698,3 +16698,9 @@ function top3_1228(products, amounts, prices) {
   
   return productObjects.sort((a,b) => b.profits - a.profits || a.index - b.index).slice(0,3).map(el => el.name)
 }
+
+//Day 1229
+//review
+function createBox_1229(width, height) {
+  return [...Array(height)].map((el, i) => [...Array(width)].map((el, j) => Math.min(i + 1, j + 1, height - i, width - j)));
+}
