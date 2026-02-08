@@ -16704,3 +16704,18 @@ function top3_1228(products, amounts, prices) {
 function createBox_1229(width, height) {
   return [...Array(height)].map((el, i) => [...Array(width)].map((el, j) => Math.min(i + 1, j + 1, height - i, width - j)));
 }
+
+//Day 1230
+//review
+class StateMachine_1230 {
+  constructor({ init, transitions }) {
+    this.state = init;
+    transitions.forEach(({method, current, target}) => {
+      this[method] = () => {
+        if (this.state === current) {
+          this.state = target
+        }
+      }
+    })
+  }
+}
