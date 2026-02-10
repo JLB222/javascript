@@ -16719,3 +16719,18 @@ class StateMachine_1230 {
     })
   }
 }
+
+//Day 1231
+//review & refactor
+function isValidWalk_1231(walk) {
+  if (walk.length !== 10) return false
+  let x = 0
+  let y = 0
+  for (let i = 0; i < walk.length; i++) {
+    if (walk[i] === "n") {x += 1}
+    if (walk[i] === "s") {x -= 1}
+    if (walk[i] === "e") {y += 1}
+    if (walk[i] === "w") {y -= 1}
+  }
+  return x === 0 && y === 0
+}
