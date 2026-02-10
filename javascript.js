@@ -16734,3 +16734,16 @@ function isValidWalk_1231(walk) {
   }
   return x === 0 && y === 0
 }
+
+//Day 1232
+//Review - Three-Cushion Billiards
+function hasScored_1232(str) {
+  let cushionsHit = 0
+  let ballsHit = new Set()
+  for (let char of str) {
+    if ("news".includes(char)) {cushionsHit++}
+    else {ballsHit.add(char)}
+    if (ballsHit.size == 2 && ballsHit.has("R")) {return cushionsHit >= 3}
+  }
+  return false
+}
