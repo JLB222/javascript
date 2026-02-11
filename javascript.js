@@ -16747,3 +16747,26 @@ function hasScored_1232(str) {
   }
   return false
 }
+
+//Day 1233
+//7 - Racing Grid Validation - https://www.codewars.com/kata/692c80fa12006b05757089dd/train/javascript
+//absolutely awful description
+function validateRace(moves) {
+  let startingPositions = [];
+
+  for(let i = 0; i < moves.length; i++){
+    
+     let startPos = (i + 1) + moves[i];
+
+     if(startPos < 1 || startPos > moves.length){
+        return false;
+      }
+
+     if(startingPositions.includes(startPos)){
+       return false;
+     }
+
+    startingPositions.push(startPos);
+   }
+   return true;
+}
