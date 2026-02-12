@@ -16770,3 +16770,13 @@ function validateRace(moves) {
    }
    return true;
 }
+
+//Day 1234
+//review
+function scramble_1234(str, arr) {
+  let result = []
+  for (let i = 0; i < str.length; i++) {
+    result[arr[i]] = str[i]
+  }
+  return result.join("")
+}
