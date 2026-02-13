@@ -16780,3 +16780,24 @@ function scramble_1234(str, arr) {
   }
   return result.join("")
 }
+
+//Day 1235
+//7 - Will you survive the zombie onslaught? - https://www.codewars.com/kata/5deeb1cc0d5bc9000f70aa74/train/javascript
+function zombieShootout (zombies, range, ammo) {
+  if (ammo >= zombies && range * 2 >= zombies ) {return `You shot all ${zombies} zombies.`}
+  if (ammo >= zombies && range * 2 <= zombies ) {return `You shot ${range * 2} zombies before being eaten: overwhelmed.`}
+  if (ammo < zombies && range * 2 >= zombies) { return `You shot ${ammo} zombies before being eaten: ran out of ammo.`}
+  
+  if (ammo < zombies && range * 2 < zombies && ammo > range*2) { return `You shot ${range * 2} zombies before being eaten: overwhelmed.`}
+  if (ammo < zombies && range * 2 < zombies && ammo < range*2) { return `You shot ${ammo} zombies before being eaten: ran out of ammo.`}
+  if (ammo < zombies && range * 2 < zombies && ammo == range*2) { return `You shot ${range * 2} zombies before being eaten: overwhelmed.`}
+}
+
+//enough ammo and enough range
+//enough ammo, not enough range
+//enough range, not enough ammo
+
+//enough of neither, but ammo runs out first
+//enough of neither, but range runs out first
+//enough of neither, but they run out at the same time
+
