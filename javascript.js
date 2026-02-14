@@ -14997,7 +14997,7 @@ async function getACuteDogPhoto() {
 
 //Day 1104
 //review
-class GbfChar1104 {
+class GbfChar_1104 {
   constructor(name,element,ultName) {
     this.name = name
     this.element = element
@@ -16801,3 +16801,14 @@ function zombieShootout (zombies, range, ammo) {
 //enough of neither, but range runs out first
 //enough of neither, but they run out at the same time
 
+//Day 1236
+//review
+function yearDays_1236(year){
+  let fourHundred = year/400 % 1
+  let oneHundred = year/100 % 1
+  let four = year/4 % 1
+  
+  let standard = four || (fourHundred && !oneHundred)
+  
+  return `${year} has ${standard?365:366} days`
+}
