@@ -16812,3 +16812,9 @@ function yearDays_1236(year){
   
   return `${year} has ${standard?365:366} days`
 }
+
+//Day 1237
+//Review - Make a function to see if a string is a palindrome.  Arguments will be single words only.  (no sentences)
+function isPalindrome(x) {
+  return x.toLowerCase() === x.toLowerCase().split("").reverse().join("")
+}
