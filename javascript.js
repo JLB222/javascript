@@ -16818,3 +16818,16 @@ function yearDays_1236(year){
 function isPalindrome(x) {
   return x.toLowerCase() === x.toLowerCase().split("").reverse().join("")
 }
+
+//Day 1238
+//review 
+//7 - SevenAte9 - Write a function that removes any 9 from a given string that is between two 7s
+function sevenAte9_1238(str) {
+  let numbers = str.split("")
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] == 9 && numbers[i-1] == 7 && numbers[i+1] == 7) {
+      numbers[i] = ""
+    }
+  }
+  return numbers.join("")
+}
