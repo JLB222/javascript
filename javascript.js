@@ -16831,3 +16831,10 @@ function sevenAte9_1238(str) {
   }
   return numbers.join("")
 }
+
+//Day 1239
+//review - best sales
+function top3_1239(products, amounts, prices) {
+  let profits = products.map((el,i) => ({name: el, revenue: amounts[i] * prices[i], index: i}))
+  return profits.sort((a,b) => b.revenue - a.revenue || a.index - b.index).slice(0,3).map(el => el.name)
+}
