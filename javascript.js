@@ -16838,3 +16838,21 @@ function top3_1239(products, amounts, prices) {
   let profits = products.map((el,i) => ({name: el, revenue: amounts[i] * prices[i], index: i}))
   return profits.sort((a,b) => b.revenue - a.revenue || a.index - b.index).slice(0,3).map(el => el.name)
 }
+
+//Day 1240
+//7r - Three Cushion Carom
+function hasScored_1240(str) {
+  let cushionsHit = 0
+  let ballsHit = new Set()
+  for (let i = 0; i < str.length; i++) {
+    if ("nesw".includes(str[i])) {
+      cushionsHit++
+    } else {
+      ballsHit.add(str[i])
+    }
+    if (ballsHit.size >= 2 && ballsHit.has("R")) {
+      return cushionsHit >= 3
+    }
+  }
+  return false;
+}
