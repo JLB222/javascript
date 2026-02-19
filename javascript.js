@@ -16856,3 +16856,14 @@ function hasScored_1240(str) {
   }
   return false;
 }
+
+//Day 1241
+//7 - Most valuable character - https://www.codewars.com/kata/5dd5128f16eced000e4c42ba/train/javascript
+function solve(str) {
+  let result = str
+    .split("")
+    .map(el => ({name: el, lexographicPosition: el.charCodeAt(), value: str.lastIndexOf(el) - str.indexOf(el)}))
+    .sort((a,b) => b.value - a.value || a.lexographicPosition - b.lexographicPosition)
+  
+  return result[0].name
+}
