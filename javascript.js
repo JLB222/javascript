@@ -16867,3 +16867,14 @@ function solve(str) {
   
   return result[0].name
 }
+
+//Day 1242
+//8r - for a given string and optional price, find the total cost of printing said string on a billboard if it costs 30 per character by default and x per character if passed as an argument.  
+//Caveat: you're not allowed to use the * operator
+function billboard_1242(name, price = 30){
+  let total = 0;
+  for (let i = 0; i < name.length; i++) {
+    total += price 
+  }
+  return total
+} 
