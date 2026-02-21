@@ -16878,3 +16878,13 @@ function billboard_1242(name, price = 30){
   }
   return total
 } 
+
+//Day 1243
+//99 Bottles
+
+function beerOnTheWall(num) {
+  for (let i = num; i > 0; i--) {
+    console.log(`${num} ${num == 1 ? 'bottle' : 'bottles'} of beer on the wall, ${num} ${num == 1 ? 'bottle' : 'bottles'} of beer!  Take on down, pass it around, ${num -1} ${num - 1 == 1 ? 'bottle' : 'bottles'} of beer on the wall!`)
+  }
+  return null
+}
