@@ -16888,3 +16888,13 @@ function beerOnTheWall(num) {
   }
   return null
 }
+
+//Day 1244
+//review
+function counter_1244(arr) {
+  let counts = {}
+  for (let i = 0; i < arr.length; i++) {
+    counts[arr[i]] = (counts[arr[i]] || 0)  + 1
+  }
+  return counts
+}
