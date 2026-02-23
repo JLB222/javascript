@@ -16898,3 +16898,17 @@ function counter_1244(arr) {
   }
   return counts
 }
+
+//Day 1245
+//review
+function cookie_1245(x){
+  let whoDunIt
+  if (typeof(x) === "string") {
+    whoDunIt = "Zach"
+  } else if (typeof(x) === "number") {
+    whoDunIt = "Monica"
+  } else {
+    whoDunIt = "the dog"
+  }
+  return `Who ate the last cookie? It was ${whoDunIt}!`
+}
