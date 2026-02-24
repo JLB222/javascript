@@ -16912,3 +16912,17 @@ function cookie_1245(x){
   }
   return `Who ate the last cookie? It was ${whoDunIt}!`
 }
+
+//Day 1246
+//class review
+class gbfCharacterMaker_1246 {
+  constructor(name, race, element, ultName) {
+    this.name = name
+    this.race = race 
+    this.element = element 
+    this.ultName = ultName 
+  }
+  Ult() {
+    console.log(`${this.ultName}!`)
+  }
+}
