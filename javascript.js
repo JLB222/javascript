@@ -16926,3 +16926,8 @@ class gbfCharacterMaker_1246 {
     console.log(`${this.ultName}!`)
   }
 }
+//Day 1247
+//review - capitalize input
+function capitalize_1247(str) {
+  return str[0].toUpperCase() + str.slice(1)
+}
