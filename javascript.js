@@ -16931,3 +16931,34 @@ class gbfCharacterMaker_1246 {
 function capitalize_1247(str) {
   return str[0].toUpperCase() + str.slice(1)
 }
+
+//Day 1248
+//codewars down, review time
+//Closures - A closure is when a function "remembers" the variables from its outer scope even after that outer function has finished executing.  
+//Closures allow for data encapsulation, private variables, and function factories.
+
+function createCounter() {
+  let count = 0; // Private variable
+
+  return {
+    increment: function () {
+      count++;
+      console.log(`Count is now: ${count}`);
+    },
+    decrement: function () {
+      count--;
+      console.log(`Count is now: ${count}`);
+    },
+    getCount: function () {
+      return count;
+    },
+  };
+}
+const counter_1248 = createCounter();
+
+counter_1248.increment(); // Count is now: 1
+counter_1248.increment(); // Count is now: 2
+counter_1248.decrement(); // Count is now: 1
+
+console.log(counter_1248.getCount()); // 1
+console.log(counter_1248.count); // undefined (can't access `count` directly!)
