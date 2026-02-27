@@ -16962,3 +16962,11 @@ counter_1248.decrement(); // Count is now: 1
 
 console.log(counter_1248.getCount()); // 1
 console.log(counter_1248.count); // undefined (can't access `count` directly!)
+
+//Day 1249
+//objects array review
+function top3(products, amounts, prices) {
+  let objectArray = products.map((el,i) => ({name: el, profit: amounts[i]*prices[i], index: i}))
+  objectArray.sort((a,b) => b.profit - a.profit || a.index - b.index)
+  return objectArray.slice(0,3).map(el => el.name)
+}
