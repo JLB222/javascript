@@ -16970,3 +16970,13 @@ function top3(products, amounts, prices) {
   objectArray.sort((a,b) => b.profit - a.profit || a.index - b.index)
   return objectArray.slice(0,3).map(el => el.name)
 }
+
+//Day 1250
+//review
+function noIfsNoButs_1250(a, b) {
+  switch(true) {
+      case a>b   : return `${a} is greater than ${b}`
+      case a<b   : return `${a} is smaller than ${b}`
+      case a===b : return `${a} is equal to ${b}`
+  }
+}
