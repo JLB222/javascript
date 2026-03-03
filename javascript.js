@@ -17001,3 +17001,13 @@ function xor_1252(a, b) {
     return false
   }
 }
+
+//Day 1253
+//7r
+function lastSurvivor_1253(letters, coords) {
+  letters = letters.split('');
+  for (let i = 0; i < coords.length; i++) {
+     letters.splice(coords[i], 1)
+  }
+  return letters.join('')
+}
