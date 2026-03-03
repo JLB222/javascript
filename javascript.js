@@ -16990,3 +16990,14 @@ function countThings_1251(arr) {
   }
   return counter
 }
+
+//Day 1252
+//review
+//8 - Create a function that operates as an exclusive or operator (XOR)
+function xor_1252(a, b) {
+  if (a === true && b === false || b === true && a === false) {
+    return true
+  } else {
+    return false
+  }
+}
