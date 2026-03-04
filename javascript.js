@@ -17011,3 +17011,9 @@ function lastSurvivor_1253(letters, coords) {
   }
   return letters.join('')
 }
+
+//Day 1254
+//7 - Happy Birthday - https://www.codewars.com/kata/5d65fbdfb96e1800282b5ee0/train/javascript
+function wrap(height, width, length){
+  return 2 * (height + width + length + Math.min(height, width, length) + 10);
+}
