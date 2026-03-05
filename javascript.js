@@ -17017,3 +17017,12 @@ function lastSurvivor_1253(letters, coords) {
 function wrap(height, width, length){
   return 2 * (height + width + length + Math.min(height, width, length) + 10);
 }
+
+//Day 1255
+//7 - Fridge Organizer - https://www.codewars.com/kata/69971f385353edeaf428e1b0/train/javascript
+function fridgeOrganizer(items) {
+  return items
+    .filter(el => el.expiryDays >= 0)
+    .sort((a,b) => b.isAlmostEmpty - a.isAlmostEmpty || a.expiryDays - b.expiryDays || a.name.localeCompare(b.name))
+    .map(el => el.name)
+}
