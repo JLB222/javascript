@@ -17026,3 +17026,9 @@ function fridgeOrganizer(items) {
     .sort((a,b) => b.isAlmostEmpty - a.isAlmostEmpty || a.expiryDays - b.expiryDays || a.name.localeCompare(b.name))
     .map(el => el.name)
 }
+
+//Day 1256
+//r
+function stringMerge_1256(string1, string2, letter){
+  return string1.slice(0, string1.indexOf(letter)) + string2.slice(string2.indexOf(letter))
+}
