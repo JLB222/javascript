@@ -17032,3 +17032,14 @@ function fridgeOrganizer(items) {
 function stringMerge_1256(string1, string2, letter){
   return string1.slice(0, string1.indexOf(letter)) + string2.slice(string2.indexOf(letter))
 }
+
+//Day 1257
+//r
+function Ship_1257(draft,crew) {
+  this.draft = draft;
+  this.crew = crew;
+   
+  this.isWorthIt = function() {
+    return (this.draft - (this.crew * 1.5)) > 20
+  }
+ }
