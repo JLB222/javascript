@@ -17043,3 +17043,18 @@ function Ship_1257(draft,crew) {
     return (this.draft - (this.crew * 1.5)) > 20
   }
  }
+
+ //Day 1258
+ //review - given an array of numbers, if any of the numbers are the character codes for lowercase aeiou, replace those numbers with the appropriate letter
+function isVowel_1258(arr){
+  for (let i = 0; i < arr.length; i++) {
+    switch (arr[i]) {
+        case 97: arr[i] = "a"; break;
+        case 101: arr[i] = "e"; break;
+        case 105: arr[i] = "i"; break;
+        case 111: arr[i] = "o"; break;
+        case 117: arr[i] = "u"; break;
+    }
+  }
+  return arr
+}
