@@ -17058,3 +17058,14 @@ function isVowel_1258(arr){
   }
   return arr
 }
+
+//Day 1259
+//r
+function top3_1259(products, amounts, prices) {
+  let result = [...products]
+  return result
+    .map((el, i) => ({name: el, profit: amounts[i] * prices[i], index: i}))
+    .sort((a,b) => b.profit - a.profit || a.index - b.index)
+    .slice(0,3)
+    .map(el => el.name)
+}
