@@ -17069,3 +17069,9 @@ function top3_1259(products, amounts, prices) {
     .slice(0,3)
     .map(el => el.name)
 }
+
+//Day 1260
+//r
+function createBox_1260(width, height) {
+  return [...Array(height)].map((el, i) => [...Array(width)].map((el, j) => Math.min(i + 1, j + 1, height - i, width - j)));
+}
