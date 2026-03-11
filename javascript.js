@@ -17075,3 +17075,8 @@ function top3_1259(products, amounts, prices) {
 function createBox_1260(width, height) {
   return [...Array(height)].map((el, i) => [...Array(width)].map((el, j) => Math.min(i + 1, j + 1, height - i, width - j)));
 }
+
+//Day 1261
+function attack(level, profRank, abilityMod, trainedOrBetter) {
+  return d20() + profRank + abilityMod + (trainedOrBetter ? level : 0)
+}
