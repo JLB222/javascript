@@ -17080,3 +17080,13 @@ function createBox_1260(width, height) {
 function attack(level, profRank, abilityMod, trainedOrBetter) {
   return d20() + profRank + abilityMod + (trainedOrBetter ? level : 0)
 }
+
+//Day 1262
+//r
+function replaceVowels(str) {
+  return str.replace(/aeiou/gi, "")
+}
+
+function capitalCheck(str) {
+  return str === str.toUpperCase()
+}
