@@ -17090,3 +17090,18 @@ function replaceVowels(str) {
 function capitalCheck(str) {
   return str === str.toUpperCase()
 }
+
+//Day 1263
+//codewars review
+class StateMachine_1263 {
+  constructor({ init, transitions }) {
+    this.state = init;
+    for (let {method, current, target} of transitions) {
+      this[method] = () => {
+        if (this.state == current) {
+          this.state = target
+        }
+      }
+    }
+  }
+}
