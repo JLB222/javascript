@@ -17105,3 +17105,22 @@ class StateMachine_1263 {
     }
   }
 }
+
+//Day 1264
+//r
+//review - 7 - three cushion billiards
+function hasScored_1264(str) {
+  let cushionCounter = 0 
+  let ballsHit = new Set()
+  for (let letter of str) {
+    if ("news".includes(letter)) {
+        cushionCounter++
+        } else {
+          ballsHit.add(letter)
+        }
+    if (ballsHit.size >= 2 && ballsHit.has("R")) {
+      return cushionCounter >= 3
+    }
+  }
+  return false;
+}
