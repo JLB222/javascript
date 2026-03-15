@@ -17107,7 +17107,6 @@ class StateMachine_1263 {
 }
 
 //Day 1264
-//r
 //review - 7 - three cushion billiards
 function hasScored_1264(str) {
   let cushionCounter = 0 
@@ -17123,4 +17122,23 @@ function hasScored_1264(str) {
     }
   }
   return false;
+}
+
+//Day 1265
+//r
+function countCharacters_1265(str) {
+  let counter = {}
+  for (let char of str) {
+    counter[char] = (counter[char] || 0) + 1  //counter[char] = counter[char] +1 || 1
+  }
+  let mostFrequentCharacter = ''
+  let characterOccurrences = 0
+  for (let key in counter) {
+    if (counter[key] > characterOccurrences) {
+      characterOccurrences = counter[key]
+      mostFrequentCharacter = key
+    }
+  }
+  console.log([mostFrequentCharacter, characterOccurrences])
+  return mostFrequentCharacter
 }
