@@ -17142,3 +17142,10 @@ function countCharacters_1265(str) {
   console.log([mostFrequentCharacter, characterOccurrences])
   return mostFrequentCharacter
 }
+
+//Day 1266
+//r
+function customSort_1266(arr) {
+  const sortType = "A23456789TJQK"
+  return arr.sort((prev,curr) => sortType.indexOf(prev) - sortType.indexOf(curr))
+}
