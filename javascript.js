@@ -17149,3 +17149,18 @@ function customSort_1266(arr) {
   const sortType = "A23456789TJQK"
   return arr.sort((prev,curr) => sortType.indexOf(prev) - sortType.indexOf(curr))
 }
+
+//Day 1267
+//7r - Odd-Even string sort
+function sortMyString_1267(S) {
+  let odds = []
+  let evens = []
+  for (let i = 0; i < S.length; i++) {
+    if (i % 2 === 0) {
+      evens.push(S.split("")[i])
+    } else {
+      odds.push(S.split("")[i])
+    }
+  }
+  return `${evens.join("")} ${odds.join("")}`
+}
