@@ -17164,3 +17164,13 @@ function sortMyString_1267(S) {
   }
   return `${evens.join("")} ${odds.join("")}`
 }
+
+//Day 1268
+//r - String Scramble
+function scramble_1268(str, arr) {
+  let result = []
+  for (let i = 0; i < str.length; i++) {
+    result[arr[i]] = str[i]
+  }
+  return result.join("")
+};
