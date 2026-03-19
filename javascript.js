@@ -17174,3 +17174,13 @@ function scramble_1268(str, arr) {
   }
   return result.join("")
 };
+
+//Day 1269
+//7r - How many arguments - return the number of arguments passed to the function
+function args_count_1269(...rest) {
+  return rest.length
+}
+//alternate:
+function args_count_1269() {
+  return arguments.length
+}
