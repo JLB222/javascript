@@ -17198,3 +17198,11 @@ function solve(a) {
   }
   return max;
 }
+
+//Day 1271
+//r
+//review
+function solve_1271(str, num){
+  let toBeRemoved = str.split("").sort().slice(0,num)
+  return toBeRemoved.reduce((prev,curr) => prev.replace(curr,""), str)
+}
