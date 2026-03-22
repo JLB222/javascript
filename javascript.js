@@ -17206,3 +17206,13 @@ function solve_1271(str, num){
   let toBeRemoved = str.split("").sort().slice(0,num)
   return toBeRemoved.reduce((prev,curr) => prev.replace(curr,""), str)
 }
+
+//Day 1272
+//r 
+function top3_1272(products, amounts, prices) {
+  return products
+    .map((el, i) => ({name: el, index: i, profit: amounts[i] * prices[i]}))
+    .sort((a,b) => b.profit - a.profit || a.index - b.index)
+    .slice(0,3)
+    .map(el => el.name)
+}
