@@ -17216,3 +17216,9 @@ function top3_1272(products, amounts, prices) {
     .slice(0,3)
     .map(el => el.name)
 }
+
+//Day 1273
+//r
+function numberTester_1273(number) {
+  return `${number * number}`.endsWith(number)
+}
