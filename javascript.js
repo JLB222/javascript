@@ -17222,3 +17222,24 @@ function top3_1272(products, amounts, prices) {
 function numberTester_1273(number) {
   return `${number * number}`.endsWith(number)
 }
+
+//Day 1274
+//r
+function Heading_1274() {
+  return <h1>Hello!</h1>
+}
+
+//7 - simple array product - https://www.codewars.com/kata/5d0365accfd09600130a00c9/train/javascript
+function arrayProduct(outerArray) {
+  let min = 1, max = 1;
+  for (let innerArray of outerArray) {
+    let cur = [];
+    for (let element of innerArray) cur.push(element * min), cur.push(element * max);
+    min = Math.min(...cur);
+    max = Math.max(...cur);
+  }
+  return max;
+}
+
+//[4,6] -> 4, 4, 6, 6 -> 4, 6
+//[3,5] -> 12, 18, 20, 30 -> 12, 30
