@@ -17243,3 +17243,18 @@ function arrayProduct(outerArray) {
 
 //[4,6] -> 4, 4, 6, 6 -> 4, 6
 //[3,5] -> 12, 18, 20, 30 -> 12, 30
+
+//Day 1275
+//7 - Adaptive Security System - https://www.codewars.com/kata/69b58aaee8f1deef7ece7d0e/javascript
+function breachAttempts(hackers, securityLevel, increase) {
+  let newSecurityLevel = securityLevel
+  let successfulBreaches = 0
+  for (let i = 0; i < hackers.length; i++) {
+    if (hackers[i] > newSecurityLevel) {
+      successfulBreaches++
+    } else {
+      newSecurityLevel += increase
+    }
+  }
+  return successfulBreaches
+}
