@@ -17258,3 +17258,17 @@ function breachAttempts(hackers, securityLevel, increase) {
   }
   return successfulBreaches
 }
+
+//Day 1276
+//7 - unsuccessful attempt
+function jumbler(arr) {
+  let numbers = [...arr]
+  let reorders = 0
+  
+  while (numbers[0] !== 0) {
+      let numberToMove = numbers[numbers[0]] //number we're gonna move to front
+      numbers = numbers.filter((el) => el !== numberToMove).unshift(numberToMove)  //filter the number of choice out, then re-insert it at the beginning
+      reorders++
+  }
+  return reorders
+}
