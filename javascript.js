@@ -17272,3 +17272,9 @@ function jumbler(arr) {
   }
   return reorders
 }
+
+//Day 1277
+//r
+function DNAtoRNA_1277(dna) {
+  return dna.replaceAll("T", "U")
+}
