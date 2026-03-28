@@ -17278,3 +17278,12 @@ function jumbler(arr) {
 function DNAtoRNA_1277(dna) {
   return dna.replaceAll("T", "U")
 }
+
+//Day 1278
+//r - counters
+function countTheElements_1278(arr) {
+  let counts = {}
+  for (let i = 0; i < arr.length; i++) {
+    counts[i] = (counts[i] || 0) + 1
+  }
+}
