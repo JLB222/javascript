@@ -17359,3 +17359,17 @@ function numStrToArr(arr){
 function discoverOriginalPrice_1285(discountedPrice, salePercentage){
   return +(discountedPrice / (1 - salePercentage * .01)).toFixed(2)
 }
+
+//Day 1286
+//7r
+function scramble_1286(str, arr) {
+  //variable to hold arr result
+  let result = []
+  //loop through given array
+  for (let i = 0; i < arr.length; i++) {
+    //put string element in result array at its specific new place
+    result[arr[i]] = str[i]
+  }
+  //return the result array as a string
+  return result.join("")
+};
