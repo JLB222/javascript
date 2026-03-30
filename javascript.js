@@ -17261,7 +17261,7 @@ function breachAttempts(hackers, securityLevel, increase) {
 
 //Day 1276
 //7 - unsuccessful attempt
-function jumbler(arr) {
+function jumbler_fail(arr) {
   let numbers = [...arr]
   let reorders = 0
   
@@ -17286,4 +17286,20 @@ function countTheElements_1278(arr) {
   for (let i = 0; i < arr.length; i++) {
     counts[i] = (counts[i] || 0) + 1
   }
+}
+
+//Day 1279
+//7 - The Jumbler - https://www.codewars.com/kata/69269262ced9e95dc63abd1e/train/javascript
+function jumbler(arr) {
+  let numbers = [...arr]
+  let reorders = 0
+  
+  while (numbers[0] !== 0) {
+      let numberToMove = numbers[numbers[0]] //number we're gonna move to front
+      numbers.splice(numbers[0], 1) //remove the number
+      numbers.unshift(numberToMove) //re-insert it at the beginning
+      reorders++
+  }
+
+  return reorders
 }
