@@ -17303,3 +17303,19 @@ function jumbler(arr) {
 
   return reorders
 }
+
+//Day 1280
+//revisit
+function jumbler_1280(arr) {
+  let numbers = [...arr]
+  let reorders = 0
+  
+  while (numbers[0] !== 0) {
+      let numberToMove = numbers[numbers[0]] //number we're gonna move to front
+      numbers.splice(numbers[0], 1) //remove the number
+      numbers.unshift(numberToMove) //re-insert it at the beginning
+      reorders++
+  }
+
+  return reorders
+}
