@@ -17319,3 +17319,10 @@ function jumbler_1280(arr) {
 
   return reorders
 }
+
+//Day 1281
+//r
+function productArray_1281(numbers){
+  let total = numbers.reduce((a,b) => a*b,1)
+  return numbers.map(el => total / el)
+}
