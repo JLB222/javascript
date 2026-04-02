@@ -17326,3 +17326,17 @@ function productArray_1281(numbers){
   let total = numbers.reduce((a,b) => a*b,1)
   return numbers.map(el => total / el)
 }
+
+//Day 1282
+//7 - Generating Markdowns - https://www.codewars.com/kata/5f656199132bf60027275739/train/javascript
+function generateMarkdowns(markdown,text,urlOrLanguage) {
+  if (markdown === 'link') {
+    return `[${text}](${urlOrLanguage})`
+  }
+  if (markdown === 'img') {
+    return `![${text}](${urlOrLanguage})`
+  }
+  if (markdown === 'code') {
+    return "```" + urlOrLanguage + "\n" + text + "\n" + "```"
+  }
+};
