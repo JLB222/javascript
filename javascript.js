@@ -17340,3 +17340,10 @@ function generateMarkdowns(markdown,text,urlOrLanguage) {
     return "```" + urlOrLanguage + "\n" + text + "\n" + "```"
   }
 };
+
+//Day 1283
+//review - simple letter removal
+function solve_1283(str, num){
+  let removed = str.split("").sort().slice(0,num)
+  return removed.reduce((prev,curr) => prev.replace(curr,""), str)
+}
