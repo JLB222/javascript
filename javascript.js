@@ -17347,3 +17347,9 @@ function solve_1283(str, num){
   let removed = str.split("").sort().slice(0,num)
   return removed.reduce((prev,curr) => prev.replace(curr,""), str)
 }
+
+//Day 1284
+//r
+function numStrToArr(arr){
+  return arr.split(",").slice(1,-1).join(" ") || null
+}
