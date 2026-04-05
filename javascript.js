@@ -17373,3 +17373,15 @@ function scramble_1286(str, arr) {
   //return the result array as a string
   return result.join("")
 };
+
+//Day 1287
+//r
+function leapYear(year){
+  let fourHundred = year/400 % 1
+  let oneHundred = year/100 % 1
+  let four = year/4 % 1
+  
+  let standard = four || (fourHundred && !oneHundred)
+  
+  return `${year} has ${standard?365:366} days`
+}
