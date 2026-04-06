@@ -17385,3 +17385,13 @@ function leapYear(year){
   
   return `${year} has ${standard?365:366} days`
 }
+
+//Day 1288
+function top3_1288(products, amounts, prices) {
+  let result = [...products]
+  return result
+    .map((el, i) => ({name: el, profit: amounts[i] * prices[i], index: i}))
+    .sort((a,b) => b.profit - a.profit || a.index - b.index)
+    .slice(0,3)
+    .map(el => el.name)
+}
