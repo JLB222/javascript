@@ -17395,3 +17395,9 @@ function top3_1288(products, amounts, prices) {
     .slice(0,3)
     .map(el => el.name)
 }
+
+//Day 1289
+//
+function automorphic_1289(n){
+  return `${n * n}`.endsWith(n) ? "Automorphic" : "Not!!"
+}
