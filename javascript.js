@@ -17397,7 +17397,22 @@ function top3_1288(products, amounts, prices) {
 }
 
 //Day 1289
-//
+//r
 function automorphic_1289(n){
   return `${n * n}`.endsWith(n) ? "Automorphic" : "Not!!"
+}
+
+//Day 1290
+//r
+class StateMachine_1290 {
+  constructor({ init, transitions }) {
+    this.state = init;
+    transitions.forEach(obj => {
+      this[obj.method] = () => {
+        if (this.state == obj.current) {
+          this.state = obj.target
+        }
+      }
+    })
+  }
 }
