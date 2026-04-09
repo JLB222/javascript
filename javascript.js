@@ -17416,3 +17416,12 @@ class StateMachine_1290 {
     })
   }
 }
+
+//Day 1291
+//7r
+function reverseMessage_1291(str) {
+  let splitWords = str.split(" ");
+  let reversedWords = splitWords.map(el => el.split("").reverse().join("").toLowerCase())
+  let reversedSentence = reversedWords.reverse().map(el => el.slice(0,1).toUpperCase() + el.slice(1))
+  return reversedSentence.join(" ")
+}
