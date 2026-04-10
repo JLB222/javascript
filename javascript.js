@@ -17425,3 +17425,10 @@ function reverseMessage_1291(str) {
   let reversedSentence = reversedWords.reverse().map(el => el.slice(0,1).toUpperCase() + el.slice(1))
   return reversedSentence.join(" ")
 }
+
+//Day 1292
+//r
+function customSort_1292(arr) {
+  let sortOrder = "A23456789TJQK"
+  return arr.sort((a,b) => sortOrder.indexOf(a) - sortOrder.indexOf(b))
+}
