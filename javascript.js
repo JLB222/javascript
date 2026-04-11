@@ -17432,3 +17432,17 @@ function customSort_1292(arr) {
   let sortOrder = "A23456789TJQK"
   return arr.sort((a,b) => sortOrder.indexOf(a) - sortOrder.indexOf(b))
 }
+
+//Day 1293
+//class review
+class characterMaker_1293 {
+  constructor(name, race, element, ultName) {
+    this.name = name 
+    this.race = race 
+    this.element = element 
+    this.ultName = ultName
+  }
+  ult = function() {
+    return `${this.ultName}`
+  }
+}
