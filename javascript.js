@@ -17446,3 +17446,13 @@ class characterMaker_1293 {
     return `${this.ultName}`
   }
 }
+
+//Day 1294
+//extension review
+class equipment extends characterMaker_1293 {
+  constructor(name,race,element,ultName, weapon, armor) {
+    super(name,race,element,ultName)
+    this.weapon = weapon 
+    this.armor = armor
+  }
+}
