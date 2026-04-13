@@ -17456,3 +17456,26 @@ class equipment extends characterMaker_1293 {
     this.armor = armor
   }
 }
+
+//Day 1295
+//review, class 27
+class NetflixTvShow_1295 {
+  constructor(title, genre, numOfEpisodes, episodeLength) {
+    this.title = title
+    this.genre = genre
+    this.numOfEpisodes = numOfEpisodes
+    this.episodeLength = episodeLength
+  }
+  play() {
+    console.log(`Play Episode`)
+  }
+  pause() {
+    console.log(`Pause Episode`)
+  }
+  rewind() {
+    console.log(`Rewinding`)
+  }
+  fastForward() {
+    console.log(`Forwarding`)
+  }
+}
