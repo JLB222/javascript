@@ -17479,3 +17479,18 @@ class NetflixTvShow_1295 {
     console.log(`Forwarding`)
   }
 }
+
+//Day 1296
+//r
+class StateMachine_1296 {
+  constructor({ init, transitions }) {
+    this.state = init;
+    transitions.forEach(({method,current,target}) => {
+      this[method] = () => {
+        if (this.state === current) {
+          this.state = target
+        }
+      }
+    })
+  }
+}
