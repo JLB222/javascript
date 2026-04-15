@@ -17494,3 +17494,34 @@ class StateMachine_1296 {
     })
   }
 }
+
+//Day 1297
+//6 - Popping Balloons: Double Trouble - https://www.codewars.com/kata/693eba356fe0559ddc609832/train/javascript
+
+//failed attempt; doesn't quite solve the problem.  as balloons are popped and the string/array size changes, my loop, which relies on array indices, doesn't keep up.  the 'blank' spaces get shot instead of different balloons
+function solve(str, numShots, numVolleys) {
+  let result = [...str]
+  
+  const guide = {
+    "w":  "",
+    "b":  "w",
+    "g":  "ww",
+    "r":  "bb",
+    "W":  "w*",
+    "w*": "",
+    "B":  "b*",
+    "b*": "W",
+    "G":  "g*",
+    "g*": "WW",
+    "R":  "r*",
+    "r*": "BB"
+  }
+  for (let i = 0; i < numVolleys; i++) {
+    for (let i = result.length - 1; i > result.length - 1 - numShots; i--) {
+      result[i] = guide[result[i]]
+    }
+    result.join("").split("")
+  }
+  
+  return result.join("")
+}
