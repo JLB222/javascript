@@ -17525,3 +17525,15 @@ function solve(str, numShots, numVolleys) {
   
   return result.join("")
 }
+
+//Day 1298
+//r
+function jewelCounter_1298(jewels,stones) {
+  let jewelCount = 0
+  for (let stone of stones) {
+    if (jewels.includes(stone)) {
+      jewelCount++
+    }
+  }
+  return jewelCount
+}
