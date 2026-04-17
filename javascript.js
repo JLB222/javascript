@@ -17537,3 +17537,53 @@ function jewelCounter_1298(jewels,stones) {
   }
   return jewelCount
 }
+
+//Day 1299
+//r - Popping Balloons
+//failed attempt; GPT introduced me to 'Tokenization' which is likely expected for this kata; it kept giving me type errors though.  need to dive into tokenization
+function solve(str, numShots, numVolleys) {
+  let result = str
+  const guide = {
+    "w":  "",
+    "b":  "w",
+    "g":  "ww",
+    "r":  "bb",
+    "W":  "w*",
+    "w*": "",
+    "B":  "b*",
+    "b*": "W",
+    "G":  "g*",
+    "g*": "WW",
+    "R":  "r*",
+    "r*": "BB"
+  }
+  for (let i = 0; i < numVolleys; i++) {
+    let tokens = tokenize(result)
+
+    let toBeShot = tokens.slice(-numShots)
+
+    for (let i = 0; i < toBeShot.length; i++) {
+      toBeShot[i] = guide[toBeShot[i]] ?? toBeShot[i]
+    }
+
+    result = tokens
+      .toSpliced(tokens.length - numShots, numShots, ...toBeShot)
+      .join("")
+  }
+  
+  return result
+}
+function tokenize(str) {
+  const tokens = []
+  
+  for (let i = 0; i < str.length; i++) {
+    if (str[i + 1] === "*") {
+      tokens.push(str[i] + "*")
+      i++
+    } else {
+      tokens.push(str[i])
+    }
+  }
+  
+  return tokens
+}
