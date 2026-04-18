@@ -17587,3 +17587,10 @@ function tokenize(str) {
   
   return tokens
 }
+
+//Day 1300
+//r
+function encode_1300(str, num) {
+	var numString = num.toString()
+  return str.split("").map((el, i) => el.charCodeAt(0) - 96 + +numString[i % numString.length])
+}
