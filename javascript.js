@@ -17594,3 +17594,18 @@ function encode_1300(str, num) {
 	var numString = num.toString()
   return str.split("").map((el, i) => el.charCodeAt(0) - 96 + +numString[i % numString.length])
 }
+
+//Day 1301
+//r classes
+class GBFMaker_1301 {
+  constructor(name, race, gender, element, ultName) {
+    this.name = name
+    this.race = race
+    this.gender = gender
+    this.element = element
+    this.ultName = ultName
+  }
+  ult() {
+    console.log(`Using ${this.ultName}`)
+  }
+}
