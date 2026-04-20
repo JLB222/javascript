@@ -17609,3 +17609,9 @@ class GBFMaker_1301 {
     console.log(`Using ${this.ultName}`)
   }
 }
+
+//Day 1302
+//anki R
+function createBox_1302(width, height) {
+  return [...Array(height)].map((el, i) => [...Array(width)].map((el, j) => Math.min(i + 1, j + 1, height - i, width - j)));
+}
