@@ -17615,3 +17615,14 @@ class GBFMaker_1301 {
 function createBox_1302(width, height) {
   return [...Array(height)].map((el, i) => [...Array(width)].map((el, j) => Math.min(i + 1, j + 1, height - i, width - j)));
 }
+
+//Day 1303
+//6 - The Pickaxe Collector - https://www.codewars.com/kata/692731572625773967bfdd32/train/javascript
+//incomplete
+function shop(materials, store, inventory, budget) {
+  let totalMoneyAvailable = budget
+  function addSellPriceToBudget(val,key,set) {
+    budget += store[val]
+  }
+  inventory.forEach(addSellPriceToBudget)
+}
