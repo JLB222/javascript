@@ -17626,3 +17626,13 @@ function shop(materials, store, inventory, budget) {
   }
   inventory.forEach(addSellPriceToBudget)
 }
+
+//Day 1304
+//r
+function scramble_1304(str, arr) {
+  let result = []
+  for (let i =0; i < str.length; i++) {
+    result[arr[i]] = str[i]
+  }
+  return result.join("")
+}
