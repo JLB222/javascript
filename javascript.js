@@ -17636,3 +17636,9 @@ function scramble_1304(str, arr) {
   }
   return result.join("")
 }
+
+//Day 1305
+//anki
+function repString(str) {
+  return str.split(",").slice(1,-1).join(" ") || null
+}
