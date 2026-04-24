@@ -17642,3 +17642,13 @@ function scramble_1304(str, arr) {
 function repString(str) {
   return str.split(",").slice(1,-1).join(" ") || null
 }
+
+//Day 1306
+//r
+function top3_1306(products, amounts, prices) {
+  return [...products]
+    .map((el,i) => ({name: el, profit: amounts[i] * prices[i], index: i}))
+    .sort((a,b) => b.profit - a.profit || a.index - b.index)
+    .slice(0,3)
+    .map(el => el.name)
+}
