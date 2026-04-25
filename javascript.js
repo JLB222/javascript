@@ -17652,3 +17652,11 @@ function top3_1306(products, amounts, prices) {
     .slice(0,3)
     .map(el => el.name)
 }
+
+//Day 1307
+//anki R
+function changeLettersOnly(thing) {
+  if (thing.toUpperCase() != thing.toLowerCase()) {
+    //do code stuff 
+  }
+}
