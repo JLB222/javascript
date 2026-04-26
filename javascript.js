@@ -17660,3 +17660,8 @@ function changeLettersOnly(thing) {
     //do code stuff 
   }
 }
+
+//Day 1308
+function validSpacing_1308(str) {
+  return str === str.trim() && !str.includes("  ")
+}
