@@ -17665,3 +17665,13 @@ function changeLettersOnly(thing) {
 function validSpacing_1308(str) {
   return str === str.trim() && !str.includes("  ")
 }
+
+//Day 1309
+//WIP
+function shop(materials, store, inventory, budget) {
+  //find all store items that have higher dmg than your best; put their names and prices in a variable; betterPickaxes
+  //check current budget compared to most expensive item; can it be bought?
+    //if yes, buy it; if no, check 2nd most expensive, and so on
+    //if a purchase is possible, store that purchase possibility in a variable; bestPossiblePurchase
+  //check budget after selling weakest owned pickaxe, then compare again
+}
