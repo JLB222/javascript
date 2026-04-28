@@ -17668,10 +17668,29 @@ function validSpacing_1308(str) {
 
 //Day 1309
 //WIP
-function shop(materials, store, inventory, budget) {
+function shop1(materials, store, inventory, budget) {
   //find all store items that have higher dmg than your best; put their names and prices in a variable; betterPickaxes
   //check current budget compared to most expensive item; can it be bought?
     //if yes, buy it; if no, check 2nd most expensive, and so on
     //if a purchase is possible, store that purchase possibility in a variable; bestPossiblePurchase
   //check budget after selling weakest owned pickaxe, then compare again
+}
+
+//Day 1310
+//WIP
+function shop2(materials, store, inventory, budget) {
+  //find all store items that have higher dmg than your best; put their names and prices in a variable; betterPickaxes
+  let myBestPickaxe = 0 //what should this be to make the loop work?
+  for (let pickaxe of inventory) {  //loop through inventory to find the best pickaxe you currently have
+    if (materials[pickaxe] > materials[myBestPickaxe]) {
+      myBestPickaxe = pickaxe
+    }
+  }
+  let betterPickaxes = []
+  //check current budget compared to most expensive item; can it be bought?
+    //if yes, buy it; if no, check 2nd most expensive, and so on
+    //if a purchase is possible, store that purchase possibility in a variable; bestPossiblePurchase
+  //check budget after selling weakest owned pickaxe, then compare again
+    //if there is no bestPossiblePurchase, return None
+    //if there is, return ["bestPossiblePurchase", {"OnesYouSold"}, remainingMoney]
 }
