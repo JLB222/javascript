@@ -17694,3 +17694,21 @@ function shop2(materials, store, inventory, budget) {
     //if there is no bestPossiblePurchase, return None
     //if there is, return ["bestPossiblePurchase", {"OnesYouSold"}, remainingMoney]
 }
+
+//Day 1140
+//fizzbuzzer
+function fizzBuzz_1140(num) {
+  for (let i = 0; i < num; i++) {
+    if (i % 15 === 0) {
+      console.log("FizzBuzz")
+    } else 
+    if (i % 5 === 0) {
+      console.log("Buzz")
+    } else
+    if (i % 3 === 0) {
+      console.log("Fizz")
+    } else {
+      console.log(i)
+    }
+  }
+}
