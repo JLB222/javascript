@@ -17712,3 +17712,19 @@ function fizzBuzz_1140(num) {
     }
   }
 }
+
+//Day 1141
+//cr
+ class Dictionary_1141 {
+  constructor() {
+    this.dict = {};
+  }
+  
+  newEntry(key, value) {
+    this.dict[key] = value;
+  }
+  
+  look(key) {
+    return this.dict[key] || `Can\'t find entry for ${key}`;
+  }
+}
