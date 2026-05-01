@@ -17728,3 +17728,33 @@ function fizzBuzz_1140(num) {
     return this.dict[key] || `Can\'t find entry for ${key}`;
   }
 }
+
+//Day 1142
+//WIP - pickaxe shop
+function shop(materials, store, inventory, budget) {
+  //find all store items that have higher dmg than your best; put their names and prices in a variable; betterPickaxes
+  let myBestPickaxe = [...inventory][0]  //initializes as the first thing in your inventory; it doesn't have to be your best; we just need a value that won't bork the for of loop below
+  let betterPickaxes = []
+  for (let pickaxe of inventory) {
+    if (materials[pickaxe] > materials[myBestPickaxe]) {
+      myBestPickaxe = pickaxe
+      betterPickaxes.push(pickaxe)
+    }
+  }
+  console.log(myBestPickaxe, betterPickaxes)
+  //check current budget compared to most expensive item; can it be bought? is it better than your best?
+    //if yes, buy it; if no, check 2nd most expensive, and so on
+    //if a purchase is possible, store that purchase possibility in a variable; bestPossiblePurchase
+  let bestPossiblePurchase = myBestPickaxe //set this to your best initially, so that the below loop's first iteration compares it to your best
+  function buyBestYouCanAfford() {
+    for (let pickaxe in store) { //this buys the best possible with your default budget, before selling anything
+      if (budget > store[pickaxe][0] && materials[pickaxe] > materials[bestPossiblePurchase]) {
+        bestPossiblePurchase = pickaxe
+      }
+    }
+  }
+  buyBestYouCanAfford()
+  //check budget after selling weakest owned pickaxe, then compare again
+    //if there is no bestPossiblePurchase, return None
+    //if there is, return ["bestPossiblePurchase", {"OnesYouSold"}, remainingMoney]
+}
