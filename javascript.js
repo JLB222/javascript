@@ -17758,3 +17758,14 @@ function shop(materials, store, inventory, budget) {
     //if there is no bestPossiblePurchase, return None
     //if there is, return ["bestPossiblePurchase", {"OnesYouSold"}, remainingMoney]
 }
+
+//Day 1143
+//r
+function bestFriend_1143(txt, a, b) {
+  for (let i = 0; i < txt.length; i++) {
+    if (txt[i] == a && txt[i+1] !== b) {
+      return false
+    }
+  }
+  return true
+}
