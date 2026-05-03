@@ -17769,3 +17769,8 @@ function bestFriend_1143(txt, a, b) {
   }
   return true
 }
+
+//Day 1144
+function splitCount(str1,str2) {
+  return str1.split(str2).length -1
+}
