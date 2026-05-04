@@ -17774,3 +17774,18 @@ function bestFriend_1143(txt, a, b) {
 function splitCount(str1,str2) {
   return str1.split(str2).length -1
 }
+
+//Day 1145
+//r
+class StateMachine_1145 {
+  constructor({ init, transitions }) {
+    this.state = init;
+    transitions.forEach((obj) => {
+      this[obj.method] = () => {
+        if (this.state === obj.current) {
+          this.state = obj.target
+        }
+      }
+    })
+  }
+}
