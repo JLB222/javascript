@@ -17789,3 +17789,15 @@ class StateMachine_1145 {
     })
   }
 }
+
+//Day 1146
+//r
+function sevenAte9_1146(str) {
+  let numbers = str.split("")
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] == 9 && numbers[i-1] == 7 && numbers[i+1] == 7) {
+      numbers[i] = ""
+    }
+  }
+  return numbers.join("")
+}
