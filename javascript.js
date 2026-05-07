@@ -17835,3 +17835,14 @@ function shop4(materials, store, inventory, budget) {
     //check if adding weakest item's sell price to budget would allow us to buy something stronger; if not continue
   }
 }
+
+//Day 1148
+//r
+function smallestInteger_1148(matrix) {
+  let thing = matrix.flat().sort()
+  for (let i = 0; i < 100; i++) {
+    if (!thing.includes(i)) {
+      return i
+    }
+  }
+}
