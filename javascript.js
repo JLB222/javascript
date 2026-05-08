@@ -17846,3 +17846,23 @@ function smallestInteger_1148(matrix) {
     }
   }
 }
+
+//Day 1149
+//caved; here's a solution
+function shop_1149(materials, store, inventory, budget) {
+  const bestDamage = Math.max(...[...inventory].map(m => materials[m]));
+  const sellable = [...inventory].filter(m => store[m] && store[m][1] > 0).sort((a, b) => materials[a] - materials[b]);
+  const candidates = Object.keys(store).filter(m => materials[m] > bestDamage).sort((a, b) => materials[b] - materials[a]);
+  for (const buy of candidates) {
+    const [buyPrice] = store[buy];
+    let money = budget;
+    const sold = new Set();
+    if (money >= buyPrice) return [buy, sold, money - buyPrice];
+    for (const s of sellable) {
+      money += store[s][1];
+      sold.add(s);
+      if (money >= buyPrice) return [buy, sold, money - buyPrice];
+    }
+  }
+  return null;
+}
