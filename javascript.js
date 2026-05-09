@@ -17866,3 +17866,11 @@ function shop_1149(materials, store, inventory, budget) {
   }
   return null;
 }
+
+//Day 1150
+//r
+function differenceInAges_1150(ages){
+  let youngest = Math.min(...ages)
+  let oldest = Math.max(...ages)
+  return [youngest, oldest,(oldest-youngest) ]
+}
