@@ -17874,3 +17874,9 @@ function differenceInAges_1150(ages){
   let oldest = Math.max(...ages)
   return [youngest, oldest,(oldest-youngest) ]
 }
+
+//Day 1151
+//r
+function wordsToMarks_1151(string){
+  return [...string].reduce((result, current) => result += current.charCodeAt(0) -96, 0)
+}
