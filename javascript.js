@@ -17880,3 +17880,15 @@ function differenceInAges_1150(ages){
 function wordsToMarks_1151(string){
   return [...string].reduce((result, current) => result += current.charCodeAt(0) -96, 0)
 }
+
+//Day 1152
+//r
+function calculate_1152(num1, operation, num2) {
+  switch (operation) {
+      case "+": return num1 + num2
+      case "-": return num1 - num2
+      case "*": return num1 * num2
+      case "/": return num2 === 0 ? null : num1 / num2
+      default: return null
+  }
+ }
