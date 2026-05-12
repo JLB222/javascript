@@ -17892,3 +17892,9 @@ function calculate_1152(num1, operation, num2) {
       default: return null
   }
  }
+
+ //Day 1153
+ //r
+ function disemvowel_1153(str) {
+  return str.replace(/[aeiou]/gi, "!")
+}
