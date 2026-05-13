@@ -17901,6 +17901,16 @@ function calculate_1152(num1, operation, num2) {
 
 //Day 1154
 //r
+function inPlaceTest_1154(arr) {
+  let thing = arr
+  console.log(thing)
+  let thang = thing.sort()
+  console.log(thing)
+  console.log(thang)
+}
+
+//Day 1155
+//r
 function top3_1154(products, amounts, prices) {
   return products
     .map((el,i) => ({name: el, profits: amounts[i]*prices[i], index: i}))
@@ -17909,7 +17919,7 @@ function top3_1154(products, amounts, prices) {
     .map(el => el.name)
 }
 
-//Day 1155
+//Day 1156
 //r
 function scramble_1155a(str, arr) {
   let result = []
@@ -17925,7 +17935,7 @@ function scramble_1155b(str, arr) {
   return arr.map((el,i) => str[arr.indexOf(i)]).join("")
 }
 
-//Day 1156
+//Day 1157
 //r fizzBuzz
 function fizzBuzz_1156(num) {
   for (let i = 1; i <= num; i++) {
@@ -17943,13 +17953,13 @@ function fizzBuzz_1156(num) {
   }
 }
 
-//Day 1157
+//Day 1158
 //r
 function d20_1157() {
   return Math.floor(Math.random() * 20) +1
 }
 
-//Day 1158
+//Day 1159
 //r
 function d20_1158(advantage = false) {
   let firstRoll = Math.random()
