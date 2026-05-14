@@ -17898,3 +17898,29 @@ function calculate_1152(num1, operation, num2) {
  function disemvowel_1153(str) {
   return str.replace(/[aeiou]/gi, "!")
 }
+
+//Day 1154
+//r
+function top3_1154(products, amounts, prices) {
+  return products
+    .map((el,i) => ({name: el, profits: amounts[i]*prices[i], index: i}))
+    .sort((a,b) => b.profits - a.profits || a.index - b.index)
+    .slice(0,3)
+    .map(el => el.name)
+}
+
+//Day 1155
+//r
+function scramble_1155a(str, arr) {
+  let result = []
+  for (let i = 0; i < str.length; i++) {
+    result[arr[i]] = str[i]
+  }
+  return result.join("")
+}
+
+//condensed version using .map()
+
+function scramble_1155b(str, arr) {
+  return arr.map((el,i) => str[arr.indexOf(i)]).join("")
+}
