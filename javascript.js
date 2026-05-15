@@ -17924,3 +17924,21 @@ function scramble_1155a(str, arr) {
 function scramble_1155b(str, arr) {
   return arr.map((el,i) => str[arr.indexOf(i)]).join("")
 }
+
+//Day 1156
+//r fizzBuzz
+function fizzBuzz_1156(num) {
+  for (let i = 1; i <= num; i++) {
+    if (i % 15 === 0) {
+      console.log("fizzbuzz")
+    } else 
+    if (i % 5 === 0) {
+      console.log("buzz")
+    } else 
+    if (i % 3 === 0) {
+      console.log("fizz")
+    } else {
+      console.log(i)
+    }
+  }
+}
