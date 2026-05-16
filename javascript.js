@@ -17942,3 +17942,9 @@ function fizzBuzz_1156(num) {
     }
   }
 }
+
+//Day 1157
+//r
+function d20_1157() {
+  return Math.floor(Math.random() * 20) +1
+}
