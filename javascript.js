@@ -17948,3 +17948,11 @@ function fizzBuzz_1156(num) {
 function d20_1157() {
   return Math.floor(Math.random() * 20) +1
 }
+
+//Day 1158
+//r
+function d20_1158(advantage = false) {
+  let firstRoll = Math.random()
+  let secondRoll = Math.random()
+  return Math.floor((advantage ? Math.max(firstRoll, secondRoll) : firstRoll) * 20) +1
+}
