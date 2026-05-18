@@ -17966,3 +17966,23 @@ function d20_1158(advantage = false) {
   let secondRoll = Math.random()
   return Math.floor((advantage ? Math.max(firstRoll, secondRoll) : firstRoll) * 20) +1
 }
+
+//Day 1160
+//pickaxe review & refactor - https://www.codewars.com/kata/692731572625773967bfdd32/train/javascript
+function shop_1160(materials, store, inventory, budget) {
+  const bestDamage = Math.max(...[...inventory].map(m => materials[m]));
+  const sellablePickaxes = [...inventory].filter(m => store[m] && store[m][1] > 0).sort((a, b) => materials[a] - materials[b]);
+  const candidates = Object.keys(store).filter(m => materials[m] > bestDamage).sort((a, b) => materials[b] - materials[a]);
+  for (const candidate of candidates) {
+    const buyPrice = store[candidate][0];
+    let money = budget;
+    const soldPickaxes = new Set();
+    if (money >= buyPrice) return [candidate, soldPickaxes, money - buyPrice];
+    for (const item of sellablePickaxes) {
+      money += store[item][1];
+      soldPickaxes.add(item);
+      if (money >= buyPrice) return [candidate, soldPickaxes, money - buyPrice];
+    }
+  }
+  return null;
+}
