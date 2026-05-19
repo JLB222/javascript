@@ -17986,3 +17986,15 @@ function shop_1160(materials, store, inventory, budget) {
   }
   return null;
 }
+
+//Day 1161
+//r
+function factors_1161(integer, limit){
+  let result = []
+  for (let i = integer; i >= limit; i--) {
+    if (integer % i === 0) {
+      result.push(i)
+    }
+  }
+  return result.sort((a,b)=>a-b,0)
+}
