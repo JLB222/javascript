@@ -17998,3 +17998,20 @@ function factors_1161(integer, limit){
   }
   return result.sort((a,b)=>a-b,0)
 }
+
+//Day 1162
+//r - Popping Balloons
+const TRANSITIONS = {
+  w: '',    b: 'w',   g: 'ww',  r: 'bb',
+  W: 'V',   B: 'X',   G: 'Y',   R: 'Z',
+  V: '',    X: 'W',   Y: 'WW',  Z: 'BB',
+}
+
+function solve_1162(s, n, k) {
+  s = [...s]
+  while(k--){
+    const shot = s.splice(-n, n)
+    s.push(...shot.map(c=>TRANSITIONS[c]).join(''))
+  }
+  return s.join('').replace(/[VXYZ]/g,m=>({V:'w*',X:'b*',Y:'g*',Z:'r*'}[m]))
+}
