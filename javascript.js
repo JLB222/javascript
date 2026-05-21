@@ -18015,3 +18015,21 @@ function solve_1162(s, n, k) {
   }
   return s.join('').replace(/[VXYZ]/g,m=>({V:'w*',X:'b*',Y:'g*',Z:'r*'}[m]))
 }
+
+//Day 1163
+//6 - Snow Plower WIP - https://www.codewars.com/kata/69351c44f82ba928e2099e05/train/javascript
+//P - string, separated by \n
+//R - string, each element/letter changed accordingly
+//E - 
+//P - 
+
+//what we need
+// width of plow = L + R + 1
+// direction (vert / horz) = which is greater?  height is greater -> vertical; width -> horizontal
+// for vertical, we must remember location of the plow itself as opposed to its extensions, because plow will leave up and down arrows whereas extensions will leave "|"
+// for vertical, plow's 'index' will be the same as R when going from top to bottom, and the same as L when going bottom to top
+
+//steps
+// string split at n -> array of smaller strings
+// array length is the height
+// string length is the width
