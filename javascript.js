@@ -18033,3 +18033,11 @@ function solve_1162(s, n, k) {
 // string split at n -> array of smaller strings
 // array length is the height
 // string length is the width
+
+
+//Day 1164
+//given a number, multiply that number by 5 raised to a power equal to the number of digits in that number & return the result
+function power(num) {
+  let pow = Math.abs(num).toString().length //negative numbers would count the negative sign as part of the length; so we take the absolute value to get an accurate length
+  return num * (5**pow)
+}
