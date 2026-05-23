@@ -18041,3 +18041,19 @@ function power(num) {
   let pow = Math.abs(num).toString().length //negative numbers would count the negative sign as part of the length; so we take the absolute value to get an accurate length
   return num * (5**pow)
 }
+
+//Day 1165
+//8 - Triple Trouble - https://www.codewars.com/kata/5704aea738428f4d30000914/train/javascript
+function tripleTrouble(one, two, three){
+  let reference = []
+  for (let i = 0; i < one.length; i++) {
+    reference.push(one[i])
+    reference.push(two[i])
+    reference.push(three[i])
+  }
+  let result = []
+  for (let i = 0; i < reference.length; i++) {
+    result.push(reference[i])
+  }
+  return result.join("")
+}
