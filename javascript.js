@@ -18057,3 +18057,15 @@ function tripleTrouble(one, two, three){
   }
   return result.join("")
 }
+
+//Day 1166
+//refactor
+function tripleTrouble_1166(one, two, three){
+  let result = []
+  for (let i = 0; i < one.length; i++) {
+    result.push(one[i])
+    result.push(two[i])
+    result.push(three[i])
+  }
+  return result.join("")
+}
