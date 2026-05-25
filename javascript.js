@@ -18069,3 +18069,10 @@ function tripleTrouble_1166(one, two, three){
   }
   return result.join("")
 }
+
+//Day 1167 - Memorial Day
+//r - custom sort
+function customSort_1167(arr) {
+  const customOrder = "A23456789TJQK"
+  return arr.sort((a,b) => customOrder.indexOf(a) - customOrder.indexOf(b))
+}
