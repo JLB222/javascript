@@ -18078,8 +18078,14 @@ function customSort_1167(arr) {
 }
 
 //Day 1168
-//8 - Job Matching 1 - https://www.codewars.com/kata/56c22c5ae8b139416c00175d/train/javascript
+//8 - Job Matching 1 incomplete - https://www.codewars.com/kata/56c22c5ae8b139416c00175d/train/javascript
 function match(candidate, job) {
   let wiggleRoom = [candidate.minSalary * .9, candidate.minSalary]
   return candidate.minSalary <= job.maxSalary
+}
+
+//Day 1169
+function match_1169(candidate, job) {
+  if (!candidate.minSalary || !job.maxSalary) throw Error("One of the salary entries is missing.")
+  return (candidate.minSalary * .9) <= job.maxSalary
 }
