@@ -18089,3 +18089,13 @@ function match_1169(candidate, job) {
   if (!candidate.minSalary || !job.maxSalary) throw Error("One of the salary entries is missing.")
   return (candidate.minSalary * .9) <= job.maxSalary
 }
+
+//Day 1170
+//8 - generate range of integers - https://www.codewars.com/kata/55eca815d0d20962e1000106/train/javascript
+function generateRange(min, max, step){
+  let result = []
+  for (let i = min; i <= max; i+= step) {
+    result.push(i)
+  }
+  return result
+}
