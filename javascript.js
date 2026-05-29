@@ -18099,3 +18099,9 @@ function generateRange(min, max, step){
   }
   return result
 }
+
+//Day 1171
+//r - When provided with a number between 0-9, return it in words.
+function wordIt(num) {
+  return ["Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"][num]
+}
