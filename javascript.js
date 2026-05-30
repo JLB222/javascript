@@ -18105,3 +18105,17 @@ function generateRange(min, max, step){
 function wordIt(num) {
   return ["Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"][num]
 }
+
+//Day 1172
+//function declaration
+function letsGo() {
+  return "Daylight's burnin."
+}
+
+//function expression
+const comeOn = function() {
+  return "We're wastin time."
+}
+
+//function expression with fat arrow syntax
+const moveIt = () => {"Move your ass."}
