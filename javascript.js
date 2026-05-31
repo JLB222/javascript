@@ -18119,3 +18119,7 @@ const comeOn = function() {
 
 //function expression with fat arrow syntax
 const moveIt = () => {"Move your ass."}
+
+//Day 1173
+//regex
+/[aeiou]/.test("stringExample")  //should return true
