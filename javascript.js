@@ -18123,3 +18123,30 @@ const moveIt = () => {"Move your ass."}
 //Day 1173
 //regex
 /[aeiou]/.test("stringExample")  //should return true
+
+//Day 1174
+//anki review
+function customSort_1174(arr) {
+  const order = "A23456789TJQK"
+  return arr.sort((a,b) => order.indexOf(a) - order.indexOf(b))
+}
+
+//constant time complexity
+function betterCustomSort(arr) {
+  const order = {
+    "A":1,
+    "2":2,
+    "3":3,
+    "4":4,
+    "5":5,
+    "6":6,
+    "7":7,
+    "8":8,
+    "9":9,
+    "T":10,
+    "J":11,
+    "Q":12,
+    "K":13
+  }
+  return arr.sort((a,b) => order[a] - order[b])
+}
