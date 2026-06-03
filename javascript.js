@@ -18161,3 +18161,27 @@ function top3_1175(products, amounts, prices) {
     .slice(0,3)
     .map(el => el.name)
 }
+
+//Day 1176
+function consonantCount_1176(str) {
+  let consonants = "bcdfghjklmnpqrstvwxyz".split("")
+  let word = str.toLowerCase().split("")
+  let counter = 0
+  for (let i = 0; i < str.length; i++) {
+    if (consonants.includes(word[i])) {
+      counter++
+    }
+  }
+  return counter
+}
+
+function consonantCount_refactor(str) {
+  let consonants = new Set("bcdfghjklmnpqrstvwxyz")
+  let counter = 0
+  for (let i = 0; i < str.length; i++) {
+    if (consonants.has(str[i].toLowerCase())) {
+      counter++
+    }
+  }
+  return counter
+}
