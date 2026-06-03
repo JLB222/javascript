@@ -18150,3 +18150,14 @@ function betterCustomSort(arr) {
   }
   return arr.sort((a,b) => order[a] - order[b])
 }
+
+//Day 1175
+//r
+function top3_1175(products, amounts, prices) {
+  const result = [...products]
+  return result
+    .map((el,i) => ({name: el, index: i, revenue: amounts[i]*prices[i]}))
+    .sort((a,b) => b.revenue - a.revenue || a.index - b.index)
+    .slice(0,3)
+    .map(el => el.name)
+}
