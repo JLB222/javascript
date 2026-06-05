@@ -18190,3 +18190,21 @@ function consonantCount_refactor(str) {
 function sortByLength_1177(array) {
   return array.sort((a,b) => b.length - a.length)
 }
+
+//Day 1178
+//r - 3-cushion carom
+function hasScored_1178(str) {
+  let ballsHit = new Set()
+  let cushionsHit = 0
+  for (let i = 0; i < str.length; i++) {
+    if ("nesw".includes(str[i])) {
+      cushionsHit++
+    } else {
+      ballsHit.add(str[i])
+    }
+    if (ballsHit.size === 2) {
+      return cushionsHit >=3
+    }
+  }
+  return false
+}
