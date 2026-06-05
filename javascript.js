@@ -18185,3 +18185,8 @@ function consonantCount_refactor(str) {
   }
   return counter
 }
+
+//Day 1177
+function sortByLength_1177(array) {
+  return array.sort((a,b) => b.length - a.length)
+}
