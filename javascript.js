@@ -18232,3 +18232,9 @@ class Block_1179{
     return (this.length * this.width * 2) + (this.length * this.height * 2) + (this.width * this.height * 2)
   }
 }
+
+//Day 1180
+//r
+function lineupStudents_1180(students){
+  return students.split(" ").sort((a,b) => b.localeCompare(a)).sort((a,b) => b.length - a.length, 0)
+}
