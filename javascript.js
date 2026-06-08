@@ -18238,3 +18238,8 @@ class Block_1179{
 function lineupStudents_1180(students){
   return students.split(" ").sort((a,b) => b.localeCompare(a)).sort((a,b) => b.length - a.length, 0)
 }
+
+//Day 1181
+function solution_1181(num){
+  return `Value is ${num.toString().padStart(5, "0")}`
+}
