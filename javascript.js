@@ -18243,3 +18243,9 @@ function lineupStudents_1180(students){
 function solution_1181(num){
   return `Value is ${num.toString().padStart(5, "0")}`
 }
+
+//Day 1182
+function solve_1182(str, num){
+  let removed = str.split("").sort().slice(0,num)
+  return removed.reduce((prev,curr) => prev.replace(curr, ""), str)
+}
