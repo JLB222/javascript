@@ -18249,3 +18249,11 @@ function solve_1182(str, num){
   let removed = str.split("").sort().slice(0,num)
   return removed.reduce((prev,curr) => prev.replace(curr, ""), str)
 }
+
+//Day 1183
+//8 - closest elevator - https://www.codewars.com/kata/5c374b346a5d0f77af500a5a/train/javascript
+function elevator(left, right, call){
+  let leftDifference = Math.abs(left-call)
+  let rightDifference = Math.abs(right-call)
+  return leftDifference >= rightDifference ? "right" : "left"
+}
