@@ -18263,3 +18263,8 @@ function elevator(left, right, call){
 function converter(mpg) {
   return mpg * 1.609344 / 4.54609188
 }
+
+//Day 1185
+function repVowel_1185(str) {
+  return str.replace(/[aeiou]/gi, "")
+}
