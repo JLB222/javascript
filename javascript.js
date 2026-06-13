@@ -18268,3 +18268,9 @@ function converter(mpg) {
 function repVowel_1185(str) {
   return str.replace(/[aeiou]/gi, "")
 }
+
+//Day 1186
+//string to num with commas included
+function stringNum(num) {
+  return num.toLocaleString()
+}
