@@ -18274,3 +18274,8 @@ function repVowel_1185(str) {
 function stringNum(num) {
   return num.toLocaleString()
 }
+
+//Day 1187
+function createBox_1187(width, height) {
+  return [...Array(height)].map((el, i) => [...Array(width)].map((el, j) => Math.min(i + 1, j + 1, height - i, width - j)));
+}
