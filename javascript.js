@@ -18279,3 +18279,17 @@ function stringNum(num) {
 function createBox_1187(width, height) {
   return [...Array(height)].map((el, i) => [...Array(width)].map((el, j) => Math.min(i + 1, j + 1, height - i, width - j)));
 }
+
+//Day 1188
+class GBFMaker_1188 {
+  constructor(name, race, gender, element, ultName) {
+    this.name = name
+    this.race = race
+    this.gender = gender
+    this.element = element
+    this.ultName = ultName
+  }
+  ult() {
+    console.log(`Using ${this.ultName}`)
+  }
+}
