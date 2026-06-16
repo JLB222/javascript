@@ -18293,3 +18293,14 @@ class GBFMaker_1188 {
     console.log(`Using ${this.ultName}`)
   }
 }
+
+//Day 1189
+//refactor this:
+function find_1189a(arr, el) {
+  return arr.includes(el) ? arr.indexOf(el) : "Not found";
+}
+//into this:
+function find_1189b(arr,el) {
+  let index = arr.indexOf(el)
+  return index >= 0 ? index : 'Not found'
+}
