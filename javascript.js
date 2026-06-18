@@ -18328,3 +18328,11 @@ function sarcasm(sentence) {
 }
 //Day 1191
 //refactor
+function sarcastic(sentence) {
+  let text = sentence.toLowerCase() 
+  let result = []
+  for (let i = 0; i < sentence.length; i++) {
+    result.push(i % 2 ? text[i].toUpperCase() : text[i])
+  }
+  return result.join("")
+}
