@@ -18336,3 +18336,7 @@ function sarcastic(sentence) {
   }
   return result.join("")
 }
+
+//Day 1192
+//8 - incorrect division method - https://www.codewars.com/kata/54d1c59aba326343c80000e7/train/javascript
+const divide = (x, y) => x / y
