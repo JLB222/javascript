@@ -18340,3 +18340,8 @@ function sarcastic(sentence) {
 //Day 1192
 //8 - incorrect division method - https://www.codewars.com/kata/54d1c59aba326343c80000e7/train/javascript
 const divide = (x, y) => x / y
+
+//Day 1193
+function returnWord_1193(num) {
+  return ["Zero", "One", "Two", "Three", "Four", "Five"][num]
+}
