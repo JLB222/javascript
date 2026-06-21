@@ -18345,3 +18345,8 @@ const divide = (x, y) => x / y
 function returnWord_1193(num) {
   return ["Zero", "One", "Two", "Three", "Four", "Five"][num]
 }
+
+//Day 1194
+function trueForNone(arr, fun){
+  return !arr.some(fun);
+}
