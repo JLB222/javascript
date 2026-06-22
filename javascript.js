@@ -18350,3 +18350,13 @@ function returnWord_1193(num) {
 function trueForNone(arr, fun){
   return !arr.some(fun);
 }
+
+//Day 1195
+//8 - Draw Stairs - https://www.codewars.com/kata/5b4e779c578c6a898e0005c5/train/javascript
+function drawStairs(n) {
+  let result = []
+  for (let i = 0; i < n; i++) {
+    result.push(" ".repeat(i) + "I")
+  }
+  return result.join("\n")
+}
