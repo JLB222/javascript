@@ -18367,10 +18367,16 @@ function sakuraFall(v) {
   return v > 0 ? 400/v : 0
 }
 
-//Day 1197
+//Day 1197 
+function addCommasToNumber_1197(num) {
+  return num.toLocaleString()
+}
+
+//Day 1198
 //99 Bottles
 function bottlesOfBeer(num) {
   for (let i = num; i > 0; i--) {
     console.log(`${i} ${i === 1 ? 'bottle' : 'bottles'} of beer on the wall, ${i} ${i === 1 ? 'bottle' : 'bottles'} of beer!  Take one down, pass it around ${i-1} ${i-1 === 1 ? 'bottle' : 'bottles'} of beer on the wall!`)
   }
 }
+
