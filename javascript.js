@@ -18360,3 +18360,17 @@ function drawStairs(n) {
   }
   return result.join("\n")
 }
+
+//Day 1196
+//8 - the falling speed of petals - https://www.codewars.com/kata/5a0be7ea8ba914fc9c00006b/train/javascript
+function sakuraFall(v) {
+  return v > 0 ? 400/v : 0
+}
+
+//Day 1197
+//99 Bottles
+function bottlesOfBeer(num) {
+  for (let i = num; i > 0; i--) {
+    console.log(`${i} ${i === 1 ? 'bottle' : 'bottles'} of beer on the wall, ${i} ${i === 1 ? 'bottle' : 'bottles'} of beer!  Take one down, pass it around ${i-1} ${i-1 === 1 ? 'bottle' : 'bottles'} of beer on the wall!`)
+  }
+}
