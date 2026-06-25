@@ -18380,3 +18380,13 @@ function bottlesOfBeer(num) {
   }
 }
 
+//Day 1199
+//8 - Pirates!! Are the cannons ready?! - https://www.codewars.com/kata/5748a883eb737cab000022a6/train/javascript
+function cannonsReady(gunners) {
+  for (let gunner in gunners) {
+    if (gunners[gunner] === 'nay') {
+      return 'Shiver me timbers!'
+    }
+  }
+  return 'Fire!'
+}
