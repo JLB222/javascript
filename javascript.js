@@ -18390,3 +18390,19 @@ function cannonsReady(gunners) {
   }
   return 'Fire!'
 }
+
+//Day 1200
+//r
+let result_1200 = []
+let placeholder_1200 = ""
+result.push(placeholder_1200 = 3)
+
+//Day 1201
+//8r - return an array with numbers from 1 to n
+function preFizz(n) {
+  let result = []
+  for (let i = 1; i <= n; i++) {
+    result.push(i)
+  }
+  return result
+}
