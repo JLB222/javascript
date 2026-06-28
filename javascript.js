@@ -18399,10 +18399,24 @@ result.push(placeholder_1200 = 3)
 
 //Day 1201
 //8r - return an array with numbers from 1 to n
-function preFizz(n) {
+function preFizz_1201(n) {
   let result = []
   for (let i = 1; i <= n; i++) {
     result.push(i)
   }
   return result
+}
+
+//Day 1202
+//r
+function pickIt_1202(arr){
+  let odd=[],even=[];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 0) {
+      even.push(arr[i])
+    } else {
+      odd.push(arr[i])
+    }
+  } 
+  return [odd,even];
 }
