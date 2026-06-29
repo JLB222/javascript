@@ -18420,3 +18420,13 @@ function pickIt_1202(arr){
   } 
   return [odd,even];
 }
+
+//Day 1203
+//r
+function top3_1203(products, amounts, prices) {
+  return products
+      .map((el,i) => ({name: el, index: i, revenue: (amounts[i]*prices[i])}))
+      .sort((a,b) => b.revenue - a.revenue || a.index - b.index)
+      .slice(0,3)
+      .map(el => el.name)
+}
