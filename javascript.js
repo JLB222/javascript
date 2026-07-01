@@ -18439,3 +18439,13 @@ function isOpposite(s1,s2){
     .join('') === s2 && s1 !== '';
   
 }
+
+//Day 1205
+//8 - Count the number of cubes with paint on - https://www.codewars.com/kata/5763bb0af716cad8fb000580/train/javascript
+function countSquares(cuts){
+  if (cuts === 0) return 1
+  let totalCubes = Math.pow(cuts + 1, 3)
+  let internalCubes = Math.pow(cuts - 1, 3)
+  
+  return totalCubes-internalCubes
+}
