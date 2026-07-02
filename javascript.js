@@ -18449,3 +18449,14 @@ function countSquares(cuts){
   
   return totalCubes-internalCubes
 }
+
+//Day 1206
+//8 - Heads and Legs - https://www.codewars.com/kata/574c5075d27783851800169e/train/javascript
+function animals(heads, legs){
+  let cows = ((heads * 4) - legs) / 2
+  let chickens = heads-cows
+  let numbers = [heads, legs, cows, chickens]
+  let solution = numbers.every(el => el % 1 === 0 && el >= 0)
+  
+  return solution ? [cows, heads-cows] : "No solutions"
+}
