@@ -18460,3 +18460,12 @@ function animals(heads, legs){
   
   return solution ? [cows, heads-cows] : "No solutions"
 }
+
+//Day 1207
+//8 - easy logs - https://www.codewars.com/kata/5b68c7029756802aa2000176/train/javascript
+function logs(x , a, b){
+  const logA = Math.log(a) / Math.log(x);
+  const logB = Math.log(b) / Math.log(x);
+    
+  return logA + logB;
+}
