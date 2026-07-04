@@ -18469,3 +18469,10 @@ function logs(x , a, b){
     
   return logA + logB;
 }
+
+//Day 1208
+//r
+function flickSwitch_1208(arr){
+  let status = true
+  return arr.map(el=> el === "flick" ? status = !status : status)
+}
