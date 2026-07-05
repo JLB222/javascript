@@ -18476,3 +18476,11 @@ function flickSwitch_1208(arr){
   let status = true
   return arr.map(el=> el === "flick" ? status = !status : status)
 }
+
+//Day 1209
+//8 - Semi-Optional - https://www.codewars.com/kata/521cd52e790405a74800032c/train/javascript
+function wrap(value) {
+  return {
+    "value": value 
+  };
+}
