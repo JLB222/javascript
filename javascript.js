@@ -18484,3 +18484,9 @@ function wrap(value) {
     "value": value 
   };
 }
+
+//Day 1210
+ function nthSmallest_1210(arr, pos){
+  let arrCopy = [...arr]
+  return arrCopy.sort((a,b) => a-b,0)[pos - 1]
+ }
