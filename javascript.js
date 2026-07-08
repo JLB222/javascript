@@ -18490,3 +18490,18 @@ function wrap(value) {
   let arrCopy = [...arr]
   return arrCopy.sort((a,b) => a-b,0)[pos - 1]
  }
+
+ //Day 1211
+ //r
+ class StateMachine_1211 {
+  constructor({ init, transitions }) {
+    this.state = init;
+    transitions.forEach(({method, current, target}) => {
+      this[method] = function() {
+        if (this.state === current) {
+          this.state = target
+        }
+      }
+    })
+  }
+}
