@@ -18505,3 +18505,25 @@ function wrap(value) {
     })
   }
 }
+
+//Day 1212
+//8 - Neutrilization - https://www.codewars.com/kata/65128732b5aff40032a3d8f0/train/javascript
+function neutraliseA(s1, s2) {
+  let result = []
+  for (let i = 0; i < s1.length; i++) {
+    if (s1[i] === "+" && s2[i] === "+") {
+      result.push("+")
+    }
+    if (s1[i] === "-" && s2[i] === "-") {
+      result.push("-")
+    }
+    if (s1[i] !== s2[i]) {
+      result.push("0")
+    }
+  }
+  return result.join("")
+}
+
+function neutraliseB([...string1], string2) {
+  return string1.map((letter, idx) => letter == string2[idx] ? letter : 0).join('')
+}
