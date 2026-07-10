@@ -18527,3 +18527,12 @@ function neutraliseA(s1, s2) {
 function neutraliseB([...string1], string2) {
   return string1.map((letter, idx) => letter == string2[idx] ? letter : 0).join('')
 }
+
+//Day 1213
+//r
+class Dog extends Animal {
+  constuctor(name, breed) {
+    super(name) 
+    this.breed = breed
+  }
+}
