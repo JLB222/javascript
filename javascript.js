@@ -18553,3 +18553,9 @@ function quadrant_1214(x, y) {
     return 2
   }
 }
+
+//Day 1215
+//r
+function repVow_1215(str) {
+  return str.replace(/[aeiou]/gi, "!")
+}
