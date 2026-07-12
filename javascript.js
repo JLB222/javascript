@@ -18614,3 +18614,13 @@ function calculator_1221(a,b,sign){
     return "unknown value"
   }
 }
+
+//Day 1222
+//r
+function reverse_1222(array) {
+  let result = []
+  for (let i = 0; i < array.length; i++) {
+    result.unshift(array[i])
+  }
+  return result
+}
