@@ -18559,3 +18559,11 @@ function quadrant_1214(x, y) {
 function repVow_1215(str) {
   return str.replace(/[aeiou]/gi, "!")
 }
+
+//Day 1216 
+//8 - Points of Reflection - https://www.codewars.com/kata/57bfea4cb19505912900012c/solutions/javascript
+function symmetricPoint(p, q) {
+  let xDiff = p[0] - q[0]
+  let yDiff = p[1] - q[1]
+  return [q[0] - xDiff, q[1] - yDiff]
+}
