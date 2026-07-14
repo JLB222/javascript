@@ -18567,3 +18567,12 @@ function symmetricPoint(p, q) {
   let yDiff = p[1] - q[1]
   return [q[0] - xDiff, q[1] - yDiff]
 }
+
+//Day 1217
+//8 - jumping dutch act - https://www.codewars.com/kata/570bcd9715944a2c8e000009/train/javascript
+function sc(floor){
+  if (floor < 2) return ""
+  let fallScreams = floor - 1
+  let landingScream = floor <= 6
+  return "Aa~ ".repeat(fallScreams) + "Pa!" + (landingScream ? " Aa!" : "")
+}
