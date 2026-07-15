@@ -18576,3 +18576,9 @@ function sc(floor){
   let landingScream = floor <= 6
   return "Aa~ ".repeat(fallScreams) + "Pa!" + (landingScream ? " Aa!" : "")
 }
+
+//Day 1218
+//r
+const alph = "abcdefghijklmnopqrstuvwxyz"
+const alphSplit = alph.split("")
+const alphSpread = [...alph]
