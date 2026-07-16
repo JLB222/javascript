@@ -18582,3 +18582,13 @@ function sc(floor){
 const alph = "abcdefghijklmnopqrstuvwxyz"
 const alphSplit = alph.split("")
 const alphSpread = [...alph]
+
+//Day 1219
+//8 - Is the date today? - https://www.codewars.com/kata/563c13853b07a8f17c000022/train/javascript
+function isToday(date) {
+  let today = new Date()
+  let sameYear = date.getYear() == today.getYear()
+  let sameMonth = date.getMonth() == today.getMonth()
+  let sameDate = date.getDate() == today.getDate()
+  return sameYear && sameMonth && sameDate
+}
