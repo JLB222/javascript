@@ -18592,3 +18592,9 @@ function isToday(date) {
   let sameDate = date.getDate() == today.getDate()
   return sameYear && sameMonth && sameDate
 }
+
+//Day 1220
+//r
+function unscrambleEggs_1220(word){
+  return word.split("egg").join("")
+}
