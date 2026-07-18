@@ -18598,3 +18598,19 @@ function isToday(date) {
 function unscrambleEggs_1220(word){
   return word.split("egg").join("")
 }
+
+//Day 1221
+//r
+function calculator_1221(a,b,sign){
+  if (typeof a === "number" && typeof b === "number") {
+    switch (sign) {
+        case "+": return a + b;
+        case "-": return a - b;
+        case "*": return a * b;
+        case "/": return a / b;
+        default: return "unknown value";
+    }
+  } else {
+    return "unknown value"
+  }
+}
