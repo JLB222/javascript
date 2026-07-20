@@ -18638,3 +18638,10 @@ function findCaterer_1223(budget, people){
     return premium > budget ? economy > budget ? 1 : 2 : 3
   }
 }
+
+//Day 1224
+//r
+function letterRemoval_1224(str, num){
+  let toBeRemoved = str.split("").sort().slice(0,num)
+  return toBeRemoved.reduce((prev,curr) => prev.replace(curr, ""), str)
+}
