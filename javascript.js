@@ -7564,7 +7564,7 @@ function min(arr, toReturn) {
 }
 
 //Day 480
-//7 - Mysterioius Singularity Numbers (and a waste of time)
+//7 - Mysterious Singularity Numbers (and a waste of time)
 function realNumbers(n){
   let result = []
   for (let i = 1; i <= n; i++) {
@@ -18644,4 +18644,10 @@ function findCaterer_1223(budget, people){
 function letterRemoval_1224(str, num){
   let toBeRemoved = str.split("").sort().slice(0,num)
   return toBeRemoved.reduce((prev,curr) => prev.replace(curr, ""), str)
+}
+
+//Day 1225
+//r
+function strCheck_1225(str1,str2) {
+  return str1.split(str2).length -1
 }
