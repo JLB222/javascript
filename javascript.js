@@ -18651,3 +18651,11 @@ function letterRemoval_1224(str, num){
 function strCheck_1225(str1,str2) {
   return str1.split(str2).length -1
 }
+
+//Day 1226
+//8 - for twins 2 - https://www.codewars.com/kata/59c287b16bddd291c700009a/train/javascript
+function iceBrickVolume(radius, bottleLength, rimLength) {
+  let brickLength = bottleLength - rimLength
+  let brickArea = (Math.pow((radius * 2), 2)) / 2
+  return brickLength * brickArea
+}
