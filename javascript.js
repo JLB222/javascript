@@ -18659,3 +18659,12 @@ function iceBrickVolume(radius, bottleLength, rimLength) {
   let brickArea = (Math.pow((radius * 2), 2)) / 2
   return brickLength * brickArea
 }
+
+//Day 1227
+//r
+function count_1227(str) {
+  let counter = {}
+  for (let i = 0; i < str.length; i++) {
+    counter[str[i]] = (counter[str[i]] || 0) +1
+  }
+}
