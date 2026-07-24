@@ -18668,3 +18668,25 @@ function count_1227(str) {
     counter[str[i]] = (counter[str[i]] || 0) +1
   }
 }
+
+//Day 1228
+//8 - Never visit a.. - https://www.codewars.com/kata/56c5847f27be2c3db20009c3/train/javascript
+function subtractSum(n){
+  let value = n
+  value -= value.toString().split("").reduce((a,b) => a + +b, 0)
+  return value > 100 ? subtractSum(value) : fruits[value]
+}
+
+const fruits = {
+  9:"apple",
+  18:"apple",
+  27:"apple",
+  36:"apple",
+  45:"apple",
+  54:"apple",
+  63:"apple",
+  72:"apple",
+  81:"apple",
+  90:"apple",
+  99:"apple",
+}
