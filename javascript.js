@@ -18690,3 +18690,9 @@ const fruits = {
   90:"apple",
   99:"apple",
 }
+
+//Day 1229
+//r
+function takeUmbrella_1229(weather, chance) {
+  return weather == 'rainy' ||  (weather == 'cloudy' && chance > 0.2) || (weather == 'sunny' && chance > 0.5)
+}
