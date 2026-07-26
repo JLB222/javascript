@@ -18696,3 +18696,25 @@ const fruits = {
 function takeUmbrella_1229(weather, chance) {
   return weather == 'rainy' ||  (weather == 'cloudy' && chance > 0.2) || (weather == 'sunny' && chance > 0.5)
 }
+
+//Day 1230
+//refactor
+function repVowels_1230(str) {
+  const vowels = {
+    a: "!",
+    e: "!", 
+    i: "!",
+    o: "!",
+    u: "!",
+    A: "!",
+    E: "!",
+    I: "!",
+    O: "!",
+    U: "!"
+  }
+  let result = str.split("")
+  for (let i = 0; i < str.length; i++) {
+    result[i] = vowels[result[i]] || result[i]
+  }
+  return result.join("")
+}
