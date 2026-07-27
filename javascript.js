@@ -18718,3 +18718,10 @@ function repVowels_1230(str) {
   }
   return result.join("")
 }
+
+//Day 1231 
+//8 - Decibel Scale - https://www.codewars.com/kata/5612a42e746aa62de100001a/train/javascript
+function dBScale(intensity) {
+  const intst = intensity / (Math.pow(10, -12))
+  return 10 * Math.log10(intst)
+}
