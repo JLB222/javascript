@@ -18725,3 +18725,9 @@ function dBScale(intensity) {
   const intst = intensity / (Math.pow(10, -12))
   return 10 * Math.log10(intst)
 }
+
+//Day 1232
+//r
+function multDigi(num) {
+  return num.toString().split("").reduce((a,b) => a*b, 1)
+}
