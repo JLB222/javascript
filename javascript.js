@@ -18731,3 +18731,13 @@ function dBScale(intensity) {
 function multDigi(num) {
   return num.toString().split("").reduce((a,b) => a*b, 1)
 }
+
+//Day 1233
+//r
+function top3_1233(products, amounts, prices) {
+   return products
+    .map((name, index) => ({ name, index, revenue: amounts[index] * prices[index] }))
+    .sort((a, b) => b.revenue - a.revenue || a.index - b.index)     
+    .slice(0, 3)
+    .map(product => product.name)
+}
