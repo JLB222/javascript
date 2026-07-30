@@ -18741,3 +18741,20 @@ function top3_1233(products, amounts, prices) {
     .slice(0, 3)
     .map(product => product.name)
 }
+
+//Day 1234
+//r
+function sumOfDifferences_1234(arr) {
+  let array = arr.sort((a,b) => b - a)
+  let sum = 0
+  for (let i = 0; i < arr.length-1; i++) {
+    sum += (array[i] - array[i+1])
+  }
+  return sum
+}
+
+//alternate - ultimately, the above just gives us the highest number minus the smallest
+function sumOfDifferences_1234b(arr) {
+  let sortedArr = arr.sort((a,b) => b-a)
+  return sortedArr[0] - sortedArr[sortedArr.length-1]
+}
