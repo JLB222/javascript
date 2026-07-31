@@ -2044,7 +2044,7 @@ let thing = new Set(a+b)
 //creates an object with 14 entries, a-n, as single letters
 let thang = new Set()
 thang.add(a73+b73) 
-//creaats an object with 1 entry that's a combination of a and b into one concatenated string
+//creates an object with 1 entry that's a combination of a and b into one concatenated string
 
 //Create a heading in react
 function Heading(props) {
@@ -18757,4 +18757,10 @@ function sumOfDifferences_1234(arr) {
 function sumOfDifferences_1234b(arr) {
   let sortedArr = arr.sort((a,b) => b-a)
   return sortedArr[0] - sortedArr[sortedArr.length-1]
+}
+
+//Day 1235
+//r
+function switchVowel_1235(str) {
+  return str.replace(/[aeiou]/gi, "!")
 }
