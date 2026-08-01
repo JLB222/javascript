@@ -18764,3 +18764,13 @@ function sumOfDifferences_1234b(arr) {
 function switchVowel_1235(str) {
   return str.replace(/[aeiou]/gi, "!")
 }
+
+//Day 1236
+//r
+function drawStairs_1237(n) {
+  let result = []
+  for (let i = 0; i < n; i++) {
+    result.push(" ".repeat(i) + "I")
+  }
+  return result.join("\n")
+}
