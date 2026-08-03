@@ -18789,3 +18789,13 @@ function cleanString_1237(s) {
   }
   return arr.join("")
 }
+
+//Day 1238
+//
+function numberToPower_1238(number, power){
+  var total = 1;
+  for (var i = 1; i <= power; i++) { 
+    total = total * number;
+  }
+  return total;
+}
