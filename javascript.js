@@ -18799,3 +18799,20 @@ function numberToPower_1238(number, power){
   }
   return total;
 }
+
+//Day 1239
+//r
+function solve_1239(str){
+  const vowels = "aeiou"
+  let longest = 0
+  let current = 0
+  for (let i = 0; i < str.length; i++) {
+    if (vowels.includes(str[i])) {
+      current += 1
+    } else {
+      current >= longest? longest = current : null
+      current = 0
+    }
+  }
+ return longest
+}
