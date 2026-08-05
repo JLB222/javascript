@@ -18816,3 +18816,16 @@ function solve_1239(str){
   }
  return longest
 }
+
+//Day 1240
+//
+function reverseLetter_1240(str) {
+  let arr = str.split("")
+  let result = []
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].toUpperCase() != arr[i].toLowerCase()) {
+      result.push(arr[i])
+    }
+  }
+  return result.reverse().join("")
+}
