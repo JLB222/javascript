@@ -18829,3 +18829,13 @@ function reverseLetter_1240(str) {
   }
   return result.reverse().join("")
 }
+
+//Day 1241
+//r
+function countLanguages_1241(arr) {
+  let result = {}
+  for (let el of arr) {
+    result[el.language] = (result[el.language] || 0 ) + 1
+  }
+  return result
+}
