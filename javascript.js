@@ -18839,3 +18839,11 @@ function countLanguages_1241(arr) {
   }
   return result
 }
+
+//Day 1242
+//8 - area of a polygon - https://www.codewars.com/kata/574758e396b130b63e00069b/train/javascript
+function polygonArea(A,B,C,D){
+  let squareArea = A * B
+  let triArea = .5 * B * (C-A)
+  return squareArea + triArea
+}
