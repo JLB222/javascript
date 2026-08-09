@@ -18865,3 +18865,8 @@ function fizzBuzz_2_7_14(num) {
     }
   }
 }
+
+//Day 1244
+function createBox_1244(width, height) {
+  return [...Array(height)].map((el, i) => [...Array(width)].map((el, j) => Math.min(i + 1, j + 1, height - i, width - j)));
+}
