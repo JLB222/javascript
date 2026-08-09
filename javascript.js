@@ -18847,3 +18847,21 @@ function polygonArea(A,B,C,D){
   let triArea = .5 * B * (C-A)
   return squareArea + triArea
 }
+
+//Day 1243
+//r
+function fizzBuzz_2_7_14(num) {
+  for (let i = 1; i <= num; i++) {
+    if (i % 14 === 0) {
+      console.log("Fizzbuzz")
+    } else 
+    if (i % 7 === 0){
+      console.log("Buzz")
+    } else 
+    if (i % 2 === 0) {
+      console.log("Fizz")
+    } else {
+      console.log(i)
+    }
+  }
+}
