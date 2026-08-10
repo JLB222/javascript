@@ -18870,3 +18870,13 @@ function fizzBuzz_2_7_14(num) {
 function createBox_1244(width, height) {
   return [...Array(height)].map((el, i) => [...Array(width)].map((el, j) => Math.min(i + 1, j + 1, height - i, width - j)));
 }
+
+//Day 1245
+//
+function elementCounter(arr) {
+  const count = {}
+  for (let i= 0; i < arr.length; i++) {
+    count[arr[i]] = (count[arr[i]] || 0) + 1
+  }
+  return count
+}
