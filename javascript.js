@@ -18880,3 +18880,13 @@ function elementCounter(arr) {
   }
   return count
 }
+
+//Day 1246
+//r
+function checkAlive_1246(health) {
+  if (health <= 0) {
+    return false
+  } else {
+    return true
+  }
+}
