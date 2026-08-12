@@ -18890,3 +18890,10 @@ function checkAlive_1246(health) {
     return true
   }
 }
+
+//Day 1247
+//r
+function match_1247(candidate, job) {
+  if (!candidate.minSalary || !job.maxSalary) throw Error("One of the salary entries is missing.")
+  return (candidate.minSalary * .9) <= job.maxSalary
+}
