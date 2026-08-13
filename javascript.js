@@ -18897,3 +18897,20 @@ function match_1247(candidate, job) {
   if (!candidate.minSalary || !job.maxSalary) throw Error("One of the salary entries is missing.")
   return (candidate.minSalary * .9) <= job.maxSalary
 }
+
+//Day 1248
+//r
+function fizzBuzz_1248(n) {
+  for (let i = 1; i <= n; i++) {
+    if (i % 15 === 0) {
+      console.log("FizzBuzz")
+    } else if (i % 5 === 0) {
+      console.log("Buzz")
+    } else if (i % 3 === 0) {
+      console.log("Fizz")
+    } else {
+      console.log(i)
+    }
+  }
+  return "Job done"
+}
