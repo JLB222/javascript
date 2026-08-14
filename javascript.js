@@ -18914,3 +18914,23 @@ function fizzBuzz_1248(n) {
   }
   return "Job done"
 }
+
+//Day 1249
+//7r - Simple string characters
+function solve_1249(string) {
+  let result = [0, 0, 0, 0];
+  for (let i = 0; i < string.length; i++) {
+    const charCode = string.charCodeAt(i);
+
+    if (charCode >= 65 && charCode <= 90) {
+      result[0]++; // Uppercase Letters
+    } else if (charCode >= 97 && charCode <= 122) {
+      result[1]++; // Lowercase Letters
+    } else if (charCode >= 48 && charCode <= 57) {
+      result[2]++; // Numbers
+    } else {
+      result[3]++; // Special Characters
+    }
+  }
+  return result;
+};
