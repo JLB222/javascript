@@ -18948,3 +18948,9 @@ function howManydays_1250(month){
   }
   return days;
 }
+
+//Day 1251
+//r
+function multiplyTheDigits(num) {
+  return num.toString().split("").reduce((a,b) => a * b, 1)
+}
