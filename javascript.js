@@ -18975,16 +18975,22 @@ function solution([m1,m2,d],[um1,um2,ud]) {
 }
 
 //Day 1253
-//r 
-//Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
-
-function dupeChecker_1253(arr) {
-  return new Set(arr).size !== arr.length
+//r
+function convert1253(num) {
+  return ["Zero", "One", "Two","Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"][num]
 }
 
 //Day 1254
+//r 
+//Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
+
+function dupeChecker_1254(arr) {
+  return new Set(arr).size !== arr.length
+}
+
+//Day 1255
 //r
-class gbf_1254 {
+class gbf_1255 {
   constructor(name, element, race, ultName) {
     this.name = name
     this.element = element 
