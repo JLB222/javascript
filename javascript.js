@@ -18973,3 +18973,11 @@ function solution([m1,m2,d],[um1,um2,ud]) {
   }
   return G * m1 * conversion[um1] * m2 * conversion[um2] / ( d * conversion[ud] ) ** 2 ;
 }
+
+//Day 1253
+//r 
+//Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
+
+function dupeChecker_1253(arr) {
+  return new Set(arr).size !== arr.length
+}
