@@ -18981,3 +18981,17 @@ function solution([m1,m2,d],[um1,um2,ud]) {
 function dupeChecker_1253(arr) {
   return new Set(arr).size !== arr.length
 }
+
+//Day 1254
+//r
+class gbf_1254 {
+  constructor(name, element, race, ultName) {
+    this.name = name
+    this.element = element 
+    this.race = race 
+    this.ultName = ultName
+  }
+  ult() {
+    console.log(`${this.ultName}!`)
+  }
+}
