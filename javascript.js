@@ -19015,3 +19015,19 @@ function travelDistance(avgSpeed, travelTime) {
   
   return travelKms;
 }
+
+//Day 1257
+//r
+function heraldCipher_1257(str) {
+  let vowels = "aeioua"
+  let string = str.toLowerCase()
+  let stringArr = string.split("")
+  //vowel changer:  all vowels should be changed to the next vowel in the alphabet
+  for (let i = 0; i < stringArr.length; i++) {
+    if (vowels.includes(stringArr[i])) {
+      stringArr[i] = vowels[vowels.indexOf(stringArr[i]) +1]
+    }
+  }
+  
+  return stringArr.join("")
+}
