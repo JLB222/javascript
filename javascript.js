@@ -19031,3 +19031,11 @@ function heraldCipher_1257(str) {
   
   return stringArr.join("")
 }
+
+//Day 1258
+//8 - Package recieved - https://www.codewars.com/kata/6707688c0f597511f6649270/train/javascript
+function was_package_received_yesterday(tz_from, tz_to, start, duration) {
+  const time_diff = tz_to - tz_from;
+  const total_hours = start + duration + time_diff;
+  return total_hours < 0;
+}
