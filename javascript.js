@@ -15010,7 +15010,7 @@ class GbfChar_1104 {
 
 //Day 1105
 //review
-function Heading1105 {
+function Heading1105() {
   return <h1>Hello!</h1>
 }
 
@@ -19038,4 +19038,11 @@ function was_package_received_yesterday(tz_from, tz_to, start, duration) {
   const time_diff = tz_to - tz_from;
   const total_hours = start + duration + time_diff;
   return total_hours < 0;
+}
+
+//Day 1259
+//8 - too many reversals - https://www.codewars.com/kata/687de0b45ab74765f516ce3f/train/javascript
+function whowon(str) {
+  const arrOfNames = str.split(" hit a reversal to ")
+  return arrOfNames[arrOfNames.length-2]
 }
