@@ -19046,3 +19046,10 @@ function whowon(str) {
   const arrOfNames = str.split(" hit a reversal to ")
   return arrOfNames[arrOfNames.length-2]
 }
+
+//Day 1260
+//refactor of day 101
+//Given an array of numbers, return a new array of length number containing the last even numbers from the original array (in the same order). The original array will be not empty and will contain at least "number" even numbers.
+function evenNumbers(arr, num) {
+  return arr.filter(el => el % 2 === 0).slice(-num)
+}
