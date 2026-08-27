@@ -19053,3 +19053,13 @@ function whowon(str) {
 function evenNumbers(arr, num) {
   return arr.filter(el => el % 2 === 0).slice(-num)
 }
+
+//Day 1261
+//r - String Scramble
+function scramble_1261(str, arr) {
+  let result = []
+  for (let i = 0; i < str.length; i++) {
+    result[arr[i]] = str[i]
+  }
+  return result.join("")
+};
