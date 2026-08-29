@@ -19063,3 +19063,9 @@ function scramble_1261(str, arr) {
   }
   return result.join("")
 };
+
+//Day 1262
+//r
+function circleCircumference_1262(circle) {
+  return Math.PI * (circle.radius) * 2
+}
