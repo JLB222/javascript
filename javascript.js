@@ -19069,3 +19069,9 @@ function scramble_1261(str, arr) {
 function circleCircumference_1262(circle) {
   return Math.PI * (circle.radius) * 2
 }
+
+//Day 1263
+//r
+function addCommas(num) {
+  return num.toLocaleString()
+}
