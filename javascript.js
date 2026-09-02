@@ -19081,3 +19081,23 @@ function addCommas(num) {
 function numberFormat(number) {
   return number.toLocaleString();
 }
+
+//Day 1265
+//6 - Going backwards: Unsquare every digit - https://www.codewars.com/kata/6a8cbe32bf74285862991b1d/train/javascript
+//WIP
+function unsquareDigits(n) {
+  let stringNum = n.toString()
+  let numbers = []
+  let sliceStart = 0
+  for (let i = 0; i < stringNum.length; i++) {
+    let currentNumber = +stringNum.slice(sliceStart, i+1)
+    let nextNumber = +stringNum.slice(sliceStart, i+2)
+    if (Math.sqrt(currentNumber) % 1 === 0 && Math.sqrt(nextNumber) % 1 !== 0) {
+      numbers.push(Math.sqrt(currentNumber))
+      sliceStart = i+1
+    }
+    if (currentNumber === nextNumber && Math.sqrt(currentNumber) % 1 === 0) numbers.push(Math.sqrt(currentNumber))
+    console.log(currentNumber, nextNumber, numbers, sliceStart)
+  }
+  return numbers.join("") || null
+}
