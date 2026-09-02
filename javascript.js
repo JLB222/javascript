@@ -19075,3 +19075,9 @@ function circleCircumference_1262(circle) {
 function addCommas(num) {
   return num.toLocaleString()
 }
+
+//Day 1264
+//r6 - Number format.  Given a number, return that number as a string with commas in appropriate places
+function numberFormat(number) {
+  return number.toLocaleString();
+}
