@@ -19101,3 +19101,9 @@ function unsquareDigits(n) {
   }
   return numbers.join("") || null
 }
+
+//Day 1266
+//r - CYC Day 1
+function bump_1266(str){
+  return str.split("").filter(char => char === "n").length <= 15 ? "Woohoo!" : "Car Dead"
+}
