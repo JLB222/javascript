@@ -19107,3 +19107,14 @@ function unsquareDigits(n) {
 function bump_1266(str){
   return str.split("").filter(char => char === "n").length <= 15 ? "Woohoo!" : "Car Dead"
 }
+
+//Day 1267
+//r - CYC Day 2
+
+function top3_1267(products, amounts, prices) {
+  return products
+    .map((el,i) => ({name: el, index: i, profits: (amounts[i] * prices[i])}))
+    .sort((a,b) => b.profits - a.profits || a.index - b.index)
+    .slice(0,3)
+    .map((el) => el.name)
+}
