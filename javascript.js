@@ -19118,3 +19118,18 @@ function top3_1267(products, amounts, prices) {
     .slice(0,3)
     .map((el) => el.name)
 }
+
+//Day 1268
+//r
+function howManyDays_1268(month) {
+  let days
+  switch(month) {
+    case 4:
+    case 6:
+    case 9:
+    case 11: days =  30; break;
+    case 2: days =  28; break;
+    default: days =  31; break;
+  }
+  return days
+}
