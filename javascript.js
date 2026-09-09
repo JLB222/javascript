@@ -19163,3 +19163,24 @@ function getDivisorsCnt_1270(n){
   }
   return counter
 }
+
+//Day 1271
+//class extension
+class dog_1271 extends animal {
+  constructor(name, breed) {
+    super(name)
+    this.breed = breed
+  }
+}
+
+//7 - Same Number of Heads - https://www.codewars.com/kata/6a5ff16900f402eefa5198ff/javascript
+function splitCoins(coins, k) {
+    const group1 = coins.slice(0, k);
+    const group2 = coins.slice(k);
+    
+    for (let coin of group1) {
+        coin.flip();
+    }
+    
+    return [group1, group2];
+}
