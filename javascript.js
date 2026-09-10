@@ -19184,3 +19184,9 @@ function splitCoins(coins, k) {
     
     return [group1, group2];
 }
+
+//Day 1722
+//r
+function automorphic_1722(num){
+  return String(num * num).endsWith(num) ? "Automorphic" : "Not!!"
+}
