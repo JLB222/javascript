@@ -19185,8 +19185,14 @@ function splitCoins(coins, k) {
     return [group1, group2];
 }
 
-//Day 1722
+//Day 1272
 //r
-function automorphic_1722(num){
+function automorphic_1272(num){
   return String(num * num).endsWith(num) ? "Automorphic" : "Not!!"
+}
+
+//Day 1273
+//r
+function describeAge_1273(age) {
+  return "You're a(n) " + (age < 13 ? "kid" : age < 18 ? "teenager" : age < 65 ? "adult" : "elderly")
 }
