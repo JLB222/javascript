@@ -19202,3 +19202,9 @@ function describeAge_1273(age) {
 function solution_1274(a, b){
   return a.length > b.length ? b+a+b : a+b+a
 }
+
+//Day 1275 
+//r
+function splitCoins_1275(coins,k) {
+  return [coins.slice(0,k).map(el => el.flip()), coins.slice(k)]
+}
