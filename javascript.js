@@ -19196,3 +19196,9 @@ function automorphic_1272(num){
 function describeAge_1273(age) {
   return "You're a(n) " + (age < 13 ? "kid" : age < 18 ? "teenager" : age < 65 ? "adult" : "elderly")
 }
+
+//Day 1274
+//r
+function solution_1274(a, b){
+  return a.length > b.length ? b+a+b : a+b+a
+}
