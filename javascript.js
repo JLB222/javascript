@@ -19208,3 +19208,8 @@ function solution_1274(a, b){
 function splitCoins_1275(coins,k) {
   return [coins.slice(0,k).map(el => el.flip()), coins.slice(k)]
 }
+
+//Day 1276
+//r - updating react state object or array
+setThing(prev => ({...prev, name: value}))
+setThing(prev => ([...prev, value]))
