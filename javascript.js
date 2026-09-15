@@ -19213,3 +19213,49 @@ function splitCoins_1275(coins,k) {
 //r - updating react state object or array
 setThing(prev => ({...prev, name: value}))
 setThing(prev => ([...prev, value]))
+
+//Day 1277
+//7 - valid number checker - https://www.codewars.com/kata/67757660c552a3a7ef9aaceb/train/javascript
+const characterValues = {
+    "0": 0,
+    "1": 1,
+    "2": 2,
+    "3": 3,
+    "4": 4,
+    "5": 5,
+    "6": 6,
+    "7": 7,
+    "8": 8,
+    "9": 9,
+    "A": 10,
+    "B": 11,
+    "C": 12,
+    "D": 13,
+    "E": 14,
+    "F": 15,
+    "G": 16,
+    "H": 17,
+    "I": 18,
+    "J": 19,
+    "K": 20,
+    "L": 21,
+    "M": 22,
+    "N": 23,
+    "O": 24,
+    "P": 25,
+    "Q": 26,
+    "R": 27,
+    "S": 28,
+    "T": 29,
+    "U": 30,
+    "V": 31,
+    "W": 32,
+    "X": 33,
+    "Y": 34,
+    "Z": 35
+}
+
+function validateBase(num, base) {
+  let highestNumber = Math.max(...num.toString().split("").map((el) => characterValues[el]))
+  return highestNumber < base
+}
