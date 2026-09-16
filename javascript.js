@@ -19259,3 +19259,10 @@ function validateBase(num, base) {
   let highestNumber = Math.max(...num.toString().split("").map((el) => characterValues[el]))
   return highestNumber < base
 }
+
+//Day 1278
+//7 - turing machines - https://www.codewars.com/kata/6809e5a484e02d7d4cac146d/train/javascript
+function countRuleTables(num) {
+  const states = BigInt(num);
+  return (4n * states + 1n) ** (2n * states);
+}
