@@ -19266,3 +19266,15 @@ function countRuleTables(num) {
   const states = BigInt(num);
   return (4n * states + 1n) ** (2n * states);
 }
+
+//Day 1279
+//7 - https://www.codewars.com/kata/678ded23514de02509dc69d1/javascript
+function words (base_n, max){
+  let counter = 0
+  let current = max
+  while (current >= base_n) {
+    current = current / base_n
+    counter++
+  }
+ return base_n + counter
+}
