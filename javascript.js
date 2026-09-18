@@ -19278,3 +19278,24 @@ function words (base_n, max){
   }
  return base_n + counter
 }
+
+//Day 1280
+//7 - https://www.codewars.com/kata/670031c78cc02fa6c28ba28a/train/javascript
+function channellingPrimes(n) {
+  // Helper function to determine if a number is prime
+  function isPrime(num) {
+    if (num < 2) return false;
+    for (let i = 2; i * i <= num; i++) {
+      if (num % i === 0) return false;
+    }
+    return true;
+  }
+
+  let result = 0n; // Using BigInt to handle large numbers
+  for (let i = 1; i <= n; i++) {
+    if (isPrime(i)) {
+      result += 1n << BigInt(i - 1); // Set the bit at position (i-1)
+    }
+  }
+  return result;
+}
