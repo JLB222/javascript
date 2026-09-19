@@ -19299,3 +19299,10 @@ function channellingPrimes(n) {
   }
   return result;
 }
+
+//Day 1281
+//r
+function splitCoins_1281(coins,k) {
+  return [[coins.slice(0,k).map(el => el.flip())],[coins.slice(k)]]
+}
+
