@@ -19306,3 +19306,8 @@ function splitCoins_1281(coins,k) {
   return [[coins.slice(0,k).map(el => el.flip())],[coins.slice(k)]]
 }
 
+//Day 1282
+//r-524
+function automorphic_1282(number){
+  return `${number * number}`.endsWith(number) ? `Automorphic` : `Not!!`
+}
