@@ -19311,3 +19311,10 @@ function splitCoins_1281(coins,k) {
 function automorphic_1282(number){
   return `${number * number}`.endsWith(number) ? `Automorphic` : `Not!!`
 }
+
+//Day 1283
+//r
+function findChildren_1283(santasList, children) {
+  return children.filter((el,i,arr) => santasList.includes(el) && arr.indexOf(el) === i).sort()
+}
+
