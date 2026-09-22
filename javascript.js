@@ -19318,3 +19318,9 @@ function findChildren_1283(santasList, children) {
   return children.filter((el,i,arr) => santasList.includes(el) && arr.indexOf(el) === i).sort()
 }
 
+//Day 1284
+//Day 1 of NeetCode 150
+//Contains Duplicate
+function hasDuplicate_1284(nums) {
+  return new Set(nums).size < nums.length
+}
