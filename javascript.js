@@ -19324,3 +19324,30 @@ function findChildren_1283(santasList, children) {
 function hasDuplicate_1284(nums) {
   return new Set(nums).size < nums.length
 }
+
+//Day 1285
+//Day 2/150
+//Valid Anagram
+function isAnagram(s, t) {
+  return s.split("").sort().join("") === t.split("").sort().join("")
+}
+
+function isAnagram_b(s, t) {
+  if (s.length !== t.length) return false
+
+  const sCounts = {}
+  const tCounts = {}
+
+  for (let i = 0; i < s.length; i++) {
+      sCounts[s[i]] = (sCounts[s[i]] || 0) + 1
+      tCounts[t[i]] = (tCounts[t[i]] || 0) + 1
+  }
+
+  for (let letter in sCounts) {
+      if (sCounts[letter] !== tCounts[letter]) {
+          return false
+      }
+  }
+
+  return true
+}
