@@ -19351,3 +19351,18 @@ function isAnagram_b(s, t) {
 
   return true
 }
+
+//Day 1286
+//Day 3/150
+//why doesn't this work? just because it's an object?
+function twoSum(nums, target) {
+    const hash = {}
+    for (let i = 0; i < nums.length; i++) {
+        let difference = target - nums[i]
+        if (hash[difference]) {
+            return [hash[difference], i]
+        } else {
+            hash[nums[i]] = i
+        }
+    }
+}
