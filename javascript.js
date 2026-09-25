@@ -19366,3 +19366,33 @@ function twoSum(nums, target) {
         }
     }
 }
+
+//Day 1287
+//Day 4/150
+class Solution_1287 {
+    isPalindrome(s) {
+        let i = 0;
+        let j = s.length - 1
+        while (i < j) {
+            while (i < j && !this.isAlphaNumeric(s[i])) {
+                i++
+            }
+            while (j > i && !this.isAlphaNumeric(s[j])) {
+                j--
+            }
+            if (s[i].toLowerCase() !== s[j].toLowerCase()) {
+                return false
+            }
+            i++
+            j--
+        }
+        return true
+    }
+    isAlphaNumeric(num) {
+        return (
+            (num >= 'A' && num <= 'Z') ||
+            (num >= 'a' && num <= 'z') ||
+            (num >= '0' && num <= '9')
+        );
+    }
+}
