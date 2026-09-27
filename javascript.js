@@ -19396,3 +19396,14 @@ class Solution_1287 {
         );
     }
 }
+
+//Day 1288
+//r
+function d20fortune_1288(boolean=true) {
+  let rolls = []
+  for (let i = 0; i < 2; i++) {
+    rolls.push(Math.floor((Math.random()*20)) + 1)
+  }
+  console.log(rolls)
+  return boolean ? Math.max(...rolls) : Math.min(...rolls)
+}
