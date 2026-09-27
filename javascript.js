@@ -19407,3 +19407,13 @@ function d20fortune_1288(boolean=true) {
   console.log(rolls)
   return boolean ? Math.max(...rolls) : Math.min(...rolls)
 }
+
+//Day 1289
+//r
+function countAll_1289(arr) {
+  const counter = {}
+  for (let i = 0; i < arr.length; i++) {
+    counter[arr[i]] = (counter[arr[i]] || 0) + 1
+  }
+  return counter
+}
