@@ -19417,3 +19417,18 @@ function countAll_1289(arr) {
   }
   return counter
 }
+
+//Day 1290
+//r - two sum
+function twoSum(nums, target) {
+    let hash = new Map()
+    for (let i = 0; i < nums.length; i++) {
+        let diff = target - nums[i]
+        if (hash.has(diff)) {
+            return [hash.get(diff), i]
+        } else {
+            hash.set(nums[i], i)
+        }
+    }
+    return false
+  }
