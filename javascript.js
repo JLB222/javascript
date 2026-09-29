@@ -19432,3 +19432,25 @@ function twoSum(nums, target) {
     }
     return false
   }
+
+  //Day 1291
+  //Neetcode - Happy Number
+  class Solution_1291 {
+    isHappy(num) {
+        let currentNumber = num
+        let numberMap = {}
+        while (currentNumber !== 1) {
+            if (numberMap[this.sumOfSquares(currentNumber)]) {
+                return false
+            } else {
+                numberMap[this.sumOfSquares(currentNumber)] = true
+            }
+            currentNumber = this.sumOfSquares(currentNumber)
+        }
+        return true
+    }
+    sumOfSquares(num) {
+        return num.toString().split("").reduce((a,b) => a + (b*b), 0)
+    }
+
+}
