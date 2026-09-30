@@ -19454,3 +19454,13 @@ function twoSum(nums, target) {
     }
 
 }
+
+//Day 1292
+//neetcode - single number - bitwise operators
+function singleNumber(nums) {
+    let result = 0
+    for (let num of nums) {
+        result ^= num
+    }
+    return result
+}
