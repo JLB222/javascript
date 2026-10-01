@@ -19464,3 +19464,18 @@ function singleNumber(nums) {
     }
     return result
 }
+
+//Day 1293
+//r - finite state automata
+class StateMachine_1293 {
+  constructor({ init, transitions }) {
+    this.state = init;
+    transitions.forEach((obj) => {
+      this[obj.method] = () => {
+        if (this.state == obj.current) {
+          this.state = obj.target
+        }
+      }
+    })
+  }
+}
