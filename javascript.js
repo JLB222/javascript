@@ -19479,3 +19479,11 @@ class StateMachine_1293 {
     })
   }
 }
+
+//Day 1294
+//Number of 1 bits
+class Solution_1294 {
+    hammingWeight(n) {
+        return n.toString(2).split('0').join('').length;
+    }
+}
