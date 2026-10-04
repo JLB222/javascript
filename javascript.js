@@ -19487,3 +19487,15 @@ class Solution_1294 {
         return n.toString(2).split('0').join('').length;
     }
 }
+
+//Day 1295
+//r
+function spacey_1295(array){
+  let result = []
+  let word = ""
+  for (let i = 0; i < array.length; i++) {
+    word += array[i]
+    result.push(word)
+  }
+  return result
+}
