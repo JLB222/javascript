@@ -19551,3 +19551,12 @@ function hasDuplicate_1300(nums) {
 function unscrambleEggs_1301(word){
   return word.split("egg").join("")
 }
+
+//Day 1302
+//r
+function menFromBoys_1302(arr){
+  arr = Array.from(new Set(arr))
+  let odds = arr.filter(el => el % 2).sort((a,b) => b-a,0)  //originally I had el % 2 === 1;  this caused problems with negative numbers having a remainder of -1
+  let evens = arr.filter(el => el % 2 === 0).sort((a,b) => a-b,0)
+  return [...evens, ...odds]
+}
