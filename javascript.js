@@ -19513,3 +19513,24 @@ function howManyDalmatians_1296(number) {
 function removeVowels_1297(str){
   return str.replace(/[aeiou]/gi, "")
 }
+
+//Day 1298
+//7 - incomplete
+function countDirectionChanges(readings) {
+  let result = 0
+  let increasing = false
+  let decreasing = false
+  for (let i = 1; i < readings.length; i++) {
+    if (readings[i] > readings[i-1] && decreasing) {
+      result++
+      increasing = true
+      decreasing = false
+    }
+    if (readings[i] < readings[i-1] && increasing) {
+      result++
+      increasing = false
+      decreasing = true
+    }
+  }
+  return result
+}
