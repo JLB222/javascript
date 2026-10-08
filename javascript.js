@@ -19534,3 +19534,9 @@ function countDirectionChanges(readings) {
   }
   return result
 }
+
+//Day 1299
+//r7 - Evens and Odds - Given a number, convert it to hexadecimal if its odd and binary if its even
+function evensAndOdds_1299(num){
+	return num.toString(num % 2 ? 16 : 2)
+}
