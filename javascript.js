@@ -19540,3 +19540,8 @@ function countDirectionChanges(readings) {
 function evensAndOdds_1299(num){
 	return num.toString(num % 2 ? 16 : 2)
 }
+
+//Day 1300
+function hasDuplicate_1300(nums) {
+  return new Set(nums).size < nums.length
+}
