@@ -19545,3 +19545,9 @@ function evensAndOdds_1299(num){
 function hasDuplicate_1300(nums) {
   return new Set(nums).size < nums.length
 }
+
+//Day 1301
+//r - unscrambled eggs; you are given a string where "egg" has been inserted after every consonant.  return what the original string must have been
+function unscrambleEggs_1301(word){
+  return word.split("egg").join("")
+}
