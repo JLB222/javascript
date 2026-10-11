@@ -19560,3 +19560,10 @@ function menFromBoys_1302(arr){
   let evens = arr.filter(el => el % 2 === 0).sort((a,b) => a-b,0)
   return [...evens, ...odds]
 }
+
+//Day 1303
+//r
+function greet_1303(nameStr) {
+  let formattedName = nameStr[0].toUpperCase() + nameStr.slice(1).toLowerCase()
+  return `Hello ${formattedName}!`
+};
