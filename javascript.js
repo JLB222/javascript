@@ -19567,3 +19567,13 @@ function greet_1303(nameStr) {
   let formattedName = nameStr[0].toUpperCase() + nameStr.slice(1).toLowerCase()
   return `Hello ${formattedName}!`
 };
+
+//Day 1304
+//r - Columbus Day
+function isItColumbusDay() {
+  const today = new Date()
+  const isItMonday = today.getDay() == 1
+  const secondMonday = today.getDate() >= 8 && today.getDate() <= 14
+  const isItOctober = today.getMonth() == 9
+  return isItMonday && secondMonday && isItOctober
+}
