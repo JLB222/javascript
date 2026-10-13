@@ -19577,3 +19577,18 @@ function isItColumbusDay() {
   const isItOctober = today.getMonth() == 9
   return isItMonday && secondMonday && isItOctober
 }
+
+//Day 1305
+//r two sum
+function twoSum_1305(nums, target) {
+  let numbers = new Map()
+  for (let i = 0; i < nums.length; i++) {
+    let diff = target - nums[i]
+    if (numbers.has(diff)) {
+      return [numbers.get(diff), i]
+    } else {
+      numbers.set(nums[i], i)
+    }
+  }
+  return
+}
