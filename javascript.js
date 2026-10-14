@@ -19592,3 +19592,18 @@ function twoSum_1305(nums, target) {
   }
   return
 }
+
+//Day 1306
+//7 - split by mask - https://www.codewars.com/kata/6a68ed7894f29599a1f7a248/train/javascript
+function split(string,mask) {
+  if (string.length !== mask.reduce((a,b) => a+b,0)) {return null}
+  let result = []
+  let sliceStart = 0
+  let sliceEnd = 0
+  for (let i = 0; i < mask.length; i++) {
+    sliceEnd += mask[i]
+    result.push(string.slice(sliceStart,sliceEnd))
+    sliceStart = sliceEnd
+  }
+  return result
+}
