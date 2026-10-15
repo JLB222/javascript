@@ -19607,3 +19607,9 @@ function split(string,mask) {
   }
   return result
 }
+
+//Day 1307
+//contains duplicate
+function hasDuplicate_1307(nums) {
+    return new Set(nums).size < nums.length
+}
