@@ -19613,3 +19613,17 @@ function split(string,mask) {
 function hasDuplicate_1307(nums) {
     return new Set(nums).size < nums.length
 }
+
+//Day 1308
+//7 - Wrapping paper - https://www.codewars.com/kata/69ea4c6708b1c58c36ac735a/train/javascript
+//WIP
+function wrappingPaper(boxes) {
+  let result = 0
+  for (let i = 0; i < boxes.length; i++) {
+    result += (boxes[i][0] * boxes[i][1]) + 
+              (boxes[i][1] * boxes[i][2]) +
+              (boxes[i][0] * boxes[i][2]) + boxes[i].sort((a,b) => a-b).slice(0,2).reduce((a,b) => a*b, 1)
+  }
+  return result
+}
+
