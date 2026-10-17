@@ -19627,3 +19627,8 @@ function wrappingPaper(boxes) {
   return result
 }
 
+//Day 1309
+//r
+function sumSquares_1309(array) {
+  return array.map(x => x**2).reduce((a,b) => a+b,0)
+}
