@@ -19632,3 +19632,17 @@ function wrappingPaper(boxes) {
 function sumSquares_1309(array) {
   return array.map(x => x**2).reduce((a,b) => a+b,0)
 }
+
+//Day 1310
+//two sum
+function twoSum_1310(arr,tar) {
+  let box = new Map()
+  for (let i = 0; i < arr.length; i++) {
+    let diff = tar - arr[i]
+    if (box.has(diff)) {
+      return [box.get(diff), i]
+    } else {
+      box.set(arr[i], i)
+    }
+  }
+}
