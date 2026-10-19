@@ -19646,3 +19646,17 @@ function twoSum_1310(arr,tar) {
     }
   }
 }
+
+//Day 1311
+//two sum review
+function twoSum_1311(nums, target) {
+    let hash = new Map()
+    for (let i = 0; i < nums.length; i++) {
+        let diff = target - nums[i]
+        if (hash.has(diff)) {
+            return [hash.get(diff), i]
+        } else {
+            hash.set(nums[i], i)
+        }
+    }
+}
