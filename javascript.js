@@ -19678,3 +19678,16 @@ function fizzbuzz(num) {
     }
   }
 }
+
+//Day 1313
+//r - coin flip
+function splitCoins_1313(coins, k) {
+    const group1 = coins.slice(0, k);
+    const group2 = coins.slice(k);
+    
+    for (let coin of group1) {
+        coin.flip();
+    }
+    
+    return [group1, group2];
+}
