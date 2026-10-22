@@ -19691,3 +19691,15 @@ function splitCoins_1313(coins, k) {
     
     return [group1, group2];
 }
+
+//Day 1314
+//7 - Cardinals through sets
+function zfcDefinition(n) {
+  let result = []
+
+  for (let i = 1; i <= n; i++) {
+    result.push(`{${result}}`)
+  }
+
+  return `{${result}}`
+}
