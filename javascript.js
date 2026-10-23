@@ -19703,3 +19703,23 @@ function zfcDefinition(n) {
 
   return `{${result}}`
 }
+
+//Day 1315
+//7 - raffle runs - incomplete - 
+function raffleOdds(totals, purchased) {
+  const oddsOfWinning = purchased.map((el,i) => el / totals[i])
+  oddsOfWinning.filter(el => el !== 0)
+  if (oddsOfWinning.some(el => el == 1)) return "1/1"
+  const oddsOfLosing = [...oddsOfWinning].map(el => 1 - el)
+  const result = 1 - (oddsOfLosing.reduce((a,b) => a*b, 1))
+  
+  return decimalToFraction(result)
+}
+
+//loop - purchased.map
+//find the chances of winning each raffle -> ticketsBought/ticketsTotal
+  //look for guaranteed wins
+  //remove any where no tickets are bought
+//invert them to find chance of losing
+//calculate probability
+  //fully reduce the fraction
