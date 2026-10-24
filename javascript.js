@@ -19723,3 +19723,22 @@ function raffleOdds(totals, purchased) {
 //invert them to find chance of losing
 //calculate probability
   //fully reduce the fraction
+
+
+//Day 1316
+//r
+function hasScored_1316(str) {
+  let cushionCounter = 0
+  const ballsHit = new Set()
+  for (let i = 0; i < str.length; i++) {
+    if ("news".includes(str[i])) {
+      cushionCounter++
+    } else {
+      ballsHit.add(str[i])
+    }
+    if (ballsHit.size == 2) {
+      return cushionCounter >= 3
+    }
+  }
+  return false;
+}
