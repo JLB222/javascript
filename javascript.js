@@ -19742,3 +19742,9 @@ function hasScored_1316(str) {
   }
   return false;
 }
+
+//Day 1317
+//r
+function solve_1317(str, num){
+  return str.split("").sort().slice(0,num).reduce((prev,curr) => prev.replace(curr, ""), str)
+}
