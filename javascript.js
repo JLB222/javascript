@@ -19748,3 +19748,13 @@ function hasScored_1316(str) {
 function solve_1317(str, num){
   return str.split("").sort().slice(0,num).reduce((prev,curr) => prev.replace(curr, ""), str)
 }
+
+//Day 1318
+//r - Most Sales
+function top3_1318(products, amounts, prices) {
+  return products
+    .map((el, i) => ({product: el, index: i, revenue: amounts[i] * prices[i]}))
+    .sort((a,b) => b.revenue - a.revenue || a.index - b.index)
+    .slice(0,3)
+    .map(el => el.product)
+}
