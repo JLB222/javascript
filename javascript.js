@@ -19764,3 +19764,10 @@ function top3_1318(products, amounts, prices) {
 function createBox_1319(width, height) {
   return [...Array(height)].map((el, i) => [...Array(width)].map((el, j) => Math.min(i + 1, j + 1, height - i, width - j)));
 }
+
+//Day 1320
+//r
+function flickSwitch_1320(arr){
+  let status = true
+  return arr.map(el=> el === "flick" ? status = !status : status)
+}
