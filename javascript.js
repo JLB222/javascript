@@ -19771,3 +19771,17 @@ function flickSwitch_1320(arr){
   let status = true
   return arr.map(el=> el === "flick" ? status = !status : status)
 }
+
+//Day 1321
+//r
+function twoSum_1321(nums, target) {
+    let hash = new Map()
+    for (let i = 0; i < nums.length; i++) {
+        let diff = target - nums[i]
+        if (hash.has(diff)) {
+            return [hash.get(diff), i]
+        } else {
+            hash.set(nums[i], i)
+        }
+    }
+}
