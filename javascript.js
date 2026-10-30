@@ -19785,3 +19785,16 @@ function twoSum_1321(nums, target) {
         }
     }
 }
+
+//Day 1322
+//Lonely Letters
+function countLonelyLetters(text) {
+    return [...text.toLowerCase().replace(/[^a-z]/g, '')]
+      .filter(
+        (el, i, arr) =>
+          i === arr.lastIndexOf(el) &&
+          i === arr.indexOf(el) &&
+          !arr.includes(String.fromCharCode(el.charCodeAt(0) - 1)) &&
+          !arr.includes(String.fromCharCode(el.charCodeAt(0) + 1))
+        ).length;
+}
