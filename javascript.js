@@ -19798,3 +19798,9 @@ function countLonelyLetters(text) {
           !arr.includes(String.fromCharCode(el.charCodeAt(0) + 1))
         ).length;
 }
+
+//Day 1323
+//r
+function digits_1323(n) {
+  return n.toString().length
+}
