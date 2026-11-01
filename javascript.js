@@ -19837,3 +19837,13 @@ function identifyMonster(observedWeaknesses, bestiary) {
 function splitCoins_1326(coins,k) {
   return [coins.slice(0,k).map(el => el.flip()), coins.slice(k)]
 }
+
+//Day 1327
+//r
+function countTheThings_1327(arr) {
+  let counts = {}
+  for (let i = 0; i < arr.length; i++) {
+    counts[arr[i]] = (counts[arr[i]] || 0) + 1
+  }
+  return counts
+}
