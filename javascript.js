@@ -19804,3 +19804,30 @@ function countLonelyLetters(text) {
 function digits_1323(n) {
   return n.toString().length
 }
+
+//Day 1324
+//r
+function dice(sides, num) {
+  let results = []
+  for (let i = 0; i < sides; i++) {
+    results.push(Math.floor(Math.random() * sides) +1)
+  }
+  return results
+}
+
+//Day 1325
+//Witcher's Contract - The Bestiary - https://www.codewars.com/kata/69b9359e8af0beedadc87db9/train/javascript
+function identifyMonster(observedWeaknesses, bestiary) {
+  for (let monster in bestiary) {
+    let counter = 0
+    bestiary[monster].forEach((weakness) => {
+      if (observedWeaknesses.includes(weakness)) {
+        counter++
+      }
+    })
+    if (counter === observedWeaknesses.length) {
+      return monster
+    }
+  }
+  return 'Unknown monster'
+}
