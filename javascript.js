@@ -19831,3 +19831,9 @@ function identifyMonster(observedWeaknesses, bestiary) {
   }
   return 'Unknown monster'
 }
+
+//Day 1326
+//r - same number of heads
+function splitCoins_1326(coins,k) {
+  return [coins.slice(0,k).map(el => el.flip()), coins.slice(k)]
+}
