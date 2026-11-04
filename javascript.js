@@ -19847,3 +19847,17 @@ function countTheThings_1327(arr) {
   }
   return counts
 }
+
+//Day 1328
+//two sum review
+function twoSum(arr, target) {
+  let hash = new Map()
+  for (let i = 0; i < arr.length; i++) {
+    let diff = target - arr[i]
+    if (hash.has(diff)) {
+      return [hash.get(diff), i]
+    } else {
+      hash.set(arr[i], i)
+    }
+  }
+}
