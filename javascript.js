@@ -19887,6 +19887,12 @@ function isAnagram_1330(s, t) {
 }
 
 //Day 1331
+//r - unscrambled eggs; you are given a string where "egg" has been inserted after every consonant.  return what the original string must have been
+function unscrambleEggs_1331(word){
+  return word.split("egg").join("")
+}
+
+//Day 1332
 //7 - how many quarter notes - https://www.codewars.com/kata/69c2f04a1294ffc95c526d9e/train/javascript
 function findQuarterNotes(timeSignature) {
   const [ a, b ] = timeSignature.split('/').map(Number);
