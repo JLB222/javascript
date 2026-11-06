@@ -9396,7 +9396,7 @@ function wordValue(arr) {
   return arr.map((el,i) => el.replace(/\s/g, '')
                          .split('')
                          .map(b => (b.charCodeAt() -96))
-                         .reduce((acc, cur) => (acc+=cur),0)*(i+1))
+                         .reduce((acc, cur) => (acc += cur), 0) * (i+1))
 }
 
 //Day 644
@@ -19860,4 +19860,12 @@ function twoSum(arr, target) {
       hash.set(arr[i], i)
     }
   }
+}
+
+//Day 1329
+function wordValue_1329(arr) {
+  return arr.map((el,i) => el.replace(/\s/g, '')
+            .split('')
+            .map(b => (b.charCodeAt() -96))
+            .reduce((acc, cur) => (acc += cur), 0) * (i+1))
 }
