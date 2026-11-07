@@ -19863,9 +19863,33 @@ function twoSum(arr, target) {
 }
 
 //Day 1329
+//r
 function wordValue_1329(arr) {
   return arr.map((el,i) => el.replace(/\s/g, '')
             .split('')
             .map(b => (b.charCodeAt() -96))
             .reduce((acc, cur) => (acc += cur), 0) * (i+1))
+}
+
+//Day 1330
+//arrays and hashing
+function hasDuplicate_1330(nums) {
+    return new Set(nums).size < nums.length
+}
+function isAnagram_1330(s, t) {
+  if (s.length !== t.length) {return false}
+  const count = new Array(26).fill(0)
+  for (let i = 0; i < s.length; i++) {
+      count[s.charCodeAt(i) - 97]++
+      count[t.charCodeAt(i) - 97]--
+  }
+  return count.every(el => el === 0)
+}
+
+//Day 1331
+//7 - how many quarter notes - https://www.codewars.com/kata/69c2f04a1294ffc95c526d9e/train/javascript
+function findQuarterNotes(timeSignature) {
+  const [ a, b ] = timeSignature.split('/').map(Number);
+  if (!b || Math.log2(b) % 1) return null;
+  return Math.floor((a/b) / (1/4)); 
 }
