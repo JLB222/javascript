@@ -19899,3 +19899,9 @@ function findQuarterNotes(timeSignature) {
   if (!b || Math.log2(b) % 1) return null;
   return Math.floor((a/b) / (1/4)); 
 }
+
+//Day 1333
+//r
+function filterLucky_1333(arr) {
+  return arr.filter((el) => el.toString().indexOf("7") !== -1)
+}
