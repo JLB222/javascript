@@ -19905,3 +19905,17 @@ function findQuarterNotes(timeSignature) {
 function filterLucky_1333(arr) {
   return arr.filter((el) => el.toString().indexOf("7") !== -1)
 }
+
+//Day 1334
+//two sum review / anki
+function twoSum_1334(arr, target) {
+    const hash = new Map()
+    for (let i = 0; i < arr.length; i++) {
+        let difference = target - arr[i]
+        if (hash.has(difference)) {
+            return [hash.get(difference), i]
+        } else {
+            hash.set(arr[i], i)
+        }
+    }
+}
