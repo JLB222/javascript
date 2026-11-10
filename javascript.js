@@ -19919,3 +19919,9 @@ function twoSum_1334(arr, target) {
         }
     }
 }
+
+//Day 1335
+//r - using Regex, remove all numbers from a string, but leave special characters intact
+function stringClean_1335(s){
+  return s.replace(/[0-9]/g, "")
+}
