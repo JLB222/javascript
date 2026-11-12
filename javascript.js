@@ -19937,3 +19937,9 @@ function isAnagram_1336(s, t) {
     }
     return count.every(el => el === 0)
 }
+
+//Day 1337
+//r - coin flip
+function splitCoins_1337(coins, numOfHeads) {
+  return [coins.slice(0,numOfHeads).map((el) => el.flip()), coins.slice(numOfHeads)]
+}
