@@ -19943,3 +19943,25 @@ function isAnagram_1336(s, t) {
 function splitCoins_1337(coins, numOfHeads) {
   return [coins.slice(0,numOfHeads).map((el) => el.flip()), coins.slice(numOfHeads)]
 }
+
+//Day 1338
+//r - neetcode isAnagram
+function isAnagram_1338(s, t) {
+    if (s.length !== t.length) {
+        return false;
+    }
+
+    const countS = {};
+    const countT = {};
+    for (let i = 0; i < s.length; i++) {
+        countS[s[i]] = (countS[s[i]] || 0) + 1;
+        countT[t[i]] = (countT[t[i]] || 0) + 1;
+    }
+
+    for (const key in countS) {
+        if (countS[key] !== countT[key]) {
+            return false;
+        }
+    }
+    return true;
+}
