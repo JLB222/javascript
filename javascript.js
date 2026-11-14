@@ -19965,3 +19965,9 @@ function isAnagram_1338(s, t) {
     }
     return true;
 }
+
+//Day 1339
+//r
+function spacify_1339(str) {
+  return [...str].split("").join(" ")
+}
