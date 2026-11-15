@@ -19971,3 +19971,15 @@ function isAnagram_1338(s, t) {
 function spacify_1339(str) {
   return [...str].split("").join(" ")
 }
+
+//Day 1340
+//r
+function yearDays_1340(year){
+  let fourHundred = year/400 % 1
+  let oneHundred = year/100 % 1
+  let four = year/4 % 1
+  
+  let standard = four || (fourHundred && !oneHundred)
+  
+  return `${year} has ${standard?365:366} days`
+}
