@@ -19983,3 +19983,15 @@ function yearDays_1340(year){
   
   return `${year} has ${standard?365:366} days`
 }
+
+//Day 1341
+//ship of theseus WIP
+function shipOfTheseus(ship) {
+  let totalLength = ship.length
+  let length = ship[0].length
+  if (ship.some((el) => el.length !== length)) return false
+  const hash = new Set(ship[0])
+  for (let i = 1; i < length; i++) {
+    hash.add
+  }
+}
