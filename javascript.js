@@ -19986,7 +19986,7 @@ function yearDays_1340(year){
 
 //Day 1341
 //ship of theseus WIP
-function shipOfTheseus(ship) {
+function shipOfTheseus_WIP(ship) {
   let totalLength = ship.length
   let length = ship[0].length
   if (ship.some((el) => el.length !== length)) return false
@@ -19994,4 +19994,19 @@ function shipOfTheseus(ship) {
   for (let i = 1; i < length; i++) {
     hash.add
   }
+}
+
+//Day 1342
+//7 - Ship of Theseus - https://www.codewars.com/kata/69b83710b26939b35fd10429/javascript
+function differsByOne(a, b) {
+  if (a.length !== b.length) return false;
+  let diffs = 0;
+  for (let i = 0; i < a.length; i++) {
+    if (a[i] !== b[i] && ++diffs > 1) return false;
+  }
+  return diffs === 1;
+};
+
+function shipOfTheseus(ship) {
+  return ship.every((el, i) => i === 0 || differsByOne(ship[i - 1], el));
 }
