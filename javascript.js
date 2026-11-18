@@ -20010,3 +20010,12 @@ function differsByOne(a, b) {
 function shipOfTheseus(ship) {
   return ship.every((el, i) => i === 0 || differsByOne(ship[i - 1], el));
 }
+
+
+//Day 1343
+//7 - Point belongs to arc (WIP) - https://www.codewars.com/kata/69aaedd9d5944360bfcb9fed/train/javascript
+function belongsToArc(a, b, c) {
+  let start = a % 360 >= 0 ? (a % 360) : 360 + (a % 360)
+  let end = b % 360 >= 0 ? (b % 360) : 360 + (b % 360)
+  return start <= c && c <= end || c === start || c === end
+}
