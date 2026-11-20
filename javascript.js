@@ -20019,3 +20019,44 @@ function belongsToArc(a, b, c) {
   let end = b % 360 >= 0 ? (b % 360) : 360 + (b % 360)
   return start <= c && c <= end || c === start || c === end
 }
+
+//Day 1344
+//code review
+function renderItemMatches(query = '') {
+  const normalizedQuery = query.trim().toLocaleLowerCase();
+  const queryTerms = normalizedQuery.split(/\s+/).filter(Boolean);
+  const matches = normalizedQuery
+    ? gifts.filter((gift) => {
+      const normalizedName = gift.name.toLocaleLowerCase();
+      return queryTerms.every((term) => normalizedName.includes(term));
+    })
+    : [];
+
+  itemResults.replaceChildren(...matches.map((gift) => {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'item-option';
+    button.setAttribute('role', 'option');
+    button.setAttribute('aria-selected', String(gift.name === selectedGiftName));
+    button.innerHTML = '<span class="option-icon" aria-hidden="true"></span><span class="option-copy"><b></b><small></small></span><span class="option-arrow" aria-hidden="true">↗</span>';
+    button.querySelector('.option-icon').textContent = gift.emoji;
+    button.querySelector('.option-copy b').textContent = gift.name;
+    button.querySelector('.option-copy small').textContent = gift.category;
+    button.addEventListener('click', () => selectGift(gift));
+    return button;
+  }));
+
+  resultCount.textContent = normalizedQuery ? `${matches.length}` : '';
+  itemResults.hidden = matches.length === 0;
+  listEmpty.hidden = matches.length > 0;
+  if (!normalizedQuery) {
+    listEmpty.innerHTML = '<span>⌕</span><p>Type an item name to see matching gifts.</p>';
+  } else if (matches.length === 0) {
+    listEmpty.innerHTML = '<span>⌕</span><p>No matching items. Try another name.</p>';
+  }
+
+  if (selectedGiftName && !matches.some((gift) => gift.name === selectedGiftName)) {
+    selectedGiftName = '';
+    showEmptyDetail();
+  }
+}
