@@ -20060,3 +20060,13 @@ function renderItemMatches(query = '') {
     showEmptyDetail();
   }
 }
+
+//Day 1345
+//r - produce an array of numbers in reverse order, starting with n
+function reverSeq(n) {
+  let numbers = []
+  for (let i = n; i > 0; i--) {
+    numbers.push(n)
+  }
+  return numbers
+}
