@@ -20070,3 +20070,9 @@ function reverSeq(n) {
   }
   return numbers
 }
+
+//Day 1346
+//r
+function zomboid() {
+  return "zombie" ? "Run Away!" : "Kill It!"
+}
