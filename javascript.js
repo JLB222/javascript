@@ -20076,3 +20076,17 @@ function reverSeq(n) {
 function zomboid() {
   return "zombie" ? "Run Away!" : "Kill It!"
 }
+
+//Day 1347
+//r
+function cleanString_1347(s) {
+  let arr = []
+  for (let i = 0; i < s.length; i++) {
+    if (s[i] !== "#") {
+      arr.push(s[i])
+    } else {
+      arr.pop()
+    }
+  }
+  return arr.join("")
+}
