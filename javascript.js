@@ -20090,3 +20090,17 @@ function cleanString_1347(s) {
   }
   return arr.join("")
 }
+
+//Day 1348
+//r
+function cookie_1348(x){
+  let whoDunIt
+  if (typeof(x) === "string") {
+    whoDunIt = "Zach"
+  } else if (typeof(x) === "number") {
+    whoDunIt = "Monica"
+  } else {
+    whoDunIt = "the dog"
+  }
+  return `Who ate the last cookie? It was ${whoDunIt}!`
+}
