@@ -20110,3 +20110,29 @@ function cookie_1348(x){
 function zeroToNine_1349(n) {
   return "Zero One Two Three Four Five Six Seven Eight Nine".split(" ")[n]
 }
+
+//Day 1350
+// shadok alternate
+function shadok(str) {
+  let rule = ["GA", "BU", "ZO", "MEU"]
+  let value = []
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === "B") {
+      value.push(1)
+      i += 1
+    }
+    if (str[i] === "Z") {
+      value.push(2)
+      i += 1
+    }
+    if (str[i] === "M") {
+      value.push(3)
+      i += 2
+    }
+    if (str[i] === "G") {
+      value.push(0)
+      i += 1
+    }
+  }
+  return parseInt(value.join(""), 4)
+}
