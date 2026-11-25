@@ -20104,3 +20104,9 @@ function cookie_1348(x){
   }
   return `Who ate the last cookie? It was ${whoDunIt}!`
 }
+
+//Day 1349
+//r
+function zeroToNine_1349(n) {
+  return "Zero One Two Three Four Five Six Seven Eight Nine".split(" ")[n]
+}
