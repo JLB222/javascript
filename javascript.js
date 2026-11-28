@@ -20142,3 +20142,9 @@ function shadok(str) {
 function giveThanks() {
   return "Thanks!"
 }
+
+//Day 1352
+//r
+function duckDuckGoose_1352(players, goose) {
+  return players[(goose-1) % players.length].name
+}
